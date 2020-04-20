@@ -1,14 +1,14 @@
 <template>
   <div class="navbar">
-    <img class="photo" src="../assets/matt-violet.png">
-    <div class="header-div">
-      <h2 class="name-text">Matt Violet</h2>
-      <h4 class="title-text">Software / Web Developer</h4>
+    <div class="header-div" v-on:click="navigate('home')">
+      <img class="photo" src="../assets/matt-violet.png">
+      <h2 class="name-text">MATT VIOLET</h2>
+      <h4 class="title-text">SOFTWARE / WEB DEVELOPER</h4>
     </div>
     <div class="links-div">
-      <p class="link-text">ABOUT</p>
-      <p class="link-text">SKILLS</p>
-      <p class="link-text">WORK</p>
+      <p class="link-text" v-on:click="navigate('about')">ABOUT</p>
+      <p class="link-text" v-on:click="navigate('skills')">SKILLS</p>
+      <p class="link-text" v-on:click="navigate('work')">WORK</p>
     </div>
   </div>
 </template>
@@ -16,6 +16,13 @@
 <script>
 export default {
   name: 'Navbar',
+  methods: {
+    navigate(option) {
+      document.getElementById(option).scrollIntoView({ 
+        behavior: 'smooth'
+      });
+    }
+  }
 }
 </script>
 
@@ -23,7 +30,7 @@ export default {
 .navbar {
   height: 100%;
   width: 300px;
-  background: rgb(70, 130, 180, .9);
+  background: rgb(70, 130, 180, .8);
   margin: 0;
   position: fixed;
   display: inline-block;
@@ -31,22 +38,26 @@ export default {
 }
 .photo {
   width: 125px;
-  background: coral;
-  margin: 50px auto 20px auto;
+  background: rgb(194, 227, 255);
+  margin: 0 auto 10px auto;
   border-radius: 50%;
 }
 .header-div {
   text-align: center;
-  margin: 20px 0 40px 0;
+  margin: 50px auto 100px auto;
+  width: 200px;
 }
 .name-text, .title-text {
   margin: 0;
 }
 .name-text {
   color: white;
+  font-weight: 700;
 }
 .title-text {
-  color: lightgrey;
+  color: rgb(194, 227, 255);
+  font-size: 12px;
+  font-weight: 500;
 }
 .links-div {
   width: 100px;
@@ -55,8 +66,16 @@ export default {
 }
 .link-text {
   margin: 5px 0;
-  font-weight: 600;
-  font-size: 14px;
+  font-weight: 500;
+  font-size: 16px;
+  color: rgb(194, 227, 255);
+}
+/* --------------------------- HOVER --------------------------- */
+.link-text:hover, .header-div:hover {
+  cursor: pointer;
+}
+.link-text:hover {
   color: white;
+  transition: .3s;
 }
 </style>

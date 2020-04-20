@@ -5,6 +5,8 @@
     <div class="components">
       <Home/>
       <About/>
+      <Skills/>
+      <Work/>
     </div>
   </div>
 </template>
@@ -13,6 +15,8 @@
 import Navbar from './components/Navbar.vue'
 import Home from './components/Home.vue'
 import About from './components/About.vue'
+import Skills from './components/Skills.vue'
+import Work from './components/Work.vue'
 
 export default {
   name: 'App',
@@ -20,6 +24,8 @@ export default {
     Navbar,
     Home,
     About,
+    Skills,
+    Work,
   }
 }
 </script>
@@ -29,20 +35,28 @@ body, html {
   margin: 0;
   height: 100%;
 }
+h1 {
+  width: 100%;
+  color: steelblue;
+  margin-top: 0;
+  border-bottom: 1px solid lightgrey;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 100%;
+  position: relative;
 }
 .components {
   margin-left: 300px;
   height: 100%;
 }
 .bg-img {
-  min-width: 100%;
-  height: 100%;
+  width: 100%;
+  min-height: 100%;
   z-index: -1;
   position: fixed;
+  bottom: 0;
 }
 </style>

@@ -1,7 +1,8 @@
 <template>
-  <div class="home">
+  <div id="home">
     <div class="header">
-      <h1>Insert one sentence header here.</h1>
+      <h1>Hi, I'm Matt,</h1>
+      <h2>a mission-driven developer with roots in the non-profit world.</h2>
     </div>
   </div>
 </template>
@@ -13,16 +14,25 @@ export default {
 </script>
 
 <style scoped>
-.home {
+#home {
   height: 100%;
   width: 100%;
-  /* position: relative; */
-  /* display: block; */
 }
 .header {
   position: absolute;
   margin: 100px;
-  display: block;
 }
-
+h1 {
+  color: white;
+  font-size: 40px;
+  font-weight: 700;
+  border: 0;
+  margin: 0;
+}
+h2 {
+  color: white;
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 5px;
+}
 </style>
