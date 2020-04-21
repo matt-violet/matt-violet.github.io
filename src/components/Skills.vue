@@ -29,19 +29,12 @@
 </template>
 
 <script>
-import { skills } from '../../skills-data.js'
+import { skills } from '../../data.js'
 export default {
   name: 'Skills',
   data() {
     return {
       skills: skills
-    }
-  },
-  methods: {
-    createIcon(str) {
-      const output = document.createElement('div');
-      output.innerHTML = str;
-      return output;
     }
   }
 }
@@ -55,28 +48,35 @@ export default {
 .skills-box {
   background: rgb(238, 238, 238);
   border-radius: 5px;
-  padding: 20px;
+  padding: 20px 30px;
   margin: 30px 0;
 }
 .skill-div {
+  box-shadow: 1px 2px 8px 0px grey;
   display: inline-block;
   position: relative;
-  width: 80px;
-  margin: 0 10px;
+  width: 100px;
+  margin: 0 20px 0 0;
   background: white;
   border-radius: 5px;
-  padding: 30px 10px;
+  padding: 20px 0 15px 0;
   text-align: center;
+  overflow: hidden;
 }
 .skills-header {
   margin: 0 0 10px 0;
-  font-weight: 400;
+  font-weight: 500;
+  color: slategray;
 }
 .skill-icon {
-  width: 30px;
+  height: 50px;
 }
 .skill-name {
-  margin: 5px 0 0 0;
-  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  font-size: 14px;
+  /* background: lightgrey; */
+  /* color: white; */
 }
 </style>

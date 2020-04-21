@@ -24,15 +24,15 @@ export default {
 }
 h1 {
   color: white;
-  font-size: 40px;
-  font-weight: 700;
+  font-size: 60px;
+  font-weight: 300;
   border: 0;
   margin: 0;
 }
 h2 {
   color: white;
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 900;
   margin-top: 5px;
 }
 </style>
