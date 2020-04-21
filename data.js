@@ -66,7 +66,7 @@ export const softwareProjects = [
     title: 'Open Restaurant',
     description: 'Photos module for restaurant app',
     details: 'Built responsive image gallery with modal view showing photo details, flagging options, and intuitive navigation. Designed database schema to optimize loading speeds by hosting images in AWS S3 buckets.',
-    stack: ['HTML', 'CSS (grid, media query)', 'Javascript', 'React', 'Styled-Components', 'Express', 'Ajax', 'MongoDB', 'Faker', 'Jest', 'Enzyme'],
+    stack: ['HTML', 'CSS', 'Javascript', 'React', 'Styled-Components', 'Express', 'Ajax', 'MongoDB', 'Faker', 'Jest', 'Enzyme'],
     github: 'https://github.com/krummurk/photos-module',
     image: require('./src/assets/projects/restaurant.jpg'),
     video: 'https://www.youtube.com/embed/LZBo0UIRxvI'
@@ -75,7 +75,7 @@ export const softwareProjects = [
     title: 'Social Inn',
     description: 'Scaled back end of housing app',
     details: 'Scaled the back end of a room reviews app to handle 10 million records and 100 requests per second. Benchmarked performance of a SQL vs. NoSQL database with 10M records to determine optimal database. Deployed app on AWS and stress tested server to identify performance bottlenecks.',
-    stack: ['PostgreSQL', 'Cassandra', 'Express', 'Amazon Web Services', 'k6', 'New Relic'],
+    stack: ['PostgreSQL', 'Cassandra', 'Express', 'AWS', 'k6', 'New Relic'],
     github: 'https://github.com/social-inn/Reviews',
     image: require('./src/assets/projects/bed.jpg'),
     // video: require('./src/images/social-in-test.png')

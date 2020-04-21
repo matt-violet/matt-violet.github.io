@@ -1,15 +1,18 @@
 <template>
   <div id="work">
     <h1>WORK</h1>
-    <div
-      v-for="(project, i) in softwareProjects"
-      :key="i"
-      class="project"
-    >
-      <img class="project-img" :src="project.image">
+    <div v-for="(project, i) in softwareProjects" :key="i" class="project">
+      <div class="img-div">
+        <img class="img" :src="project.image">
+      </div>
       <div class="text-div">
         <h4 class="title">{{ project.title }}</h4>
         <p class="description">{{ project.description }}</p>
+        <p class="stack-header">STACK: </p>
+        <p class="stack" v-for="(stack, i) of project.stack" :key="i">{{ stack }}</p>
+        <div class="btn-div">
+          <button class="details-btn">DETAILS</button>
+        </div>
       </div>
     </div>
   </div>
@@ -38,24 +41,89 @@ export default {
   box-shadow: 1px 2px 8px 0px grey;
   border-radius: 5px;
   display: inline-block;
-  margin: 0 20px 20px 0;
+  margin: 0 25px 25px 0;
   overflow: hidden;
   background: white;
 }
-.project-img {
-  min-width: 100%;
+.img-div {
+  width: 250px;
   height: 66%;
+  text-align: center;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+}
+.img {
+  position: relative;
+  min-width: 100%;
+  height: 100%;
 }
 .text-div {
-  padding: 10px
+  margin: 0;
+  padding: 0 10px;
+  position: relative;
+  height: 33%;
 }
 .title {
-  margin: 0 0 2px 0;
-  font-size: 18px;
-  font-weight: 500;
+  margin: 10px 0 0 0;
+  font-size: 20px;
+  font-weight: 900;
+  display: inline-block;
 }
 .description {
-  margin: 0;
+  margin: 5px 0;
+  font-size: 14px;
+}
+.stack-header {
+  opacity: 0;
   font-size: 13px;
+  font-weight: 900;
+  display: inline-block;
+  margin: 15px 5px 0 0;
+}
+.stack {
+  opacity: 0;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 3px 8px;
+  background: rgb(231, 231, 231);
+  border-radius: 20px;
+  margin: 2px;
+  display: inline-block;
+}
+.btn-div {
+  text-align: center;
+  width: 230px;
+  bottom: 15px;
+  position: absolute;
+}
+.details-btn {
+  opacity: 0;
+  margin: auto;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 6px 10px;
+  color: steelblue;
+  border: 1.5px solid steelblue;
+  border-radius: 20px;
+  display: block;
+}
+/* ---------------------- HOVER EFFECTS ---------------------- */
+.project:hover .img-div {
+  height: 0;
+}
+.project:hover .stack, .project:hover .stack-header, .project:hover .details-btn {
+  opacity: 1;
+}
+.project:hover .title {
+  margin: 15px 0 0 0;
+}
+.project:hover .text-div {
+  height: 250px;
+}
+.details-btn:hover {
+  background: steelblue;
+  color: white;
+  transition: .3s;
+  cursor: pointer;
 }
 </style>

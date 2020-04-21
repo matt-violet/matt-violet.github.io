@@ -9,6 +9,7 @@
       <p class="link-text" v-on:click="navigate('about')">ABOUT</p>
       <p class="link-text" v-on:click="navigate('skills')">SKILLS</p>
       <p class="link-text" v-on:click="navigate('work')">WORK</p>
+      <p class="link-text" v-on:click="navigate('contact')">CONTACT</p>
     </div>
   </div>
 </template>
