@@ -1,15 +1,15 @@
 <template>
   <div class="navbar">
-    <div class="header-div" v-on:click="navigate('home')">
+    <div class="header-div" v-on:click="$emit('nav', 'home')">
       <img class="photo" src="../assets/matt-violet.png">
       <h2 class="name-text">MATT VIOLET</h2>
       <h4 class="title-text">SOFTWARE / WEB DEVELOPER</h4>
     </div>
     <div class="links-div">
-      <p class="link-text" v-on:click="navigate('about')">ABOUT</p>
-      <p class="link-text" v-on:click="navigate('skills')">SKILLS</p>
-      <p class="link-text" v-on:click="navigate('work')">WORK</p>
-      <p class="link-text" v-on:click="navigate('contact')">CONTACT</p>
+      <p class="link-text" v-on:click="$emit('nav', 'about')">ABOUT</p>
+      <p class="link-text" v-on:click="$emit('nav', 'skills')">SKILLS</p>
+      <p class="link-text" v-on:click="$emit('nav', 'work')">WORK</p>
+      <p class="link-text" v-on:click="$emit('nav', 'contact')">CONTACT</p>
     </div>
   </div>
 </template>
@@ -17,12 +17,8 @@
 <script>
 export default {
   name: 'Navbar',
-  methods: {
-    navigate(option) {
-      document.getElementById(option).scrollIntoView({ 
-        behavior: 'smooth'
-      });
-    }
+  props: {
+    nav: {type: Function}
   }
 }
 </script>
@@ -39,7 +35,8 @@ export default {
 }
 .photo {
   width: 125px;
-  background: rgb(194, 227, 255);
+  background: rgb(255, 255, 255, .8);
+  box-shadow: 1px 2px 4px 0px black;
   margin: 0 auto 10px auto;
   border-radius: 50%;
 }

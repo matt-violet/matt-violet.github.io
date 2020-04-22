@@ -1,14 +1,20 @@
 <template>
   <div id="app">
     <img class="bg-img" src="./assets/sunset.jpg">
-    <Navbar/>
-    <div class="components">
+    <div class="bg-img"></div>
+    <Navbar @nav="navigate"/>
+    <div class="components" v-if="!showProject">
       <Home/>
       <About/>
       <Skills/>
-      <Work/>
+      <Work @viewProjectDetails="handleViewProjectDetails"/>
       <Contact/>
     </div>
+    <WorkDetails 
+      v-if="showProject"
+      :project="featuredProject"
+      @nav="navigate"
+    />
   </div>
 </template>
 
@@ -19,6 +25,7 @@ import About from './components/About.vue'
 import Skills from './components/Skills.vue'
 import Work from './components/Work.vue'
 import Contact from './components/Contact.vue'
+import WorkDetails from './components/WorkDetails.vue'
 
 export default {
   name: 'App',
@@ -29,6 +36,31 @@ export default {
     Skills,
     Work,
     Contact,
+    WorkDetails,
+  },
+  data() {
+    return {
+      showProject: false,
+      featuredProject: {}
+    }
+  },
+  methods: {
+    async navigate(id) {
+      if (this.showProject) {
+        let obj = {};
+        await this.handleViewProjectDetails(obj)
+        document.getElementById(id).scrollIntoView({ 
+          behavior: 'smooth'
+        });
+      }
+      document.getElementById(id).scrollIntoView({ 
+        behavior: 'smooth'
+      });
+    },
+    handleViewProjectDetails(project) {
+      this.showProject = !this.showProject;
+      this.featuredProject = project;
+    }
   }
 }
 </script>
@@ -37,12 +69,6 @@ export default {
 body, html {
   margin: 0;
   height: 100%;
-}
-h1 {
-  width: 100%;
-  color: steelblue;
-  margin-top: 0;
-  border-bottom: 1px solid lightgrey;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -61,5 +87,6 @@ h1 {
   z-index: -1;
   position: fixed;
   bottom: 0;
+  background: rgb(0, 0, 0, 0.2);
 }
 </style>

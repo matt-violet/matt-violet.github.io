@@ -40,10 +40,16 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 #skills {
   background: white;
   padding: 75px;
+}
+h1 {
+  width: 100%;
+  color: steelblue;
+  margin-top: 0;
+  border-bottom: 1px solid lightgrey;
 }
 .skills-box {
   background: rgb(238, 238, 238);
@@ -76,7 +82,5 @@ export default {
   padding: 0;
   font-weight: 500;
   font-size: 14px;
-  /* background: lightgrey; */
-  /* color: white; */
 }
 </style>

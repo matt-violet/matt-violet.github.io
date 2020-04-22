@@ -48,25 +48,25 @@ export const softwareProjects = [
     title: 'Segment Events',
     description: 'Harnessing the power of user event data',
     details: 'As an intern at Seasoned I integrated Segment events (from Segment\'s Customer Data Platform) to collect data about admin onboarding events. This information is now used by the Data and Marketing teams to drive analytics, A/B testing, and automated marketing campaigns.',
-    stack: ['Javavscript', 'React', 'Segment Library'],
+    stack: ['React', 'Segment Library'],
     github: '',
     image: require('./src/assets/projects/segment.png'),
-    // video:require('./src/images/segment.png')
+    video: require('./src/assets/projects/segment.png')
   },
   {
     title: 'Internal Tool',
     description: 'Components for customer service tool',
     details: 'As an intern at Seasoned I developed reusable components for an internal tool for the Customer Service team. In addition to building stylized menus and cards for admins, job seekers, and stores, I implemented GraphQL queries to fetch relevant data from a Postgres database.',
-    stack: ['Javavscript', 'Vue', 'Vuetify', 'GraphQL', 'PostgreSQL'],
+    stack: ['Vue', 'Vuetify', 'GraphQL', 'PostgreSQL'],
     github: '',
     image: require('./src/assets/projects/vuetify.png'),
-    // video:require('./src/images/vuetify.png')
+    video:require('./src/assets/projects/vuetify.png')
   },
   {
     title: 'Open Restaurant',
     description: 'Photos module for restaurant app',
     details: 'Built responsive image gallery with modal view showing photo details, flagging options, and intuitive navigation. Designed database schema to optimize loading speeds by hosting images in AWS S3 buckets.',
-    stack: ['HTML', 'CSS', 'Javascript', 'React', 'Styled-Components', 'Express', 'Ajax', 'MongoDB', 'Faker', 'Jest', 'Enzyme'],
+    stack: ['React', 'Styled-Components', 'Express', 'Ajax', 'MongoDB', 'Faker', 'Jest', 'Enzyme', 'Amazon S3'],
     github: 'https://github.com/krummurk/photos-module',
     image: require('./src/assets/projects/restaurant.jpg'),
     video: 'https://www.youtube.com/embed/LZBo0UIRxvI'
@@ -78,13 +78,13 @@ export const softwareProjects = [
     stack: ['PostgreSQL', 'Cassandra', 'Express', 'AWS', 'k6', 'New Relic'],
     github: 'https://github.com/social-inn/Reviews',
     image: require('./src/assets/projects/bed.jpg'),
-    // video: require('./src/images/social-in-test.png')
+    video: require('./src/assets/projects/social-in-test.png')
   },
   {
     title: 'Connect Four',
     description: 'Single Page Connect Four Game',
     details: 'Developed game in which two players alternately place pieces into a 7x7 board trying to place 4 adjacent pieces. Implemented animations and dynamically rendering board, game status, and rematch button.',
-    stack: ['HTML', 'CSS', 'Javascript', 'React'],
+    stack: ['React', 'CSS animations'],
     github: 'https://github.com/matt-violet/connect4',
     image: require('./src/assets/projects/connect-four.png'),
     video: 'https://www.youtube.com/embed/AM0sI6ZqEQw'
@@ -93,10 +93,9 @@ export const softwareProjects = [
     title: 'My Bolus',
     description: 'Insulin dose calculator for diabetics',
     details: 'Developed a full stack application to simulate modern insulin pump dosage algorithms based on user’s meal choice, current blood glucose (bg) level, insulin-to-carb ratio, bg correction factor, future exercise plans, and other factors. Below is a theoretical example of the kind of mental calculations insulin users must perform ahead of every meal.',
-    stack: ['HTML', 'CSS', 'Javascript', 'React', 'Express', 'MongoDB'],
+    stack: ['React', 'Express', 'MongoDB'],
     github: 'https://github.com/matt-violet/My-Bolus',
     image: require('./src/assets/projects/vial.jpg'),
-    // image2: require('./src/images/bolus-math.png'),
     ppt: 'https://drive.google.com/file/d/1D8tp35PoCCbMzuWLTPHFI5oGN7nFhIQ1/view?usp=sharing',
     video: 'https://www.youtube.com/embed/OsGm4uK7SEs'
   }

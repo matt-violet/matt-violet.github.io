@@ -33,11 +33,16 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 #contact {
   background: white;
   padding: 75px;
-
+}
+h1 {
+  width: 100%;
+  color: steelblue;
+  margin-top: 0;
+  border-bottom: 1px solid lightgrey;
 }
 .containers {
   margin-top: 50px;
@@ -52,6 +57,7 @@ export default {
 }
 .container:hover .text {
   color: steelblue;
+  transition: .3s;
 }
 .icon {
   display: inline-block;
