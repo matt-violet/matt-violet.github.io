@@ -47,6 +47,7 @@ export default {
   text-align: center;
   margin-left: 300px;
   padding-bottom: 25px;
+  min-height: 100%;
 }
 p {
   margin: 0;
@@ -55,7 +56,7 @@ p {
   text-align: left;
 }
 .close-btn {
-  padding: 25px;
+  margin: 25px;
   width: 20px;
   left: 0;
   transition: .3s ease;

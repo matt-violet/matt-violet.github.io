@@ -2,8 +2,16 @@
   <div id="skills">
     <h1>SKILLS</h1>
     <p>I offer over 2 years of full stack engineering experience.</p>
-    <p>I have maintained, developed and launched multiple projects from scratch, carrying the development of its' back-end and front-end codebases.</p>
-    <p>My favorite tools include React, Vue, Express, Mongo, and Postgres.</p>
+    <p>I have maintained, developed, and launched <strong>multiple projects from scratch,</strong> carrying the development of both back-end and front-end codebases. Here is the time I've been putting in:</p>
+    <ul>
+      <li><strong>2+ years</strong> of combined coursework / personal projects / professional experience</li>
+      <li><strong>5 months</strong> working in a <strong>professional codebase</strong> as a Software Engineer Intern at Seasoned</li>
+      <li>Completed <strong>1000+ hours</strong> of advanced Computer Science curriculum modeling today’s software engineering industry</li>
+      <li><strong>Self-taught</strong> skills such as HTML, CSS, Vue, Photoshop, and InDesign</li>
+      <li>Active contributer on GitHub:</li>
+    </ul>
+    <img class="github-squares" src="../assets/github-squares.png">
+    <p>My favorite tools right now are React, Vue, Express, MongoDB, and PostgreSQL. But I have experience with all of the following:</p>
     <div class="skills-box">
       <h2 class="skills-header">Front End</h2>
       <div v-for="(skill, i) of skills.frontend" :key=i class="skill-div">
@@ -51,6 +59,14 @@ h1 {
   margin-top: 0;
   border-bottom: 1px solid lightgrey;
 }
+li {
+  margin: 5px 0;
+}
+.github-squares {
+  width: 700px;
+  margin-left: 40px;
+  margin: 20px 0 15px 25px;
+}
 .skills-box {
   background: rgb(238, 238, 238);
   border-radius: 5px;
@@ -68,6 +84,11 @@ h1 {
   padding: 20px 0 15px 0;
   text-align: center;
   overflow: hidden;
+  transition: 1s ease;
+}
+.skill-div:hover {
+  transform: rotate(360deg);
+
 }
 .skills-header {
   margin: 0 0 10px 0;

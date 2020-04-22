@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img class="bg-img" src="./assets/sunset.jpg">
+    <img class="bg-img" src="./assets/pumpp.png">
     <div class="bg-img"></div>
     <Navbar @nav="navigate"/>
     <div class="components" v-if="!showProject">
@@ -82,11 +82,11 @@ body, html {
   height: 100%;
 }
 .bg-img {
-  width: 100%;
+  min-width: 100%;
   min-height: 100%;
   z-index: -1;
   position: fixed;
-  bottom: 0;
-  background: rgb(0, 0, 0, 0.2);
+  /* bottom: 0; */
+  background: rgb(0, 0, 0, 0.5);
 }
 </style>
