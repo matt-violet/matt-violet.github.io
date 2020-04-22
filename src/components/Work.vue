@@ -1,17 +1,21 @@
 <template>
   <div id="work">
     <h1>WORK</h1>
-    <div v-for="(project, i) in softwareProjects" :key="i" class="project">
-      <div class="img-div">
-        <img class="img" :src="project.image">
-      </div>
-      <div class="text-div">
-        <h4 class="title">{{ project.title }}</h4>
-        <p class="description">{{ project.description }}</p>
-        <p class="stack-header">STACK: </p>
-        <p class="stack" v-for="(stack, i) of project.stack" :key="i">{{ stack }}</p>
-        <div class="btn-div">
-          <button class="details-btn" v-on:click="$emit('viewProjectDetails', project)">DETAILS</button>
+    <div class="inner-content">
+      <div class="bg-div">
+        <div v-for="(project, i) in softwareProjects" :key="i" class="project" data-aos="zoom-in">
+          <div class="img-div">
+            <img class="img" :src="project.image">
+          </div>
+          <div class="text-div">
+            <h4 class="title">{{ project.title }}</h4>
+            <p class="description">{{ project.description }}</p>
+            <p class="stack-header">STACK: </p>
+            <p class="stack" v-for="(stack, i) of project.stack" :key="i">{{ stack }}</p>
+            <div class="btn-div">
+              <button class="details-btn" v-on:click="$emit('viewProjectDetails', project)">DETAILS</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -36,12 +40,23 @@ export default {
 <style scoped>
 #work {
   background: white;
+}
+.inner-content {
   padding: 75px;
 }
+.bg-div {
+  background: rgb(238, 238, 238);
+  padding: 30px;
+  border-radius: 5px;
+}
 h1 {
-  width: 100%;
-  color: steelblue;
-  margin-top: 0;
+  /* width: 100%; */
+  padding: 30px 75px;
+  font-size: 50px;
+  font-weight: 500;
+  color: black;
+  background: lightsalmon;
+  margin: 0;
   border-bottom: 1px solid lightgrey;
 }
 .project {

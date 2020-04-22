@@ -4,14 +4,14 @@
     <div class="bg-img"></div>
     <Navbar @nav="navigate"/>
     <div class="components" v-if="!showProject">
-      <Home/>
+      <Home @nav="navigate"/>
       <About/>
-      <Skills/>
       <Work @viewProjectDetails="handleViewProjectDetails"/>
+      <Skills/>
       <Contact/>
     </div>
     <WorkDetails 
-      v-if="showProject"
+      v-else
       :project="featuredProject"
       @nav="navigate"
     />
@@ -80,13 +80,14 @@ body, html {
 .components {
   margin-left: 300px;
   height: 100%;
+  position: absolute;
 }
 .bg-img {
   min-width: 100%;
   min-height: 100%;
   z-index: -1;
   position: fixed;
-  /* bottom: 0; */
+  /* top: 0; */
   background: rgb(0, 0, 0, 0.5);
 }
 </style>

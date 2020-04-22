@@ -1,5 +1,5 @@
 <template>
-  <div class="navbar">
+  <div class="navbar" data-aos="fade-right" data-aos-easing="ease-in-sine">
     <div class="header-div" v-on:click="$emit('nav', 'home')">
       <img class="photo" src="../assets/matt-violet.png">
       <h2 class="name-text">MATT VIOLET</h2>
@@ -7,8 +7,8 @@
     </div>
     <div class="links-div">
       <p class="link-text" v-on:click="$emit('nav', 'about')">ABOUT</p>
-      <p class="link-text" v-on:click="$emit('nav', 'skills')">SKILLS</p>
       <p class="link-text" v-on:click="$emit('nav', 'work')">WORK</p>
+      <p class="link-text" v-on:click="$emit('nav', 'skills')">SKILLS</p>
       <p class="link-text" v-on:click="$emit('nav', 'contact')">CONTACT</p>
     </div>
   </div>
@@ -35,7 +35,7 @@ export default {
 }
 .photo {
   width: 125px;
-  background: rgb(255, 255, 255, .8);
+  background: lightsalmon;
   box-shadow: 1px 2px 4px 0px black;
   margin: 0 auto 10px auto;
   border-radius: 50%;
@@ -53,7 +53,7 @@ export default {
   font-weight: 700;
 }
 .title-text {
-  color: rgb(194, 227, 255);
+  color: lightsalmon;
   font-size: 12px;
   font-weight: 500;
 }
@@ -63,17 +63,17 @@ export default {
   text-align: left;
 }
 .link-text {
-  margin: 5px 0;
+  margin: 10px 0;
   font-weight: 500;
   font-size: 16px;
-  color: rgb(194, 227, 255);
+  color: white;
 }
 /* --------------------------- HOVER --------------------------- */
 .link-text:hover, .header-div:hover {
   cursor: pointer;
 }
 .link-text:hover {
-  color: white;
+  color: lightsalmon;
   transition: .3s;
 }
 </style>

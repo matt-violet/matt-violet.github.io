@@ -1,36 +1,38 @@
 <template>
   <div id="skills">
     <h1>SKILLS</h1>
-    <p>I offer over 2 years of full stack engineering experience.</p>
-    <p>I have maintained, developed, and launched <strong>multiple projects from scratch,</strong> carrying the development of both back-end and front-end codebases. Here is the time I've been putting in:</p>
-    <ul>
-      <li><strong>2+ years</strong> of combined coursework / personal projects / professional experience</li>
-      <li><strong>5 months</strong> working in a <strong>professional codebase</strong> as a Software Engineer Intern at Seasoned</li>
-      <li>Completed <strong>1000+ hours</strong> of advanced Computer Science curriculum modeling today’s software engineering industry</li>
-      <li><strong>Self-taught</strong> skills such as HTML, CSS, Vue, Photoshop, and InDesign</li>
-      <li>Active contributer on GitHub:</li>
-    </ul>
-    <img class="github-squares" src="../assets/github-squares.png">
-    <p>My favorite tools right now are React, Vue, Express, MongoDB, and PostgreSQL. But I have experience with all of the following:</p>
-    <div class="skills-box">
-      <h2 class="skills-header">Front End</h2>
-      <div v-for="(skill, i) of skills.frontend" :key=i class="skill-div">
-        <img class="skill-icon" :src="skill.image">
-        <p class="skill-name">{{ skill.name }}</p>
+    <div class="inner-content">
+      <p>I offer over 2 years of full stack engineering experience.</p>
+      <p>I have maintained, developed, and launched <strong>multiple projects from scratch,</strong> carrying the development of both back-end and front-end codebases. Here is the time I've been putting in:</p>
+      <ul>
+        <li><strong>2+ years</strong> of combined coursework / personal projects / professional experience</li>
+        <li><strong>5 months</strong> working in a <strong>professional codebase</strong> as a Software Engineer Intern at Seasoned</li>
+        <li>Completed <strong>1000+ hours</strong> of advanced Computer Science curriculum modeling today’s software engineering industry</li>
+        <li><strong>Self-taught</strong> skills such as HTML, CSS, Vue, Photoshop, and InDesign</li>
+        <li>Active contributer on GitHub:</li>
+      </ul>
+      <img class="github-squares" src="../assets/github-squares.png">
+      <p>My favorite tools right now are React, Vue, Express, MongoDB, and PostgreSQL. But I have experience with all of the following:</p>
+      <div class="skills-box">
+        <h2 class="skills-header">Front End</h2>
+        <div v-for="(skill, i) of skills.frontend" :key=i class="skill-div" data-aos="zoom-in" data-aos-offset="700">
+          <img class="skill-icon" :src="skill.image">
+          <p class="skill-name">{{ skill.name }}</p>
+        </div>
       </div>
-    </div>
-    <div class="skills-box">
-      <h2 class="skills-header">Back End</h2>
-      <div v-for="(skill, i) of skills.backend" :key=i class="skill-div">
-        <img class="skill-icon" :src="skill.image">
-        <p class="skill-name">{{ skill.name }}</p>
+      <div class="skills-box">
+        <h2 class="skills-header">Back End</h2>
+        <div v-for="(skill, i) of skills.backend" :key=i class="skill-div" data-aos="zoom-in" data-aos-offset="700">
+          <img class="skill-icon" :src="skill.image">
+          <p class="skill-name">{{ skill.name }}</p>
+        </div>
       </div>
-    </div>
-    <div class="skills-box">
-      <h2 class="skills-header">Additional</h2>
-      <div v-for="(skill, i) of skills.other" :key=i class="skill-div">
-        <img class="skill-icon" :src="skill.image">
-        <p class="skill-name">{{ skill.name }}</p>
+      <div class="skills-box">
+        <h2 class="skills-header">Additional</h2>
+        <div v-for="(skill, i) of skills.other" :key=i class="skill-div" data-aos="zoom-in" data-aos-offset="700">
+          <img class="skill-icon" :src="skill.image">
+          <p class="skill-name">{{ skill.name }}</p>
+        </div>
       </div>
     </div>
   </div>
@@ -51,12 +53,18 @@ export default {
 <style scoped>
 #skills {
   background: white;
-  padding: 75px;
+}
+.inner-content {
+  padding: 75px
 }
 h1 {
-  width: 100%;
-  color: steelblue;
-  margin-top: 0;
+  /* width: 100%; */
+  padding: 30px 75px;
+  font-size: 50px;
+  font-weight: 500;
+  color: black;
+  background: lightsalmon;
+  margin: 0;
   border-bottom: 1px solid lightgrey;
 }
 li {

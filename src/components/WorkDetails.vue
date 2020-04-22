@@ -56,8 +56,8 @@ p {
   text-align: left;
 }
 .close-btn {
-  margin: 25px;
-  width: 20px;
+  padding: 25px;
+  width: 25px;
   left: 0;
   transition: .3s ease;
 }
@@ -71,14 +71,12 @@ p {
   overflow: hidden;
   width: 560px;
   height: 315px;
+  border-radius: 5px;
   box-shadow: 1px 2px 8px 0px grey;
 }
-.video, .img {
-  border-radius: 5px;
-}
 .img {
-  min-width: 560px;
-  min-height: 315px;
+  width: 560px;
+  height: 315px;
 }
 .text-div {
   width: 560px;
