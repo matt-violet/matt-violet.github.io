@@ -3,6 +3,7 @@
     <h1>WORK</h1>
     <div class="inner-content">
       <div class="bg-div">
+        <h2 class="section-title">Software Projects:</h2>
         <div v-for="(project, i) in softwareProjects" :key="i" class="project" data-aos="zoom-in">
           <div class="img-div">
             <img class="img" :src="project.image">
@@ -58,6 +59,9 @@ h1 {
   background: lightsalmon;
   margin: 0;
   border-bottom: 1px solid lightgrey;
+}
+.section-title {
+  display: block;
 }
 .project {
   width: 250px;

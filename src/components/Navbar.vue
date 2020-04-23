@@ -55,7 +55,7 @@ export default {
 .title-text {
   color: lightsalmon;
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 700;
 }
 .links-div {
   width: 100px;
@@ -64,7 +64,7 @@ export default {
 }
 .link-text {
   margin: 10px 0;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 16px;
   color: white;
 }

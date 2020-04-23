@@ -36,7 +36,7 @@ h1 {
   margin: 0;
 }
 h2 {
-  color: grey;
+  color: rgb(187, 187, 187);
   font-size: 18px;
   font-weight: 700;
   margin-top: 5px;

@@ -15,21 +15,21 @@
       <p>My favorite tools right now are React, Vue, Express, MongoDB, and PostgreSQL. But I have experience with all of the following:</p>
       <div class="skills-box">
         <h2 class="skills-header">Front End</h2>
-        <div v-for="(skill, i) of skills.frontend" :key=i class="skill-div" data-aos="zoom-in" data-aos-offset="700">
+        <div v-for="(skill, i) of skills.frontend" :key=i class="skill-div" data-aos="zoom-in" data-aos-offset="300">
           <img class="skill-icon" :src="skill.image">
           <p class="skill-name">{{ skill.name }}</p>
         </div>
       </div>
       <div class="skills-box">
         <h2 class="skills-header">Back End</h2>
-        <div v-for="(skill, i) of skills.backend" :key=i class="skill-div" data-aos="zoom-in" data-aos-offset="700">
+        <div v-for="(skill, i) of skills.backend" :key=i class="skill-div" data-aos="zoom-in" data-aos-offset="300">
           <img class="skill-icon" :src="skill.image">
           <p class="skill-name">{{ skill.name }}</p>
         </div>
       </div>
       <div class="skills-box">
         <h2 class="skills-header">Additional</h2>
-        <div v-for="(skill, i) of skills.other" :key=i class="skill-div" data-aos="zoom-in" data-aos-offset="700">
+        <div v-for="(skill, i) of skills.other" :key=i class="skill-div" data-aos="zoom-in" data-aos-offset="300">
           <img class="skill-icon" :src="skill.image">
           <p class="skill-name">{{ skill.name }}</p>
         </div>
@@ -71,7 +71,7 @@ li {
   margin: 5px 0;
 }
 .github-squares {
-  width: 700px;
+  width: 70%;
   margin-left: 40px;
   margin: 20px 0 15px 25px;
 }
@@ -92,9 +92,8 @@ li {
   padding: 20px 0 15px 0;
   text-align: center;
   overflow: hidden;
-  transition: 1s ease;
 }
-.skill-div:hover {
+.skill-icon:hover {
   transform: rotate(360deg);
 
 }
@@ -104,6 +103,7 @@ li {
   color: slategray;
 }
 .skill-icon {
+  transition: 1s ease;
   height: 50px;
 }
 .skill-name {

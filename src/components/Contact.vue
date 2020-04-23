@@ -73,6 +73,7 @@ h1 {
 .container:hover .text {
   color: steelblue;
   transition: .3s;
+  font-weight: 700;
 }
 .icon {
   display: inline-block;
