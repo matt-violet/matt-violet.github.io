@@ -2,6 +2,7 @@
   <div id="contact">
     <h1>Contact</h1>
     <div class="inner-content">
+      <p>I'm currently available for hire and open to discussing any opportunities.</p>
       <div class="bg-div">
         <div class="containers">
           <div class="container" v-on:click='handleLinkClick("mattviolet@gmail.com")'>
@@ -42,12 +43,13 @@ export default {
   background: white;
 }
 .inner-content {
-  padding: 75px;
+  padding: 59px 75px 75px 75px;
 }
 .bg-div {
   background: rgb(238, 238, 238);
   padding: 30px;
   border-radius: 5px;
+  margin-top: 30px;
 }
 h1 {
   /* width: 100%; */
@@ -64,7 +66,7 @@ h1 {
 }
 .container {
   position: relative;
-  margin: 0 0 20px 0;
+  margin: 0 0 15px 0;
   vertical-align: middle;
 }
 .container:hover {
@@ -84,7 +86,7 @@ h1 {
 .text {
   display: inline-block;
   position: absolute;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 300;
   margin: 0;
   top: 15%;

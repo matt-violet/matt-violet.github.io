@@ -1,30 +1,32 @@
 <template>
   <div id="work-details">
-    <div class="close-btn-div">
-      <img class="close-btn" src="../assets/icons/close.png" v-on:click="$emit('nav', 'work')">
-    </div>
-    <p class="title">{{ project.title }}</p>
-    <p class="description">{{ project.description }}</p>
-    <div class="video-div">  
-      <iframe 
-        class="video" 
-        v-if='project.title!=="Social Inn" && project.title!=="Segment Events" && project.title!=="Internal Tool"' 
-        width="560px" 
-        height="315px" 
-        :src="project.video" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-        allowfullscreen>
-      </iframe>
-      <img v-else class='img' width="660" height="415" :src='project.video'>
-    </div>
-    <div class="text-div">
-      <div class="details-div">
-        <p class="details">{{ project.details }}</p>
-        <p class="stack" v-for="(stack, i) of project.stack" :key="i">{{ stack }}</p>
-        <div class="github-div">
-          <a v-if='project.github.length !== 2' class='github-link' :href="project.github" target="_blank">GitHub Repository</a>
-          <a v-else v-for='link of project.github' v-bind:key="link" class='github-link-2' :href="link.link" target="_blank">{{link.repo}}</a>
+    <div class="inner-content" data-aos="zoom-in">
+      <div class="close-btn-div">
+        <img class="close-btn" src="../assets/icons/close.png" v-on:click="$emit('nav', 'work')">
+      </div>
+      <p class="title">{{ project.title }}</p>
+      <p class="description">{{ project.description }}</p>
+      <div class="video-div">  
+        <iframe 
+          class="video" 
+          v-if='project.title!=="Social Inn" && project.title!=="Segment Events" && project.title!=="Internal Tool"' 
+          width="560px" 
+          height="315px" 
+          :src="project.video" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+        <img v-else class='img' width="660" height="415" :src='project.video'>
+      </div>
+      <div class="text-div">
+        <div class="details-div">
+          <p class="details">{{ project.details }}</p>
+          <p class="stack" v-for="(stack, i) of project.stack" :key="i">{{ stack }}</p>
+          <div class="github-div">
+            <a v-if='project.github.length !== 2' class='github-link' :href="project.github" target="_blank">GitHub Repository</a>
+            <a v-else v-for='link of project.github' v-bind:key="link" class='github-link-2' :href="link.link" target="_blank">{{link.repo}}</a>
+          </div>
         </div>
       </div>
     </div>

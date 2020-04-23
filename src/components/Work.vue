@@ -51,7 +51,6 @@ export default {
   border-radius: 5px;
 }
 h1 {
-  /* width: 100%; */
   padding: 30px 75px;
   font-size: 50px;
   font-weight: 500;

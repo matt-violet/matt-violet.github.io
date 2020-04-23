@@ -12,8 +12,8 @@
         </div>
         
         <div class="text">
-          <p><strong>Honestly, I never thought I'd become a software developer,</strong> but now I can't see myself doing anything else.</p>
-          <p>Throughout my career I've sought out opportunities and challenges that are meaningful to me. Although my professional path has taken many twists and turns — from tutoring students of underserved schools in East Oakland, to empowering Burmese migrant communities in Thailand, to establishing a new communications department for a social justice non-profit in Berkeley — <strong>I've always followed my passion</strong> to help others and solve problems.</p>
+          <p><strong>I never could have anticipated my journey into software development,</strong> but now I can't see myself doing anything else.</p>
+          <p>Although my professional path has taken many twists and turns — from tutoring students of East Oakland's underserved schools, to empowering Burmese migrants in Thailand, to establishing a new communications department for an activist non-profit in Berkeley — <strong>I've always followed my passion</strong> to help others and solve problems.</p>
           <p>My passion for programming comes from the role software plays in my personal health, as a <strong>self-identified <a href='https://drive.google.com/file/d/1D8tp35PoCCbMzuWLTPHFI5oGN7nFhIQ1/view?usp=sharing' target='_blank'>human cyborg</a></strong> who has used an <strong>"artificial pancreas"</strong> to manage his type one diabetes since 2016. With my daily well-being now literally tied to algorithms, I'm invested in learning and developing applications that have the potential to help others as much as these devices have helped me.</p>
           <p>When not coding I can be found DJing, making Photoshop creations, and social distancing in my hometown of Oakland, CA.</p>
         </div>
@@ -56,7 +56,6 @@ h1 {
 p {
   margin-top: 0;
   font-weight: 300;
-  font-size: 14px;
 }
 strong {
   font-weight: 900;
