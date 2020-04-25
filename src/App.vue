@@ -87,6 +87,6 @@ body, html {
   min-height: 100%;
   z-index: -1;
   position: fixed;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgb(0, 0, 0, 0));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgb(0, 0, 0, 0));
 }
 </style>

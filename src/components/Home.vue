@@ -1,10 +1,11 @@
 <template>
   <div id="home">
     <div class="header" data-aos="zoom-in" data-aos-duration="500">
-      <h1>Hi, I'm Matt,</h1>
-      <h2>a mission-driven developer with roots in the non-profit world.</h2>
+      <h1>Welcome!</h1>
+      <h2>I'm Matt, a mission-driven developer with roots in the non-profit world.</h2>
+      <button v-on:click="$emit('nav', 'work')">Portfolio</button>
     </div>
-    <img class="arrow" src="../assets/icons/white-down-arrow.png" v-on:click="$emit('nav', 'about')">
+    <!-- <img class="arrow" src="../assets/icons/white-down-arrow.png" v-on:click="$emit('nav', 'about')"> -->
   </div>
 </template>
 
@@ -24,24 +25,37 @@ export default {
   text-align: center;
 }
 .header {
-  position: absolute;
-  margin: 80px;
-  text-align: left;
+  width: 800px;
+  margin: 60px auto;
+  text-align: center;
 }
 h1 {
   color: white;
-  font-size: 60px;
-  font-weight: 300;
+  font-size: 90px;
+  font-weight: 500;
   border: 0;
   margin: 0;
 }
 h2 {
-  color: rgb(187, 187, 187);
+  color: white;
   font-size: 18px;
-  font-weight: 700;
-  margin-top: 5px;
+  font-weight: 500;
+  margin-top: 10px;
 }
-.arrow {
+button {
+  background: steelblue;
+  color: white;
+  margin-top: 25px;
+  padding: 15px 35px;
+  font-size: 24px;
+  font-weight: 400;
+  border-radius: 30px;
+  border: 0;
+}
+button:hover {
+  cursor: pointer;
+}
+/* .arrow {
   width: 50px;
   position: absolute;
   padding-bottom: 20px;
@@ -61,5 +75,5 @@ h2 {
 	100% {
 		transform: scale(1);
 	}
-}
+} */
 </style>

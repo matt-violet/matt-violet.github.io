@@ -41,7 +41,7 @@ export const softwareProjects = [
         repo: 'GitHub Repository - Back End'
       }  
     ],
-    image: require('./src/assets/projects/kwik-e-mart.png'),
+    image: require('./src/assets/projects/software/kwik-e-mart.png'),
     video: 'https://www.youtube.com/embed/CLBsz0dTiEk'
   },
   {
@@ -50,8 +50,8 @@ export const softwareProjects = [
     details: 'As an intern at Seasoned I integrated Segment events (from Segment\'s Customer Data Platform) to collect data about admin onboarding events. This information is now used by the Data and Marketing teams to drive analytics, A/B testing, and automated marketing campaigns.',
     stack: ['React', 'Segment Library'],
     github: '',
-    image: require('./src/assets/projects/segment.png'),
-    video: require('./src/assets/projects/segment.png')
+    image: require('./src/assets/projects/software/segment.png'),
+    video: require('./src/assets/projects/software/segment.png')
   },
   {
     title: 'Internal Tool',
@@ -59,8 +59,8 @@ export const softwareProjects = [
     details: 'As an intern at Seasoned I developed reusable components for an internal tool for the Customer Service team. In addition to building stylized menus and cards for admins, job seekers, and stores, I implemented GraphQL queries to fetch relevant data from a Postgres database.',
     stack: ['Vue', 'Vuetify', 'GraphQL', 'PostgreSQL'],
     github: '',
-    image: require('./src/assets/projects/vuetify.png'),
-    video:require('./src/assets/projects/vuetify.png')
+    image: require('./src/assets/projects/software/vuetify.png'),
+    video:require('./src/assets/projects/software/vuetify.png')
   },
   {
     title: 'Open Restaurant',
@@ -68,7 +68,7 @@ export const softwareProjects = [
     details: 'Built responsive image gallery with modal view showing photo details, flagging options, and intuitive navigation. Designed database schema to optimize loading speeds by hosting images in AWS S3 buckets.',
     stack: ['React', 'Styled-Components', 'Express', 'Ajax', 'MongoDB', 'Faker', 'Jest', 'Enzyme', 'Amazon S3'],
     github: 'https://github.com/krummurk/photos-module',
-    image: require('./src/assets/projects/restaurant.jpg'),
+    image: require('./src/assets/projects/software/restaurant.jpg'),
     video: 'https://www.youtube.com/embed/LZBo0UIRxvI'
   },
   {
@@ -77,8 +77,8 @@ export const softwareProjects = [
     details: 'Scaled the back end of a room reviews app to handle 10 million records and 100 requests per second. Benchmarked performance of a SQL vs. NoSQL database with 10M records to determine optimal database. Deployed app on AWS and stress tested server to identify performance bottlenecks.',
     stack: ['PostgreSQL', 'Cassandra', 'Express', 'AWS', 'k6', 'New Relic'],
     github: 'https://github.com/social-inn/Reviews',
-    image: require('./src/assets/projects/bed.jpg'),
-    video: require('./src/assets/projects/social-in-test.png')
+    image: require('./src/assets/projects/software/bed.jpg'),
+    video: require('./src/assets/projects/software/social-in-test.png')
   },
   {
     title: 'Connect Four',
@@ -86,7 +86,7 @@ export const softwareProjects = [
     details: 'Developed game in which two players alternately place pieces into a 7x7 board trying to place 4 adjacent pieces. Implemented animations and dynamically rendering board, game status, and rematch button.',
     stack: ['React', 'CSS animations'],
     github: 'https://github.com/matt-violet/connect4',
-    image: require('./src/assets/projects/connect-four.png'),
+    image: require('./src/assets/projects/software/connect-four.png'),
     video: 'https://www.youtube.com/embed/AM0sI6ZqEQw'
   },
   {
@@ -95,8 +95,51 @@ export const softwareProjects = [
     details: 'Developed a full stack application to simulate modern insulin pump dosage algorithms based on user’s meal choice, current blood glucose (bg) level, insulin-to-carb ratio, bg correction factor, future exercise plans, and other factors. Below is a theoretical example of the kind of mental calculations insulin users must perform ahead of every meal.',
     stack: ['React', 'Express', 'MongoDB'],
     github: 'https://github.com/matt-violet/My-Bolus',
-    image: require('./src/assets/projects/vial.jpg'),
+    image: require('./src/assets/projects/software/vial.jpg'),
     ppt: 'https://drive.google.com/file/d/1D8tp35PoCCbMzuWLTPHFI5oGN7nFhIQ1/view?usp=sharing',
     video: 'https://www.youtube.com/embed/OsGm4uK7SEs'
+  }
+];
+
+export const designProjects = [
+  {
+    image: require('./src/assets/projects/design/symposium-2019.jpg'),
+    description: 'Event Flyer',
+  },
+  {
+    image: require('./src/assets/projects/design/stories-from-the-threshold.jpg'),
+    description: 'Event Flyer',
+  },
+  {
+    image: require('./src/assets/projects/design/thinking-out-loud.jpg'),
+    description: 'Event Flyer',
+  },
+  {
+    image: require('./src/assets/projects/design/GA-2017.png'),
+    description: 'Recruitment Flyer',
+  },
+  {
+    image: require('./src/assets/projects/design/SKSM-banner.jpg'),
+    description: 'Retractable Banner',
+  },
+  {
+    image: require('./src/assets/projects/design/GA-2016.png'),
+    description: 'Magazine Ad',
+  },
+  {
+    image: require('./src/assets/projects/design/GA-2018.png'),
+    description: 'Magazine Ad',
+  },
+  {
+    image: require('./src/assets/projects/design/city-of-dreams.jpg'),
+    description: 'General Brochure',
+  },
+  {
+    image: require('./src/assets/projects/design/HLTW-cover.jpg'),
+    description: 'Page Layouts',
+  },
+  {
+    image: require('./src/assets/projects/design/SEAsia.png'),
+    description: 'Personal Project',
   }
 ];

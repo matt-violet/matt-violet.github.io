@@ -2,9 +2,9 @@
   <div id="work">
     <h1>WORK</h1>
     <div class="inner-content">
-      <div class="bg-div">
-        <h2 class="section-title">Software Projects:</h2>
-        <div v-for="(project, i) in softwareProjects" :key="i" class="project" data-aos="zoom-in">
+      <div class="software-bg-div">
+        <h2 class="section-title">Software:</h2>
+        <div v-for="(project, i) in softwareProjects" :key="i" class="software-project" data-aos="zoom-in">
           <div class="img-div">
             <img class="img" :src="project.image">
           </div>
@@ -19,12 +19,23 @@
           </div>
         </div>
       </div>
+      <div class="design-bg-div">
+        <h2 class="section-title">Design:</h2>
+        <div v-for="(project, i) in designProjects" :key="i" class="design-project">
+          <div class="design-img-div">
+            <img class="design-img" :src="project.image">
+          </div>
+          <div class="design-text-div">
+            <p class="design-description">{{ project.description }}</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import { softwareProjects } from '../../data.js'
+import { softwareProjects, designProjects } from '../../data.js'
 export default {
   name: 'Work',
   props: {
@@ -32,7 +43,8 @@ export default {
   },
   data() {
     return {
-      softwareProjects: softwareProjects
+      softwareProjects: softwareProjects,
+      designProjects: designProjects
     }
   }
 }
@@ -45,7 +57,7 @@ export default {
 .inner-content {
   padding: 75px;
 }
-.bg-div {
+.software-bg-div {
   background: rgb(238, 238, 238);
   padding: 30px;
   border-radius: 5px;
@@ -61,8 +73,9 @@ h1 {
 }
 .section-title {
   display: block;
+  margin-top: 0;
 }
-.project {
+.software-project {
   width: 250px;
   height: 250px;
   box-shadow: 1px 2px 8px 0px grey;
@@ -135,17 +148,55 @@ h1 {
   border-radius: 20px;
   display: block;
 }
+/* ---------------------- DESIGN PROJECTS ---------------------- */
+.design-bg-div {
+  background: rgb(238, 238, 238);
+  padding: 30px;
+  border-radius: 5px;
+  margin-top: 50px;
+}
+.design-project {
+  width: 175px;
+  height: 175px;
+  box-shadow: 1px 2px 8px 0px grey;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 0 25px 25px 0;
+  overflow: hidden;
+  background: white;
+}
+.design-img-div {
+  width: 100%;
+  height: 130px;
+  overflow: hidden;
+}
+.design-img {
+  width: 100%;
+  min-height: 100%;
+}
+.design-text-div {
+  margin: 0;
+  border-top: 1px solid black;
+  padding: 5px 10px;
+  height: 33%;
+}
+.design-description {
+  margin: 0;
+  padding-top: 5px;
+  font-weight: 700;
+  font-size: 16px;
+}
 /* ---------------------- HOVER EFFECTS ---------------------- */
-.project:hover .img-div {
+.software-project:hover .img-div {
   height: 0;
 }
-.project:hover .stack, .project:hover .stack-header, .project:hover .details-btn {
+.software-project:hover .stack, .software-project:hover .stack-header, .software-project:hover .details-btn {
   opacity: 1;
 }
-.project:hover .title {
+.software-project:hover .title {
   margin: 15px 0 0 0;
 }
-.project:hover .text-div {
+.software-project:hover .text-div {
   height: 250px;
 }
 .details-btn:hover {
