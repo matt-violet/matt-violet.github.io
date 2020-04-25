@@ -1,12 +1,12 @@
 <template>
   <div id="work-details">
-    <div class="inner-content" data-aos="zoom-in">
+    <div class="inner-content">
       <div class="close-btn-div">
         <img class="close-btn" src="../assets/icons/close.png" v-on:click="$emit('nav', 'work')">
       </div>
-      <p class="title">{{ project.title }}</p>
-      <p class="description">{{ project.description }}</p>
-      <div class="video-div">  
+      <p class="title" data-aos="zoom-in">{{ project.title }}</p>
+      <p class="description" data-aos="zoom-in">{{ project.description }}</p>
+      <div class="video-div" data-aos="zoom-in">  
         <iframe 
           class="video" 
           v-if='project.title!=="Social Inn" && project.title!=="Segment Events" && project.title!=="Internal Tool"' 
@@ -19,7 +19,7 @@
         </iframe>
         <img v-else class='img' width="660" height="415" :src='project.video'>
       </div>
-      <div class="text-div">
+      <div class="text-div" data-aos="zoom-in">
         <div class="details-div">
           <p class="details">{{ project.details }}</p>
           <p class="stack" v-for="(stack, i) of project.stack" :key="i">{{ stack }}</p>

@@ -11,7 +11,12 @@
       <Contact/>
     </div>
     <WorkDetails 
-      v-else
+      v-if="!featuredProject.isDesignProject"
+      :project="featuredProject"
+      @nav="navigate"
+    />
+    <DesignWorkDetails
+      v-if="featuredProject.isDesignProject"
       :project="featuredProject"
       @nav="navigate"
     />
@@ -26,6 +31,7 @@ import Skills from './components/Skills.vue'
 import Work from './components/Work.vue'
 import Contact from './components/Contact.vue'
 import WorkDetails from './components/WorkDetails.vue'
+import DesignWorkDetails from './components/DesignWorkDetails.vue'
 
 export default {
   name: 'App',
@@ -37,6 +43,7 @@ export default {
     Work,
     Contact,
     WorkDetails,
+    DesignWorkDetails,
   },
   data() {
     return {

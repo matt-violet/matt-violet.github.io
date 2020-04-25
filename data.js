@@ -105,41 +105,51 @@ export const designProjects = [
   {
     image: require('./src/assets/projects/design/symposium-2019.jpg'),
     description: 'Event Flyer',
+    isDesignProject: true
   },
   {
     image: require('./src/assets/projects/design/stories-from-the-threshold.jpg'),
     description: 'Event Flyer',
+    isDesignProject: true
   },
   {
     image: require('./src/assets/projects/design/thinking-out-loud.jpg'),
     description: 'Event Flyer',
+    isDesignProject: true
   },
   {
     image: require('./src/assets/projects/design/GA-2017.png'),
     description: 'Recruitment Flyer',
+    isDesignProject: true
   },
   {
     image: require('./src/assets/projects/design/SKSM-banner.jpg'),
     description: 'Retractable Banner',
+    isDesignProject: true
   },
   {
     image: require('./src/assets/projects/design/GA-2016.png'),
     description: 'Magazine Ad',
+    isDesignProject: true
   },
   {
     image: require('./src/assets/projects/design/GA-2018.png'),
     description: 'Magazine Ad',
+    isDesignProject: true
   },
   {
     image: require('./src/assets/projects/design/city-of-dreams.jpg'),
     description: 'General Brochure',
+    isDesignProject: true
   },
   {
     image: require('./src/assets/projects/design/HLTW-cover.jpg'),
     description: 'Page Layouts',
+    isDesignProject: true
   },
   {
     image: require('./src/assets/projects/design/SEAsia.png'),
     description: 'Personal Project',
+    isDesignProject: true
   }
 ];

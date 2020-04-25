@@ -19,9 +19,9 @@
           </div>
         </div>
       </div>
-      <div class="design-bg-div">
+      <div class="design-bg-div" id="design-bg-div">
         <h2 class="section-title">Design:</h2>
-        <div v-for="(project, i) in designProjects" :key="i" class="design-project">
+        <div v-for="(project, i) in designProjects" :key="i" class="design-project" v-on:click="$emit('viewProjectDetails', project)">
           <div class="design-img-div">
             <img class="design-img" :src="project.image">
           </div>
@@ -176,7 +176,6 @@ h1 {
 }
 .design-text-div {
   margin: 0;
-  border-top: 1px solid black;
   padding: 5px 10px;
   height: 33%;
 }
@@ -185,6 +184,13 @@ h1 {
   padding-top: 5px;
   font-weight: 700;
   font-size: 16px;
+}
+.design-project:hover {
+  cursor: pointer;
+}
+.design-project:hover .design-img {
+  transform: scale(1.1);
+  transition: .3s;
 }
 /* ---------------------- HOVER EFFECTS ---------------------- */
 .software-project:hover .img-div {
