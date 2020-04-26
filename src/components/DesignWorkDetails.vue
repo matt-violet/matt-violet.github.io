@@ -3,9 +3,14 @@
     <div class="close-btn-div">
       <img class="close-btn" src="../assets/icons/close.png" v-on:click="$emit('nav', 'design-bg-div')">
     </div>
-    <div class="img-div" data-aos="zoom-in">
-      <img class="img" :src="project.image">
+    <div class="track">
+      <img class="left arrow" src="../assets/icons/left-arrow.png" v-on:click="$emit('handlePreviousProject', project)">
+      <div class="img-div" data-aos="zoom-in">
+        <img class="img" v-for="(image, i) of project.images" :key="i" :src="image">
+      </div>
+      <img class="right arrow" src="../assets/icons/right-arrow.png" v-on:click="$emit('handleNextProject', project)">
     </div>
+    <p class="details">{{ project.details }}</p>
   </div>
 </template>
 
@@ -14,7 +19,9 @@ export default {
   name: 'DesignWorkDetails',
   props: {
     nav: {type: Function},
-    project: {type: Object} 
+    project: {type: Object},
+    handleNextProject: {type: Function},
+    handlePreviousProject: {type: Function}
   }
 }
 </script>
@@ -41,14 +48,38 @@ export default {
   cursor: pointer;
   transform: rotate(90deg);
 }
+.track {
+  position: relative;
+}
+.arrow {
+  width: 40px;
+  top: 200px;
+  position: absolute;
+  display: inline-block;
+}
+.arrow:hover {
+  cursor: pointer;
+}
+.left {
+  transform: translateX(-75px); 
+}
+.right {
+  transform: translateX(35px);
+}
 .img-div {
-  max-width: 70%;
+  width: 60%;
   margin: auto;
+  display: inline-block;
 }
 .img {
   max-height: 1500px;
   max-width: 100%;
+  margin-bottom: 50px;
   -webkit-filter: drop-shadow(1px 2px 8px rgb(107, 107, 107));
   filter: drop-shadow(1px 2px 8px rgb(107, 107, 107));
+}
+.details {
+  font-weight: 700;
+  margin-top: 0;
 }
 </style>

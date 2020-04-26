@@ -11,19 +11,22 @@
       <Contact/>
     </div>
     <WorkDetails 
-      v-if="!featuredProject.isDesignProject"
+      v-if="showProject && featuredProject && !featuredProject.isDesignProject"
       :project="featuredProject"
       @nav="navigate"
     />
     <DesignWorkDetails
-      v-if="featuredProject.isDesignProject"
+      v-if="showProject && featuredProject && featuredProject.isDesignProject"
       :project="featuredProject"
       @nav="navigate"
+      @handleNextProject="showNextProject"
+      @handlePreviousProject="showPreviousProject"
     />
   </div>
 </template>
 
 <script>
+import { designProjects } from '../data.js'
 import Navbar from './components/Navbar.vue'
 import Home from './components/Home.vue'
 import About from './components/About.vue'
@@ -67,6 +70,20 @@ export default {
     handleViewProjectDetails(project) {
       this.showProject = !this.showProject;
       this.featuredProject = project;
+    },
+    showNextProject(currentProj) {
+      if (!designProjects[designProjects.indexOf(currentProj) + 1]) {
+        this.featuredProject = designProjects[0];
+        return;
+      }
+      this.featuredProject = designProjects[(designProjects.indexOf(currentProj)) + 1];
+    },
+    showPreviousProject(currentProj) {
+      if (!designProjects[designProjects.indexOf(currentProj) - 1]) {
+        this.featuredProject = designProjects[designProjects.length - 1];
+        return;
+      }
+      this.featuredProject = designProjects[designProjects.indexOf(currentProj) - 1];
     }
   }
 }

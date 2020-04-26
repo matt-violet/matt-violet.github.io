@@ -103,53 +103,67 @@ export const softwareProjects = [
 
 export const designProjects = [
   {
-    image: require('./src/assets/projects/design/symposium-2019.jpg'),
+    images: [require('./src/assets/projects/design/symposium-2019.jpg')],
     description: 'Event Flyer',
+    details: 'Event Flyer, 2019',
     isDesignProject: true
   },
   {
-    image: require('./src/assets/projects/design/stories-from-the-threshold.jpg'),
+    images: [require('./src/assets/projects/design/stories-from-the-threshold.jpg')],
     description: 'Event Flyer',
+    details: 'Event Flyer, 2018',
     isDesignProject: true
   },
   {
-    image: require('./src/assets/projects/design/thinking-out-loud.jpg'),
+    images: [require('./src/assets/projects/design/thinking-out-loud.jpg')],
     description: 'Event Flyer',
+    details: 'Event Flyer, 2018',
     isDesignProject: true
   },
   {
-    image: require('./src/assets/projects/design/GA-2017.png'),
+    images: [require('./src/assets/projects/design/GA-2017.png')],
     description: 'Recruitment Flyer',
+    details: 'Recruitment Flyer, 2018',
     isDesignProject: true
   },
   {
-    image: require('./src/assets/projects/design/SKSM-banner.jpg'),
+    images: [require('./src/assets/projects/design/SKSM-banner.jpg')],
     description: 'Retractable Banner',
+    details: '8-foot Retractable Banner, 2017',
     isDesignProject: true
   },
   {
-    image: require('./src/assets/projects/design/GA-2016.png'),
+    images: [require('./src/assets/projects/design/GA-2016.png')],
     description: 'Magazine Ad',
+    details: 'Ad in UU World Magazine, 2016',
     isDesignProject: true
   },
   {
-    image: require('./src/assets/projects/design/GA-2018.png'),
+    images: [require('./src/assets/projects/design/GA-2018.png')],
     description: 'Magazine Ad',
+    details: 'Ad in UU World Magazine, 2018',
     isDesignProject: true
   },
   {
-    image: require('./src/assets/projects/design/city-of-dreams.jpg'),
+    images: [require('./src/assets/projects/design/city-of-dreams.jpg')],
     description: 'General Brochure',
+    details: 'General Brochure, 2012',
     isDesignProject: true
   },
   {
-    image: require('./src/assets/projects/design/HLTW-cover.jpg'),
+    images: [
+      require('./src/assets/projects/design/HLTW-cover.jpg'),
+      require('./src/assets/projects/design/HLTW-page.jpg'),
+      require('./src/assets/projects/design/HLTW-credit.jpg'),      
+    ],
     description: 'Page Layouts',
+    details: 'Designed page layouts for the book "Hunter Leads the Way", 2017',
     isDesignProject: true
   },
   {
-    image: require('./src/assets/projects/design/SEAsia.png'),
+    images: [require('./src/assets/projects/design/SEAsia.png')],
     description: 'Personal Project',
+    details: 'Graphic for Personal Project, 2015',
     isDesignProject: true
   }
 ];

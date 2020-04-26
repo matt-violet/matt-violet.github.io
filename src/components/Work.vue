@@ -23,7 +23,7 @@
         <h2 class="section-title">Design:</h2>
         <div v-for="(project, i) in designProjects" :key="i" class="design-project" v-on:click="$emit('viewProjectDetails', project)">
           <div class="design-img-div">
-            <img class="design-img" :src="project.image">
+            <img class="design-img" :src="project.images[0]">
           </div>
           <div class="design-text-div">
             <p class="design-description">{{ project.description }}</p>
