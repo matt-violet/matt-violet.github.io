@@ -114,4 +114,12 @@ p {
   display: block;
   margin-top: 10px;
 }
+@media (max-width: 1000px) {
+  #work-details {
+    margin-left: 0;
+  }
+  .close-btn {
+    margin-top: 70px;
+  }
+}
 </style>

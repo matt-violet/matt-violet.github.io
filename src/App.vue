@@ -113,4 +113,10 @@ body, html {
   position: fixed;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgb(0, 0, 0, 0));
 }
+@media (max-width: 1000px) {
+  .components {
+    width: 100%;
+    margin: 70px 0 0 0;
+  }
+}
 </style>

@@ -25,7 +25,7 @@ export default {
   text-align: center;
 }
 .header {
-  width: 800px;
+  width: 600px;
   margin: 60px auto;
   text-align: center;
 }
@@ -76,4 +76,10 @@ button:hover {
 		transform: scale(1);
 	}
 } */
+/* --------------------------- MEDIA QUERY --------------------------- */
+@media (max-width: 1000px) {
+  .header {
+    margin-top: 125px;
+  }
+}
 </style>

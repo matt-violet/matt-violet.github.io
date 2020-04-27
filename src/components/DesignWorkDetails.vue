@@ -82,4 +82,12 @@ export default {
   font-weight: 700;
   margin-top: 0;
 }
+@media (max-width: 1000px) {
+  #design-work-details {
+    margin: 0;
+  }
+  .close-btn {
+    margin-top: 70px;
+  }
+}
 </style>
