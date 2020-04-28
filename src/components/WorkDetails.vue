@@ -54,6 +54,9 @@ export default {
 p {
   margin: 0;
 }
+a {
+  font-weight: 500;
+}
 .close-btn-div {
   text-align: left;
 }
@@ -90,14 +93,18 @@ p {
   font-weight: 700;
 }
 .description {
-  font-size: 16px;
+  font-size: 18px;
+  font-weight: 400;
   margin-bottom: 30px;
+  color: grey;
 }
 .details-div {
   text-align: left;
 }
 .details {
   margin-bottom: 30px;
+  color: grey;
+  font-weight: 400;
 }
 .stack {
   display: inline-block;

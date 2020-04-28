@@ -1,22 +1,20 @@
 <template>
   <div id="contact">
-    <h1>Contact</h1>
+    <h1>CONTACT</h1>
     <div class="inner-content">
       <p>I'm currently available for hire and open to discussing any opportunities.</p>
-      <div class="bg-div">
-        <div class="containers">
-          <div class="container" v-on:click='handleLinkClick("mattviolet@gmail.com")'>
-            <img class="icon" src="../assets/icons/email.png"/>
-            <p class="text">mattviolet@gmail.com</p>
-          </div>
-          <div class="container" v-on:click='handleLinkClick("https://github.com/matt-violet")'>
-            <img class="icon" src="../assets/icons/github.png"/>
-            <p class="text">github.com/matt-violet</p>
-          </div>
-          <div class="container" v-on:click='handleLinkClick("https://www.linkedin.com/in/mattviolet")'>
-            <img class="icon" src="../assets/icons/linkedin.png"/>
-            <p class="text">linkedin.com/in/mattviolet</p>
-          </div>
+      <div class="containers">
+        <div class="container" v-on:click='handleLinkClick("mattviolet@gmail.com")'>
+          <img class="icon" src="../assets/icons/email.png"/>
+          <p class="link-text">mattviolet@gmail.com</p>
+        </div>
+        <div class="container" v-on:click='handleLinkClick("https://github.com/matt-violet")'>
+          <img class="icon" src="../assets/icons/github.png"/>
+          <p class="link-text">github.com/matt-violet</p>
+        </div>
+        <div class="container" v-on:click='handleLinkClick("https://www.linkedin.com/in/mattviolet")'>
+          <img class="icon" src="../assets/icons/linkedin.png"/>
+          <p class="link-text">linkedin.com/in/mattviolet</p>
         </div>
       </div>
     </div>
@@ -52,43 +50,47 @@ export default {
   margin-top: 30px;
 }
 h1 {
-  /* width: 100%; */
   padding: 30px 75px;
   font-size: 50px;
-  font-weight: 500;
-  color: black;
+  font-weight: 700;
+  color: white;
   background: lightsalmon;
   margin: 0;
   border-bottom: 1px solid lightgrey;
 }
+p {
+  color: grey;
+  font-size: 18px;
+  font-weight: 400;
+}
 .containers {
-  margin-top: 30px;
+  margin: 30px 0 0 50px;
 }
 .container {
   position: relative;
-  margin: 0 0 15px 0;
+  margin: 0 0 10px 0;
   vertical-align: middle;
 }
 .container:hover {
   cursor: pointer;
 }
-.container:hover .text {
-  color: steelblue;
+.container:hover .link-text {
   transition: .3s;
-  font-weight: 700;
+  font-weight: 600;
 }
 .icon {
   display: inline-block;
   position: relative;
-  height: 40px;
-  margin-right: 20px;
+  height: 30px;
+  margin-right: 15px;
 }
-.text {
+.link-text {
   display: inline-block;
   position: absolute;
-  font-size: 18px;
-  font-weight: 300;
+  font-size: 16px;
+  font-weight: 400;
   margin: 0;
-  top: 15%;
+  top: 10%;
+  color: black;
 }
 </style>

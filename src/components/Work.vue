@@ -65,8 +65,8 @@ export default {
 h1 {
   padding: 30px 75px;
   font-size: 50px;
-  font-weight: 500;
-  color: black;
+  font-weight: 700;
+  color: white;
   background: lightsalmon;
   margin: 0;
   border-bottom: 1px solid lightgrey;
@@ -84,6 +84,7 @@ h1 {
   margin: 0 25px 25px 0;
   overflow: hidden;
   background: white;
+  text-align: left;
 }
 .img-div {
   width: 250px;
@@ -99,7 +100,7 @@ h1 {
 }
 .text-div {
   margin: 0;
-  padding: 0 10px;
+  padding: 0 15px;
   position: relative;
   height: 33%;
 }
@@ -112,6 +113,7 @@ h1 {
 .description {
   margin: 5px 0;
   font-size: 14px;
+  color: grey;
 }
 .stack-header {
   opacity: 0;
@@ -210,5 +212,105 @@ h1 {
   color: white;
   transition: .3s;
   cursor: pointer;
+}
+/* ---------------------- SOFTWARE PROJECTS MEDIA QUERY ---------------------- */
+@media (max-width: 1335px) {
+  .software-project {
+    width: 200px;
+    height: 200px;
+  }
+  .img-div {
+    width: 200px;
+  }
+  .title {
+    margin: 5px 0 0 0;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  .description {
+    font-size: 12px;
+  }
+  .stack-header {
+    font-size: 11px;
+    font-weight: 700;
+    margin: 5px 5px 0 0;
+  }
+  .stack {
+    font-size: 10px;
+    font-weight: 600;
+    padding: 3px 8px;
+  }
+  .btn-div {
+    width: 170px;
+    bottom: 10px;
+  }
+  .details-btn {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 8px;
+  }
+  .software-project:hover .text-div {
+    height: 200px;
+    width: 170px;
+  }
+}
+@media (max-width: 1185px) {
+  .software-project {
+    width: 150px;
+    height: 150px;
+  }
+  .img-div {
+    width: 150px;
+  }
+  .title {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 700;
+  }
+  .description {
+    font-size: 10px;
+    margin-top: 0;
+    line-height: 1.2;
+  }
+  .text-div {
+    padding: 0 10px;
+  }
+  .stack, .stack-header {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
+  .software-project:hover .text-div {
+    height: 150px;
+    width: 130px;
+  }
+  .btn-div {
+    width: 130px;
+    bottom: 10px;
+  }
+  .details-btn {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 8px;
+  }
+}
+/* ---------------------- DESIGN PROJECTS MEDIA QUERY ---------------------- */
+@media (max-width: 1111px) {
+  .design-project {
+    width: 125px;
+    height: 125px;
+  }
+  .design-img-div {
+    height: 95px;
+  }
+  .design-text-div {
+    padding: 5px 10px;
+    height: 33%;
+  }
+  .design-description {
+    padding-top: 2px;
+    font-weight: 500;
+    font-size: 12px;
+  }
 }
 </style>

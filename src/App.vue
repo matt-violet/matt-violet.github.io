@@ -94,6 +94,12 @@ body, html {
   margin: 0;
   height: 100%;
 }
+a {
+  color: blue;
+}
+a:visited {
+  color: black;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

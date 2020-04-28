@@ -28,7 +28,7 @@ export const skills = {
 export const softwareProjects = [
   {
     title: 'Kwik-e-Mart',
-    description: 'Mock online grocery store application',
+    description: 'Mock online grocery store app',
     details: 'Welcome to Kwik-e-Mart, a full stack CRUD application using RESTful API architecture. Users can filter and select groceries for their shopping cart, add a payment method, and edit / confirm their order before checkout.',
     stack: ['Vue', 'Vue Router', 'Node', 'Express', 'Axios', 'Sequelize', 'PostgreSQL'],
     github: [
@@ -82,7 +82,7 @@ export const softwareProjects = [
   },
   {
     title: 'Connect Four',
-    description: 'Single Page Connect Four Game',
+    description: 'Single page two player game',
     details: 'Developed game in which two players alternately place pieces into a 7x7 board trying to place 4 adjacent pieces. Implemented animations and dynamically rendering board, game status, and rematch button.',
     stack: ['React', 'CSS animations'],
     github: 'https://github.com/matt-violet/connect4',

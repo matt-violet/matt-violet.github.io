@@ -79,7 +79,9 @@ export default {
   filter: drop-shadow(1px 2px 8px rgb(107, 107, 107));
 }
 .details {
-  font-weight: 700;
+  color: grey;
+  font-size: 16px;
+  font-weight: 500;
   margin-top: 0;
 }
 @media (max-width: 1000px) {

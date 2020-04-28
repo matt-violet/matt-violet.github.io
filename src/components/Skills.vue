@@ -3,7 +3,7 @@
     <h1>SKILLS</h1>
     <div class="inner-content">
       <p>Over the last couple years, I have taken a deep dive into the world of software engineering.</p>
-      <p>I began by teaching myself basic skills like HTML, CSS, and vanilla JavaScript. Then I decided to focus on my learning full-time, completing <strong>over 1,000 hours</strong> of advanced computer science curriculum modeling today's software engineering industry. Most recently, I gained invaluable <strong>hands-on experience as an intern</strong> working in a professional codebase at Seasoned.
+      <p>I began by teaching myself basic skills like HTML, CSS, and vanilla JavaScript. Then I decided to focus on my learning full-time, completing <strong>over 1,000 hours</strong> of advanced computer science curriculum modeling today's software engineering industry. Most recently, I gained invaluable <strong>hands-on experience as an intern</strong> working in a professional codebase at <a href="https://www.seasoned.co/" target="blank">Seasoned</a>.
       <p>Though I have encountered plenty of challenges, I'm validated by my accomplishments and remain committed to learning and pushing myself to the next level at all times.
       <div class="stats-div">
         <div class="stat">
@@ -27,7 +27,7 @@
       <div class="github-div">
         <img class="github-squares" src="../assets/github-squares.png">
       </div>
-      <p>My favorite tools right now are React, Vue, Express, MongoDB, and PostgreSQL. But I have experience with all of the following:</p>
+      <p>My favorite tools right now are React, Vue, Express, MongoDB, PostgreSQL, and Node. But I have experience with all of the following:</p>
       <div class="skills-boxes">
         <div class="skills-box">
           <h2 class="skills-header">Front End</h2>
@@ -77,11 +77,16 @@ export default {
 h1 {
   padding: 30px 75px;
   font-size: 50px;
-  font-weight: 500;
-  color: black;
+  font-weight: 700;
+  color: white;
   background: lightsalmon;
   margin: 0;
   border-bottom: 1px solid lightgrey;
+}
+p {
+  font-size: 18px;
+  font-weight: 400;
+  color: grey;
 }
 strong {
   font-weight: 900;
@@ -146,7 +151,6 @@ strong {
   margin: 0 0 10px 0;
   font-weight: 500;
   text-align: left;
-  color: slategray;
 }
 .skill-icon {
   transition: 1s ease;
@@ -199,6 +203,9 @@ strong {
   }
   .skill-name {
     font-size: 10px;
+  }
+  p {
+    font-size: 16px;
   }
 }
 @media (max-width: 690px) {
