@@ -31,21 +31,21 @@
       <div class="skills-boxes">
         <div class="skills-box">
           <h2 class="skills-header">Front End</h2>
-          <div v-for="(skill, i) of skills.frontend" :key=i class="skill-div" data-aos="zoom-in" data-aos-offset="200">
+          <div class="skill-div" v-for="(skill, i) of skills.frontend" :key=i data-aos="zoom-in" data-aos-offset="200">
             <img class="skill-icon" :src="skill.image">
             <p class="skill-name">{{ skill.name }}</p>
           </div>
         </div>
         <div class="skills-box">
           <h2 class="skills-header">Back End</h2>
-          <div v-for="(skill, i) of skills.backend" :key=i class="skill-div" data-aos="zoom-in" data-aos-offset="200">
+          <div class="skill-div" v-for="(skill, i) of skills.backend" :key=i data-aos="zoom-in" data-aos-offset="200">
             <img class="skill-icon" :src="skill.image">
             <p class="skill-name">{{ skill.name }}</p>
           </div>
         </div>
         <div class="skills-box">
           <h2 class="skills-header">Additional</h2>
-          <div v-for="(skill, i) of skills.other" :key=i class="skill-div" data-aos="zoom-in" data-aos-offset="200">
+          <div class="skill-div" v-for="(skill, i) of skills.other" :key=i data-aos="zoom-in" data-aos-offset="200">
             <img class="skill-icon" :src="skill.image">
             <p class="skill-name">{{ skill.name }}</p>
           </div>
@@ -94,7 +94,7 @@ strong {
 .stat {
   vertical-align: top;
   margin: 0 20px;
-  width: 175px;
+  width: 17%;
   display: inline-block;
   text-align: center;
 }
@@ -122,6 +122,7 @@ strong {
 }
 .skills-box {
   background: rgb(238, 238, 238);
+  text-align: center;
   border-radius: 5px;
   padding: 20px 30px;
   margin: 30px 0;
@@ -144,6 +145,7 @@ strong {
 .skills-header {
   margin: 0 0 10px 0;
   font-weight: 500;
+  text-align: left;
   color: slategray;
 }
 .skill-icon {
@@ -155,5 +157,62 @@ strong {
   padding: 0;
   font-weight: 500;
   font-size: 14px;
+}
+/* ---------------------------- STATS RESIZING ---------------------------- */
+@media (max-width: 1200px) {
+  .num {
+    font-size: 35px;
+    font-weight: 500;
+  }
+  .num-description {
+    font-size: 13px;
+  }
+}
+@media (max-width: 700px) {
+  .num {
+    font-size: 25px;
+    font-weight: 500;
+  }
+  .num-description {
+    font-size: 12px;
+  }
+}
+/* ---------------------------- ICONS RESIZING ---------------------------- */
+@media (max-width: 1230px) {
+  .skill-div {
+    width: 75px;
+    padding: 15px 0 10px 0;
+  }
+  .skill-icon {
+    height: 30PX;
+  }
+  .skill-name {
+    font-size: 12px;
+  }
+}
+@media (max-width: 1080px) {
+  .skill-div {
+    width: 60px;
+  }
+  .skill-icon {
+    height: 25PX;
+  }
+  .skill-name {
+    font-size: 10px;
+  }
+}
+@media (max-width: 690px) {
+  .skill-div {
+    width: 50px;
+    margin: 0 10px 0 0;
+  }
+  .skill-icon {
+    height: 25PX;
+  }
+  .skill-name {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
 }
 </style>
