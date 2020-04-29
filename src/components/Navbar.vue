@@ -48,7 +48,7 @@ export default {
 .navbar {
   height: 100%;
   width: 300px;
-  background: rgb(70, 130, 180, .8);
+  background: rgb(70, 130, 180, .9);
   margin: 0;
   position: fixed;
   display: inline-block;
@@ -116,7 +116,7 @@ export default {
     position: fixed;
     z-index: 2;
     text-align: left;
-    background: rgb(70, 130, 180, .8);
+    background: rgb(70, 130, 180, .9);
   }
   .small-menu {
     width: 30px;
@@ -129,7 +129,7 @@ export default {
     width: 200px;
     height: auto;
     margin-top: 14px;
-    background: rgb(70, 130, 180, .8);
+    background: rgb(70, 130, 180, .9);
     visibility: visible;
     padding: 10px 10px 5px 10px;
   }

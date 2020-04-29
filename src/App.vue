@@ -1,7 +1,9 @@
 <template>
   <div id="app">
-    <img class="bg-img" src="./assets/pumpp.png">
-    <div class="bg-img"></div>
+    <div class="bg-div">
+      <img class="bg-img" :src="backgroundImage">
+      <div class="bg-gradient"></div>
+    </div>
     <Navbar @nav="navigate"/>
     <div class="components" v-if="!showProject">
       <Home @nav="navigate"/>
@@ -26,7 +28,7 @@
 </template>
 
 <script>
-import { designProjects } from '../data.js'
+import { designProjects, backgroundImages } from '../data.js'
 import Navbar from './components/Navbar.vue'
 import Home from './components/Home.vue'
 import About from './components/About.vue'
@@ -51,7 +53,9 @@ export default {
   data() {
     return {
       showProject: false,
-      featuredProject: {}
+      featuredProject: {},
+      backgroundIndex: 1,
+      backgroundImage: require("./assets/pump.png"),
     }
   },
   methods: {
@@ -85,6 +89,15 @@ export default {
       }
       this.featuredProject = designProjects[designProjects.indexOf(currentProj) - 1];
     }
+  },
+  mounted() {
+    const bgImgs = backgroundImages;
+    setInterval(() => {
+      this.backgroundImage = bgImgs[this.backgroundIndex];
+      this.backgroundIndex === 3 ? 
+        this.backgroundIndex = 0 : 
+        this.backgroundIndex++
+    }, 3500);
   }
 }
 </script>
@@ -112,17 +125,32 @@ a:visited {
   height: 100%;
   position: absolute;
 }
-.bg-img {
-  min-width: 100%;
-  min-height: 100%;
+.bg-div {
+  width: 100%;
+  height: 100%;
   z-index: -1;
   position: fixed;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgb(0, 0, 0, 0));
+}
+.bg-img {
+  bottom: 50;
+  min-width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.bg-gradient {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: linear-gradient(to bottom, rgba(24, 24, 24, 0.6), rgb(0, 0, 0, 0));
 }
 @media (max-width: 1000px) {
   .components {
     width: 100%;
     margin: 70px 0 0 0;
+  }
+  .bg-img {
+    width: 1000px;
+    min-height: 100%;
   }
 }
 </style>

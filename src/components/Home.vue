@@ -5,7 +5,6 @@
       <h2>I'm Matt, a mission-driven developer with roots in the non-profit world.</h2>
       <button v-on:click="$emit('nav', 'work')">Portfolio</button>
     </div>
-    <!-- <img class="arrow" src="../assets/icons/white-down-arrow.png" v-on:click="$emit('nav', 'about')"> -->
   </div>
 </template>
 
@@ -51,35 +50,22 @@ button {
   font-weight: 400;
   border-radius: 30px;
   border: 0;
+  box-shadow: 1px 2px 8px 0px black;
 }
 button:hover {
+  color: lightsalmon;
+  transition: .3s;
   cursor: pointer;
 }
-/* .arrow {
-  width: 50px;
-  position: absolute;
-  padding-bottom: 20px;
-  bottom: 0;
-  animation: pulse 2s infinite;
-}
-.arrow:hover {
-  cursor: pointer;
-}
-@keyframes pulse {
-	0% {
-		transform: scale(1);
-	}
-	50% {
-		transform: scale(1.5);
-	}
-	100% {
-		transform: scale(1);
-	}
-} */
 /* --------------------------- MEDIA QUERY --------------------------- */
 @media (max-width: 1000px) {
   .header {
-    margin-top: 125px;
+    margin-top: 100px;
+  }
+}
+@media (max-width: 800px) {
+  .header {  
+    width: 400px;
   }
 }
 </style>
