@@ -8,11 +8,11 @@
     <div class="components" v-if="!showProject">
       <Home @nav="navigate"/>
       <About/>
-      <Work @viewProjectDetails="handleViewProjectDetails"/>
+      <Work :viewProjectDetails="handleViewProjectDetails"/>
       <Skills/>
       <Contact/>
     </div>
-    <WorkDetails 
+    <SoftwareWorkDetails 
       v-if="showProject && featuredProject && !featuredProject.isDesignProject"
       :project="featuredProject"
       @nav="navigate"
@@ -35,8 +35,8 @@ import About from './components/About.vue'
 import Skills from './components/Skills.vue'
 import Work from './components/Work.vue'
 import Contact from './components/Contact.vue'
-import WorkDetails from './components/WorkDetails.vue'
-import DesignWorkDetails from './components/DesignWorkDetails.vue'
+import SoftwareWorkDetails from './components/software/SoftwareWorkDetails.vue'
+import DesignWorkDetails from './components/design/DesignWorkDetails.vue'
 
 export default {
   name: 'App',
@@ -47,7 +47,7 @@ export default {
     Skills,
     Work,
     Contact,
-    WorkDetails,
+    SoftwareWorkDetails,
     DesignWorkDetails,
   },
   data() {

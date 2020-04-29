@@ -2,7 +2,7 @@
   <div id="work-details">
     <div class="inner-content">
       <div class="close-btn-div">
-        <img class="close-btn" src="../assets/icons/close.png" v-on:click="$emit('nav', 'work')">
+        <img class="close-btn" src="../../assets/icons/close.png" v-on:click="$emit('nav', 'work')">
       </div>
       <p class="title" data-aos="zoom-in">{{ project.title }}</p>
       <p class="description" data-aos="zoom-in">{{ project.description }}</p>
@@ -35,7 +35,7 @@
 
 <script>
 export default {
-  name: 'WorkDetails',
+  name: 'SoftwareWorkDetails',
   props: {
     project: {type: Object},
     nav: {type: Function}

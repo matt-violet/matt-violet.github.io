@@ -10,7 +10,7 @@
         <p class="stack-header">STACK: </p>
         <p class="stack" v-for="(stack, i) of project.stack" :key="i">{{ stack }}</p>
         <div class="btn-div">
-          <button class="details-btn" v-on:click="$emit('viewProjectDetails', project)">DETAILS</button>
+          <button class="details-btn" v-on:click="$emit('viewProjDetails', project)">DETAILS</button>
         </div>
       </div>
     </div>
@@ -18,13 +18,18 @@
 </template>
 
 <script>
-import { softwareProjects } from '../../data.js'
-
+import { softwareProjects } from '../../../data.js'
 export default {
+  props: {
+    viewProjDetails: {type: Function}
+  },
   data() {
     return {
       softwareProjects: softwareProjects
     }
+  },
+  methods: {
+
   }
 }
 </script>
