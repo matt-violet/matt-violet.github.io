@@ -6,19 +6,27 @@
       </div>
       <p class="title" data-aos="zoom-in">{{ project.title }}</p>
       <p class="description" data-aos="zoom-in">{{ project.description }}</p>
-      <div class="video-div" data-aos="zoom-in">  
-        <iframe 
-          class="video" 
-          v-if='project.title!=="Social Inn" && project.title!=="Segment Events" && project.title!=="Internal Tool"' 
-          width="560px" 
-          height="315px" 
-          :src="project.video" 
-          frameborder="0" 
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-          allowfullscreen>
-        </iframe>
-        <img v-else class='img' width="660" height="415" :src='project.video'>
+      
+       <div class="track">
+        <img class="left arrow" src="../../assets/icons/left-arrow.png" v-on:click="$emit('handlePreviousProject', project)">
+
+        <div class="video-div" data-aos="zoom-in">  
+          <iframe 
+            class="video" 
+            v-if='project.title!=="Social Inn" && project.title!=="Segment Events" && project.title!=="Internal Tool"' 
+            width="560px" 
+            height="315px" 
+            :src="project.video" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+          </iframe>
+          <img v-else class='img' width="660" height="415" :src='project.video'>
+        </div>
+      
+        <img class="right arrow" src="../../assets/icons/right-arrow.png" v-on:click="$emit('handleNextProject', project)">
       </div>
+
       <div class="text-div" data-aos="zoom-in">
         <div class="details-div">
           <p class="details">{{ project.details }}</p>
@@ -38,7 +46,9 @@ export default {
   name: 'SoftwareWorkDetails',
   props: {
     project: {type: Object},
-    nav: {type: Function}
+    nav: {type: Function},
+    handleNextProject: {type: Function},
+    handlePreviousProject: {type: Function}
   }
 }
 </script>
@@ -97,6 +107,24 @@ a {
   font-weight: 400;
   margin-bottom: 30px;
   color: grey;
+}
+.track {
+  position: relative;
+}
+.arrow {
+  width: 40px;
+  top: 140px;
+  position: absolute;
+  display: inline-block;
+}
+.arrow:hover {
+  cursor: pointer;
+}
+.left {
+  transform: translateX(-345px); 
+}
+.right {
+  transform: translateX(305px);
 }
 .details-div {
   text-align: left;

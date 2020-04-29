@@ -16,6 +16,8 @@
       v-if="showProject && featuredProject && !featuredProject.isDesignProject"
       :project="featuredProject"
       @nav="navigate"
+      @handleNextProject="showNextProject"
+      @handlePreviousProject="showPreviousProject"
     />
     <DesignWorkDetails
       v-if="showProject && featuredProject && featuredProject.isDesignProject"
@@ -28,7 +30,7 @@
 </template>
 
 <script>
-import { designProjects, backgroundImages } from '../data.js'
+import { designProjects, backgroundImages, softwareProjects } from '../data.js'
 import Navbar from './components/Navbar.vue'
 import Home from './components/Home.vue'
 import About from './components/About.vue'
@@ -76,18 +78,36 @@ export default {
       this.featuredProject = project;
     },
     showNextProject(currentProj) {
-      if (!designProjects[designProjects.indexOf(currentProj) + 1]) {
-        this.featuredProject = designProjects[0];
+      if (currentProj.isDesignProject) {
+        if (!designProjects[designProjects.indexOf(currentProj) + 1]) {
+          this.featuredProject = designProjects[0];
+          return;
+        }
+        this.featuredProject = designProjects[(designProjects.indexOf(currentProj)) + 1];
         return;
+      } else {
+        if (!softwareProjects[softwareProjects.indexOf(currentProj) + 1]) {
+          this.featuredProject = softwareProjects[0];
+          return;
+        }
+        this.featuredProject = softwareProjects[(softwareProjects.indexOf(currentProj)) + 1];
       }
-      this.featuredProject = designProjects[(designProjects.indexOf(currentProj)) + 1];
     },
     showPreviousProject(currentProj) {
-      if (!designProjects[designProjects.indexOf(currentProj) - 1]) {
-        this.featuredProject = designProjects[designProjects.length - 1];
+      if (currentProj.isDesignProject) {
+        if (!designProjects[designProjects.indexOf(currentProj) - 1]) {
+          this.featuredProject = designProjects[designProjects.length - 1];
+          return;
+        }
+        this.featuredProject = designProjects[designProjects.indexOf(currentProj) - 1];
         return;
+      } else {
+        if (!softwareProjects[softwareProjects.indexOf(currentProj) - 1]) {
+          this.featuredProject = softwareProjects[softwareProjects.length - 1];
+          return;
+        }
+        this.featuredProject = softwareProjects[softwareProjects.indexOf(currentProj) - 1];
       }
-      this.featuredProject = designProjects[designProjects.indexOf(currentProj) - 1];
     }
   },
   mounted() {
