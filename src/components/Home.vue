@@ -50,10 +50,9 @@ button {
   font-weight: 400;
   border-radius: 30px;
   border: 0;
-  box-shadow: 1px 2px 8px 0px black;
 }
 button:hover {
-  color: lightsalmon;
+  box-shadow: 1px 2px 8px 0px black;
   transition: .3s;
   cursor: pointer;
 }
