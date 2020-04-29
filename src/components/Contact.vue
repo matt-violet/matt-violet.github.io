@@ -62,6 +62,7 @@ p {
   color: grey;
   font-size: 18px;
   font-weight: 400;
+  margin-top: 0;
 }
 .containers {
   margin: 30px 0 0 50px;
@@ -92,5 +93,10 @@ p {
   margin: 0;
   top: 10%;
   color: black;
+}
+@media (max-width: 700px) {
+  .inner-content {
+    padding: 35px;
+  }
 }
 </style>

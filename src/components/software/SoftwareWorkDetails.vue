@@ -6,10 +6,8 @@
       </div>
       <p class="title" data-aos="zoom-in">{{ project.title }}</p>
       <p class="description" data-aos="zoom-in">{{ project.description }}</p>
-      
-       <div class="track">
+      <div class="track">
         <img class="left arrow" src="../../assets/icons/left-arrow.png" v-on:click="$emit('handlePreviousProject', project)">
-
         <div class="video-div" data-aos="zoom-in">  
           <iframe 
             class="video" 
@@ -23,10 +21,8 @@
           </iframe>
           <img v-else class='img' width="660" height="415" :src='project.video'>
         </div>
-      
         <img class="right arrow" src="../../assets/icons/right-arrow.png" v-on:click="$emit('handleNextProject', project)">
       </div>
-
       <div class="text-div" data-aos="zoom-in">
         <div class="details-div">
           <p class="details">{{ project.details }}</p>
@@ -155,6 +151,30 @@ a {
   }
   .close-btn {
     margin-top: 70px;
+  }
+}
+@media (max-width: 700px) {
+  .video-div {
+    width: 400px;
+    height: 225px;
+  }
+  .arrow {
+    width: 30px;
+    top: 100px;
+  }
+  .left {
+    transform: translateX(-250px); 
+  }
+  .right {
+    transform: translateX(210px); 
+  }
+  .text-div {
+    width: 400px;
+    font-size: 14px;
+  }
+  .img, .video {
+    width: 400px;
+    height: 225px;
   }
 }
 </style>

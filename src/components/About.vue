@@ -82,4 +82,9 @@ strong {
     font-size: 16px;
   }
 }
+@media (max-width: 700px) {
+  .inner-content {
+    padding: 35px;
+  }
+}
 </style>

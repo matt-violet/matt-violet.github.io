@@ -169,8 +169,16 @@ a:visited {
     margin: 70px 0 0 0;
   }
   .bg-img {
-    width: 1000px;
-    min-height: 100%;
+    min-width: 1000px;
+    height: 100%;
+    transform: translateX(-250px);
+  }
+  .bg-div {
+  }
+}
+@media (max-width: 700px) {
+  .bg-img {
+    transform: translateX(-500px);
   }
 }
 </style>

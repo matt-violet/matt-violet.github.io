@@ -69,4 +69,9 @@ h1 {
   border-radius: 5px;
   margin-top: 50px;
 }
+@media (max-width: 700px) {
+  .inner-content {
+    padding: 35px;
+  }
+}
 </style>

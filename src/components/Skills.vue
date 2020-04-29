@@ -221,5 +221,14 @@ strong {
     height: 0;
     visibility: hidden;
   }
+  .stat {
+    margin: 0 10px;
+    width: 20%;
+  }
+}
+@media (max-width: 700px) {
+  .inner-content {
+    padding: 35px;
+  }
 }
 </style>
