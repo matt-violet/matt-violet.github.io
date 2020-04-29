@@ -173,8 +173,6 @@ a:visited {
     height: 100%;
     transform: translateX(-250px);
   }
-  .bg-div {
-  }
 }
 @media (max-width: 700px) {
   .bg-img {
