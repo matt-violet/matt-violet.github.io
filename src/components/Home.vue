@@ -59,12 +59,18 @@ button:hover {
 /* --------------------------- MEDIA QUERY --------------------------- */
 @media (max-width: 1000px) {
   .header {
-    margin-top: 100px;
+    margin-top: 70px;
   }
 }
 @media (max-width: 800px) {
   .header {  
-    width: 400px;
+    width: 350px;
+  }
+  h1 {
+    font-size: 75px;
+  }
+  h2 {
+    font-size: 16px;
   }
 }
 </style>

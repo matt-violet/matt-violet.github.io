@@ -153,15 +153,21 @@ a:visited {
 }
 .bg-img {
   bottom: 50;
+  right: 0;
   min-width: 100%;
   height: 100%;
   position: absolute;
+  animation: grow 3.5s infinite;
+}
+@keyframes grow {
+  from { transform: scale(1); }
+  to { transform: scale(1.1); }
 }
 .bg-gradient {
   width: 100%;
   height: 100%;
   position: absolute;
-  background: linear-gradient(to bottom, rgba(24, 24, 24, 0.6), rgb(0, 0, 0, 0));
+  background: linear-gradient(to bottom, rgba(36, 36, 36, 0.6), rgb(0, 0, 0, 0));
 }
 @media (max-width: 1000px) {
   .components {
@@ -176,7 +182,7 @@ a:visited {
 }
 @media (max-width: 700px) {
   .bg-img {
-    transform: translateX(-500px);
+    right: -40%;
   }
 }
 </style>

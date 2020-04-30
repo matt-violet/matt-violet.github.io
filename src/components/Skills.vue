@@ -6,21 +6,25 @@
       <p>I began by teaching myself basic skills like HTML, CSS, and vanilla JavaScript. Then I decided to focus on my learning full-time, completing <strong>over 1,000 hours</strong> of advanced computer science curriculum modeling today's software engineering industry. Most recently, I gained invaluable <strong>hands-on experience as an intern</strong> working in a professional codebase at <a href="https://www.seasoned.co/" target="blank">Seasoned</a>.
       <p>Though I have encountered plenty of challenges, I'm validated by my accomplishments and remain committed to learning and pushing myself to the next level at all times.
       <div class="stats-div">
-        <div class="stat">
-          <p class="num">2+</p>
-          <p class="num-description">years of programming experience</p>
+        <div class="first-stats">
+          <div class="stat">
+            <p class="num">2+</p>
+            <p class="num-description">years of programming experience</p>
+          </div>
+          <div class="stat">
+            <p class="num">5</p>
+            <p class="num-description">months as a Software Engineer Intern</p>
+          </div>
         </div>
-        <div class="stat">
-          <p class="num">5</p>
-          <p class="num-description">months as a Software Engineer Intern</p>
-        </div>
-        <div class="stat">
-          <p class="num">1,000+</p>
-          <p class="num-description">hours of advanced CS curriculum</p>
-        </div>
-        <div class="stat">
-          <p class="num">93</p>
-          <p class="num-description">pull requests on GitHub</p>
+        <div class="second-stats">
+          <div class="stat">
+            <p class="num">1,000+</p>
+            <p class="num-description">hours of advanced CS curriculum</p>
+          </div>
+          <div class="stat">
+            <p class="num">93</p>
+            <p class="num-description">pull requests on GitHub</p>
+          </div>
         </div>
       </div>
       <p>I'm also active on GitHub:</p>
@@ -31,23 +35,95 @@
       <div class="skills-boxes">
         <div class="skills-box">
           <h2 class="skills-header">Front End</h2>
-          <div class="skill-div" v-for="(skill, i) of skills.frontend" :key=i data-aos="zoom-in" data-aos-offset="200">
-            <img class="skill-icon" :src="skill.image">
-            <p class="skill-name">{{ skill.name }}</p>
+          <div class="first-skills">
+            <div class="skill-div" data-aos="zoom-in" data-aos-offset="200">
+              <img class="skill-icon" :src="skills.frontend[0].image">
+              <p class="skill-name">{{ skills.frontend[0].name }}</p>
+            </div>
+            <div class="skill-div" data-aos="zoom-in" data-aos-offset="200">
+              <img class="skill-icon" :src="skills.frontend[1].image">
+              <p class="skill-name">{{ skills.frontend[1].name }}</p>
+            </div>
+            <div class="skill-div" data-aos="zoom-in" data-aos-offset="200">
+              <img class="skill-icon" :src="skills.frontend[2].image">
+              <p class="skill-name">{{ skills.frontend[2].name }}</p>
+            </div>
+          </div>
+          <div class="second-skills">
+            <div class="skill-div" data-aos="zoom-in" data-aos-offset="200">
+              <img class="skill-icon" :src="skills.frontend[3].image">
+              <p class="skill-name">{{ skills.frontend[3].name }}</p>
+            </div>
+            <div class="skill-div" data-aos="zoom-in" data-aos-offset="200">
+              <img class="skill-icon" :src="skills.frontend[4].image">
+              <p class="skill-name">{{ skills.frontend[4].name }}</p>
+            </div>
+            <div class="skill-div" data-aos="zoom-in" data-aos-offset="200">
+              <img class="skill-icon" :src="skills.frontend[5].image">
+              <p class="skill-name">{{ skills.frontend[5].name }}</p>
+            </div>
           </div>
         </div>
         <div class="skills-box">
           <h2 class="skills-header">Back End</h2>
-          <div class="skill-div" v-for="(skill, i) of skills.backend" :key=i data-aos="zoom-in" data-aos-offset="200">
-            <img class="skill-icon" :src="skill.image">
-            <p class="skill-name">{{ skill.name }}</p>
+          <div class="first-skills">
+            <div class="skill-div" data-aos="zoom-in" data-aos-offset="200">
+              <img class="skill-icon" :src="skills.backend[0].image">
+              <p class="skill-name">{{ skills.backend[0].name }}</p>
+            </div>
+            <div class="skill-div" data-aos="zoom-in" data-aos-offset="200">
+              <img class="skill-icon" :src="skills.backend[1].image">
+              <p class="skill-name">{{ skills.backend[1].name }}</p>
+            </div>
+            <div class="skill-div" data-aos="zoom-in" data-aos-offset="200">
+              <img class="skill-icon" :src="skills.backend[2].image">
+              <p class="skill-name">{{ skills.backend[2].name }}</p>
+            </div>
+          </div>
+          <div class="second-skills">
+            <div class="skill-div" data-aos="zoom-in" data-aos-offset="200">
+              <img class="skill-icon" :src="skills.backend[3].image">
+              <p class="skill-name">{{ skills.backend[3].name }}</p>
+            </div>
+            <div class="skill-div" data-aos="zoom-in" data-aos-offset="200">
+              <img class="skill-icon" :src="skills.backend[4].image">
+              <p class="skill-name">{{ skills.backend[4].name }}</p>
+            </div>
+            <div class="skill-div" data-aos="zoom-in" data-aos-offset="200">
+              <img class="skill-icon" :src="skills.backend[5].image">
+              <p class="skill-name">{{ skills.backend[5].name }}</p>
+            </div>
           </div>
         </div>
         <div class="skills-box">
           <h2 class="skills-header">Additional</h2>
-          <div class="skill-div" v-for="(skill, i) of skills.other" :key=i data-aos="zoom-in" data-aos-offset="200">
-            <img class="skill-icon" :src="skill.image">
-            <p class="skill-name">{{ skill.name }}</p>
+          <div class="first-skills">
+            <div class="skill-div" data-aos="zoom-in" data-aos-offset="200">
+              <img class="skill-icon" :src="skills.other[0].image">
+              <p class="skill-name">{{ skills.other[0].name }}</p>
+            </div>
+            <div class="skill-div" data-aos="zoom-in" data-aos-offset="200">
+              <img class="skill-icon" :src="skills.other[1].image">
+              <p class="skill-name">{{ skills.other[1].name }}</p>
+            </div>
+            <div class="skill-div" data-aos="zoom-in" data-aos-offset="200">
+              <img class="skill-icon" :src="skills.other[2].image">
+              <p class="skill-name">{{ skills.other[2].name }}</p>
+            </div>
+          </div>
+          <div class="second-skills">
+            <div class="skill-div" data-aos="zoom-in" data-aos-offset="200">
+              <img class="skill-icon" :src="skills.other[3].image">
+              <p class="skill-name">{{ skills.other[3].name }}</p>
+            </div>
+            <div class="skill-div" data-aos="zoom-in" data-aos-offset="200">
+              <img class="skill-icon" :src="skills.other[4].image">
+              <p class="skill-name">{{ skills.other[4].name }}</p>
+            </div>
+            <div class="skill-div" data-aos="zoom-in" data-aos-offset="200">
+              <img class="skill-icon" :src="skills.other[5].image">
+              <p class="skill-name">{{ skills.other[5].name }}</p>
+            </div>
           </div>
         </div>
       </div>
@@ -96,11 +172,20 @@ strong {
   position: relative;
   text-align: center;
 }
+.first-stats {
+  display: inline-block;
+  position: relative;
+}
+.second-stats {
+  display: inline-block;
+  position: relative;
+}
 .stat {
   vertical-align: top;
   margin: 0 20px;
-  width: 17%;
+  width: 160px;
   display: inline-block;
+  position: relative;
   text-align: center;
 }
 .num {
@@ -131,6 +216,14 @@ strong {
   border-radius: 5px;
   padding: 20px 30px;
   margin: 30px 0;
+}
+.first-skills {
+  display: inline-block;
+  position: relative;
+}
+.second-skills {
+  display: inline-block;
+  position: relative;
 }
 .skill-div {
   box-shadow: 1px 2px 8px 0px grey;
@@ -163,7 +256,10 @@ strong {
   font-size: 14px;
 }
 /* ---------------------------- STATS RESIZING ---------------------------- */
-@media (max-width: 1200px) {
+@media (max-width: 1250px) {
+  .stat {
+    width: 120px;
+  }
   .num {
     font-size: 35px;
     font-weight: 500;
@@ -172,13 +268,14 @@ strong {
     font-size: 13px;
   }
 }
-@media (max-width: 700px) {
-  .num {
-    font-size: 25px;
-    font-weight: 500;
+@media (max-width: 1090px) {
+  .stat {
+    width: 100px;
+    margin: 15px;
   }
-  .num-description {
-    font-size: 12px;
+  .num {
+    font-size: 30px;
+    font-weight: 500;
   }
 }
 /* ---------------------------- ICONS RESIZING ---------------------------- */
@@ -208,10 +305,10 @@ strong {
     font-size: 16px;
   }
 }
-@media (max-width: 690px) {
+@media (max-width: 570px) {
   .skill-div {
     width: 50px;
-    margin: 0 10px 0 0;
+    margin: 0 15px 0 0;
   }
   .skill-icon {
     height: 25PX;
@@ -221,14 +318,16 @@ strong {
     height: 0;
     visibility: hidden;
   }
-  .stat {
-    margin: 0 10px;
-    width: 20%;
+}
+@media (max-width: 479px) {
+  .skill-div {
+    margin: 5px 10px;
   }
 }
+/* ---------------------------- PADDING RESIZING ---------------------------- */
 @media (max-width: 700px) {
   .inner-content {
-    padding: 35px;
+    padding: 30px 15px;
   }
 }
 </style>

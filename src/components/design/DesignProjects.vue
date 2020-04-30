@@ -1,11 +1,45 @@
 <template>
-  <div>
-    <div v-for="(project, i) in designProjects" :key="i" class="design-project" v-on:click="$emit('viewProjDetails', project)">
-      <div class="design-img-div">
-        <img class="design-img" :src="project.images[0]">
+  <div class="design-projects">
+    <div class="project-row">
+      <div v-for="(project, i) in designProjects.slice(0,3)" :key="i" class="design-project" v-on:click="$emit('viewProjDetails', project)">
+        <div class="design-img-div">
+          <img class="design-img" :src="project.images[0]">
+        </div>
+        <div class="design-text-div">
+          <p class="design-description">{{ project.description }}</p>
+        </div>
       </div>
-      <div class="design-text-div">
-        <p class="design-description">{{ project.description }}</p>
+    </div>
+    <div class="project-row">
+      <div class="project-row">
+        <div v-for="(project, i) in designProjects.slice(3,6)" :key="i" class="design-project" v-on:click="$emit('viewProjDetails', project)">
+          <div class="design-img-div">
+            <img class="design-img" :src="project.images[0]">
+          </div>
+          <div class="design-text-div">
+            <p class="design-description">{{ project.description }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="project-row">
+        <div v-for="(project, i) in designProjects.slice(6,9)" :key="i" class="design-project" v-on:click="$emit('viewProjDetails', project)">
+          <div class="design-img-div">
+            <img class="design-img" :src="project.images[0]">
+          </div>
+          <div class="design-text-div">
+            <p class="design-description">{{ project.description }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="project-row">
+        <div v-for="(project, i) in designProjects.slice(9,12)" :key="i" class="design-project" v-on:click="$emit('viewProjDetails', project)">
+          <div class="design-img-div">
+            <img class="design-img" :src="project.images[0]">
+          </div>
+          <div class="design-text-div">
+            <p class="design-description">{{ project.description }}</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -26,9 +60,18 @@ export default {
 </script>
 
 <style scoped>
+.design-projects {
+  text-align: center;
+}
+.project-row {
+  width: 825px;
+  position: relative;
+  margin: auto;
+  text-align: left;
+}
 .design-project {
-  width: 175px;
-  height: 175px;
+  width: 250px;
+  height: 250px;
   box-shadow: 1px 2px 8px 0px grey;
   border-radius: 5px;
   display: inline-block;
@@ -38,7 +81,7 @@ export default {
 }
 .design-img-div {
   width: 100%;
-  height: 130px;
+  height: 200px;
   overflow: hidden;
 }
 .design-img {
@@ -47,14 +90,15 @@ export default {
 }
 .design-text-div {
   margin: 0;
-  padding: 5px 10px;
+  padding: 0px 10px;
   height: 33%;
+  text-align: left;
 }
 .design-description {
-  margin: 0;
+  margin: 10px 0 0 5px;
   padding-top: 5px;
-  font-weight: 700;
-  font-size: 16px;
+  font-weight: 900;
+  font-size: 18px;
 }
 .design-project:hover {
   cursor: pointer;
@@ -64,22 +108,43 @@ export default {
   transition: .3s;
 }
 /* ---------------------- MEDIA QUERY ---------------------- */
-@media (max-width: 1111px) {
+@media (max-width: 1335px) and (min-width: 1185px), (max-width: 1000px) and (min-width: 860px){
+  .project-row {
+    width: 675px;
+  }
   .design-project {
-    width: 125px;
-    height: 125px;
+    width: 200px;
+    height: 200px;
   }
   .design-img-div {
-    height: 95px;
-  }
-  .design-text-div {
-    padding: 5px 10px;
-    height: 33%;
+    height: 160px;
   }
   .design-description {
-    padding-top: 2px;
-    font-weight: 500;
-    font-size: 12px;
+    margin-top: 5px;
+    font-weight: 700;
+    font-size: 16px;
+  }
+}
+/* ---------------------- MEDIA QUERY ---------------------- */
+@media (max-width: 1185px) and (min-width: 1000px), (max-width: 860px) and (min-width: 595px) {
+  .project-row {
+    width: 525px;
+  }
+  .design-project {
+    width: 150px;
+    height: 150px;
+  }
+  .design-img-div {
+    height: 115px;
+  }
+  .design-description {
+    font-size: 13px;
+    margin: 5px 0 0 5px;
+  }
+}
+@media (max-width: 590px) {
+  .project-row {
+    width: 250px;
   }
 }
 </style>

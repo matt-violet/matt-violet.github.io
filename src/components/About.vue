@@ -84,7 +84,16 @@ strong {
 }
 @media (max-width: 700px) {
   .inner-content {
-    padding: 35px;
+    padding: 30px 15px;
+  }
+  .photo-div {
+    width: 180px;
+    height: 220px;
+  }
+  .photo-text {
+    width: 160px;
+    font-size: 12px;
+    padding: 40% 10px 0px 10px;
   }
 }
 </style>

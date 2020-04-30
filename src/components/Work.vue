@@ -4,15 +4,11 @@
     <div class="inner-content">
       <div class="software-bg-div">
         <h2 class="section-title">Software:</h2>
-        <SoftwareProjects
-          @viewProjDetails="handleViewProjDetails"
-        />
+        <SoftwareProjects @viewProjDetails="handleViewProjDetails"/>
       </div>
       <div class="design-bg-div" id="design-bg-div">
         <h2 class="section-title">Design:</h2>
-        <DesignProjects
-          @viewProjDetails="handleViewProjDetails"
-        />
+        <DesignProjects @viewProjDetails="handleViewProjDetails"/>
       </div>
     </div>
   </div>
@@ -71,7 +67,7 @@ h1 {
 }
 @media (max-width: 700px) {
   .inner-content {
-    padding: 35px;
+    padding: 30px 15px;
   }
 }
 </style>
