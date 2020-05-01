@@ -175,22 +175,22 @@ a {
 }
 @media (max-width: 550px) {
   .video-div, .img, .video {
-    width: 250px;
-    height: 132px;
+    width: 270px;
+    height: 159px;
   }
   .arrow {
     width: 25px;
-    top: 60px;
+    top: 65px;
   }
   .left {
-    transform: translateX(-165px); 
+    transform: translateX(-170px); 
   }
   .right {
-    transform: translateX(135px); 
+    transform: translateX(140px); 
   }
   .text-div {
-    width: 250px;
-    font-size: 13px;
+    width: 270px;
+    font-size: 14px;
   }
   .title {
   font-size: 30px;

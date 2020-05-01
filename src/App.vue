@@ -142,7 +142,7 @@ a:visited {
 }
 .components {
   margin-left: 300px;
-  height: 100%;
+  min-height: 100%;
   position: absolute;
 }
 .bg-div {
