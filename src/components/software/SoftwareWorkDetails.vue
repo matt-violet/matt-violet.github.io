@@ -154,7 +154,7 @@ a {
   }
 }
 @media (max-width: 700px) {
-  .video-div {
+  .video-div, .img, .video {
     width: 400px;
     height: 225px;
   }
@@ -172,9 +172,31 @@ a {
     width: 400px;
     font-size: 14px;
   }
-  .img, .video {
-    width: 400px;
-    height: 225px;
+}
+@media (max-width: 550px) {
+  .video-div, .img, .video {
+    width: 250px;
+    height: 132px;
+  }
+  .arrow {
+    width: 25px;
+    top: 60px;
+  }
+  .left {
+    transform: translateX(-165px); 
+  }
+  .right {
+    transform: translateX(135px); 
+  }
+  .text-div {
+    width: 250px;
+    font-size: 13px;
+  }
+  .title {
+  font-size: 30px;
+  }
+  .description {
+    font-size: 16px;
   }
 }
 </style>
