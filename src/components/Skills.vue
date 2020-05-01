@@ -326,7 +326,7 @@ strong {
 }
 /* ---------------------------- PADDING RESIZING ---------------------------- */
 @media (max-width: 700px) {
-  .inner-content {
+  .inner-content, h1 {
     padding: 30px 15px;
   }
 }
