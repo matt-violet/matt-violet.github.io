@@ -57,7 +57,7 @@ export default {
       showProject: false,
       featuredProject: {},
       backgroundIndex: 1,
-      backgroundImage: require("./assets/pump.png"),
+      backgroundImage: require("./assets/matt-nyc.png"),
     }
   },
   methods: {

@@ -183,10 +183,10 @@ a {
     top: 65px;
   }
   .left {
-    transform: translateX(-170px); 
+    transform: translateX(-175px); 
   }
   .right {
-    transform: translateX(140px); 
+    transform: translateX(148px); 
   }
   .text-div {
     width: 270px;
