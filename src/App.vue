@@ -143,7 +143,6 @@ a:visited {
 .components {
   margin-left: 300px;
   height: 100%;
-  position: absolute;
 }
 .bg-div {
   width: 100%;
@@ -173,6 +172,7 @@ a:visited {
   .components {
     width: 100%;
     margin: 70px 0 0 0;
+    position: absolute;
   }
   .bg-img {
     min-width: 1000px;

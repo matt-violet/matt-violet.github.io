@@ -41,9 +41,12 @@ strong {
 }
 #about {
   background: white;
+  width: 100%;
 }
 .inner-content {
   padding: 75px;
+  max-width: 1000px;
+  margin: auto;
 }
 .photo-div {
   width: 260px;

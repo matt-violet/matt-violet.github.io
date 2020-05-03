@@ -40,6 +40,8 @@ export default {
 }
 .inner-content {
   padding: 75px;
+  max-width: 1000px;
+  margin: auto;
 }
 h1 {
   padding: 30px 75px;

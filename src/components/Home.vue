@@ -25,7 +25,8 @@ export default {
 }
 .header {
   width: 600px;
-  margin: 60px auto;
+  padding: 60px 0;
+  margin: auto;
   text-align: center;
 }
 h1 {
@@ -59,7 +60,7 @@ button:hover {
 /* --------------------------- MEDIA QUERY --------------------------- */
 @media (max-width: 1000px) {
   .header {
-    margin-top: 70px;
+    padding-top: 70px;
   }
 }
 @media (max-width: 800px) {

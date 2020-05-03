@@ -42,6 +42,8 @@ export default {
 }
 .inner-content {
   padding: 59px 75px 75px 75px;
+  max-width: 1000px;
+  margin: auto;
 }
 .bg-div {
   background: rgb(238, 238, 238);
