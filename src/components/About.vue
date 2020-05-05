@@ -27,9 +27,8 @@ h1 {
   font-size: 50px;
   font-weight: 700;
   color: white;
-  background: lightsalmon;
+  background: linear-gradient(to top, coral, lightsalmon);
   margin: 0;
-  border-bottom: 1px solid lightgrey;
 }
 p {
   margin-top: 0;
