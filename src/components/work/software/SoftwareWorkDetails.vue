@@ -2,12 +2,12 @@
   <div id="work-details">
     <div class="inner-content">
       <div class="close-btn-div">
-        <img class="close-btn" src="../../assets/icons/close.png" v-on:click="$emit('nav', 'work')">
+        <img class="close-btn" src="../../../assets/icons/close.png" v-on:click="$emit('nav', 'work')">
       </div>
       <p class="title" data-aos="zoom-in">{{ project.title }}</p>
       <p class="description" data-aos="zoom-in">{{ project.description }}</p>
       <div class="track">
-        <img class="left arrow" src="../../assets/icons/left-arrow.png" v-on:click="$emit('handlePreviousProject', project)">
+        <img class="left arrow" src="../../../assets/icons/left-arrow.png" v-on:click="$emit('handlePreviousProject', project)">
         <div class="video-div" data-aos="zoom-in">  
           <iframe 
             class="video" 
@@ -21,7 +21,7 @@
           </iframe>
           <img v-else class='img' width="660" height="415" :src='project.video'>
         </div>
-        <img class="right arrow" src="../../assets/icons/right-arrow.png" v-on:click="$emit('handleNextProject', project)">
+        <img class="right arrow" src="../../../assets/icons/right-arrow.png" v-on:click="$emit('handleNextProject', project)">
       </div>
       <div class="text-div" data-aos="zoom-in">
         <div class="details-div">

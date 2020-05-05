@@ -52,7 +52,7 @@
 </template>
 
 <script>
-import { softwareProjects } from '../../../data.js'
+import { softwareProjects } from '../../../../data.js'
 export default {
   props: {
     viewProjDetails: {type: Function}

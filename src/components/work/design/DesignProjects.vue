@@ -46,7 +46,7 @@
 </template>
 
 <script>
-import { designProjects } from '../../../data.js'
+import { designProjects } from '../../../../data.js'
 export default {
   props: {
     viewProjDetails: {type: Function}

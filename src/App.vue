@@ -34,11 +34,11 @@ import { designProjects, backgroundImages, softwareProjects } from '../data.js'
 import Navbar from './components/Navbar.vue'
 import Home from './components/Home.vue'
 import About from './components/About.vue'
-import Skills from './components/Skills.vue'
-import Work from './components/Work.vue'
+import Skills from './components/skills/Skills.vue'
+import Work from './components/work/Work.vue'
 import Contact from './components/Contact.vue'
-import SoftwareWorkDetails from './components/software/SoftwareWorkDetails.vue'
-import DesignWorkDetails from './components/design/DesignWorkDetails.vue'
+import SoftwareWorkDetails from './components/work/software/SoftwareWorkDetails.vue'
+import DesignWorkDetails from './components/work/design/DesignWorkDetails.vue'
 
 export default {
   name: 'App',
