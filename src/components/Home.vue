@@ -43,12 +43,13 @@ h2 {
   margin-top: 10px;
 }
 button {
-  background: steelblue;
+  /* background: steelblue; */
+  background: linear-gradient(to top, coral, lightsalmon);
   color: white;
   margin-top: 25px;
   padding: 15px 35px;
   font-size: 24px;
-  font-weight: 400;
+  font-weight: 500;
   border-radius: 30px;
   border: 0;
 }

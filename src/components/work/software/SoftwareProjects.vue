@@ -101,6 +101,8 @@ export default {
     position: relative;
     min-width: 100%;
     height: 100%;
+    margin-left: 50%;
+    transform: translateX(-50%);
   }
   .text-div {
     margin: 0;

@@ -48,7 +48,7 @@ export default {
 .navbar {
   height: 100%;
   width: 300px;
-  background: rgb(70, 130, 180, .9);
+  background: linear-gradient(to right, rgb(70, 130, 180), rgb(70, 130, 180, .9));
   margin: 0;
   position: fixed;
   display: inline-block;
