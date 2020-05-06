@@ -116,7 +116,7 @@ export default {
     position: fixed;
     z-index: 2;
     text-align: left;
-    background: rgb(70, 130, 180, .9);
+    background: linear-gradient(to right, rgb(70, 130, 180), rgb(70, 130, 180, .9));
   }
   .small-menu {
     width: 30px;
@@ -129,14 +129,14 @@ export default {
     width: 200px;
     height: auto;
     margin-top: 14px;
-    background: rgb(70, 130, 180, .9);
+    background: linear-gradient(to right, rgb(70, 130, 180), rgb(70, 130, 180, .9));
     visibility: visible;
     padding: 10px 10px 5px 10px;
   }
   .link-text-small {
     margin-left: 10px;
     color: white;
-    font-weight: 500;
+    font-weight: 600;
   }
   .small-menu:hover {
     cursor: pointer;

@@ -2,31 +2,33 @@
   <div id="skills">
     <h1>SKILLS</h1>
     <div class="inner-content">
-      <p>Over the last couple years, I have taken a deep dive into the world of software engineering.</p>
-      <p>I began by teaching myself basic skills like HTML, CSS, and vanilla JavaScript. Then I decided to focus on my learning full-time, completing <strong>over 1,000 hours</strong> of advanced computer science curriculum modeling today's software engineering industry. Most recently, I gained invaluable <strong>hands-on experience as an intern</strong> working in a professional codebase at <a href="https://www.seasoned.co/" target="blank">Seasoned</a>.
-      <p>Though I have encountered plenty of challenges, I'm validated by my accomplishments and remain committed to learning and pushing myself to the next level at all times.
-      <div class="stats-div">
-        <div class="first-stats">
-          <div class="stat">
-            <p class="num">2+</p>
-            <p class="num-description">years of programming experience</p>
-          </div>
-          <div class="stat">
-            <p class="num">5</p>
-            <p class="num-description">months as a Software Engineer Intern</p>
-          </div>
+      <p>My first taste of programming was building and maintaining WordPress websites for non-profit organizations using basic HTML.</p>
+      <p>From there I gained proficiency in full stack software development through a combination of self study and structured education. As a student at Hack Reactor (Galvanize), I completed <strong>over 1,000 hours</strong> of advanced computer science curriculum modeling today's software engineering industry. Most recently, I gained invaluable <strong>hands-on experience as an intern</strong> working on a team of Software Engineers in a professional codebase at <a href="https://www.seasoned.co/" target="blank">Seasoned</a>.</p>
+      <p>Throughout my ascent into the industry, I've remained committed to learning and pushing myself to the next level at all times.</p>
+    </div>
+    <div class="stats-div">
+      <div class="first-stats">
+        <div class="stat">
+          <p class="num">2+</p>
+          <p class="num-description">years of programming experience</p>
         </div>
-        <div class="second-stats">
-          <div class="stat">
-            <p class="num">1,000+</p>
-            <p class="num-description">hours of advanced CS curriculum</p>
-          </div>
-          <div class="stat">
-            <p class="num">93</p>
-            <p class="num-description">pull requests on GitHub</p>
-          </div>
+        <div class="stat">
+          <p class="num">5</p>
+          <p class="num-description">months as a Software Engineer Intern</p>
         </div>
       </div>
+      <div class="second-stats">
+        <div class="stat">
+          <p class="num">1,000+</p>
+          <p class="num-description">hours of advanced CS curriculum</p>
+        </div>
+        <div class="stat">
+          <p class="num">93</p>
+          <p class="num-description">pull requests on GitHub</p>
+        </div>
+      </div>
+    </div>
+    <div class="inner-content">
       <p>I'm also active on GitHub:</p>
       <div class="github-div">
         <img class="github-squares" src="../../assets/github-squares.png">
@@ -73,9 +75,10 @@ strong {
   font-weight: 900;
 }
 .stats-div {
-  margin: 40px 0;
+  padding: 60px 0;
   position: relative;
   text-align: center;
+  background: rgb(238, 238, 238);
 }
 .first-stats {
   display: inline-block;
@@ -96,12 +99,13 @@ strong {
 .num {
   margin: 0;
   font-size: 50px;
-  font-weight: 400;
+  font-weight: 500;
   color: steelblue;
 }
 .num-description {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 500;
+  margin-bottom: 0;
   color: steelblue;
 }
 .github-div {
@@ -113,26 +117,21 @@ strong {
   width: 75%;
 }
 /* ---------------------------- STATS RESIZING ---------------------------- */
-@media (max-width: 1250px) {
+@media (max-width: 1250px) and (min-width: 1001px), (max-width: 850px) {
   .stat {
     width: 120px;
   }
   .num {
-    font-size: 35px;
+    font-size: 38px;
     font-weight: 500;
   }
   .num-description {
     font-size: 13px;
   }
 }
-@media (max-width: 1090px) {
-  .stat {
-    width: 100px;
-    margin: 15px;
-  }
-  .num {
-    font-size: 30px;
-    font-weight: 500;
+@media (max-width: 639px) {
+  .second-stats {
+    padding-top: 35px;
   }
 }
 /* ---------------------------- PADDING RESIZING ---------------------------- */
