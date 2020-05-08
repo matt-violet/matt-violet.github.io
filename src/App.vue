@@ -114,10 +114,10 @@ export default {
     const bgImgs = backgroundImages;
     setInterval(() => {
       this.backgroundImage = bgImgs[this.backgroundIndex];
-      this.backgroundIndex === 3 ? 
+      this.backgroundIndex === 4 ? 
         this.backgroundIndex = 0 : 
         this.backgroundIndex++
-    }, 3500);
+    }, 3000);
   }
 }
 </script>
@@ -156,7 +156,7 @@ a:visited {
   min-width: 100%;
   height: 100%;
   position: absolute;
-  animation: grow 3.5s infinite;
+  animation: grow 3s infinite;
 }
 @keyframes grow {
   from { transform: scale(1); }
@@ -166,7 +166,7 @@ a:visited {
   width: 100%;
   height: 100%;
   position: absolute;
-  background: linear-gradient(to bottom, rgba(36, 36, 36, 0.6), rgb(0, 0, 0, 0));
+  background: linear-gradient(to bottom, rgba(36, 36, 36, 0.5), rgb(0, 0, 0, 0));
 }
 @media (max-width: 1000px) {
   .components {

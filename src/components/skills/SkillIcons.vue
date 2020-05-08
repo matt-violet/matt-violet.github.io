@@ -117,7 +117,7 @@ export default {
   text-align: center;
   border-radius: 5px;
   padding: 20px 30px;
-  margin: 30px 0;
+  margin: 40px 0;
 }
 .first-skills {
   display: inline-block;

@@ -3,8 +3,8 @@
     <h1>SKILLS</h1>
     <div class="inner-content">
       <p>My first taste of programming was building and maintaining WordPress websites for non-profit organizations using basic HTML.</p>
-      <p>From there I gained proficiency in full stack software development through a combination of self study and structured education. As a student at Hack Reactor (Galvanize), I completed <strong>over 1,000 hours</strong> of advanced computer science curriculum modeling today's software engineering industry. Most recently, I gained invaluable <strong>hands-on experience as an intern</strong> working on a team of Software Engineers in a professional codebase at <a href="https://www.seasoned.co/" target="blank">Seasoned</a>.</p>
-      <p>Throughout my ascent into the industry, I've remained committed to learning and pushing myself to the next level at all times.</p>
+      <p>From there I gained proficiency in full stack software development through a combination of self study and structured education. As a student at San Francisco's premiere coding bootcamp, Hack Reactor (Galvanize), I completed <strong>over 1,000 hours</strong> of advanced computer science curriculum modeling today's software engineering industry. Most recently, I gained invaluable <strong>hands-on experience as an intern</strong> working on a team of developers in a professional codebase at <a href="https://www.seasoned.co/" target="blank">Seasoned</a>.</p>
+      <p>Throughout my journey I've embraced every challenge as an opportunity and sought out ways to make each project better than my last.</p>
     </div>
     <div class="stats-div">
       <div class="first-stats">
@@ -33,8 +33,8 @@
       <div class="github-div">
         <img class="github-squares" src="../../assets/github-squares.png">
       </div>
-      <p>My favorite tools right now are React, Vue, Express, MongoDB, PostgreSQL, and Node. But I have experience with all of the following:</p>
-      <SkillIcons/>
+      <p>I have demonstrated proficiency with the following tools:</p>
+      <SkillIcons class="SkillIcons"/>
     </div>
   </div>
 </template>
@@ -57,6 +57,9 @@ export default {
   padding: 59px 75px 75px 75px;
   max-width: 1000px;
   margin: auto;
+}
+.SkillIcons {
+  margin-top: 75px;
 }
 h1 {
   padding: 30px 75px;
@@ -111,7 +114,7 @@ strong {
 .github-div {
   width: 100%;
   text-align: center;
-  margin: 45px auto 40px auto;
+  margin: 45px auto;
 }
 .github-squares {
   width: 75%;

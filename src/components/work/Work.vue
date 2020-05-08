@@ -3,11 +3,11 @@
     <h1>WORK</h1>
     <div class="inner-content">
       <div class="software-bg-div">
-        <h2 class="section-title">Software:</h2>
+        <h2 class="section-title">Software Development:</h2>
         <SoftwareProjects @viewProjDetails="handleViewProjDetails"/>
       </div>
       <div class="design-bg-div" id="design-bg-div">
-        <h2 class="section-title">Design:</h2>
+        <h2 class="section-title">Graphic Design:</h2>
         <DesignProjects @viewProjDetails="handleViewProjDetails"/>
       </div>
     </div>

@@ -171,6 +171,7 @@ export const designProjects = [
 export const backgroundImages = [
   require("./src/assets/matt-nyc.png"),
   require("./src/assets/pump.png"),
+  require("./src/assets/matt-beach.jpg"),
   require("./src/assets/skate.jpg"),
   require("./src/assets/matt-guitar.jpg")
 ];
