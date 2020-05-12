@@ -1,6 +1,6 @@
 <template>
   <div id="work">
-    <h1>WORK</h1>
+    <h1>PORTFOLIO</h1>
     <div class="inner-content">
       <div class="software-bg-div">
         <h2 class="section-title">Software Development:</h2>

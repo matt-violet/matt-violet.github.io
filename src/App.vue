@@ -8,6 +8,7 @@
     <div class="components" v-if="!showProject">
       <Home @nav="navigate"/>
       <About/>
+      <Education/>
       <Work :viewProjectDetails="handleViewProjectDetails"/>
       <Skills/>
       <Contact/>
@@ -34,6 +35,7 @@ import { designProjects, backgroundImages, softwareProjects } from '../data.js'
 import Navbar from './components/Navbar.vue'
 import Home from './components/Home.vue'
 import About from './components/About.vue'
+import Education from './components/Education.vue'
 import Skills from './components/skills/Skills.vue'
 import Work from './components/work/Work.vue'
 import Contact from './components/Contact.vue'
@@ -46,6 +48,7 @@ export default {
     Navbar,
     Home,
     About,
+    Education,
     Skills,
     Work,
     Contact,

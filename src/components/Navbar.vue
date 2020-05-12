@@ -7,14 +7,16 @@
     </div>
     <div class="links-div">
       <p class="link-text" v-on:click="$emit('nav', 'about')">ABOUT</p>
-      <p class="link-text" v-on:click="$emit('nav', 'work')">WORK</p>
+      <p class="link-text" v-on:click="$emit('nav', 'education')">EDUCATION</p>
+      <p class="link-text" v-on:click="$emit('nav', 'work')">PORTFOLIO</p>
       <p class="link-text" v-on:click="$emit('nav', 'skills')">SKILLS</p>
       <p class="link-text" v-on:click="$emit('nav', 'contact')">CONTACT</p>
     </div>
     <img class="small-menu" v-on:click="handleShowSmallMenu()" src="../assets/icons/menu-white.png">
     <div :class="this.showSmallMenu ? 'drop-down' : 'invisible'">
       <p class="link-text-small" v-on:click="handleSmallMenuClick('about')">ABOUT</p>
-      <p class="link-text-small" v-on:click="handleSmallMenuClick('work')">WORK</p>
+      <p class="link-text-small" v-on:click="handleSmallMenuClick('education')">EDUCATION</p>
+      <p class="link-text-small" v-on:click="handleSmallMenuClick('work')">PORTFOLIO</p>
       <p class="link-text-small" v-on:click="handleSmallMenuClick('skills')">SKILLS</p>
       <p class="link-text-small" v-on:click="handleSmallMenuClick('contact')">CONTACT</p>
     </div>
