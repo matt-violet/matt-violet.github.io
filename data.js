@@ -41,8 +41,14 @@ export const softwareProjects = [
         repo: 'GitHub Repository - Back End'
       }  
     ],
-    image: require('./src/assets/projects/software/kwik-e-mart.png'),
-    video: 'https://www.youtube.com/embed/CLBsz0dTiEk'
+    image: require('./src/assets/projects/software/kwikemart/kwik-e-mart.png'),
+    video: 'https://www.youtube.com/embed/CLBsz0dTiEk',
+    screenshots: [
+      require('./src/assets/projects/software/kwikemart/grocery.png'),
+      require('./src/assets/projects/software/kwikemart/cart.png'),
+      require('./src/assets/projects/software/kwikemart/add-payment.png'),
+      require('./src/assets/projects/software/kwikemart/confirm.png')
+    ]
   },
   {
     title: 'Segment Events',

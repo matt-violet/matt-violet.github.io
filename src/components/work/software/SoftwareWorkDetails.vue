@@ -23,7 +23,7 @@
         </div>
         <img class="right arrow" src="../../../assets/icons/right-arrow.png" v-on:click="$emit('handleNextProject', project)">
       </div>
-      <div class="text-div" data-aos="zoom-in">
+      <div class="text-div">
         <div class="details-div">
           <p class="details">{{ project.details }}</p>
           <p class="stack" v-for="(stack, i) of project.stack" :key="i">{{ stack }}</p>
@@ -32,6 +32,9 @@
             <a v-else v-for='link of project.github' v-bind:key="link" class='github-link-2' :href="link.link" target="_blank">{{link.repo}}</a>
           </div>
         </div>
+      </div>
+      <div v-if="project.screenshots" class="screenshots">
+        <img v-for="(screenshot, i) of project.screenshots" :key="i" :src="screenshot" class="screenshot" data-aos="zoom-in"/>
       </div>
     </div>
   </div>
@@ -145,6 +148,17 @@ a {
   display: block;
   margin-top: 10px;
 }
+.screenshots {
+  width: 560px;
+  margin: 50px auto 0 auto;
+}
+.screenshot {
+  width: 100%;
+  display: block;
+  margin-bottom: 50px;
+  border-radius: 5px;
+  box-shadow: 1px 2px 8px 0px grey;
+}
 @media (max-width: 1000px) {
   #work-details {
     margin-left: 0;
@@ -172,6 +186,9 @@ a {
     width: 400px;
     font-size: 14px;
   }
+  .screenshots {
+    width: 400px;
+  }
 }
 @media (max-width: 550px) {
   .video-div, .img, .video {
@@ -197,6 +214,9 @@ a {
   }
   .description {
     font-size: 16px;
+  }
+  .screenshots {
+    width: 270px;
   }
 }
 </style>
