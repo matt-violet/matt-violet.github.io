@@ -57,7 +57,12 @@ export const softwareProjects = [
     stack: ['React', 'Segment Library'],
     github: '',
     image: require('./src/assets/projects/software/segment.png'),
-    video: require('./src/assets/projects/software/segment.png')
+    video: require('./src/assets/projects/software/segment.png'),
+    screenshots: [
+      require('./src/assets/projects/software/segment/interview-canceled-applicant.png'),
+      require('./src/assets/projects/software/segment/interview-cancelled-admin.png'),
+      require('./src/assets/projects/software/segment/interview-requested.png'),
+    ]
   },
   {
     title: 'Internal Tool',
@@ -66,7 +71,11 @@ export const softwareProjects = [
     stack: ['Vue', 'Vuetify', 'GraphQL', 'PostgreSQL'],
     github: '',
     image: require('./src/assets/projects/software/vuetify.png'),
-    video:require('./src/assets/projects/software/vuetify.png')
+    video:require('./src/assets/projects/software/vuetify.png'),
+    screenshots: [
+      require('./src/assets/projects/software/internaltool/candidate-card.png'),
+      require('./src/assets/projects/software/internaltool/applications.png'),
+    ]
   },
   {
     title: 'Open Restaurant',
@@ -75,7 +84,12 @@ export const softwareProjects = [
     stack: ['React', 'Styled-Components', 'Express', 'Ajax', 'MongoDB', 'Faker', 'Jest', 'Enzyme', 'Amazon S3'],
     github: 'https://github.com/krummurk/photos-module',
     image: require('./src/assets/projects/software/restaurant.jpg'),
-    video: 'https://www.youtube.com/embed/LZBo0UIRxvI'
+    video: 'https://www.youtube.com/embed/LZBo0UIRxvI',
+    screenshots: [
+      require('./src/assets/projects/software/openrestaurant/gallery.png'),
+      require('./src/assets/projects/software/openrestaurant/modal-view.png'),
+      require('./src/assets/projects/software/openrestaurant/flag.png'),
+    ]
   },
   {
     title: 'Social Inn',
@@ -93,7 +107,12 @@ export const softwareProjects = [
     stack: ['React', 'CSS animations'],
     github: 'https://github.com/matt-violet/connect4',
     image: require('./src/assets/projects/software/connect-four.png'),
-    video: 'https://www.youtube.com/embed/AM0sI6ZqEQw'
+    video: 'https://www.youtube.com/embed/AM0sI6ZqEQw',
+    screenshots: [
+      require('./src/assets/projects/software/connect4/choose-side.png'),
+      require('./src/assets/projects/software/connect4/board.png'),
+      require('./src/assets/projects/software/connect4/rematch.png'),
+    ]
   },
   {
     title: 'My Bolus',
@@ -103,7 +122,12 @@ export const softwareProjects = [
     github: 'https://github.com/matt-violet/My-Bolus',
     image: require('./src/assets/projects/software/vial.jpg'),
     ppt: 'https://drive.google.com/file/d/1D8tp35PoCCbMzuWLTPHFI5oGN7nFhIQ1/view?usp=sharing',
-    video: 'https://www.youtube.com/embed/OsGm4uK7SEs'
+    video: 'https://www.youtube.com/embed/OsGm4uK7SEs',
+    screenshots: [
+      require('./src/assets/projects/software/mybolus/sign-in.png'),
+      require('./src/assets/projects/software/mybolus/input.png'),
+      require('./src/assets/projects/software/mybolus/results.png'),
+    ]
   }
 ];
 
