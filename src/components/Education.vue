@@ -2,17 +2,17 @@
   <div id="education">
     <h1>EDUCATION</h1>
     <div class="inner-content">
-      <div class="school-section">
+      <div class="school-section" data-aos="zoom-in">
         <p class="school-name">Hack Reactor at Galvanize, SF</p>
         <p class="school-details">Advanced Software Engineering Immersive Program</p>
         <p class="school-details">April 2019 - July 2019</p>
       </div>
-      <div class="school-section">
+      <div class="school-section" data-aos="zoom-in">
         <p class="school-name">Udacity Courses</p>
-        <p class="school-details">Intro to Javascript (2019)</p>
+        <p class="school-details">Intro to Javascript (2018)</p>
         <p class="school-details">The Web Developer Bootcamp (2019)</p>
       </div>
-      <div class="school-section-last">
+      <div class="school-section-last" data-aos="zoom-in">
         <p class="school-name">University of California, Davis</p>
         <p class="school-details">Bachelor of Arts in Communication</p>
         <p class="school-details">Minor in Sociology</p>
@@ -53,12 +53,12 @@ h1 {
   margin: 0 0 2px 0;
 }
 .school-section, .school-section-last {
-  width: 500px;
+  width: 450px;
   display: block;
   padding: 25px;
   margin-bottom: 40px;
   border-radius: 5px;
-  background: rgb(238, 238, 238);
+  background: linear-gradient(to bottom, rgb(238, 238, 238), rgb(219, 219, 219));
 }
 .school-section-last {
   margin-bottom: 0;
@@ -67,7 +67,7 @@ h1 {
   font-size: 22px;
   font-weight: 900;
   color: black;
-  margin: 0 0 8px 0;
+  margin: 0 0 5px 0;
 }
 @media (max-width: 700px) {
   .inner-content, h1 {

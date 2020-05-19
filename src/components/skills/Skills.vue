@@ -8,21 +8,21 @@
     </div>
     <div class="stats-div">
       <div class="first-stats">
-        <div class="stat">
+        <div class="stat" data-aos="zoom-in">
           <p class="num">2+</p>
           <p class="num-description">years of programming experience</p>
         </div>
-        <div class="stat">
+        <div class="stat" data-aos="zoom-in">
           <p class="num">5</p>
           <p class="num-description">months as a Software Engineer Intern</p>
         </div>
       </div>
       <div class="second-stats">
-        <div class="stat">
+        <div class="stat" data-aos="zoom-in">
           <p class="num">1,000+</p>
           <p class="num-description">hours of advanced CS curriculum</p>
         </div>
-        <div class="stat">
+        <div class="stat" data-aos="zoom-in">
           <p class="num">93</p>
           <p class="num-description">pull requests on GitHub</p>
         </div>
@@ -34,8 +34,8 @@
         <img class="github-squares" src="../../assets/github-squares.png">
       </div>
       <p>I have demonstrated proficiency with the following tools:</p>
-      <SkillIcons class="SkillIcons"/>
     </div>
+    <SkillIcons class="SkillIcons"/>
   </div>
 </template>
 
@@ -57,9 +57,6 @@ export default {
   padding: 59px 75px 75px 75px;
   max-width: 1000px;
   margin: auto;
-}
-.SkillIcons {
-  margin-top: 75px;
 }
 h1 {
   padding: 30px 75px;

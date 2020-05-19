@@ -1,9 +1,9 @@
 <template>
   <div id="home">
     <div class="header" data-aos="zoom-in" data-aos-duration="500">
-      <h1>Welcome!</h1>
-      <h2>I'm Matt, a mission-driven developer with roots in the non-profit world.</h2>
-      <button v-on:click="$emit('nav', 'work')">Portfolio</button>
+      <h1 data-aos="fade-right">Welcome!</h1>
+      <h2 data-aos="fade-left" data-aos-delay="300">I'm Matt, a mission-driven developer with roots in the non-profit world.</h2>
+      <button v-on:click="$emit('nav', 'work')" data-aos="zoom-in" data-aos-delay="600">Portfolio</button>
     </div>
   </div>
 </template>

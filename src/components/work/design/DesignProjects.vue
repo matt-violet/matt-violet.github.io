@@ -1,7 +1,7 @@
 <template>
   <div class="design-projects">
     <div class="project-row">
-      <div v-for="(project, i) in designProjects.slice(0,3)" :key="i" class="design-project" v-on:click="$emit('viewProjDetails', project)">
+      <div v-for="(project, i) in designProjects.slice(0,3)" :key="i" class="design-project" v-on:click="$emit('viewProjDetails', project)" data-aos="zoom-in">
         <div class="design-img-div">
           <img class="design-img" :src="project.images[0]">
         </div>
@@ -12,7 +12,7 @@
     </div>
     <div class="project-row">
       <div class="project-row">
-        <div v-for="(project, i) in designProjects.slice(3,6)" :key="i" class="design-project" v-on:click="$emit('viewProjDetails', project)">
+        <div v-for="(project, i) in designProjects.slice(3,6)" :key="i" class="design-project" v-on:click="$emit('viewProjDetails', project)" data-aos="zoom-in">
           <div class="design-img-div">
             <img class="design-img" :src="project.images[0]">
           </div>
@@ -22,7 +22,7 @@
         </div>
       </div>
       <div class="project-row">
-        <div v-for="(project, i) in designProjects.slice(6,9)" :key="i" class="design-project" v-on:click="$emit('viewProjDetails', project)">
+        <div v-for="(project, i) in designProjects.slice(6,9)" :key="i" class="design-project" v-on:click="$emit('viewProjDetails', project)" data-aos="zoom-in">
           <div class="design-img-div">
             <img class="design-img" :src="project.images[0]">
           </div>
@@ -32,7 +32,7 @@
         </div>
       </div>
       <div class="project-row">
-        <div v-for="(project, i) in designProjects.slice(9,12)" :key="i" class="design-project" v-on:click="$emit('viewProjDetails', project)">
+        <div v-for="(project, i) in designProjects.slice(9,12)" :key="i" class="design-project" v-on:click="$emit('viewProjDetails', project)" data-aos="zoom-in">
           <div class="design-img-div">
             <img class="design-img" :src="project.images[0]">
           </div>

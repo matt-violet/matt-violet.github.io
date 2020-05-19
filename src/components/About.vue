@@ -2,10 +2,10 @@
   <div id="about">
     <h1>ABOUT</h1>
     <div class="inner-content">
-      <div class="photo-div">
+      <div class="photo-div" data-aos="fade-right">
         <p class="photo-text">That's my insulin pump and blood sugar sensor. Together they create a continuous glucose monitoring (CGM) system, AKA an "artificial pancreas".</p>
       </div>
-      <div class="about-text-div">
+      <div class="about-text-div" data-aos="fade-left">
         <p><strong>I never could have anticipated my journey into software development,</strong> but now I can't see myself doing anything else.</p>
         <p>Although my professional path has taken many twists and turns — from tutoring students of East Oakland's underserved schools, to empowering Burmese migrants in Thailand, to establishing a new communications department for an activist non-profit in Berkeley — <strong>I've always followed my passion</strong> to help others and solve problems.</p>
         <p>My passion for programming comes from the role software plays in my personal health, as a <strong>self-identified <a href='https://drive.google.com/file/d/1D8tp35PoCCbMzuWLTPHFI5oGN7nFhIQ1/view?usp=sharing' target='_blank'>human cyborg</a></strong> who has used an <strong>"artificial pancreas"</strong> to manage his type one diabetes since 2016. With my daily well-being now literally tied to algorithms, I'm invested in learning and developing applications that have the potential to help others as much as these devices have helped me.</p>

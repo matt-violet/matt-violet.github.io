@@ -1,95 +1,43 @@
 <template>
-  <div class="skills-boxes">
-    <div class="skills-box">
-      <h2 class="skills-header">Front End</h2>
-      <div class="first-skills">
-        <div class="skill-div" data-aos="zoom-in" data-aos-offset="200">
-          <img class="skill-icon" :src="skills.frontend[0].image">
-          <p class="skill-name">{{ skills.frontend[0].name }}</p>
-        </div>
-        <div class="skill-div" data-aos="zoom-in" data-aos-offset="200">
-          <img class="skill-icon" :src="skills.frontend[1].image">
-          <p class="skill-name">{{ skills.frontend[1].name }}</p>
-        </div>
-        <div class="skill-div" data-aos="zoom-in" data-aos-offset="200">
-          <img class="skill-icon" :src="skills.frontend[2].image">
-          <p class="skill-name">{{ skills.frontend[2].name }}</p>
-        </div>
+  <div class="skills-containers">
+    <div class="skills-container front-end">
+      <div class="header-div">
+        <h2 class="skills-header">Front End Skills</h2>
       </div>
-      <div class="second-skills">
-        <div class="skill-div" data-aos="zoom-in" data-aos-offset="200">
-          <img class="skill-icon" :src="skills.frontend[3].image">
-          <p class="skill-name">{{ skills.frontend[3].name }}</p>
-        </div>
-        <div class="skill-div" data-aos="zoom-in" data-aos-offset="200">
-          <img class="skill-icon" :src="skills.frontend[4].image">
-          <p class="skill-name">{{ skills.frontend[4].name }}</p>
-        </div>
-        <div class="skill-div" data-aos="zoom-in" data-aos-offset="200">
-          <img class="skill-icon" :src="skills.frontend[5].image">
-          <p class="skill-name">{{ skills.frontend[5].name }}</p>
+      <div class="skills-row">
+        <div v-for ="(skill, i) of skills.frontend" :key="i" class="skill-div" data-aos="zoom-in" data-aos-offset="200">
+          <div class="icon-div">
+            <img class="skill-icon" :src="skill.image">
+          </div>
+          <div class="skill-name-div">
+            <p class="skill-name">{{ skill.name }}</p>
+          </div>
         </div>
       </div>
     </div>
-    <div class="skills-box">
-      <h2 class="skills-header">Back End</h2>
-      <div class="first-skills">
-        <div class="skill-div" data-aos="zoom-in" data-aos-offset="200">
-          <img class="skill-icon" :src="skills.backend[0].image">
-          <p class="skill-name">{{ skills.backend[0].name }}</p>
-        </div>
-        <div class="skill-div" data-aos="zoom-in" data-aos-offset="200">
-          <img class="skill-icon" :src="skills.backend[1].image">
-          <p class="skill-name">{{ skills.backend[1].name }}</p>
-        </div>
-        <div class="skill-div" data-aos="zoom-in" data-aos-offset="200">
-          <img class="skill-icon" :src="skills.backend[2].image">
-          <p class="skill-name">{{ skills.backend[2].name }}</p>
-        </div>
+    <div class="skills-container back-end">
+      <div class="header-div">
+        <h2 class="skills-header">Back End Skills</h2>
       </div>
-      <div class="second-skills">
-        <div class="skill-div" data-aos="zoom-in" data-aos-offset="200">
-          <img class="skill-icon" :src="skills.backend[3].image">
-          <p class="skill-name">{{ skills.backend[3].name }}</p>
-        </div>
-        <div class="skill-div" data-aos="zoom-in" data-aos-offset="200">
-          <img class="skill-icon" :src="skills.backend[4].image">
-          <p class="skill-name">{{ skills.backend[4].name }}</p>
-        </div>
-        <div class="skill-div" data-aos="zoom-in" data-aos-offset="200">
-          <img class="skill-icon" :src="skills.backend[5].image">
-          <p class="skill-name">{{ skills.backend[5].name }}</p>
+      <div class="skills-row">
+        <div v-for ="(skill, i) of skills.backend" :key="i" class="skill-div" data-aos="zoom-in" data-aos-offset="200">
+          <div class="icon-div">
+            <img class="skill-icon" :src="skill.image">
+          </div>
+          <p class="skill-name">{{ skill.name }}</p>
         </div>
       </div>
     </div>
-    <div class="skills-box">
-      <h2 class="skills-header">Additional</h2>
-      <div class="first-skills">
-        <div class="skill-div" data-aos="zoom-in" data-aos-offset="200">
-          <img class="skill-icon" :src="skills.other[0].image">
-          <p class="skill-name">{{ skills.other[0].name }}</p>
-        </div>
-        <div class="skill-div" data-aos="zoom-in" data-aos-offset="200">
-          <img class="skill-icon" :src="skills.other[1].image">
-          <p class="skill-name">{{ skills.other[1].name }}</p>
-        </div>
-        <div class="skill-div" data-aos="zoom-in" data-aos-offset="200">
-          <img class="skill-icon" :src="skills.other[2].image">
-          <p class="skill-name">{{ skills.other[2].name }}</p>
-        </div>
+    <div class="skills-container additional">
+      <div class="header-div">
+        <h2 class="skills-header">Additional Skills</h2>
       </div>
-      <div class="second-skills">
-        <div class="skill-div" data-aos="zoom-in" data-aos-offset="200">
-          <img class="skill-icon" :src="skills.other[3].image">
-          <p class="skill-name">{{ skills.other[3].name }}</p>
-        </div>
-        <div class="skill-div" data-aos="zoom-in" data-aos-offset="200">
-          <img class="skill-icon" :src="skills.other[4].image">
-          <p class="skill-name">{{ skills.other[4].name }}</p>
-        </div>
-        <div class="skill-div" data-aos="zoom-in" data-aos-offset="200">
-          <img class="skill-icon" :src="skills.other[5].image">
-          <p class="skill-name">{{ skills.other[5].name }}</p>
+      <div class="skills-row">
+        <div v-for ="(skill, i) of skills.other" :key="i" class="skill-div" data-aos="zoom-in" data-aos-offset="200">
+          <div class="icon-div">
+            <img class="skill-icon" :src="skill.image">
+          </div>
+          <p class="skill-name">{{ skill.name }}</p>
         </div>
       </div>
     </div>
@@ -109,93 +57,72 @@ export default {
 </script>
 
 <style scoped>
-.skills-boxes {
-  margin: 40px auto 0 auto;
+.skills-container {
+  padding: 100px 30px;
 }
-.skills-box {
-  background: rgb(238, 238, 238);
-  text-align: center;
-  border-radius: 5px;
-  padding: 20px 30px;
-  margin: 40px 0;
+.skills-row {
+  margin: auto;
+  max-width: 1000px;
+  display: flex;
+  justify-content: space-evenly;
 }
-.first-skills {
-  display: inline-block;
-  position: relative;
+.front-end {
+  background: rgb(216, 238, 255);
 }
-.second-skills {
-  display: inline-block;
-  position: relative;
+.back-end {
+  background: rgb(183, 223, 255);
+}
+.additional {
+  background: rgb(148, 207, 255);
 }
 .skill-div {
   box-shadow: 1px 2px 8px 0px grey;
-  display: inline-block;
-  position: relative;
-  width: 100px;
-  margin: 0 20px 0 0;
   background: white;
   border-radius: 5px;
-  padding: 20px 0 15px 0;
+  padding: 20px 30px 15px 30px;
   text-align: center;
   overflow: hidden;
+}
+.skill-icon {
+  transition: 1s ease;
+  width: 60px;
+  height: 60px;
 }
 .skill-icon:hover {
   transform: rotate(360deg);
 }
-.skills-header {
-  margin: 0 0 10px 0;
-  font-weight: 500;
-  text-align: left;
+.header-div {
+  margin: 0 auto 50px auto;
+  text-align: center;
 }
-.skill-icon {
-  transition: 1s ease;
-  height: 50px;
+.skills-header {
+  font-weight: 400;
+  font-size: 24px;
+  margin: 0;
 }
 .skill-name {
-  margin: 0;
-  padding: 0;
-  font-weight: 500;
+  margin: 5px 0 0 0;
+  font-weight: 400;
   font-size: 14px;
 }
 /* ---------------------------- ICONS RESIZING ---------------------------- */
-@media (max-width: 1230px) {
+@media (max-width: 1250px) and (min-width: 1001px), (max-width: 900px) {
   .skill-div {
-    width: 75px;
-    padding: 15px 0 10px 0;
+    padding: 15px 20px 10px 20px;
   }
   .skill-icon {
-    height: 30PX;
+    width: 40px;
+    height: 40PX;
   }
   .skill-name {
-    font-size: 12px;
-  }
-}
-@media (max-width: 1080px) {
-  .skill-div {
-    width: 60px;
-  }
-  .skill-icon {
-    height: 25PX;
-  }
-  .skill-name {
+    margin: 0;
     font-size: 10px;
   }
-  p {
-    font-size: 16px;
-  }
 }
-@media (max-width: 570px) {
-  .skill-div {
-    width: 50px;
-    margin: 0 15px 0 0;
-  }
-  .skill-icon {
-    height: 25PX;
-  }
-  .skill-name {
-    width: 0;
-    height: 0;
-    visibility: hidden;
+@media (max-width: 700px) {
+  .skills-container {
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 @media (max-width: 479px) {
