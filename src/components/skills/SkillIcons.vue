@@ -1,11 +1,11 @@
 <template>
-  <div class="skills-containers">
+  <div class="containers">
     <div class="skills-container front-end">
       <div class="header-div">
         <h2 class="skills-header">Front End Skills</h2>
       </div>
       <div class="skills-row">
-        <div v-for ="(skill, i) of skills.frontend" :key="i" class="skill-div" data-aos="zoom-in" data-aos-offset="200">
+        <div class="skill-div" v-for ="(skill, i) of skills.frontend" :key="i" data-aos="zoom-in" data-aos-offset="200">
           <div class="icon-div">
             <img class="skill-icon" :src="skill.image">
           </div>
@@ -20,7 +20,7 @@
         <h2 class="skills-header">Back End Skills</h2>
       </div>
       <div class="skills-row">
-        <div v-for ="(skill, i) of skills.backend" :key="i" class="skill-div" data-aos="zoom-in" data-aos-offset="200">
+        <div class="skill-div" v-for ="(skill, i) of skills.backend" :key="i" data-aos="zoom-in" data-aos-offset="200">
           <div class="icon-div">
             <img class="skill-icon" :src="skill.image">
           </div>
@@ -33,7 +33,7 @@
         <h2 class="skills-header">Additional Skills</h2>
       </div>
       <div class="skills-row">
-        <div v-for ="(skill, i) of skills.other" :key="i" class="skill-div" data-aos="zoom-in" data-aos-offset="200">
+        <div class="skill-div" v-for ="(skill, i) of skills.other" :key="i" data-aos="zoom-in" data-aos-offset="200">
           <div class="icon-div">
             <img class="skill-icon" :src="skill.image">
           </div>
@@ -64,6 +64,7 @@ export default {
   margin: auto;
   max-width: 1000px;
   display: flex;
+  align-items: stretch;
   justify-content: space-evenly;
 }
 .front-end {
@@ -119,15 +120,32 @@ export default {
     font-size: 10px;
   }
 }
-@media (max-width: 700px) {
-  .skills-container {
-    padding-left: 15px;
-    padding-right: 15px;
+@media (max-width: 650px) {
+  .skill-div {
+    padding: 10px;
+    height: 35px;
+  }
+  .skill-icon {
+    width: 35px;
+    height: 35px;
+  }
+  .skill-name {
+    width: 0;
+    height: 0;
+    visibility: hidden;
   }
 }
-@media (max-width: 479px) {
+@media (max-width: 500px) {
   .skill-div {
-    margin: 5px 10px;
+    padding: 5px;
+    height: 30px;
+  }
+  .skill-icon {
+    width: 30px;
+    height: 30px;
+  }
+  .skills-row {
+    justify-content: space-between;
   }
 }
 </style>
