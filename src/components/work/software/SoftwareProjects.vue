@@ -109,6 +109,7 @@ export default {
     padding: 0 15px;
     position: relative;
     height: 33%;
+    border-top: 1px solid lightgrey;
   }
   .title {
     margin: 10px 0 0 0;
@@ -117,7 +118,7 @@ export default {
     display: inline-block;
   }
   .description {
-    margin: 0 0 5px 0;
+    margin: 4px 0;
     font-size: 14px;
     color: grey;
   }

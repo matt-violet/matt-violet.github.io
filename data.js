@@ -27,8 +27,23 @@ export const skills = {
 
 export const softwareProjects = [
   {
+    title: 'Dialytics',
+    description: 'Diabetes Management Software',
+    details: 'Dialytics is a helpful reporting tool for those managing their blood sugar with Dexcom\'s Continuous Glucose Monitoring. It provides real glucose data - obtained from the Dexcom API via the OAuth 2 framework - displayed in easy to read charts, statistics, trends, and device settings.',
+    stack: ['React', 'OAuth 2.0', 'Dexcom API', 'flatpickr', 'Google Charts'],
+    github: 'https://github.com/matt-violet/dialytics',
+    image: require('./src/assets/projects/software/dialytics/thumbnail.png'),
+    video: 'https://www.youtube.com/embed/sFRA6nZiswg',
+    screenshots: [
+      require('./src/assets/projects/software/dialytics/sign-in.png'),
+      require('./src/assets/projects/software/dialytics/authentication.png'),
+      require('./src/assets/projects/software/dialytics/bg-data.png'),
+      require('./src/assets/projects/software/dialytics/device-settings.png')
+    ]
+  },
+  {
     title: 'Kwik-e-Mart',
-    description: 'Mock online grocery store app',
+    description: 'Mock Online Grocery Store App',
     details: 'Welcome to Kwik-e-Mart, a full stack CRUD application using RESTful API architecture. Users can filter and select groceries for their shopping cart, add a payment method, and edit / confirm their order before checkout.',
     stack: ['Vue', 'Vue Router', 'Node', 'Express', 'Axios', 'Sequelize', 'PostgreSQL'],
     github: [
@@ -52,8 +67,8 @@ export const softwareProjects = [
   },
   {
     title: 'Segment Events',
-    description: 'Harnessing the power of user event data',
-    details: 'As an intern at Seasoned I integrated Segment events (from Segment\'s Customer Data Platform) to collect data about admin onboarding events. This information is now used by the Data and Marketing teams to drive analytics, A/B testing, and automated marketing campaigns.',
+    description: 'Harnessing the Power of Data',
+    details: 'As an intern at Seasoned I integrated Segment events (from Segment\'s Customer Data Platform) to collect data about admin user onboarding events. This information is now used by the Data and Marketing teams to drive analytics, A/B testing, and automated marketing campaigns.',
     stack: ['React', 'Segment Library'],
     github: '',
     image: require('./src/assets/projects/software/segment.png'),
@@ -65,9 +80,9 @@ export const softwareProjects = [
     ]
   },
   {
-    title: 'Internal Tool',
-    description: 'Components for customer service tool',
-    details: 'As an intern at Seasoned I developed reusable components for an internal tool for the Customer Service team. In addition to building stylized menus and cards for admins, job seekers, and stores, I implemented GraphQL queries to fetch relevant data from a Postgres database.',
+    title: 'Profile Components',
+    description: 'Internal Customer Support Tool',
+    details: 'As an intern at Seasoned I developed reusable components for an internal Customer Support tool. In addition to building stylized menus and cards for admins, job seekers, and stores, I implemented GraphQL queries to fetch relevant data from a Postgres database.',
     stack: ['Vue', 'Vuetify', 'GraphQL', 'PostgreSQL'],
     github: '',
     image: require('./src/assets/projects/software/vuetify.png'),
@@ -79,7 +94,7 @@ export const softwareProjects = [
   },
   {
     title: 'Open Restaurant',
-    description: 'Photos module for restaurant app',
+    description: 'Photos Module for Restaurant App',
     details: 'Built responsive image gallery with modal view showing photo details, flagging options, and intuitive navigation. Designed database schema to optimize loading speeds by hosting images in AWS S3 buckets.',
     stack: ['React', 'Styled-Components', 'Express', 'Ajax', 'MongoDB', 'Faker', 'Jest', 'Enzyme', 'Amazon S3'],
     github: 'https://github.com/krummurk/photos-module',
@@ -93,16 +108,16 @@ export const softwareProjects = [
   },
   {
     title: 'Social Inn',
-    description: 'Scaled back end of housing app',
+    description: 'Scaled Back End of Housing App',
     details: 'Scaled the back end of a room reviews app to handle 10 million records and 100 requests per second. Benchmarked performance of a SQL vs. NoSQL database with 10M records to determine optimal database. Deployed app on AWS and stress tested server to identify performance bottlenecks.',
     stack: ['PostgreSQL', 'Cassandra', 'Express', 'AWS', 'k6', 'New Relic'],
     github: 'https://github.com/social-inn/Reviews',
-    image: require('./src/assets/projects/software/bed.jpg'),
+    image: require('./src/assets/projects/software/social-inn.jpg'),
     video: require('./src/assets/projects/software/social-in-test.png')
   },
   {
     title: 'Connect Four',
-    description: 'Single page two player game',
+    description: 'Two Player Game',
     details: 'Developed game in which two players alternately place pieces into a 7x7 board trying to place 4 adjacent pieces. Implemented animations and dynamically rendering board, game status, and rematch button.',
     stack: ['React', 'CSS animations'],
     github: 'https://github.com/matt-violet/connect4',
@@ -116,7 +131,7 @@ export const softwareProjects = [
   },
   {
     title: 'My Bolus',
-    description: 'Insulin dose calculator for diabetics',
+    description: 'Insulin Dose Calculator',
     details: 'Developed a full stack application to simulate modern insulin pump dosage algorithms based on user’s meal choice, current blood glucose (bg) level, insulin-to-carb ratio, bg correction factor, future exercise plans, and other factors. Below is a theoretical example of the kind of mental calculations insulin users must perform ahead of every meal.',
     stack: ['React', 'Express', 'MongoDB'],
     github: 'https://github.com/matt-violet/My-Bolus',

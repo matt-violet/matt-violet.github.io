@@ -5,7 +5,7 @@
         <h2 class="skills-header">Front End Skills</h2>
       </div>
       <div class="skills-row">
-        <div class="skill-div" v-for ="(skill, i) of skills.frontend" :key="i" data-aos="zoom-in" data-aos-offset="200">
+        <div class="skill-div" :class="i === 3 ? 'first-div-new-row' : ''" v-for ="(skill, i) of skills.frontend" :key="i" data-aos="zoom-in" data-aos-offset="200">
           <div class="icon-div">
             <img class="skill-icon" :src="skill.image">
           </div>
@@ -64,6 +64,7 @@ export default {
   margin: auto;
   max-width: 1000px;
   display: flex;
+  flex-flow: wrap;
   align-items: stretch;
   justify-content: space-evenly;
 }
@@ -123,29 +124,31 @@ export default {
 @media (max-width: 650px) {
   .skill-div {
     padding: 10px;
-    height: 35px;
+    height: 50px;
+    width: 50px;
   }
   .skill-icon {
     width: 35px;
     height: 35px;
   }
-  .skill-name {
-    width: 0;
-    height: 0;
-    visibility: hidden;
-  }
 }
-@media (max-width: 500px) {
+@media (max-width: 550px) {
   .skill-div {
-    padding: 5px;
-    height: 30px;
+    /* width: 20px; */
+    padding: 10px;
+    flex: 1 1 1;
+    margin: 10px;
+  }
+  .icon-div {
+    
   }
   .skill-icon {
     width: 30px;
     height: 30px;
   }
   .skills-row {
-    justify-content: space-between;
+    width: 275px;
+    /* justify-content: space-between; */
   }
 }
 </style>
