@@ -2,8 +2,8 @@
   <div id="home">
     <div class="header" data-aos="zoom-in" data-aos-duration="500">
       <h1 data-aos="fade-right">Welcome!</h1>
-      <h2 data-aos="fade-left" data-aos-delay="300">I'm Matt, a mission-driven developer with roots in the non-profit world.</h2>
-      <button v-on:click="$emit('nav', 'work')" data-aos="zoom-in" data-aos-delay="600">Portfolio</button>
+      <h2 data-aos="fade-left" data-aos-delay="300">I'm a mission-driven developer with roots in the non-profit world, currently seeking a junior web / software developer role.</h2>
+      <button v-on:click="$emit('nav', 'work')" data-aos="zoom-in" data-aos-delay="600">View Portfolio</button>
     </div>
   </div>
 </template>
@@ -24,7 +24,7 @@ export default {
   text-align: center;
 }
 .header {
-  width: 600px;
+  width: 500px;
   padding: 60px 0;
   margin: auto;
   text-align: center;
@@ -32,13 +32,13 @@ export default {
 h1 {
   color: white;
   font-size: 90px;
-  font-weight: 500;
+  font-weight: 300;
   border: 0;
   margin: 0;
 }
 h2 {
   color: white;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   margin-top: 10px;
 }

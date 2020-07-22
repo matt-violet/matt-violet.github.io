@@ -3,7 +3,7 @@
     <div class="header-div" v-on:click="$emit('nav', 'home')">
       <img class="photo" src="../assets/matt-violet.png">
       <h2 class="name-text">MATT VIOLET</h2>
-      <h4 class="title-text">SOFTWARE / WEB DEVELOPER</h4>
+      <h4 class="title-text">WEB / SOFTWARE DEVELOPER</h4>
     </div>
     <div class="links-div">
       <p class="link-text" v-on:click="$emit('nav', 'about')">ABOUT</p>
@@ -11,6 +11,11 @@
       <p class="link-text" v-on:click="$emit('nav', 'work')">PORTFOLIO</p>
       <p class="link-text" v-on:click="$emit('nav', 'skills')">SKILLS</p>
       <p class="link-text" v-on:click="$emit('nav', 'contact')">CONTACT</p>
+    </div>
+    <div class="icons-div">
+      <img class="icon" src="../assets/icons/email-white.png" v-on:click='handleLinkClick("mattviolet@gmail.com")'/>
+      <img class="icon" src="../assets/icons/github-white.png" v-on:click='handleLinkClick("https://github.com/matt-violet")'/>
+      <img class="icon" src="../assets/icons/linkedin-white.png" v-on:click='handleLinkClick("https://www.linkedin.com/in/mattviolet")'/>
     </div>
     <img class="small-menu" v-on:click="handleShowSmallMenu()" src="../assets/icons/menu-white.png">
     <div :class="this.showSmallMenu ? 'drop-down' : 'invisible'">
@@ -35,6 +40,13 @@ export default {
     }
   },
   methods: {
+    handleLinkClick(url) {
+      if (url === 'mattviolet@gmail.com') {
+        window.location.href = "mailto:" + url;
+      } else {
+        window.open(url, '_blank');
+      }
+    },
     handleShowSmallMenu() {
       this.$data.showSmallMenu = !this.$data.showSmallMenu;
     },
@@ -79,6 +91,19 @@ export default {
   color: lightsalmon;
   font-size: 12px;
   font-weight: 700;
+}
+.icons-div {
+  margin: 76px auto 0 auto;
+}
+.icon {
+  margin: 0 10px;
+  width: 25px;
+  height: 25px;
+  transition: .3s;
+}
+.icon:hover {
+  cursor: pointer;
+  transform: scale(1.2);
 }
 .links-div {
   width: 100px;

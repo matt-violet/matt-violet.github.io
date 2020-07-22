@@ -6,10 +6,10 @@
         <p class="photo-text">That's my insulin pump and blood sugar sensor. Together they create a continuous glucose monitoring (CGM) system, AKA an "artificial pancreas".</p>
       </div>
       <div class="about-text-div" data-aos="fade-left">
-        <p><strong>I never could have anticipated my journey into software development,</strong> but now I can't see myself doing anything else.</p>
+        <p><strong>I never could have anticipated my journey</strong> into software development, but now I can't see myself doing anything else.</p>
         <p>Although my professional path has taken many twists and turns — from tutoring students of East Oakland's underserved schools, to empowering Burmese migrants in Thailand, to establishing a new communications department for an activist non-profit in Berkeley — <strong>I've always followed my passion</strong> to help others and solve problems.</p>
-        <p>My passion for programming comes from the role software plays in my personal health, as a <strong>self-identified <a href='https://drive.google.com/file/d/1D8tp35PoCCbMzuWLTPHFI5oGN7nFhIQ1/view?usp=sharing' target='_blank'>human cyborg</a></strong> who has used an <strong>"artificial pancreas"</strong> to manage his type one diabetes since 2016. With my daily well-being now literally tied to algorithms, I'm invested in learning and developing applications that have the potential to help others as much as these devices have helped me.</p>
-        <p>When not coding I can be found DJing, making Photoshop creations, and social distancing in my hometown of Oakland, CA.</p>
+        <p>My passion for programming comes from the role software plays in my health, as a person with type 1 diabetes who's used an <strong>"<a href='https://drive.google.com/file/d/1D8tp35PoCCbMzuWLTPHFI5oGN7nFhIQ1/view?usp=sharing' target='_blank'>artificial pancreas</a>"</strong> to manage his blood sugar since 2016. With my daily well-being now literally tied to algorithms, I'm invested in learning and developing applications that have the potential to help others as much as these devices have helped me.</p>
+        <p>When not coding I can be found making music, Photoshop creations, and social distancing in my hometown of Oakland, CA.</p>
       </div>
     </div>
   </div>
