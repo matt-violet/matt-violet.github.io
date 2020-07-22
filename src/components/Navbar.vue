@@ -77,7 +77,7 @@ export default {
 }
 .header-div {
   text-align: center;
-  margin: 50px auto 100px auto;
+  margin: 50px auto 75px auto;
   width: 200px;
 }
 .name-text, .title-text {
@@ -144,6 +144,9 @@ export default {
     z-index: 2;
     text-align: left;
     background: linear-gradient(to right, rgb(70, 130, 180), rgb(70, 130, 180, .9));
+  }
+  .icons-div {
+    display:none
   }
   .small-menu {
     width: 30px;

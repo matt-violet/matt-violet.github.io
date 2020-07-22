@@ -39,23 +39,23 @@ h1 {
 h2 {
   color: white;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 700;
   margin-top: 10px;
 }
 button {
-  /* background: steelblue; */
-  background: linear-gradient(to top, coral, lightsalmon);
+  background: coral;
   color: white;
   margin-top: 25px;
-  padding: 15px 35px;
-  font-size: 24px;
+  padding: 10px 18px;
+  font-size: 22px;
   font-weight: 500;
-  border-radius: 30px;
+  border-radius: 5px;
   border: 0;
+  box-shadow: 1px 2px 8px 0px rgb(51, 51, 51);
+  transition: .3s;
 }
 button:hover {
-  box-shadow: 1px 2px 8px 0px black;
-  transition: .3s;
+  transform: scale(1.2);
   cursor: pointer;
 }
 /* --------------------------- MEDIA QUERY --------------------------- */

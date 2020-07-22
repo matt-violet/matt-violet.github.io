@@ -58,7 +58,7 @@ h1 {
   padding: 25px;
   margin-bottom: 40px;
   border-radius: 5px;
-  background: linear-gradient(to bottom, rgb(238, 238, 238), rgb(219, 219, 219));
+  background: rgb(238, 238, 238);
 }
 .school-section-last {
   margin-bottom: 0;
