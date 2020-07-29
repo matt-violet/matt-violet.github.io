@@ -11,19 +11,21 @@
       <p class="link-text" v-on:click="$emit('nav', 'work')">PORTFOLIO</p>
       <p class="link-text" v-on:click="$emit('nav', 'skills')">SKILLS</p>
       <p class="link-text" v-on:click="$emit('nav', 'contact')">CONTACT</p>
+      <p class="link-text" v-on:click='handleLinkClick(resumeLink)'>RESUME</p>
     </div>
     <div class="icons-div">
       <img class="icon" src="../assets/icons/email-white.png" v-on:click='handleLinkClick("mattviolet@gmail.com")'/>
       <img class="icon" src="../assets/icons/github-white.png" v-on:click='handleLinkClick("https://github.com/matt-violet")'/>
       <img class="icon" src="../assets/icons/linkedin-white.png" v-on:click='handleLinkClick("https://www.linkedin.com/in/mattviolet")'/>
     </div>
-    <img class="small-menu" v-on:click="handleShowSmallMenu()" src="../assets/icons/menu-white.png">
+    <img class="small-menu" v-on:click="toggleSmallMenu()" src="../assets/icons/menu-white.png">
     <div :class="this.showSmallMenu ? 'drop-down' : 'invisible'">
       <p class="link-text-small" v-on:click="handleSmallMenuClick('about')">ABOUT</p>
       <p class="link-text-small" v-on:click="handleSmallMenuClick('education')">EDUCATION</p>
       <p class="link-text-small" v-on:click="handleSmallMenuClick('work')">PORTFOLIO</p>
       <p class="link-text-small" v-on:click="handleSmallMenuClick('skills')">SKILLS</p>
       <p class="link-text-small" v-on:click="handleSmallMenuClick('contact')">CONTACT</p>
+      <p class="link-text-small" v-on:click="handleSmallMenuClick('resume')">RESUME</p>
     </div>
   </div>
 </template>
@@ -36,7 +38,8 @@ export default {
   },
   data() {
     return {
-      showSmallMenu: false
+      showSmallMenu: false,
+      resumeLink: 'https://docs.google.com/document/d/1QNbQGA8xYZ_rY8bJt6Y7lT9yVWhXIu7WmLypJb6UrZU/edit?usp=sharing'
     }
   },
   methods: {
@@ -47,11 +50,15 @@ export default {
         window.open(url, '_blank');
       }
     },
-    handleShowSmallMenu() {
+    toggleSmallMenu() {
       this.$data.showSmallMenu = !this.$data.showSmallMenu;
     },
     handleSmallMenuClick(page) {
-      this.handleShowSmallMenu();
+      this.toggleSmallMenu();
+      if (page === 'resume') {
+        window.open(this.resumeLink, '_blank');
+        return;
+      }
       this.$emit('nav', page);
     }
   }

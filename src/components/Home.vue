@@ -2,7 +2,7 @@
   <div id="home">
     <div class="header" data-aos="zoom-in" data-aos-duration="500">
       <h1 data-aos="fade-right">Welcome!</h1>
-      <h2 data-aos="fade-left" data-aos-delay="300">I'm a mission-driven developer with roots in the non-profit world, currently seeking a junior web / software developer role.</h2>
+      <h2 data-aos="fade-left" data-aos-delay="300">I'm a mission-driven developer with roots in the non-profit world, currently seeking a web / software developer role.</h2>
       <button v-on:click="$emit('nav', 'work')" data-aos="zoom-in" data-aos-delay="600">View Portfolio</button>
     </div>
   </div>
@@ -39,7 +39,7 @@ h1 {
 h2 {
   color: white;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 500;
   margin-top: 10px;
 }
 button {
@@ -66,13 +66,25 @@ button:hover {
 }
 @media (max-width: 800px) {
   .header {  
-    width: 350px;
+    width: 450px;
   }
   h1 {
     font-size: 75px;
   }
   h2 {
-    font-size: 16px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 500px) {
+  .header {
+    width: 300px;
+  }
+  h1 {
+    font-size: 60px;
+  }
+  button {
+    padding: 10px 15px;
+    font-size: 18px;
   }
 }
 </style>
