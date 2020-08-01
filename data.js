@@ -68,7 +68,7 @@ export const softwareProjects = [
   {
     title: 'Segment Events',
     description: 'Harnessing the Power of Data',
-    details: 'As an intern at Seasoned I integrated Segment events (from Segment\'s Customer Data Platform) to collect data about admin user onboarding events. This information is now used by the Data and Marketing teams to drive analytics, A/B testing, and automated marketing campaigns.',
+    details: 'As an intern at Seasoned I took ownership of a sprint to integrate Segment events (from Segment\'s Customer Data Platform) to collect data about admin user onboarding events. This information is now used by the Data and Marketing teams to drive analytics, A/B testing, and automated marketing campaigns.',
     stack: ['React', 'Segment Library'],
     github: '',
     image: require('./src/assets/projects/software/segment.png'),
@@ -95,7 +95,7 @@ export const softwareProjects = [
   {
     title: 'Open Restaurant',
     description: 'Photos Module for Restaurant App',
-    details: 'Built responsive image gallery with modal view showing photo details, flagging options, and intuitive navigation. Designed database schema to optimize loading speeds by hosting images in AWS S3 buckets.',
+    details: 'For this team project I contributed a responsive image gallery component for a restaurant reviews application. When an individual photo is clicked, the user enters a full-screen modal carousel view that includes photo details, flagging options, and intuitive navigation arrows. Images are hosted in AWS S3 buckets.',
     stack: ['React', 'Styled-Components', 'Express', 'Ajax', 'MongoDB', 'Faker', 'Jest', 'Enzyme', 'Amazon S3'],
     github: 'https://github.com/krummurk/photos-module',
     image: require('./src/assets/projects/software/restaurant.jpg'),
@@ -109,7 +109,7 @@ export const softwareProjects = [
   {
     title: 'Social Inn',
     description: 'Scaled Back End of Housing App',
-    details: 'Scaled the back end of a room reviews app to handle 10 million records and 100 requests per second. Benchmarked performance of a SQL vs. NoSQL database with 10M records to determine optimal database. Deployed app on AWS and stress tested server to identify performance bottlenecks.',
+    details: 'This was a team project in which I inherited legacy code for a housing review application and was tasked with scaling the back end to handle realistic volumes of data and web traffic, which my team defined as 10 million database records and 100 requests per second. Given the rigid/uniform structure of the data (all room reviews have the same properties that take the same data type), I suspected that a SQL database would be most appropriate, but I decided to test a SQL database (Postgres) versus a NoSQL database (Cassandra) to find the fastest query speeds for my use case. As I suspected, Postgres outperformed Cassandra initially. After adding a secondary index to the room_id property, Postgres achieved an average latency of 3 milliseconds (versus 18 with Cassandra) and 400 requests per second (versus 150 with Cassandra). To further improve performance, I implemented load balancers to distribute requests among multiple servers.',
     stack: ['PostgreSQL', 'Cassandra', 'Express', 'AWS', 'k6', 'New Relic'],
     github: 'https://github.com/social-inn/Reviews',
     image: require('./src/assets/projects/software/social-inn.jpg'),
@@ -118,7 +118,7 @@ export const softwareProjects = [
   {
     title: 'Connect Four',
     description: 'Two Player Game',
-    details: 'Developed game in which two players alternately place pieces into a 7x7 board trying to place 4 adjacent pieces. Implemented animations and dynamically rendering board, game status, and rematch button.',
+    details: 'Connect Four was a classic project I used to familiarize myself with the React library. It is a popular game in which two players alternately place pieces into a 7x7 board trying to place 4 adjacent pieces. I implemented animations and a dynamically rendering board, game status, and rematch button.',
     stack: ['React', 'CSS animations'],
     github: 'https://github.com/matt-violet/connect4',
     image: require('./src/assets/projects/software/connect-four.png'),
@@ -132,7 +132,7 @@ export const softwareProjects = [
   {
     title: 'My Bolus',
     description: 'Insulin Dose Calculator',
-    details: 'Developed a full stack application to simulate modern insulin pump dosage algorithms based on user’s meal choice, current blood glucose (bg) level, insulin-to-carb ratio, bg correction factor, future exercise plans, and other factors. Below is a theoretical example of the kind of mental calculations insulin users must perform ahead of every meal.',
+    details: 'For diabetics, "bolus" is the subcutaneous administration of insulin to handle a rise in blood glucose following meals. This full stack application simulates modern insulin pump dosage algorithms based on user’s meal choice, current blood glucose (bg) level, insulin-to-carb ratio, bg correction factor, future exercise plans, and other factors.',
     stack: ['React', 'Express', 'MongoDB'],
     github: 'https://github.com/matt-violet/My-Bolus',
     image: require('./src/assets/projects/software/vial.jpg'),

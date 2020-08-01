@@ -61,9 +61,6 @@ export default {
     return {
       softwareProjects: softwareProjects
     }
-  },
-  methods: {
-
   }
 }
 </script>
