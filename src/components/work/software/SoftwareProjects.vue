@@ -150,7 +150,8 @@ export default {
     font-weight: 700;
     padding: 6px 10px;
     color: steelblue;
-    border: 1.5px solid steelblue;
+    background: white;
+    border: 2px solid steelblue;
     border-radius: 20px;
     display: block;
   }

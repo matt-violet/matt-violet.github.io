@@ -9,7 +9,7 @@
       <p class="link-text" v-on:click="$emit('nav', 'about')">ABOUT</p>
       <p class="link-text" v-on:click="$emit('nav', 'education')">EDUCATION</p>
       <p class="link-text" v-on:click="$emit('nav', 'work')">PORTFOLIO</p>
-      <p class="link-text" v-on:click="$emit('nav', 'skills')">SKILLS</p>
+      <p class="link-text" v-on:click="$emit('nav', 'skills')">SKILLS + EXPERIENCE</p>
       <p class="link-text" v-on:click="$emit('nav', 'contact')">CONTACT</p>
       <p class="link-text" v-on:click='handleLinkClick(resumeLink)'>RESUME</p>
     </div>
@@ -23,7 +23,7 @@
       <p class="link-text-small" v-on:click="handleSmallMenuClick('about')">ABOUT</p>
       <p class="link-text-small" v-on:click="handleSmallMenuClick('education')">EDUCATION</p>
       <p class="link-text-small" v-on:click="handleSmallMenuClick('work')">PORTFOLIO</p>
-      <p class="link-text-small" v-on:click="handleSmallMenuClick('skills')">SKILLS</p>
+      <p class="link-text-small" v-on:click="handleSmallMenuClick('skills')">SKILLS + EXPERIENCE</p>
       <p class="link-text-small" v-on:click="handleSmallMenuClick('contact')">CONTACT</p>
       <p class="link-text-small" v-on:click="handleSmallMenuClick('resume')">RESUME</p>
     </div>
@@ -77,7 +77,7 @@ export default {
 }
 .photo {
   width: 125px;
-  background: linear-gradient(to top, coral, lightsalmon);
+  background: coral;
   box-shadow: 1px 2px 4px 0px black;
   margin: 0 auto 10px auto;
   border-radius: 50%;
@@ -129,11 +129,16 @@ export default {
   visibility: hidden;
 }
 /* --------------------------- HOVER --------------------------- */
+.header-div:hover .photo {
+  transform: scale(1.1);
+  transition: .3s;
+}
 .link-text:hover, .header-div:hover {
   cursor: pointer;
 }
 .link-text:hover {
   color: lightsalmon;
+  transform: scale(1.1);
   transition: .3s;
 }
 /* --------------------------- MEDIA QUERY --------------------------- */
@@ -183,6 +188,8 @@ export default {
   }
   .link-text-small:hover {
     color: lightsalmon;
+    transform: scale(1.1);
+    transition: .3s;
   }
 }
 </style>

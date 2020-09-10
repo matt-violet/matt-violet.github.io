@@ -1,9 +1,9 @@
 <template>
   <div id="skills">
-    <h1>SKILLS</h1>
+    <h1>SKILLS + EXPERIENCE</h1>
     <div class="inner-content">
-      <p>My first taste of programming was building and maintaining WordPress websites for non-profit organizations using basic HTML.</p>
-      <p>From there I gained proficiency in full stack software development through a combination of self study and structured education. As a student at San Francisco's premiere coding bootcamp, Hack Reactor (Galvanize), I completed <strong>over 1,000 hours</strong> of advanced computer science curriculum modeling today's software engineering industry. Most recently, I gained invaluable <strong>hands-on experience as an intern</strong> working on a team of developers in a professional codebase at <a href="https://www.seasoned.co/" target="blank">Seasoned</a>.</p>
+      <p>My first taste of programming was building and maintaining <strong>WordPress websites</strong> for 3 different non-profit organizations.</p>
+      <p>From there I gained proficiency in full stack software development through a combination of <strong>self study</strong>, <strong>structured coursework</strong>, and <strong>real world internship experience</strong>. As a student at San Francisco's premier coding bootcamp, Hack Reactor (Galvanize), I completed over 1,000 hours of advanced computer science curriculum modeling today's software engineering industry. Following bootcamp I gained invaluable hands-on experience as a <strong>Software Engineer Intern</strong> on a team of developers in a professional codebase at a start up company called <a href="https://www.seasoned.co/" target="blank">Seasoned</a>.</p>
       <p>Throughout my journey I've embraced every challenge as an opportunity and sought out ways to make each project better than my last.</p>
     </div>
     <div class="stats-div">
