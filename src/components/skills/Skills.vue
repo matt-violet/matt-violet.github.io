@@ -2,9 +2,9 @@
   <div id="skills">
     <h1>SKILLS + EXPERIENCE</h1>
     <div class="inner-content">
-      <p>My first taste of programming was building and maintaining <strong>WordPress websites</strong> for 3 different non-profit organizations.</p>
-      <p>From there I gained proficiency in full stack software development through a combination of <strong>self study</strong>, <strong>structured coursework</strong>, and <strong>real world internship experience</strong>. As a student at San Francisco's premier coding bootcamp, Hack Reactor (Galvanize), I completed over 1,000 hours of advanced computer science curriculum modeling today's software engineering industry. Following bootcamp I gained invaluable hands-on experience as a <strong>Software Engineer Intern</strong> on a team of developers in a professional codebase at a start up company called <a href="https://www.seasoned.co/" target="blank">Seasoned</a>.</p>
-      <p>Throughout my journey I've embraced every challenge as an opportunity and sought out ways to make each project better than my last.</p>
+      <p>My introduction to the world of programming was maintaining <strong>WordPress websites</strong> for 3 different non-profit organizations.</p>
+      <p>From there I took my software engineering skills to the next level through a combination of <strong>self study</strong>, <strong>structured coursework</strong>, and <strong>real world internship experience</strong>. As a student at Hack Reactor, a <strong>premier SF coding bootcamp</strong>, I completed 1,000+ hours of advanced computer science curriculum modeling today's software engineering industry. Next, I gained invaluable hands-on experience as a <strong>Software Engineer Intern</strong> working in a professional codebase at a <a href="https://www.seasoned.co/" target="blank">start up company</a>.</p>
+      <p>Throughout my journey I've embraced challenges and relished every opportunity to expand my knowledge.</p>
     </div>
     <div class="stats-div">
       <div class="first-stats">
@@ -59,9 +59,9 @@ export default {
   margin: auto;
 }
 h1 {
-  padding: 30px 75px;
-  font-size: 50px;
-  font-weight: 700;
+  padding: 25px 75px;
+  font-size: 45px;
+  font-weight: 600;
   color: white;
   background: linear-gradient(to top, coral, lightsalmon);
   margin: 0;
@@ -75,10 +75,10 @@ strong {
   font-weight: 900;
 }
 .stats-div {
-  padding: 60px 0;
+  padding: 100px 0;
   position: relative;
   text-align: center;
-  background: rgb(238, 238, 238);
+  background: rgb(58, 58, 58);
 }
 .first-stats {
   display: inline-block;
@@ -99,14 +99,14 @@ strong {
 .num {
   margin: 0;
   font-size: 50px;
-  font-weight: 500;
-  color: steelblue;
+  font-weight: 300;
+  color: white;
 }
 .num-description {
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 13px;
+  font-weight: 400;
   margin-bottom: 0;
-  color: steelblue;
+  color: white;
 }
 .github-div {
   width: 100%;

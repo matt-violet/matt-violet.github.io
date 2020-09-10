@@ -26,8 +26,8 @@ export default {
   text-align: center;
 }
 .header {
-  width: 500px;
-  padding: 60px 0;
+  width: 470px;
+  padding: 150px 0;
   margin: auto;
   text-align: center;
 }
@@ -70,7 +70,7 @@ h2 {
 }
 @media (max-width: 800px) {
   .header {  
-    width: 450px;
+    width: 400px;
   }
   h1 {
     font-size: 75px;
@@ -81,7 +81,7 @@ h2 {
 }
 @media (max-width: 500px) {
   .header {
-    width: 300px;
+    width: 280px;
   }
   h1 {
     font-size: 60px;

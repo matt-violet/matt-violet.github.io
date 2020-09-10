@@ -6,9 +6,9 @@
         <p class="photo-text">That's my insulin pump and blood sugar sensor. Together they create a continuous glucose monitoring (CGM) system, AKA an "artificial pancreas".</p>
       </div>
       <div class="about-text-div" data-aos="fade-left">
-        <p><strong>I never could have anticipated my journey</strong> into software development, but now I can't see myself doing anything else.</p>
-        <p>Although my professional path has taken many twists and turns — from tutoring students of East Oakland's underserved schools, to empowering Burmese migrants in Thailand, to establishing a new communications department for an activist non-profit in Berkeley — <strong>I've always followed my passion</strong> to help others and solve problems.</p>
-        <p>My passion for programming comes from the role software plays in my health, as a person with type 1 diabetes who's used an <strong>"<a href='https://drive.google.com/file/d/1D8tp35PoCCbMzuWLTPHFI5oGN7nFhIQ1/view?usp=sharing' target='_blank'>artificial pancreas</a>"</strong> to manage his blood sugar since 2016. With my daily well-being now literally tied to algorithms, I'm invested in learning and developing applications that have the potential to help others as much as these devices have helped me.</p>
+        <p><strong>I couldn't have anticipated my journey</strong> into software development, but now I don't see myself doing anything else.</p>
+        <p>Although my professional path has taken many twists and turns — from tutoring students of East Oakland public schools, to empowering Burmese migrants in Thailand, to establishing a new communications department for a progressive non-profit — <strong>I've always followed my passion</strong> to help others and solve problems.</p>
+        <p>My passion for programming comes from the role software plays in my health, as a person with type 1 diabetes who's used an <strong>"<a href='https://drive.google.com/file/d/1D8tp35PoCCbMzuWLTPHFI5oGN7nFhIQ1/view?usp=sharing' target='_blank'>artificial pancreas</a>"</strong> to manage his blood sugar since 2016. With my well-being now literally tied to algorithms, I've invested myself in learning and developing applications that have the potential to help others as much as these devices have helped me.</p>
         <p>When not coding I can be found making music, Photoshop creations, and social distancing in my hometown of Oakland, CA.</p>
       </div>
     </div>
@@ -23,9 +23,9 @@ export default {
 
 <style scoped>
 h1 {
-  padding: 30px 75px;
-  font-size: 50px;
-  font-weight: 700;
+  padding: 25px 75px;
+  font-size: 45px;
+  font-weight: 600;
   color: white;
   background: linear-gradient(to top, coral, lightsalmon);
   margin: 0;

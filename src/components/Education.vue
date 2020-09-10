@@ -3,20 +3,20 @@
     <h1>EDUCATION</h1>
     <div class="inner-content">
       <div class="school-section" data-aos="zoom-in">
-        <p class="school-name">Hack Reactor at Galvanize, SF</p>
-        <p class="school-details"><a href="https://www.hackreactor.com/" target="_blank">Advanced Software Engineering Immersive Program</a></p>
-        <p class="school-details">April 2019 - July 2019</p>
-      </div>
-      <div class="school-section" data-aos="zoom-in">
-        <p class="school-name">Online Courses</p>
-        <p class="school-details"><a href="https://www.udacity.com/course/intro-to-javascript--ud803" target="_blank">Intro to Javascript</a> (Udacity, 2018)</p>
-        <p class="school-details"><a href="https://www.udemy.com/course/the-web-developer-bootcamp/" target="_blank">The Web Developer Bootcamp</a> (Udemy, 2019)</p>
-      </div>
-      <div class="school-section-last" data-aos="zoom-in">
         <p class="school-name">University of California, Davis</p>
         <p class="school-details">Bachelor of Arts in Communication</p>
         <p class="school-details">Minor in Sociology</p>
         <p class="school-details">2006 - 2010</p>
+      </div>
+      <div class="school-section" data-aos="zoom-in">
+        <p class="school-name">Hack Reactor (Galvanize), SF</p>
+        <p class="school-details"><a href="https://www.hackreactor.com/" target="_blank">Advanced Software Engineering Immersive Program</a></p>
+        <p class="school-details">April 2019 - July 2019</p>
+      </div>
+      <div class="school-section-last" data-aos="zoom-in">
+        <p class="school-name">Online Courses</p>
+        <p class="school-details"><a href="https://www.udacity.com/course/intro-to-javascript--ud803" target="_blank">Intro to Javascript</a> (Udacity, 2018)</p>
+        <p class="school-details"><a href="https://www.udemy.com/course/the-web-developer-bootcamp/" target="_blank">The Web Developer Bootcamp</a> (Udemy, 2019)</p>
       </div>
     </div>
   </div>
@@ -39,9 +39,9 @@ export default {
   margin: auto;
 }
 h1 {
-  padding: 30px 75px;
-  font-size: 50px;
-  font-weight: 700;
+  padding: 25px 75px;
+  font-size: 45px;
+  font-weight: 600;
   color: white;
   background: linear-gradient(to top, coral, lightsalmon);
   margin: 0;
@@ -58,7 +58,7 @@ h1 {
   padding: 20px;
   margin-bottom: 40px;
   border-radius: 5px;
-  background: rgb(238, 238, 238);
+  background: rgb(243, 243, 243);
 }
 .school-section-last {
   margin-bottom: 0;

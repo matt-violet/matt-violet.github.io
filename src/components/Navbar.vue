@@ -119,7 +119,7 @@ export default {
 }
 .link-text {
   margin: 10px 0;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 16px;
   color: white;
 }
@@ -138,6 +138,7 @@ export default {
 }
 .link-text:hover {
   color: lightsalmon;
+  font-weight: 700;
   transform: scale(1.1);
   transition: .3s;
 }
@@ -178,7 +179,7 @@ export default {
   .link-text-small {
     margin-left: 10px;
     color: white;
-    font-weight: 600;
+    font-weight: 500;
   }
   .small-menu:hover {
     cursor: pointer;
@@ -188,6 +189,7 @@ export default {
   }
   .link-text-small:hover {
     color: lightsalmon;
+    font-weight: 700;
     transform: scale(1.1);
     transition: .3s;
   }

@@ -44,9 +44,9 @@ export default {
   margin: auto;
 }
 h1 {
-  padding: 30px 75px;
-  font-size: 50px;
-  font-weight: 700;
+  padding: 25px 75px;
+  font-size: 45px;
+  font-weight: 600;
   color: white;
   background: linear-gradient(to top, coral, lightsalmon);
   margin: 0;
@@ -56,12 +56,12 @@ h1 {
   margin-top: 0;
 }
 .software-bg-div {
-  background: rgb(238, 238, 238);
+  background: rgb(243, 243, 243);
   padding: 30px;
   border-radius: 5px;
 }
 .design-bg-div {
-  background: rgb(238, 238, 238);
+  background: rgb(243, 243, 243);
   padding: 30px;
   border-radius: 5px;
   margin-top: 50px;

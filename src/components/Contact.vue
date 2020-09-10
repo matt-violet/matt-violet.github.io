@@ -52,9 +52,9 @@ export default {
   margin-top: 30px;
 }
 h1 {
-  padding: 30px 75px;
-  font-size: 50px;
-  font-weight: 700;
+  padding: 25px 75px;
+  font-size: 45px;
+  font-weight: 600;
   color: white;
   background: linear-gradient(to top, coral, lightsalmon);
   margin: 0;
