@@ -2,7 +2,7 @@
   <div id="home">
     <div class="header" data-aos="zoom-in" data-aos-duration="500">
       <h1 data-aos="fade-right">Welcome!</h1>
-      <h2 data-aos="fade-left" data-aos-delay="300">I'm a mission-driven developer with roots in the non-profit world, currently seeking a web / software developer role.</h2>
+      <h2 data-aos="fade-left" data-aos-delay="300">I'm a mission-driven individual with roots in the non-profit world, currently seeking a web / software developer role.</h2>
       <div class="btn-div" data-aos="zoom-in" data-aos-delay="600">
         <button class="btn" v-on:click="$emit('nav', 'work')">View Portfolio</button>
       </div>
@@ -23,12 +23,15 @@ export default {
 #home {
   height: 100%;
   width: 100%;
+  margin: auto;
   text-align: center;
+  padding-top: 150px;
 }
 .header {
   width: 470px;
-  padding: 150px 0;
-  margin: auto;
+  /* border: 2px solid white; */
+  padding-bottom: 30px;
+  margin: 0 auto;
   text-align: center;
 }
 h1 {
@@ -41,16 +44,16 @@ h1 {
 h2 {
   color: white;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
   margin-top: 10px;
 }
 .btn {
   background: coral;
   color: white;
   margin-top: 25px;
-  padding: 10px 18px;
-  font-size: 22px;
-  font-weight: 500;
+  padding: 12px 20px;
+  font-size: 20px;
+  font-weight: 600;
   border-radius: 50px;
   border: 0;
   /* box-shadow: 1px 2px 8px 0px rgb(51, 51, 51); */

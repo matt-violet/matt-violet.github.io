@@ -60,7 +60,7 @@ export default {
       showProject: false,
       featuredProject: {},
       backgroundIndex: 1,
-      backgroundImage: require("./assets/matt-nyc.png"),
+      backgroundImage: require("./assets/bay.jpg"),
     }
   },
   methods: {
@@ -120,7 +120,7 @@ export default {
       this.backgroundIndex === 4 ? 
         this.backgroundIndex = 0 : 
         this.backgroundIndex++
-    }, 3000);
+    }, 4000);
   }
 }
 </script>
@@ -158,7 +158,7 @@ a:visited {
   min-width: 100%;
   height: 100%;
   position: absolute;
-  animation: grow 3s infinite;
+  animation: grow 4s infinite;
 }
 @keyframes grow {
   from { transform: scale(1); }
@@ -168,7 +168,7 @@ a:visited {
   width: 100%;
   height: 100%;
   position: absolute;
-  background: linear-gradient(to bottom, rgba(36, 36, 36, 0.8), rgb(0, 0, 0, 0));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1));
 }
 @media (max-width: 1000px) {
   .components {
