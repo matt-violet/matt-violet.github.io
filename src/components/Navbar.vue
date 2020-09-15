@@ -18,8 +18,8 @@
       <img class="icon" src="../assets/icons/github-white.png" v-on:click='handleLinkClick("https://github.com/matt-violet")'/>
       <img class="icon" src="../assets/icons/linkedin-white.png" v-on:click='handleLinkClick("https://www.linkedin.com/in/mattviolet")'/>
     </div>
-    <img class="small-menu" v-on:click="toggleSmallMenu()" src="../assets/icons/menu-white.png">
-    <div :class="this.showSmallMenu ? 'drop-down' : 'invisible'">
+    <img class="menu-icon" v-on:click="toggleSmallMenu()" src="../assets/icons/menu-white.png">
+    <div :class="this.showSmallMenu ? 'navbar-drop-down' : 'invisible'">
       <p class="link-text-small" v-on:click="handleSmallMenuClick('about')">ABOUT</p>
       <p class="link-text-small" v-on:click="handleSmallMenuClick('education')">EDUCATION</p>
       <p class="link-text-small" v-on:click="handleSmallMenuClick('work')">PORTFOLIO</p>
@@ -72,9 +72,10 @@ export default {
   background: linear-gradient(to right, rgb(70, 130, 180), rgb(70, 130, 180, .9));
   margin: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 3;
   display: inline-block;
   text-align: center;
+  overflow-y: auto;
 }
 .photo {
   width: 125px;
@@ -124,7 +125,7 @@ export default {
   font-size: 16px;
   color: white;
 }
-.invisible, .small-menu, .drop-down {
+.invisible, .menu-icon, .navbar-drop-down {
   width: 0;
   height: 0;
   visibility: hidden;
@@ -157,40 +158,49 @@ export default {
     position: fixed;
     z-index: 3;
     text-align: left;
+    overflow-y: visible;
     background: linear-gradient(to right, rgb(70, 130, 180), rgb(70, 130, 180, .9));
   }
   .icons-div {
     display:none
   }
-  .small-menu {
+  .menu-icon {
     width: 30px;
     height: 30px;
     z-index: 3;
-    margin: 10px 20px 0 20px;
+    padding: 10px 20px 0 20px;
     visibility: visible;
   }
-  .drop-down {
+  .navbar-drop-down {
     width: 200px;
+    z-index: 3;
     height: auto;
     background: linear-gradient(to right, rgb(70, 130, 180), rgb(70, 130, 180, .9));
     visibility: visible;
-    padding: 10px 10px 5px 10px;
+    animation: fadeIn .3s;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
   }
   .link-text-small {
-    margin-left: 10px;
+    padding: 8px 50px;
+    margin: 0;
     color: white;
     font-weight: 600;
   }
-  .small-menu:hover {
+  .menu-icon:hover {
     cursor: pointer;
   }
-  .drop-down:hover {
+  .navbar-drop-down:hover {
     cursor: pointer;
   }
   .link-text-small:hover {
-    color: lightsalmon;
+    /* color: lightsalmon; */
+    background: linear-gradient(to top, coral, lightsalmon);
+    /* padding: 0 10px; */
     font-weight: 700;
-    transform: scale(1.1);
+    padding-left: 30px;
     transition: .3s;
   }
 }

@@ -1,17 +1,10 @@
 <template>
   <div id="app">
     <Navbar @nav="navigate"/>
-    <div class="bg-div">
+    <div class="home-div" v-if="!showProject">
       <Home @nav="navigate"/>
-      <img class="bg-img" :src="backgroundImage">
-      <div class="bg-gradient"></div>
-    </div>
-    <div class="components" v-if="!showProject">
-      <About/>
-      <Education/>
-      <Work :viewProjectDetails="handleViewProjectDetails"/>
-      <Skills/>
-      <Contact/>
+      <img class="home-bg-img" :src="backgroundImage">
+      <div class="bg-gradient"/>
     </div>
     <SoftwareWorkDetails 
       v-if="showProject && featuredProject && !featuredProject.isDesignProject"
@@ -27,6 +20,13 @@
       @handleNextProject="showNextProject"
       @handlePreviousProject="showPreviousProject"
     />
+    <div class="components" v-if="!showProject">
+      <About/>
+      <Education/>
+      <Work :viewProjectDetails="handleViewProjectDetails"/>
+      <Skills/>
+      <Contact/>
+    </div>
   </div>
 </template>
 
@@ -59,7 +59,7 @@ export default {
     return {
       showProject: false,
       featuredProject: {},
-      backgroundIndex: 1,
+      // backgroundIndex: 1,
       backgroundImage: require("./assets/bay.jpg"),
     }
   },
@@ -129,6 +129,8 @@ export default {
 body, html {
   margin: 0;
   height: 100%;
+  width: 100%;
+  position: relative;
 }
 a {
   color: blue;
@@ -141,19 +143,26 @@ a:visited {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 100%;
+  width: 100%;
+  /* position: absolute; */
 }
 .components {
   margin-left: 300px;
   height: 100%;
   position: relative;
   z-index: 2;
+  box-shadow: 0px 0px 8px 0px black;
+  /* overflow: visible; */
 }
-.bg-div {
-  width: 100%;
+.home-div {
+  min-width: 100%;
   height: 100%;
   z-index: 0;
+  /* background: aquamarine; */
+  /* border: 2px solid white; */
+  /* position: absolute; */
 }
-.bg-img {
+.home-bg-img {
   min-width: 100%;
   height: 100%;
   z-index: -1;
@@ -168,28 +177,15 @@ a:visited {
 .bg-gradient {
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: relative;
   z-index: -1;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+  /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)); */
 }
 @media (max-width: 1000px) {
   .components {
     width: 100%;
     margin: 0;
     position: absolute;
-  }
-  .bg-img {
-    left: -50%;
-  }
-}
-@media (max-width: 700px) {
-  .bg-img {
-    left: -80%;
-  }
-}
-@media (max-width: 500px) {
-  .bg-img {
-    left: -120%;
   }
 }
 </style>
