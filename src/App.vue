@@ -1,12 +1,12 @@
 <template>
   <div id="app">
+    <Navbar @nav="navigate"/>
     <div class="bg-div">
+      <Home @nav="navigate"/>
       <img class="bg-img" :src="backgroundImage">
       <div class="bg-gradient"></div>
     </div>
-    <Navbar @nav="navigate"/>
     <div class="components" v-if="!showProject">
-      <Home @nav="navigate"/>
       <About/>
       <Education/>
       <Work :viewProjectDetails="handleViewProjectDetails"/>
@@ -31,7 +31,7 @@
 </template>
 
 <script>
-import { designProjects, backgroundImages, softwareProjects } from '../data.js'
+import { designProjects, softwareProjects } from '../data.js'
 import Navbar from './components/Navbar.vue'
 import Home from './components/Home.vue'
 import About from './components/About.vue'
@@ -113,15 +113,15 @@ export default {
       }
     }
   },
-  mounted() {
-    const bgImgs = backgroundImages;
-    setInterval(() => {
-      this.backgroundImage = bgImgs[this.backgroundIndex];
-      this.backgroundIndex === 4 ? 
-        this.backgroundIndex = 0 : 
-        this.backgroundIndex++
-    }, 4000);
-  }
+  // mounted() {
+  //   const bgImgs = backgroundImages;
+  //   setInterval(() => {
+  //     this.backgroundImage = bgImgs[this.backgroundIndex];
+  //     this.backgroundIndex === 4 ? 
+  //       this.backgroundIndex = 0 : 
+  //       this.backgroundIndex++
+  //   }, 4000);
+  // }
 }
 </script>
 
@@ -145,46 +145,51 @@ a:visited {
 .components {
   margin-left: 300px;
   height: 100%;
+  position: relative;
+  z-index: 2;
 }
 .bg-div {
   width: 100%;
   height: 100%;
-  z-index: -1;
-  position: fixed;
+  z-index: 0;
 }
 .bg-img {
-  bottom: 50;
-  right: 0;
   min-width: 100%;
   height: 100%;
-  position: absolute;
-  animation: grow 4s infinite;
+  z-index: -1;
+  position: fixed;
+  animation: grow 5s;
+  animation-fill-mode: forwards;
 }
 @keyframes grow {
   from { transform: scale(1); }
-  to { transform: scale(1.1); }
+  to { transform: scale(1.2); }
 }
 .bg-gradient {
   width: 100%;
   height: 100%;
   position: absolute;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1));
+  z-index: -1;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
 }
 @media (max-width: 1000px) {
   .components {
     width: 100%;
-    margin: 70px 0 0 0;
+    margin: 0;
     position: absolute;
   }
   .bg-img {
-    min-width: 1000px;
-    height: 100%;
-    transform: translateX(-250px);
+    left: -50%;
   }
 }
 @media (max-width: 700px) {
   .bg-img {
-    right: -40%;
+    left: -80%;
+  }
+}
+@media (max-width: 500px) {
+  .bg-img {
+    left: -120%;
   }
 }
 </style>

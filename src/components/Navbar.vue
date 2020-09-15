@@ -72,6 +72,7 @@ export default {
   background: linear-gradient(to right, rgb(70, 130, 180), rgb(70, 130, 180, .9));
   margin: 0;
   position: fixed;
+  z-index: 1;
   display: inline-block;
   text-align: center;
 }
@@ -118,8 +119,8 @@ export default {
   text-align: left;
 }
 .link-text {
-  margin: 10px 0;
-  font-weight: 500;
+  margin: 15px 0;
+  font-weight: 600;
   font-size: 16px;
   color: white;
 }
@@ -154,7 +155,7 @@ export default {
     width: 100%;
     height: 70px;
     position: fixed;
-    z-index: 2;
+    z-index: 3;
     text-align: left;
     background: linear-gradient(to right, rgb(70, 130, 180), rgb(70, 130, 180, .9));
   }
@@ -171,7 +172,6 @@ export default {
   .drop-down {
     width: 200px;
     height: auto;
-    margin-top: 14px;
     background: linear-gradient(to right, rgb(70, 130, 180), rgb(70, 130, 180, .9));
     visibility: visible;
     padding: 10px 10px 5px 10px;
@@ -179,7 +179,7 @@ export default {
   .link-text-small {
     margin-left: 10px;
     color: white;
-    font-weight: 500;
+    font-weight: 600;
   }
   .small-menu:hover {
     cursor: pointer;

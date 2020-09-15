@@ -23,17 +23,17 @@
           <p class="num-description">hours of advanced CS curriculum</p>
         </div>
         <div class="stat" data-aos="zoom-in">
-          <p class="num">93</p>
-          <p class="num-description">pull requests on GitHub</p>
+          <p class="num">500+</p>
+          <p class="num-description">GitHub contributions per year</p>
         </div>
       </div>
     </div>
     <div class="inner-content">
-      <p>I'm also active on GitHub:</p>
+      <p>I'm active on GitHub:</p>
       <div class="github-div">
         <img class="github-squares" src="../../assets/github-squares.png">
       </div>
-      <p>I have demonstrated proficiency with the following tools:</p>
+      <p>And have demonstrated proficiency with the following tools:</p>
     </div>
     <SkillIcons class="SkillIcons"/>
   </div>
@@ -54,7 +54,7 @@ export default {
   background: white;
 }
 .inner-content {
-  padding: 59px 75px 75px 75px;
+  padding: 75px;
   max-width: 1000px;
   margin: auto;
 }
@@ -78,7 +78,7 @@ strong {
   padding: 100px 0;
   position: relative;
   text-align: center;
-  background: rgb(58, 58, 58);
+  background: rgb(100, 100, 100);
 }
 .first-stats {
   display: inline-block;
@@ -100,13 +100,19 @@ strong {
   margin: 0;
   font-size: 50px;
   font-weight: 300;
-  color: white;
+  color: lightgrey;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
 }
 .num-description {
   font-size: 13px;
-  font-weight: 400;
+  font-weight: 500;
   margin-bottom: 0;
-  color: white;
+  color: lightgrey;
 }
 .github-div {
   width: 100%;

@@ -41,7 +41,7 @@ export default {
   background: white;
 }
 .inner-content {
-  padding: 59px 75px 75px 75px;
+  padding: 75px;
   max-width: 1000px;
   margin: auto;
 }
@@ -66,38 +66,62 @@ p {
   margin-top: 0;
 }
 .containers {
-  margin: 30px 0 0 50px;
+  margin: 50px auto;
+  text-align: center;
 }
 .container {
+  width: 150px;
+  height: 100px;
   position: relative;
-  margin: 0 0 10px 0;
-  vertical-align: middle;
+  margin: 30px 50px;
+  display: inline-block;
+  text-align: center;
 }
 .container:hover {
   cursor: pointer;
 }
+.container:hover .icon {
+  height: 60px;
+  width: 60px;
+  transform: translate(-5px, -5px);
+}
 .container:hover .link-text {
-  transition: .3s;
-  font-weight: 600;
+  font-weight: 500;
+  font-size: 14px;
 }
 .icon {
-  display: inline-block;
-  position: relative;
-  height: 30px;
-  margin-right: 15px;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  margin-left: -25px;
+  height: 50px;
+  width: 50px;
+  transition: .3s;
 }
 .link-text {
-  display: inline-block;
-  position: absolute;
-  font-size: 16px;
-  font-weight: 400;
+  width: 150px;
+  font-size: 12px;
+  font-weight: 300;
   margin: 0;
-  top: 10%;
+  position: absolute;
+  bottom: 5px;
   color: black;
+  transition: .3s;
+}
+@media (max-width: 1250px) and (min-width: 1000px), (max-width: 900px) {
+  .container {
+    margin: 30px 15px;
+  }
 }
 @media (max-width: 700px) {
   .inner-content, h1 {
     padding: 30px 15px;
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    display: block;
+    margin: 30px auto;
   }
 }
 </style>

@@ -58,7 +58,7 @@ export default {
 
 <style scoped>
 .skills-container {
-  padding: 100px 30px;
+  padding: 150px 30px;
 }
 .skills-row {
   margin: auto;
@@ -90,7 +90,7 @@ export default {
   width: 60px;
   height: 60px;
 }
-.skill-icon:hover {
+.skill-div:hover .skill-icon {
   transform: rotate(360deg);
 }
 .header-div {
@@ -98,8 +98,8 @@ export default {
   text-align: center;
 }
 .skills-header {
-  font-weight: 400;
-  font-size: 24px;
+  font-weight: 300;
+  font-size: 28px;
   margin: 0;
 }
 .skill-name {
@@ -133,14 +133,13 @@ export default {
   }
 }
 @media (max-width: 550px) {
+  .skills-container {
+    padding: 100px 30px;
+  }
   .skill-div {
-    /* width: 20px; */
     padding: 10px;
     flex: 1 1 1;
     margin: 10px;
-  }
-  .icon-div {
-    
   }
   .skill-icon {
     width: 30px;
@@ -148,7 +147,6 @@ export default {
   }
   .skills-row {
     width: 275px;
-    /* justify-content: space-between; */
   }
 }
 </style>
