@@ -1,6 +1,6 @@
 <template>
-  <div class="navbar" data-aos="fade-right">
-    <div class="header-div" v-on:click="$emit('nav', 'home')">
+  <div :class="this.showSmallMenu ? 'navbar-with-drop-down' : 'navbar'">
+    <div class="photo-div" v-on:click="$emit('nav', 'home')">
       <img class="photo" src="../assets/matt-violet.png">
       <h2 class="name-text">MATT VIOLET</h2>
       <h4 class="title-text">WEB / SOFTWARE DEVELOPER</h4>
@@ -9,7 +9,7 @@
       <p class="link-text" v-on:click="$emit('nav', 'about')">ABOUT</p>
       <p class="link-text" v-on:click="$emit('nav', 'education')">EDUCATION</p>
       <p class="link-text" v-on:click="$emit('nav', 'work')">PORTFOLIO</p>
-      <p class="link-text" v-on:click="$emit('nav', 'skills')">SKILLS + EXPERIENCE</p>
+      <p class="link-text" v-on:click="$emit('nav', 'experience')">EXPERIENCE</p>
       <p class="link-text" v-on:click="$emit('nav', 'contact')">CONTACT</p>
       <p class="link-text" v-on:click='handleLinkClick(resumeLink)'>RESUME</p>
     </div>
@@ -19,11 +19,11 @@
       <img class="icon" src="../assets/icons/linkedin-white.png" v-on:click='handleLinkClick("https://www.linkedin.com/in/mattviolet")'/>
     </div>
     <img class="menu-icon" v-on:click="toggleSmallMenu()" src="../assets/icons/menu-white.png">
-    <div :class="this.showSmallMenu ? 'navbar-drop-down' : 'invisible'">
+    <div v-if="this.showSmallMenu" class="drop-down">
       <p class="link-text-small" v-on:click="handleSmallMenuClick('about')">ABOUT</p>
       <p class="link-text-small" v-on:click="handleSmallMenuClick('education')">EDUCATION</p>
       <p class="link-text-small" v-on:click="handleSmallMenuClick('work')">PORTFOLIO</p>
-      <p class="link-text-small" v-on:click="handleSmallMenuClick('skills')">SKILLS + EXPERIENCE</p>
+      <p class="link-text-small" v-on:click="handleSmallMenuClick('experience')">EXPERIENCE</p>
       <p class="link-text-small" v-on:click="handleSmallMenuClick('contact')">CONTACT</p>
       <p class="link-text-small" v-on:click="handleSmallMenuClick('resume')">RESUME</p>
     </div>
@@ -69,7 +69,8 @@ export default {
 .navbar {
   height: 100%;
   width: 300px;
-  background: linear-gradient(to right, rgb(70, 130, 180), rgb(70, 130, 180, .9));
+  box-shadow: 0px 0px 4px 4px rgba(46, 46, 46, 0.5);
+  background: linear-gradient(to right, rgb(70, 130, 180), rgb(70, 130, 180, .75));
   margin: 0;
   position: fixed;
   z-index: 3;
@@ -77,16 +78,25 @@ export default {
   text-align: center;
   overflow-y: auto;
 }
+.navbar-with-drop-down {
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  z-index: 3;
+  text-align: left;
+  overflow-y: visible;
+  background: rgb(70, 130, 180, .95);
+}
 .photo {
-  width: 125px;
+  width: 150px;
   background: coral;
   box-shadow: 1px 2px 4px 0px black;
   margin: 0 auto 10px auto;
   border-radius: 50%;
 }
-.header-div {
+.photo-div {
   text-align: center;
-  margin: 50px auto 75px auto;
+  margin: 50px auto;
   width: 200px;
 }
 .name-text, .title-text {
@@ -122,20 +132,20 @@ export default {
 .link-text {
   margin: 15px 0;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 14px;
   color: white;
 }
-.invisible, .menu-icon, .navbar-drop-down {
+.invisible, .menu-icon, .drop-down {
   width: 0;
   height: 0;
   visibility: hidden;
 }
 /* --------------------------- HOVER --------------------------- */
-.header-div:hover .photo {
+.photo-div:hover .photo {
   transform: scale(1.1);
   transition: .3s;
 }
-.link-text:hover, .header-div:hover {
+.link-text:hover, .photo-div:hover {
   cursor: pointer;
 }
 .link-text:hover {
@@ -146,7 +156,7 @@ export default {
 }
 /* --------------------------- MEDIA QUERY --------------------------- */
 @media (max-width: 1000px) {
-  .header-div, .links-div {
+  .photo-div, .links-div {
     width: 0;
     height: 0;
     visibility: hidden;
@@ -159,7 +169,7 @@ export default {
     z-index: 3;
     text-align: left;
     overflow-y: visible;
-    background: linear-gradient(to right, rgb(70, 130, 180), rgb(70, 130, 180, .9));
+    background: rgb(70, 130, 180, .95);
   }
   .icons-div {
     display:none
@@ -171,11 +181,13 @@ export default {
     padding: 10px 20px 0 20px;
     visibility: visible;
   }
-  .navbar-drop-down {
-    width: 200px;
+  .drop-down {
+    transform: translate(0, 9px);
     z-index: 3;
-    height: auto;
-    background: linear-gradient(to right, rgb(70, 130, 180), rgb(70, 130, 180, .9));
+    padding: 20px 0;
+    height: 250px;
+    width: 250px;
+    background: rgb(70, 130, 180, .95);
     visibility: visible;
     animation: fadeIn .3s;
   }
@@ -184,24 +196,39 @@ export default {
     to { opacity: 1; }
   }
   .link-text-small {
-    padding: 8px 50px;
+    padding: 8px 0 8px 80px;
     margin: 0;
     color: white;
-    font-weight: 600;
+    font-weight: 500;
   }
   .menu-icon:hover {
     cursor: pointer;
   }
-  .navbar-drop-down:hover {
+  .drop-down:hover {
     cursor: pointer;
   }
   .link-text-small:hover {
-    /* color: lightsalmon; */
     background: linear-gradient(to top, coral, lightsalmon);
-    /* padding: 0 10px; */
     font-weight: 700;
-    padding-left: 30px;
+    padding-left: 100px;
     transition: .3s;
+  }
+}
+@media (max-width: 500px) {
+  .drop-down {
+    width: 100%;
+    height: 100%;
+    padding-top: 100px;
+    position: fixed;
+    text-align: left;
+    background: rgb(70, 130, 180, .95);
+  }
+  .link-text-small {
+    padding-left: 120px;
+    font-size: 20px;
+  }
+  .link-text-small:hover {
+    padding-left: 140px;
   }
 }
 </style>

@@ -6,15 +6,24 @@
       <div class="containers">
         <div class="container" v-on:click='handleLinkClick("mattviolet@gmail.com")'>
           <img class="icon" src="../assets/icons/email.png"/>
-          <p class="link-text">mattviolet@gmail.com</p>
+          <div class="icon-text">
+            <h4 class="link-header">Email</h4>
+            <p class="link-text">mattviolet@gmail.com</p>
+          </div>
         </div>
         <div class="container" v-on:click='handleLinkClick("https://github.com/matt-violet")'>
           <img class="icon" src="../assets/icons/github.png"/>
-          <p class="link-text">github.com/matt-violet</p>
+          <div class="icon-text">
+            <h4 class="link-header">GitHub</h4>
+            <p class="link-text">github.com/matt-violet</p>
+          </div>
         </div>
         <div class="container" v-on:click='handleLinkClick("https://www.linkedin.com/in/mattviolet")'>
           <img class="icon" src="../assets/icons/linkedin.png"/>
-          <p class="link-text">linkedin.com/in/mattviolet</p>
+          <div class="icon-text">
+            <h4 class="link-header">LinkedIn</h4>
+            <p class="link-text">linkedin.com/in/mattviolet</p>
+          </div>
         </div>
       </div>
     </div>
@@ -71,7 +80,6 @@ p {
 }
 .container {
   width: 150px;
-  height: 100px;
   position: relative;
   margin: 30px 50px;
   display: inline-block;
@@ -87,7 +95,9 @@ p {
 }
 .container:hover .link-text {
   font-weight: 500;
-  font-size: 14px;
+}
+.container:hover .link-header {
+  font-weight: 600;
 }
 .icon {
   position: absolute;
@@ -98,15 +108,22 @@ p {
   width: 50px;
   transition: .3s;
 }
-.link-text {
-  width: 150px;
-  font-size: 12px;
-  font-weight: 300;
-  margin: 0;
-  position: absolute;
-  bottom: 5px;
-  color: black;
+.icon-text {
+  margin-top: 80px;
+}
+.link-header {
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  font-size: 20px;
+  font-weight: 400;
   transition: .3s;
+}
+.link-text {
+  font-size: 12px;
+  font-weight: 400;
+  transition: .3s;
+  margin: 0;
 }
 @media (max-width: 1250px) and (min-width: 1000px), (max-width: 900px) {
   .container {
@@ -121,7 +138,14 @@ p {
 @media (max-width: 600px) {
   .container {
     display: block;
-    margin: 30px auto;
+    margin: 0px auto 40px auto;
+    height: 115px;
+  }
+  .icon-text {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
   }
 }
 </style>

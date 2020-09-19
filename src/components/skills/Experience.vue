@@ -1,6 +1,6 @@
 <template>
-  <div id="skills">
-    <h1>SKILLS + EXPERIENCE</h1>
+  <div id="experience">
+    <h1>EXPERIENCE</h1>
     <div class="inner-content">
       <p>My introduction to the world of programming was maintaining <strong>WordPress websites</strong> for 3 different non-profit organizations.</p>
       <p>From there I took my software engineering skills to the next level through a combination of <strong>self study</strong>, <strong>structured coursework</strong>, and <strong>real world internship experience</strong>. As a student at Hack Reactor, a <strong>premier SF coding bootcamp</strong>, I completed 1,000+ hours of advanced computer science curriculum modeling today's software engineering industry. Next, I gained invaluable hands-on experience as a <strong>Software Engineer Intern</strong> working in a professional codebase at a <a href="https://www.seasoned.co/" target="blank">start up company</a>.</p>
@@ -50,7 +50,7 @@ export default {
 </script>
 
 <style scoped>
-#skills {
+#experience {
   background: white;
 }
 .inner-content {

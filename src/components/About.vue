@@ -5,11 +5,11 @@
       <div class="photo-div" data-aos="fade-right">
         <p class="photo-text">That's my insulin pump and blood sugar sensor. Together they create a continuous glucose monitoring (CGM) system, AKA an "artificial pancreas".</p>
       </div>
-      <div class="about-text-div" data-aos="fade-left">
-        <p>Two years ago <strong>I could not have anticipated</strong> writing asynchronous functions, scaling databases, or accessing open APIs - probably because I didn’t know what those phrases meant at the time - but now I can’t see myself in any other industry.</p>
-        <p>Although my career has taken some twists and turns - from tutoring youth of East Oakland, to empowering Burmese migrants in Thailand, to establishing a new communications department for a progressive non-profit - <strong>I’ve always followed my passion</strong> for uplifting others and addressing pressing issues.</p>
-        <p>My passion for programming comes from appreciating the role it plays in my daily health, as a person with type 1 diabetes who's used an <strong>"<a href='https://drive.google.com/file/d/1D8tp35PoCCbMzuWLTPHFI5oGN7nFhIQ1/view?usp=sharing' target='_blank'>artificial pancreas</a>"</strong> to manage his blood sugar since 2016. With my well-being tied to algorithms (literally), I've invested myself in learning and developing applications that have the potential to help others as much as my medical devices have helped me.</p>
-        <p>When not coding I can be found making music, Photoshop creations, and social distancing in my hometown of Oakland, CA.</p>
+      <div class="about-text-div">
+        <p>Two years ago <strong>I could not have anticipated</strong> writing asynchronous functions, scaling databases, or accessing open APIs, but now I can’t see myself doing any other work.</p>
+        <p>Although my career has taken some twists and turns - from tutoring youth of East Oakland, to empowering Burmese migrants in Thailand, to establishing a new communications department for a progressive non-profit - <strong>I’ve always followed my passion</strong>, produced tangible results, and earned the respect of others.</p>
+        <p>My passion for programming comes from appreciating the role it plays in my daily health, as a person with type 1 diabetes who's used an "<a href='https://drive.google.com/file/d/1D8tp35PoCCbMzuWLTPHFI5oGN7nFhIQ1/view?usp=sharing' target='_blank'>artificial pancreas</a>" to manage his blood sugar since 2016. With my well-being tied to algorithms (literally), I've invested myself in learning and developing applications that have the potential to help others as much as my medical devices have helped me.</p>
+        <p>When not coding I can be found hiking, making music, or watching a game in my hometown of Oakland, CA.</p>
       </div>
     </div>
   </div>

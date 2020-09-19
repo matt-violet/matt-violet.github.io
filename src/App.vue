@@ -24,7 +24,7 @@
       <About/>
       <Education/>
       <Work :viewProjectDetails="handleViewProjectDetails"/>
-      <Skills/>
+      <Experience/>
       <Contact/>
     </div>
   </div>
@@ -36,7 +36,7 @@ import Navbar from './components/Navbar.vue'
 import Home from './components/Home.vue'
 import About from './components/About.vue'
 import Education from './components/Education.vue'
-import Skills from './components/skills/Skills.vue'
+import Experience from './components/skills/Experience.vue'
 import Work from './components/work/Work.vue'
 import Contact from './components/Contact.vue'
 import SoftwareWorkDetails from './components/work/software/SoftwareWorkDetails.vue'
@@ -49,7 +49,7 @@ export default {
     Home,
     About,
     Education,
-    Skills,
+    Experience,
     Work,
     Contact,
     SoftwareWorkDetails,
@@ -144,23 +144,17 @@ a:visited {
   -moz-osx-font-smoothing: grayscale;
   height: 100%;
   width: 100%;
-  /* position: absolute; */
 }
 .components {
+  width: 100%;
   margin-left: 300px;
-  height: 100%;
   position: relative;
-  z-index: 2;
-  box-shadow: 0px 0px 8px 0px black;
-  /* overflow: visible; */
 }
 .home-div {
   min-width: 100%;
   height: 100%;
-  z-index: 0;
-  /* background: aquamarine; */
-  /* border: 2px solid white; */
-  /* position: absolute; */
+  position: relative;
+  overflow: hidden;
 }
 .home-bg-img {
   min-width: 100%;
@@ -177,15 +171,13 @@ a:visited {
 .bg-gradient {
   width: 100%;
   height: 100%;
-  position: relative;
+  position: fixed;
   z-index: -1;
-  /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)); */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
 }
 @media (max-width: 1000px) {
   .components {
-    width: 100%;
     margin: 0;
-    position: absolute;
   }
 }
 </style>
