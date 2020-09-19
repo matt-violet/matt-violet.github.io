@@ -30,7 +30,6 @@ export default {
 #design-work-details {
   background: white;
   text-align: center;
-  margin-left: 300px;
   padding-bottom: 25px;
   min-height: 100%;
   text-align: center;
@@ -78,7 +77,7 @@ export default {
   display: inline-block;
 }
 .img {
-  max-height: 1500px;
+  max-height: 1000px;
   max-width: 100%;
   margin: 10px auto 50px auto;
   -webkit-filter: drop-shadow(1px 2px 8px rgb(107, 107, 107));

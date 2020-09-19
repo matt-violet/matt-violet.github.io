@@ -1,13 +1,14 @@
 <template>
   <div id="app">
-    <Navbar @nav="navigate"/>
-    <div class="home-div" v-if="!showProject">
+    <Navbar v-if="!showProject" @nav="navigate"/>
+    <div :class="showProject ? 'home-div-absolute' : 'home-div'">
       <Home @nav="navigate"/>
       <img class="home-bg-img" :src="backgroundImage">
       <div class="bg-gradient"/>
     </div>
     <SoftwareWorkDetails 
       v-if="showProject && featuredProject && !featuredProject.isDesignProject"
+      class="work-details"
       :project="featuredProject"
       @nav="navigate"
       @handleNextProject="showNextProject"
@@ -15,6 +16,7 @@
     />
     <DesignWorkDetails
       v-if="showProject && featuredProject && featuredProject.isDesignProject"
+      class="work-details"
       :project="featuredProject"
       @nav="navigate"
       @handleNextProject="showNextProject"
@@ -145,8 +147,11 @@ a:visited {
   height: 100%;
   width: 100%;
 }
+.work-details {
+  z-index: 100;
+  position: relative;
+}
 .components {
-  width: 100%;
   margin-left: 300px;
   position: relative;
 }
@@ -155,6 +160,9 @@ a:visited {
   height: 100%;
   position: relative;
   overflow: hidden;
+}
+.home-div-absolute {
+  position: absolute;
 }
 .home-bg-img {
   min-width: 100%;
@@ -173,11 +181,16 @@ a:visited {
   height: 100%;
   position: fixed;
   z-index: -1;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
 }
 @media (max-width: 1000px) {
   .components {
     margin: 0;
+  }
+}
+@media (max-width: 500px) {
+  .bg-gradient {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
   }
 }
 </style>

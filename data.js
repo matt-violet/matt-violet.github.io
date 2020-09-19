@@ -115,35 +115,35 @@ export const softwareProjects = [
     image: require('./src/assets/projects/software/social-inn.jpg'),
     video: require('./src/assets/projects/software/social-in-test.png')
   },
-  {
-    title: 'Connect Four',
-    description: 'Two Player Game',
-    details: 'Connect Four was a classic project I used to familiarize myself with the React library. It is a popular game in which two players alternately place pieces into a 7x7 board trying to place 4 adjacent pieces. I implemented animations and a dynamically rendering board, game status, and rematch button.',
-    stack: ['React', 'CSS animations'],
-    github: 'https://github.com/matt-violet/connect4',
-    image: require('./src/assets/projects/software/connect-four.png'),
-    video: 'https://www.youtube.com/embed/AM0sI6ZqEQw',
-    screenshots: [
-      require('./src/assets/projects/software/connect4/choose-side.png'),
-      require('./src/assets/projects/software/connect4/board.png'),
-      require('./src/assets/projects/software/connect4/rematch.png'),
-    ]
-  },
-  {
-    title: 'My Bolus',
-    description: 'Insulin Dose Calculator',
-    details: 'For diabetics, "bolus" is the subcutaneous administration of insulin to handle a rise in blood glucose following meals. This full stack application simulates modern insulin pump dosage algorithms based on user’s meal choice, current blood glucose (bg) level, insulin-to-carb ratio, bg correction factor, future exercise plans, and other factors.',
-    stack: ['React', 'Express', 'MongoDB'],
-    github: 'https://github.com/matt-violet/My-Bolus',
-    image: require('./src/assets/projects/software/vial.jpg'),
-    ppt: 'https://drive.google.com/file/d/1D8tp35PoCCbMzuWLTPHFI5oGN7nFhIQ1/view?usp=sharing',
-    video: 'https://www.youtube.com/embed/OsGm4uK7SEs',
-    screenshots: [
-      require('./src/assets/projects/software/mybolus/sign-in.png'),
-      require('./src/assets/projects/software/mybolus/input.png'),
-      require('./src/assets/projects/software/mybolus/results.png'),
-    ]
-  }
+  // {
+  //   title: 'Connect Four',
+  //   description: 'Two Player Game',
+  //   details: 'Connect Four was a classic project I used to familiarize myself with the React library. It is a popular game in which two players alternately place pieces into a 7x7 board trying to place 4 adjacent pieces. I implemented animations and a dynamically rendering board, game status, and rematch button.',
+  //   stack: ['React', 'CSS animations'],
+  //   github: 'https://github.com/matt-violet/connect4',
+  //   image: require('./src/assets/projects/software/connect-four.jpg'),
+  //   video: 'https://www.youtube.com/embed/AM0sI6ZqEQw',
+  //   screenshots: [
+  //     require('./src/assets/projects/software/connect4/choose-side.png'),
+  //     require('./src/assets/projects/software/connect4/board.png'),
+  //     require('./src/assets/projects/software/connect4/rematch.png'),
+  //   ]
+  // },
+  // {
+  //   title: 'My Bolus',
+  //   description: 'Insulin Dose Calculator',
+  //   details: 'For diabetics, "bolus" is the subcutaneous administration of insulin to handle a rise in blood glucose following meals. This full stack application simulates modern insulin pump dosage algorithms based on user’s meal choice, current blood glucose (bg) level, insulin-to-carb ratio, bg correction factor, future exercise plans, and other factors.',
+  //   stack: ['React', 'Express', 'MongoDB'],
+  //   github: 'https://github.com/matt-violet/My-Bolus',
+  //   image: require('./src/assets/projects/software/vial.jpg'),
+  //   ppt: 'https://drive.google.com/file/d/1D8tp35PoCCbMzuWLTPHFI5oGN7nFhIQ1/view?usp=sharing',
+  //   video: 'https://www.youtube.com/embed/OsGm4uK7SEs',
+  //   screenshots: [
+  //     require('./src/assets/projects/software/mybolus/sign-in.png'),
+  //     require('./src/assets/projects/software/mybolus/input.png'),
+  //     require('./src/assets/projects/software/mybolus/results.png'),
+  //   ]
+  // }
 ];
 
 export const designProjects = [

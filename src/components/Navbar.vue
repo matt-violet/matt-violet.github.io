@@ -10,8 +10,8 @@
       <p class="link-text" v-on:click="$emit('nav', 'education')">EDUCATION</p>
       <p class="link-text" v-on:click="$emit('nav', 'work')">PORTFOLIO</p>
       <p class="link-text" v-on:click="$emit('nav', 'experience')">EXPERIENCE</p>
-      <p class="link-text" v-on:click="$emit('nav', 'contact')">CONTACT</p>
       <p class="link-text" v-on:click='handleLinkClick(resumeLink)'>RESUME</p>
+      <p class="link-text" v-on:click="$emit('nav', 'contact')">CONTACT</p>
     </div>
     <div class="icons-div">
       <img class="icon" src="../assets/icons/email-white.png" v-on:click='handleLinkClick("mattviolet@gmail.com")'/>
@@ -20,12 +20,12 @@
     </div>
     <img class="menu-icon" v-on:click="toggleSmallMenu()" src="../assets/icons/menu-white.png">
     <div v-if="this.showSmallMenu" class="drop-down">
-      <p class="link-text-small" v-on:click="handleSmallMenuClick('about')">ABOUT</p>
-      <p class="link-text-small" v-on:click="handleSmallMenuClick('education')">EDUCATION</p>
-      <p class="link-text-small" v-on:click="handleSmallMenuClick('work')">PORTFOLIO</p>
-      <p class="link-text-small" v-on:click="handleSmallMenuClick('experience')">EXPERIENCE</p>
-      <p class="link-text-small" v-on:click="handleSmallMenuClick('contact')">CONTACT</p>
-      <p class="link-text-small" v-on:click="handleSmallMenuClick('resume')">RESUME</p>
+      <p class="link-text-drop-down" v-on:click="handleSmallMenuClick('about')">ABOUT</p>
+      <p class="link-text-drop-down" v-on:click="handleSmallMenuClick('education')">EDUCATION</p>
+      <p class="link-text-drop-down" v-on:click="handleSmallMenuClick('work')">PORTFOLIO</p>
+      <p class="link-text-drop-down" v-on:click="handleSmallMenuClick('experience')">EXPERIENCE</p>
+      <p class="link-text-drop-down" v-on:click="handleSmallMenuClick('resume')">RESUME</p>
+      <p class="link-text-drop-down" v-on:click="handleSmallMenuClick('contact')">CONTACT</p>
     </div>
   </div>
 </template>
@@ -130,9 +130,9 @@ export default {
   text-align: left;
 }
 .link-text {
-  margin: 15px 0;
+  margin: 10px 0;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 16px;
   color: white;
 }
 .invisible, .menu-icon, .drop-down {
@@ -150,7 +150,6 @@ export default {
 }
 .link-text:hover {
   color: lightsalmon;
-  font-weight: 700;
   transform: scale(1.1);
   transition: .3s;
 }
@@ -195,11 +194,11 @@ export default {
     from { opacity: 0; }
     to { opacity: 1; }
   }
-  .link-text-small {
+  .link-text-drop-down {
     padding: 8px 0 8px 80px;
     margin: 0;
     color: white;
-    font-weight: 500;
+    font-weight: 600;
   }
   .menu-icon:hover {
     cursor: pointer;
@@ -207,9 +206,8 @@ export default {
   .drop-down:hover {
     cursor: pointer;
   }
-  .link-text-small:hover {
+  .link-text-drop-down:hover {
     background: linear-gradient(to top, coral, lightsalmon);
-    font-weight: 700;
     padding-left: 100px;
     transition: .3s;
   }
@@ -223,11 +221,11 @@ export default {
     text-align: left;
     background: rgb(70, 130, 180, .95);
   }
-  .link-text-small {
+  .link-text-drop-down {
     padding-left: 120px;
     font-size: 20px;
   }
-  .link-text-small:hover {
+  .link-text-drop-down:hover {
     padding-left: 140px;
   }
 }

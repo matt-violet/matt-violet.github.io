@@ -1,6 +1,8 @@
 <template>
   <div id="work">
-    <h1>PORTFOLIO</h1>
+    <div class="header">
+      <h1>PORTFOLIO</h1>
+    </div>
     <div class="inner-content">
       <div class="software-bg-div">
         <h2 class="section-title">Software Development:</h2>
@@ -38,6 +40,10 @@ export default {
 #work {
   background: white;
 }
+.header {
+  width: 100%;
+  text-align: center;
+}
 .inner-content {
   padding: 75px;
   max-width: 1000px;
@@ -46,7 +52,7 @@ export default {
 h1 {
   padding: 25px 75px;
   font-size: 45px;
-  font-weight: 600;
+  font-weight: 500;
   color: white;
   background: linear-gradient(to top, coral, lightsalmon);
   margin: 0;
@@ -54,14 +60,16 @@ h1 {
 .section-title {
   display: block;
   margin-top: 0;
+  font-size: 30px;
+  font-weight: 400;
 }
 .software-bg-div {
-  background: rgb(243, 243, 243);
+  background-image: linear-gradient(to bottom,  rgba(163,217,207,.3), rgba(4,178,217,.3));
   padding: 30px;
   border-radius: 5px;
 }
 .design-bg-div {
-  background: rgb(243, 243, 243);
+  background-image: linear-gradient(to bottom,  rgba(163,217,207,.3), rgba(4,178,217,.3));
   padding: 30px;
   border-radius: 5px;
   margin-top: 50px;

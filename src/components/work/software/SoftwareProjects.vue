@@ -11,7 +11,7 @@
           <p class="stack-header">STACK: </p>
           <p class="stack" v-for="(stack, i) of project.stack" :key="i">{{ stack }}</p>
           <div class="btn-div">
-            <button class="details-btn" v-on:click="$emit('viewProjDetails', project)">DETAILS</button>
+            <button class="details-btn" v-on:click="$emit('viewProjDetails', project)">Details</button>
           </div>
         </div>
       </div>
@@ -27,7 +27,7 @@
           <p class="stack-header">STACK: </p>
           <p class="stack" v-for="(stack, i) of project.stack" :key="i">{{ stack }}</p>
           <div class="btn-div">
-            <button class="details-btn" v-on:click="$emit('viewProjDetails', project)">DETAILS</button>
+            <button class="details-btn" v-on:click="$emit('viewProjDetails', project)">Details</button>
           </div>
         </div>
       </div>
@@ -43,7 +43,7 @@
           <p class="stack-header">STACK: </p>
           <p class="stack" v-for="(stack, i) of project.stack" :key="i">{{ stack }}</p>
           <div class="btn-div">
-            <button class="details-btn" v-on:click="$emit('viewProjDetails', project)">DETAILS</button>
+            <button class="details-btn" v-on:click="$emit('viewProjDetails', project)">Details</button>
           </div>
         </div>
       </div>
@@ -90,9 +90,10 @@ export default {
     width: 250px;
     height: 66%;
     text-align: center;
-    transition: 0.5s;
+    transition: 0.3s;
     overflow: hidden;
-    -webkit-transition: 0.5s;
+    background: black;
+    -webkit-transition: 0.3s;
   }
   .img {
     position: relative;
@@ -106,7 +107,7 @@ export default {
     padding: 0 15px;
     position: relative;
     height: 33%;
-    border-top: 1px solid lightgrey;
+    border-top: 1px solid black;
   }
   .title {
     margin: 10px 0 0 0;
@@ -122,7 +123,7 @@ export default {
   .stack-header {
     opacity: 0;
     font-size: 13px;
-    font-weight: 900;
+    font-weight: 500;
     display: inline-block;
     margin: 15px 5px 0 0;
   }
@@ -147,11 +148,11 @@ export default {
     opacity: 0;
     margin: auto;
     font-size: 14px;
-    font-weight: 700;
-    padding: 6px 10px;
-    color: steelblue;
-    background: white;
-    border: 2px solid steelblue;
+    font-weight: 600;
+    padding: 8px 12px;
+    color: white;
+    background: coral;
+    border: 0;
     border-radius: 20px;
     display: block;
   }
@@ -167,12 +168,15 @@ export default {
   }
   .software-project:hover .text-div {
     height: 250px;
+    border: 0;
   }
   .details-btn:hover {
-    background: steelblue;
-    color: white;
+    background: white;
+    color: coral;
     transition: .3s;
     cursor: pointer;
+    /* border: 2px solid; */
+    box-shadow: 1px 2px 4px 0px rgb(44, 44, 44);
   }
 /* ---------------------- SOFTWARE PROJECTS MEDIA QUERY ---------------------- */
 @media (max-width: 1335px) and (min-width: 1185px), (max-width: 1000px) and (min-width: 860px) {

@@ -56,7 +56,6 @@ export default {
 #work-details {
   background: white;
   text-align: center;
-  margin-left: 300px;
   padding-bottom: 25px;
   min-height: 100%;
 }
@@ -99,7 +98,7 @@ a {
 .title {
   margin: 0 auto;
   font-size: 40px;
-  font-weight: 700;
+  font-weight: 500;
 }
 .description {
   font-size: 18px;
@@ -153,18 +152,16 @@ a {
   margin: 50px auto 0 auto;
 }
 .screenshot {
-  width: 100%;
+  max-width: 100%;
+  max-height: 500px;
   display: block;
-  margin-bottom: 50px;
+  margin: 0 auto 50px auto;
   border-radius: 5px;
   box-shadow: 1px 2px 8px 0px grey;
 }
 @media (max-width: 1000px) {
   #work-details {
     margin-left: 0;
-  }
-  .close-btn {
-    margin-top: 70px;
   }
 }
 @media (max-width: 700px) {

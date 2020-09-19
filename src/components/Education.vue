@@ -1,6 +1,8 @@
 <template>
   <div id="education">
-    <h1>EDUCATION</h1>
+    <div class="header">
+      <h1>EDUCATION</h1>
+    </div>
     <div class="inner-content">
       <div class="school-section" data-aos="zoom-in">
         <p class="school-name">University of California, Davis</p>
@@ -14,7 +16,7 @@
         <p class="school-details">April 2019 - July 2019</p>
       </div>
       <div class="school-section-last" data-aos="zoom-in">
-        <p class="school-name">Online Courses</p>
+        <p class="school-name">Online Coursework</p>
         <p class="school-details"><a href="https://www.udacity.com/course/intro-to-javascript--ud803" target="_blank">Intro to Javascript</a> (Udacity, 2018)</p>
         <p class="school-details"><a href="https://www.udemy.com/course/the-web-developer-bootcamp/" target="_blank">The Web Developer Bootcamp</a> (Udemy, 2019)</p>
       </div>
@@ -33,15 +35,19 @@ export default {
   background: white;
   overflow: hidden;
 }
+.header {
+  width: 100%;
+  text-align: center;
+}
 .inner-content {
   padding: 59px 75px 75px 75px;
-  max-width: 1000px;
+  max-width: 800px;
   margin: auto;
 }
 h1 {
   padding: 25px 75px;
   font-size: 45px;
-  font-weight: 600;
+  font-weight: 500;
   color: white;
   background: linear-gradient(to top, coral, lightsalmon);
   margin: 0;
@@ -49,23 +55,23 @@ h1 {
 .school-details {
   color: grey;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
   margin: 0 0 2px 0;
 }
 .school-section, .school-section-last {
-  width: 450px;
+  width: 425px;
   display: block;
   padding: 20px;
   margin-bottom: 40px;
   border-radius: 5px;
-  background: rgb(243, 243, 243);
+  background-image: linear-gradient(to bottom,  rgba(163,217,207,.3), rgba(4,178,217,.3));
 }
 .school-section-last {
   margin-bottom: 0;
 }
 .school-name {
   font-size: 22px;
-  font-weight: 900;
+  font-weight: 700;
   color: black;
   margin: 0 0 5px 0;
 }

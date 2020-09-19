@@ -69,13 +69,16 @@ export default {
   justify-content: space-evenly;
 }
 .front-end {
-  background: rgb(216, 238, 255);
-}
+  /* background: rgb(216, 238, 255); */
+background-image: linear-gradient(to bottom, rgb(146, 183, 224), rgb(206, 227, 252));
+  }
 .back-end {
-  background: rgb(183, 223, 255);
+    background-image: linear-gradient(to bottom, rgba(167,220,225,1), rgba(217,239,242,1));
+  /* background: rgb(183, 223, 255); */
 }
 .additional {
-  background: rgb(148, 207, 255);
+background-image: linear-gradient(to bottom, rgba(255,216,194,1), rgba(228,247,255,1));
+  /* background: rgb(148, 207, 255); */
 }
 .skill-div {
   box-shadow: 1px 2px 8px 0px grey;
@@ -98,8 +101,8 @@ export default {
   text-align: center;
 }
 .skills-header {
-  font-weight: 300;
-  font-size: 28px;
+  font-weight: 400;
+  font-size: 30px;
   margin: 0;
 }
 .skill-name {

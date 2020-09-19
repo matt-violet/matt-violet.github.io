@@ -1,6 +1,8 @@
 <template>
   <div id="experience">
-    <h1>EXPERIENCE</h1>
+    <div class="header">
+      <h1>EXPERIENCE</h1>
+    </div>
     <div class="inner-content">
       <p>My introduction to the world of programming was maintaining <strong>WordPress websites</strong> for 3 different non-profit organizations.</p>
       <p>From there I took my software engineering skills to the next level through a combination of <strong>self study</strong>, <strong>structured coursework</strong>, and <strong>real world internship experience</strong>. As a student at Hack Reactor, a <strong>premier SF coding bootcamp</strong>, I completed 1,000+ hours of advanced computer science curriculum modeling today's software engineering industry. Next, I gained invaluable hands-on experience as a <strong>Software Engineer Intern</strong> working in a professional codebase at a <a href="https://www.seasoned.co/" target="blank">start up company</a>.</p>
@@ -53,21 +55,25 @@ export default {
 #experience {
   background: white;
 }
+.header {
+  width: 100%;
+  text-align: center;
+}
 .inner-content {
   padding: 75px;
-  max-width: 1000px;
+  max-width: 800px;
   margin: auto;
 }
 h1 {
   padding: 25px 75px;
   font-size: 45px;
-  font-weight: 600;
+  font-weight: 500;
   color: white;
   background: linear-gradient(to top, coral, lightsalmon);
   margin: 0;
 }
 p {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   color: grey;
 }
@@ -78,7 +84,7 @@ strong {
   padding: 100px 0;
   position: relative;
   text-align: center;
-  background: rgb(100, 100, 100);
+  background-image: linear-gradient(to bottom,  rgba(163,217,207,.3), rgba(4,178,217,.3));
 }
 .first-stats {
   display: inline-block;
@@ -100,7 +106,6 @@ strong {
   margin: 0;
   font-size: 50px;
   font-weight: 300;
-  color: lightgrey;
   animation: pulse 2s infinite;
 }
 @keyframes pulse {
@@ -112,7 +117,6 @@ strong {
   font-size: 13px;
   font-weight: 500;
   margin-bottom: 0;
-  color: lightgrey;
 }
 .github-div {
   width: 100%;

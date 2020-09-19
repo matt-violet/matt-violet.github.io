@@ -1,6 +1,8 @@
 <template>
   <div id="contact">
-    <h1>CONTACT</h1>
+    <div class="header">
+      <h1>CONTACT</h1>
+    </div>
     <div class="inner-content">
       <p>I'm currently available for hire and open to discussing any opportunities.</p>
       <div class="containers">
@@ -49,9 +51,13 @@ export default {
 #contact {
   background: white;
 }
+.header {
+  width: 100%;
+  text-align: center;
+}
 .inner-content {
   padding: 75px;
-  max-width: 1000px;
+  max-width: 800px;
   margin: auto;
 }
 .bg-div {
@@ -63,7 +69,7 @@ export default {
 h1 {
   padding: 25px 75px;
   font-size: 45px;
-  font-weight: 600;
+  font-weight: 500;
   color: white;
   background: linear-gradient(to top, coral, lightsalmon);
   margin: 0;

@@ -1,6 +1,8 @@
 <template>
   <div id="about">
-    <h1>ABOUT</h1>
+    <div class="header">
+      <h1>ABOUT</h1>
+    </div>
     <div class="inner-content">
       <div class="photo-div" data-aos="fade-right">
         <p class="photo-text">That's my insulin pump and blood sugar sensor. Together they create a continuous glucose monitoring (CGM) system, AKA an "artificial pancreas".</p>
@@ -25,7 +27,7 @@ export default {
 h1 {
   padding: 25px 75px;
   font-size: 45px;
-  font-weight: 600;
+  font-weight: 500;
   color: white;
   background: linear-gradient(to top, coral, lightsalmon);
   margin: 0;
@@ -42,9 +44,13 @@ strong {
   background: white;
   width: 100%;
 }
+.header {
+  width: 100%;
+  text-align: center;
+}
 .inner-content {
   padding: 75px;
-  max-width: 1000px;
+  max-width: 800px;
   margin: auto;
 }
 .photo-div {
@@ -77,7 +83,7 @@ strong {
 }
 .about-text-div {
   vertical-align: top;
-  font-size: 18px;
+  font-size: 16px;
 }
 @media (max-width: 1100px) {
   .about-text-div {
