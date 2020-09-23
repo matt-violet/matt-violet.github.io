@@ -77,7 +77,7 @@ background-image: linear-gradient(to bottom, rgb(146, 183, 224), rgb(206, 227, 2
   /* background: rgb(183, 223, 255); */
 }
 .additional {
-background-image: linear-gradient(to bottom, rgba(255,216,194,1), rgba(228,247,255,1));
+background-image: linear-gradient(to bottom, rgba(255,216,194,1), rgb(255, 243, 236));
   /* background: rgb(148, 207, 255); */
 }
 .skill-div {

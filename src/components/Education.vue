@@ -40,7 +40,7 @@ export default {
   text-align: center;
 }
 .inner-content {
-  padding: 59px 75px 75px 75px;
+  padding: 75px;
   max-width: 800px;
   margin: auto;
 }

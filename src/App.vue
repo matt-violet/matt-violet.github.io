@@ -190,7 +190,7 @@ a:visited {
 }
 @media (max-width: 500px) {
   .bg-gradient {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   }
 }
 </style>

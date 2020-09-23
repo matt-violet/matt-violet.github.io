@@ -1,10 +1,10 @@
 <template>
   <div id="home">
     <div class="header">
-      <h1>Hello,</h1>
-      <h2>I'm a mission-driven developer with roots in non-profit communications, currently seeking a web / software developer role.</h2>
+      <h1>Welcome,</h1>
+      <h2>I'm an Oakland-based developer with roots in the non-profit world.</h2>
       <div class="btn-div">
-        <button class="btn" v-on:click="$emit('nav', 'work')">View Portfolio</button>
+        <button class="btn" v-on:click="$emit('nav', 'work')">View My Work</button>
       </div>
     </div>
   </div>
@@ -37,14 +37,14 @@ export default {
 h1 {
   color: white;
   font-size: 50px;
-  font-weight: 300;
+  font-weight: 500;
   border: 0;
   margin: 0;
 }
 h2 {
   color: white;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 300;
   margin-top: 10px;
 }
 .btn {
@@ -54,7 +54,7 @@ h2 {
   margin-top: 15px;
   padding: 10px;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 500;
   border-radius: 50px;
   border: 0;
   transition: .3s;
