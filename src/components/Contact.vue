@@ -4,7 +4,7 @@
       <h1>CONTACT</h1>
     </div>
     <div class="inner-content">
-      <p>I'm currently available for hire and open to discussing any opportunities.</p>
+      <p>Want to chat about something? Let's connect. I'm currently available for hire and open to discussing any opportunities.</p>
       <div class="containers">
         <div class="container" v-on:click='handleLinkClick("mattviolet@gmail.com")'>
           <img class="icon" src="../assets/icons/email.png"/>
@@ -60,12 +60,6 @@ export default {
   max-width: 800px;
   margin: auto;
 }
-.bg-div {
-  background: rgb(238, 238, 238);
-  padding: 30px;
-  border-radius: 5px;
-  margin-top: 30px;
-}
 h1 {
   padding: 25px 75px;
   font-size: 45px;
@@ -75,7 +69,7 @@ h1 {
   margin: 0;
 }
 p {
-  color: grey;
+  color: var(--body-text);
   font-size: 18px;
   font-weight: 400;
   margin-top: 0;
@@ -139,6 +133,9 @@ p {
 @media (max-width: 700px) {
   .inner-content, h1 {
     padding: 30px 15px;
+  }
+  .inner-content {
+    margin-top: 16px;
   }
 }
 @media (max-width: 600px) {

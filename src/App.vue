@@ -2,9 +2,11 @@
   <div id="app">
     <Navbar v-if="!showProject" @nav="navigate"/>
     <div :class="showProject ? 'home-div-absolute' : 'home-div'">
-      <Home @nav="navigate"/>
-      <img class="home-bg-img" :src="backgroundImage">
-      <div class="bg-gradient"/>
+      <Home @nav="navigate" :showHomeBtn="showHomeBtn"/>
+      <div class="bg-div">
+        <img class="home-bg-img" :src="backgroundImage">
+        <div class="bg-gradient"/>
+      </div>
     </div>
     <SoftwareWorkDetails 
       v-if="showProject && featuredProject && !featuredProject.isDesignProject"
@@ -24,7 +26,7 @@
     />
     <div class="components" v-if="!showProject">
       <About/>
-      <Education/>
+      <!-- <Education/> -->
       <Work :viewProjectDetails="handleViewProjectDetails"/>
       <Experience/>
       <Contact/>
@@ -37,7 +39,7 @@ import { designProjects, softwareProjects } from '../data.js'
 import Navbar from './components/Navbar.vue'
 import Home from './components/Home.vue'
 import About from './components/About.vue'
-import Education from './components/Education.vue'
+// import Education from './components/Education.vue'
 import Experience from './components/skills/Experience.vue'
 import Work from './components/work/Work.vue'
 import Contact from './components/Contact.vue'
@@ -50,7 +52,7 @@ export default {
     Navbar,
     Home,
     About,
-    Education,
+    // Education,
     Experience,
     Work,
     Contact,
@@ -60,6 +62,8 @@ export default {
   data() {
     return {
       showProject: false,
+      showHomeBtn: true,
+      lastScrollPosition: 0,
       featuredProject: {},
       // backgroundIndex: 1,
       backgroundImage: require("./assets/bay.jpg"),
@@ -113,21 +117,29 @@ export default {
         }
         this.featuredProject = softwareProjects[softwareProjects.indexOf(currentProj) - 1];
       }
+    },
+    onScroll () {
+      const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+      if (currentScrollPosition < 0) {
+        return;
+      }
+      this.showHomeBtn = currentScrollPosition >= 0 && currentScrollPosition <= 150;
+      this.lastScrollPosition = currentScrollPosition;
     }
   },
-  // mounted() {
-  //   const bgImgs = backgroundImages;
-  //   setInterval(() => {
-  //     this.backgroundImage = bgImgs[this.backgroundIndex];
-  //     this.backgroundIndex === 4 ? 
-  //       this.backgroundIndex = 0 : 
-  //       this.backgroundIndex++
-  //   }, 4000);
-  // }
+  mounted () {
+    window.addEventListener('scroll', this.onScroll)
+  },
+  beforeDestroy () {
+    window.removeEventListener('scroll', this.onScroll)
+  }
 }
 </script>
 
 <style>
+body {
+  --body-text: rgb(90, 90, 90);
+}
 body, html {
   margin: 0;
   height: 100%;
@@ -154,12 +166,16 @@ a:visited {
 .components {
   margin-left: 300px;
   position: relative;
+  overflow-x: hidden;
 }
 .home-div {
-  min-width: 100%;
+  width: 100%;
   height: 100%;
   position: relative;
-  overflow: hidden;
+}
+.bg-div {
+  width: 100%;
+  overflow-x: hidden;
 }
 .home-div-absolute {
   position: absolute;
@@ -181,7 +197,7 @@ a:visited {
   height: 100%;
   position: fixed;
   z-index: -1;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
 }
 @media (max-width: 1000px) {
   .components {
@@ -189,8 +205,8 @@ a:visited {
   }
 }
 @media (max-width: 500px) {
-  .bg-gradient {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  .home-bg-img {
+    margin-left: -250px;
   }
 }
 </style>

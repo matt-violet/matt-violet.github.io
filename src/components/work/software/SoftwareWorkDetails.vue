@@ -104,7 +104,7 @@ a {
   font-size: 18px;
   font-weight: 400;
   margin-bottom: 30px;
-  color: grey;
+  color: var(--body-text);
 }
 .track {
   position: relative;
@@ -129,7 +129,7 @@ a {
 }
 .details {
   margin-bottom: 30px;
-  color: grey;
+  color: var(--body-text);
   font-weight: 400;
 }
 .stack {

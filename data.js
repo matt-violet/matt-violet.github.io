@@ -213,10 +213,7 @@ export const designProjects = [
   }
 ];
 
-// export const backgroundImages = [
-  // require("./src/assets/bay.jpg"),
-  // require("./src/assets/matt-sksm.png"),
-  // require("./src/assets/pump.png"),
-  // require("./src/assets/matt-nyc.png"),
-  // require("./src/assets/skate.jpg")
-// ];
+export const aboutImgs = [
+  require('./src/assets/showing-pump.jpg'),
+  require('./src/assets/pump.png'),
+];

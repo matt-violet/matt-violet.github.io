@@ -118,7 +118,7 @@ export default {
   .description {
     margin: 4px 0;
     font-size: 14px;
-    color: grey;
+    color: var(--body-text);
   }
   .stack-header {
     opacity: 0;

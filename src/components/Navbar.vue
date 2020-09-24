@@ -7,7 +7,7 @@
     </div>
     <div class="links-div">
       <p class="link-text" v-on:click="$emit('nav', 'about')">ABOUT</p>
-      <p class="link-text" v-on:click="$emit('nav', 'education')">EDUCATION</p>
+      <!-- <p class="link-text" v-on:click="$emit('nav', 'education')">EDUCATION</p> -->
       <p class="link-text" v-on:click="$emit('nav', 'work')">PORTFOLIO</p>
       <p class="link-text" v-on:click="$emit('nav', 'experience')">EXPERIENCE</p>
       <p class="link-text" v-on:click='handleLinkClick(resumeLink)'>RESUME</p>
@@ -21,7 +21,7 @@
     <img class="menu-icon" v-on:click="toggleSmallMenu()" src="../assets/icons/menu-white.png">
     <div v-if="this.showSmallMenu" class="drop-down">
       <p class="link-text-drop-down" v-on:click="handleSmallMenuClick('about')">ABOUT</p>
-      <p class="link-text-drop-down" v-on:click="handleSmallMenuClick('education')">EDUCATION</p>
+      <!-- <p class="link-text-drop-down" v-on:click="handleSmallMenuClick('education')">EDUCATION</p> -->
       <p class="link-text-drop-down" v-on:click="handleSmallMenuClick('work')">PORTFOLIO</p>
       <p class="link-text-drop-down" v-on:click="handleSmallMenuClick('experience')">EXPERIENCE</p>
       <p class="link-text-drop-down" v-on:click="handleSmallMenuClick('resume')">RESUME</p>
@@ -184,7 +184,7 @@ export default {
     transform: translate(0, 9px);
     z-index: 3;
     padding: 20px 0;
-    height: 250px;
+    height: 200px;
     width: 250px;
     background: rgb(70, 130, 180, .95);
     visibility: visible;

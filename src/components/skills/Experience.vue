@@ -75,7 +75,7 @@ h1 {
 p {
   font-size: 16px;
   font-weight: 400;
-  color: grey;
+  color: var(--body-text);
 }
 strong {
   font-weight: 900;
