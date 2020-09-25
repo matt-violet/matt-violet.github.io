@@ -197,7 +197,7 @@ a:visited {
   height: 100%;
   position: fixed;
   z-index: -1;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+  background: linear-gradient(to bottom, rgba(46, 46, 46, 0.3), rgba(0, 0, 0, 0));
 }
 @media (max-width: 1000px) {
   .components {

@@ -4,7 +4,7 @@
       <h1>Welcome,</h1>
       <h2>I'm an Oakland-based web developer currently seeking new opportunities.</h2>
       <div class="btn-div">
-        <button class="btn" v-on:click="$emit('nav', 'work')">View Portfolio</button>
+        <button class="btn" v-on:click="$emit('nav', 'work')">Portfolio</button>
       </div>
     </div>
   </div>

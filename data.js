@@ -177,12 +177,12 @@ export const designProjects = [
     details: '8-foot Retractable Banner, 2017',
     isDesignProject: true
   },
-  {
-    images: [require('./src/assets/projects/design/GA-2016.png')],
-    description: 'Magazine Ad',
-    details: 'Ad in UU World Magazine, 2016',
-    isDesignProject: true
-  },
+  // {
+  //   images: [require('./src/assets/projects/design/GA-2016.png')],
+  //   description: 'Magazine Ad',
+  //   details: 'Ad in UU World Magazine, 2016',
+  //   isDesignProject: true
+  // },
   {
     images: [require('./src/assets/projects/design/GA-2018.png')],
     description: 'Magazine Ad',

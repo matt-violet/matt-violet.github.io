@@ -3,11 +3,6 @@
     <div class="header">
       <h1>EXPERIENCE</h1>
     </div>
-    <div class="inner-content">
-      <p>My introduction to the world of programming was maintaining <strong>WordPress websites</strong> for 3 different non-profit organizations.</p>
-      <p>From there I took my software engineering skills to the next level through a combination of <strong>self study</strong>, <strong>structured coursework</strong>, and <strong>real world internship experience</strong>. As a student at Hack Reactor, a <strong>premier SF coding bootcamp</strong>, I completed 1,000+ hours of advanced computer science curriculum modeling today's software engineering industry. Next, I gained invaluable hands-on experience as a <strong>Software Engineer Intern</strong> working in a professional codebase at a <a href="https://www.seasoned.co/" target="blank">start up company</a>.</p>
-      <p>Throughout my journey I've embraced challenges and relished every opportunity to expand my knowledge.</p>
-    </div>
     <div class="stats-div">
       <div class="first-stats">
         <div class="stat" data-aos="zoom-in">
@@ -15,7 +10,7 @@
           <p class="num-description">years of programming experience</p>
         </div>
         <div class="stat" data-aos="zoom-in">
-          <p class="num">5</p>
+          <p class="num">6</p>
           <p class="num-description">months as a Software Engineer Intern</p>
         </div>
       </div>
@@ -30,12 +25,31 @@
         </div>
       </div>
     </div>
-    <div class="inner-content">
-      <p>I'm active on GitHub:</p>
+     <div class="inner-content">
+      <h3>Experience Highlights</h3>
+      <h2 class="exp-type-header">Real World Experience</h2>
+      <ul>
+        <li>Software Engineer Intern at a <a href="https://www.seasoned.co/" target="blank">startup company</a>, contributing to codebases in React, Redux, Vue, Java, and GraphQL.</li>
+      </ul>
+      <h2 class="exp-type-header">Structured Coursework</h2>
+      <ul>
+        <li><a href="https://www.hackreactor.com/" target="_blank">Hack Reactor (Galvanize), 2019</a></li>        
+          <ul>
+            <li>One of San Francisco's premier Software Engineering Immersive programs modeling today’s industry</li>
+          </ul>
+        <li><a href="https://www.udemy.com/course/the-web-developer-bootcamp/" target="_blank">The Web Developer Bootcamp</a> (Udemy), 2019</li>
+        <li><a href="https://www.udacity.com/course/intro-to-javascript--ud803" target="_blank">Intro to Javascript</a> (Udacity), 2018</li>
+      </ul>
+      <h2 class="exp-type-header">Achievements & Transferrable Skills</h2>
+      <ul>
+        <li>Portfolio of full stack web applications using modern front end frameworks / libraries, RESTful / external APIs, and responsive design.</li>
+        <li>4 years of WordPress and graphic design experience in the non-profit world</li>
+        <li>10+ years of non-profit communications experience and demonstrated advancement</li>
+      </ul>
+      <p>As you can see from my GitHub activity, coding is a muscle I've been exercising regularly.</p>
       <div class="github-div">
         <img class="github-squares" src="../../assets/github-squares.png">
       </div>
-      <p>And have demonstrated proficiency with the following tools:</p>
     </div>
     <SkillIcons class="SkillIcons"/>
   </div>
@@ -61,7 +75,7 @@ export default {
 }
 .inner-content {
   padding: 75px;
-  max-width: 800px;
+  max-width: 600px;
   margin: auto;
 }
 h1 {
@@ -77,8 +91,15 @@ p {
   font-weight: 400;
   color: var(--body-text);
 }
-strong {
-  font-weight: 900;
+h3 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 400;
+  margin: 0 auto 40px auto;
+}
+li {
+  color: var(--body-text);
+  font-size: 16px;
 }
 .stats-div {
   padding: 100px 0;
@@ -118,13 +139,18 @@ strong {
   font-weight: 500;
   margin-bottom: 0;
 }
-.github-div {
-  width: 100%;
-  text-align: center;
-  margin: 45px auto;
+.exp-type-header {
+  font-weight: 600;
+  font-size: 20px;
 }
 .github-squares {
-  width: 75%;
+  width: 100%;
+  text-align: center;
+  margin: 45px auto 0 auto;
+  width: 100%;
+}
+.github-text {
+  position: absolute;
 }
 /* ---------------------------- STATS RESIZING ---------------------------- */
 @media (max-width: 1250px) and (min-width: 1001px), (max-width: 850px) {
@@ -140,6 +166,9 @@ strong {
   }
 }
 @media (max-width: 639px) {
+  .stats-div {
+    padding: 50px 0;
+  }
   .second-stats {
     padding-top: 35px;
   }

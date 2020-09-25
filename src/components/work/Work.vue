@@ -72,11 +72,20 @@ h1 {
   background-image: linear-gradient(to bottom,  rgba(163,217,207,.3), rgba(4,178,217,.3));
   padding: 30px;
   border-radius: 5px;
-  margin-top: 50px;
+  margin-top: 75px;
 }
 @media (max-width: 700px) {
   .inner-content, h1 {
     padding: 30px 15px;
+  }
+}
+@media (max-width: 425px) {
+  .software-bg-div, .design-bg-div {
+    padding: 30px 10px;
+  }
+  .section-title {
+    font-size: 25px;
+    text-align: center;
   }
 }
 </style>

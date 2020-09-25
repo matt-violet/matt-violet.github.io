@@ -1,7 +1,7 @@
 <template>
   <div class="software-projects">
     <div class="project-row">
-      <div v-for="(project, i) in softwareProjects.slice(0,3)" :key="i" class="software-project" data-aos="zoom-in">
+      <div v-for="(project, i) in softwareProjects" :key="i" class="software-project" data-aos="zoom-in">
         <div class="img-div">
           <img class="img" :src="project.image">
         </div>
@@ -16,7 +16,7 @@
         </div>
       </div>
     </div>
-    <div class="project-row">
+    <!-- <div class="project-row">
       <div v-for="(project, i) in softwareProjects.slice(3,6)" :key="i" class="software-project" data-aos="zoom-in">
         <div class="img-div">
           <img class="img" :src="project.image">
@@ -47,7 +47,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -222,7 +222,7 @@ export default {
     width: 170px;
   }
 }
-@media (max-width: 1185px) and (min-width: 1000px), (max-width: 860px) and (min-width: 595px) {
+@media (max-width: 1185px) and (min-width: 1000px), (max-width: 860px) {
   .project-row {
     width: 525px;
   }
@@ -267,7 +267,12 @@ export default {
 }
 @media (max-width: 590px) {
   .project-row {
-    width: 250px;
+    width: 350px;
+  }
+}
+@media (max-width: 375px) {
+  .project-row {
+    width: 150px;
   }
 }
 </style>

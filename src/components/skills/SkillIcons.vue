@@ -70,14 +70,14 @@ export default {
 }
 .front-end {
   /* background: rgb(216, 238, 255); */
-background-image: linear-gradient(to bottom, rgb(146, 183, 224), rgb(206, 227, 252));
-  }
+  background-image: linear-gradient(to bottom, rgb(146, 183, 224), rgb(206, 227, 252));
+}
 .back-end {
-    background-image: linear-gradient(to bottom, rgba(167,220,225,1), rgba(217,239,242,1));
+  background-image: linear-gradient(to bottom, rgba(167,220,225,1), rgba(217,239,242,1));
   /* background: rgb(183, 223, 255); */
 }
 .additional {
-background-image: linear-gradient(to bottom, rgba(255,216,194,1), rgb(255, 243, 236));
+  background-image: linear-gradient(to bottom, rgba(255,216,194,1), rgb(255, 243, 236));
   /* background: rgb(148, 207, 255); */
 }
 .skill-div {

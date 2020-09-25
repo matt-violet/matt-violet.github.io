@@ -4,7 +4,7 @@
       <h1>CONTACT</h1>
     </div>
     <div class="inner-content">
-      <p>Want to chat about something? Let's connect. I'm currently available for hire and open to discussing any opportunities.</p>
+      <p class="text">Want to chat? I'm currently available for hire and open to discussing any opportunities.</p>
       <div class="containers">
         <div class="container" v-on:click='handleLinkClick("mattviolet@gmail.com")'>
           <img class="icon" src="../assets/icons/email.png"/>
@@ -68,11 +68,12 @@ h1 {
   background: linear-gradient(to top, coral, lightsalmon);
   margin: 0;
 }
-p {
+.text {
   color: var(--body-text);
   font-size: 18px;
   font-weight: 400;
-  margin-top: 0;
+  margin: 0 auto;
+  max-width: 600px;
 }
 .containers {
   margin: 50px auto;
@@ -81,12 +82,16 @@ p {
 .container {
   width: 150px;
   position: relative;
-  margin: 30px 50px;
+  margin: 30px;
   display: inline-block;
   text-align: center;
+  transition: .3s;
+  padding: 20px 5px;
+  border-radius: 5px;
 }
 .container:hover {
   cursor: pointer;
+  /* box-shadow: 1px 2px 8px 0px grey; */
 }
 .container:hover .icon {
   height: 60px;
@@ -109,7 +114,7 @@ p {
   transition: .3s;
 }
 .icon-text {
-  margin-top: 80px;
+  margin-top: 55px;
 }
 .link-header {
   left: 0;
@@ -126,6 +131,12 @@ p {
   margin: 0;
 }
 @media (max-width: 1250px) and (min-width: 1000px), (max-width: 900px) {
+  .inner-content {
+    padding: 75px 50px;
+  }
+  .text {
+    max-width: 500px;
+  }
   .container {
     margin: 30px 15px;
   }
@@ -141,8 +152,8 @@ p {
 @media (max-width: 600px) {
   .container {
     display: block;
-    margin: 0px auto 40px auto;
-    height: 115px;
+    margin: 0px auto 50px auto;
+    height: 70px;
   }
   .icon-text {
     bottom: 0;
