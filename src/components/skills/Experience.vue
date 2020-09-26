@@ -35,7 +35,7 @@
         <ul>
           <li>Software Engineer Intern at a <a href="https://www.seasoned.co/" target="blank">startup company</a>, contributing to codebases in React, Redux, Vue, Java, and GraphQL.</li>
           <li>Maintained WordPress websites for 3 non-profit organizations</li>
-          <li>4 years of graphic design</li>
+          <li>4 years of professional graphic design experience</li>
         </ul>
       </div>
       <div class="exp-group">
@@ -68,8 +68,8 @@
       <div class="github-div">
         <img class="github-squares" src="../../assets/github-squares.png">
       </div>
+      <SkillIcons class="SkillIcons"/>
     </div>
-    <SkillIcons class="SkillIcons"/>
   </div>
 </template>
 
@@ -190,6 +190,9 @@ li {
 }
 .github-text {
   position: absolute;
+}
+.SkillIcons {
+  margin: 75px auto 0 auto;
 }
 /* ---------------------------- STATS RESIZING ---------------------------- */
 @media (max-width: 1250px) and (min-width: 1001px), (max-width: 850px) {

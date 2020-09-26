@@ -15,7 +15,7 @@ export const skills = {
     {name: 'MySQL', image: require('./src/assets/icons/MySQL.png')},
     {name: 'GraphQL', image: require('./src/assets/icons/GraphQL.png')}
   ],
-  other: [
+  additional: [
     {name: 'webpack', image: require('./src/assets/icons/webpack.png')},
     {name: 'AWS', image: require('./src/assets/icons/AWS.png')},
     {name: 'Git', image: require('./src/assets/icons/Git.png')},
