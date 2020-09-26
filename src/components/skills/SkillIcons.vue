@@ -94,10 +94,11 @@ h3 {
   margin: 0;
   font-size: 16px;
   font-weight: 400;
+  color: var(--body-text);
 }
 .skills-header {
   font-size: 25px;
-  font-weight: 500;
+  font-weight: 400;
   margin-bottom: 40px;
 }
 @media (max-width: 700px) {

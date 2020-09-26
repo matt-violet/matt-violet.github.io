@@ -175,7 +175,7 @@ li {
   text-align: center;
 }
 .exp-type-header {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 25px;
   margin: auto;
 }

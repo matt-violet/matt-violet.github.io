@@ -4,7 +4,7 @@
       <h1>CONTACT</h1>
     </div>
     <div class="inner-content">
-      <p class="text">Want to chat? I'm currently available for hire and open to discussing any opportunities.</p>
+      <p class="text">Looking to chat? I'm currently available for hire and open to discussing any opportunities.</p>
       <div class="containers">
         <div class="container" v-on:click='handleLinkClick("mattviolet@gmail.com")'>
           <img class="icon" src="../assets/icons/email.png"/>

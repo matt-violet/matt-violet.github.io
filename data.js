@@ -16,9 +16,9 @@ export const skills = {
     {name: 'GraphQL', image: require('./src/assets/icons/GraphQL.png')}
   ],
   additional: [
-    {name: 'webpack', image: require('./src/assets/icons/webpack.png')},
-    {name: 'AWS', image: require('./src/assets/icons/AWS.png')},
     {name: 'Git', image: require('./src/assets/icons/Git.png')},
+    {name: 'AWS', image: require('./src/assets/icons/AWS.png')},
+    {name: 'Webpack', image: require('./src/assets/icons/webpack.png')},
     {name: 'WordPress', image: require('./src/assets/icons/WordPress.png')},
     {name: 'Photoshop', image: require('./src/assets/icons/Photoshop.png')},
     {name: 'InDesign', image: require('./src/assets/icons/InDesign.png')}
