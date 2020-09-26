@@ -27,26 +27,44 @@
     </div>
      <div class="inner-content">
       <h3>Experience Highlights</h3>
-      <h2 class="exp-type-header">Real World Experience</h2>
-      <ul>
-        <li>Software Engineer Intern at a <a href="https://www.seasoned.co/" target="blank">startup company</a>, contributing to codebases in React, Redux, Vue, Java, and GraphQL.</li>
-      </ul>
-      <h2 class="exp-type-header">Structured Coursework</h2>
-      <ul>
-        <li><a href="https://www.hackreactor.com/" target="_blank">Hack Reactor (Galvanize), 2019</a></li>        
-          <ul>
-            <li>One of San Francisco's premier Software Engineering Immersive programs modeling today’s industry</li>
-          </ul>
-        <li><a href="https://www.udemy.com/course/the-web-developer-bootcamp/" target="_blank">The Web Developer Bootcamp</a> (Udemy), 2019</li>
-        <li><a href="https://www.udacity.com/course/intro-to-javascript--ud803" target="_blank">Intro to Javascript</a> (Udacity), 2018</li>
-      </ul>
-      <h2 class="exp-type-header">Achievements & Transferrable Skills</h2>
-      <ul>
-        <li>Portfolio of full stack web applications using modern front end frameworks / libraries, RESTful / external APIs, and responsive design.</li>
-        <li>4 years of WordPress and graphic design experience in the non-profit world</li>
-        <li>10+ years of non-profit communications experience and demonstrated advancement</li>
-      </ul>
-      <p>As you can see from my GitHub activity, coding is a muscle I've been exercising regularly.</p>
+      <div class="exp-group">
+        <img class="exp-icon" src="../../assets/icons/suitcase.png">
+        <div class="exp-header-div">
+          <h2 class="exp-type-header">Career</h2>
+        </div>
+        <ul>
+          <li>Software Engineer Intern at a <a href="https://www.seasoned.co/" target="blank">startup company</a>, contributing to codebases in React, Redux, Vue, Java, and GraphQL.</li>
+          <li>Maintained WordPress websites for 3 non-profit organizations</li>
+          <li>4 years of graphic design</li>
+        </ul>
+      </div>
+      <div class="exp-group">
+        <img class="exp-icon" src="../../assets/icons/graduation.png">
+        <div class="exp-header-div">
+          <h2 class="exp-type-header">Coursework</h2>
+        </div>
+        <ul>
+          <li><a href="https://www.hackreactor.com/" target="_blank">Hack Reactor (Galvanize), 2019</a></li>        
+            <ul>
+              <li>A premier SF Software Engineering Immersive program modeling today’s industry</li>
+            </ul>
+          <li><a href="https://www.udemy.com/course/the-web-developer-bootcamp/" target="_blank">The Web Developer Bootcamp</a> (Udemy), 2019</li>
+          <li><a href="https://www.udacity.com/course/intro-to-javascript--ud803" target="_blank">Intro to Javascript</a> (Udacity), 2018</li>
+          <li>UC Davis, 2010 (B.A. in Communication)</li>
+        </ul>
+      </div>
+      <div class="exp-group">
+        <img class="exp-icon" src="../../assets/icons/achievement.png">
+        <div class="exp-header-div">
+          <h2 class="exp-type-header">Achievements</h2>
+        </div>
+        <ul>
+          <li>Portfolio of full stack apps built with modern front end frameworks / libraries, RESTful / external APIs, and responsive design.</li>
+          <li>A decade of non-profit communications experience</li>
+          <li>Demonstrated professional advancement</li>
+        </ul>
+      </div>
+      <p>As you can see from my <a href="https://github.com/matt-violet" target="_blank">GitHub</a> activity, coding is a muscle I exercise regularly:</p>
       <div class="github-div">
         <img class="github-squares" src="../../assets/github-squares.png">
       </div>
@@ -74,8 +92,9 @@ export default {
   text-align: center;
 }
 .inner-content {
-  padding: 75px;
-  max-width: 600px;
+  text-align: center;
+  padding: 75px 25px;
+  max-width: 1000px;
   margin: auto;
 }
 h1 {
@@ -95,7 +114,7 @@ h3 {
   text-align: center;
   font-size: 30px;
   font-weight: 400;
-  margin: 0 auto 40px auto;
+  margin: 0 auto 50px auto;
 }
 li {
   color: var(--body-text);
@@ -139,14 +158,34 @@ li {
   font-weight: 500;
   margin-bottom: 0;
 }
+.exp-group {
+  display: inline-block;
+  text-align: left;
+  width: 30%;
+  padding: 0 10px;
+  vertical-align: top;
+}
+.exp-icon {
+  width: 50px;
+  margin: 0 auto;
+  display: block;
+}
+.exp-header-div {
+  margin: 10px auto 30px auto;
+  text-align: center;
+}
 .exp-type-header {
-  font-weight: 600;
-  font-size: 20px;
+  font-weight: 500;
+  font-size: 25px;
+  margin: auto;
+}
+.github-div {
+  padding: 0 25px;
 }
 .github-squares {
-  width: 100%;
+  max-width: 800px;
   text-align: center;
-  margin: 45px auto 0 auto;
+  margin: 75px auto 0 auto;
   width: 100%;
 }
 .github-text {
@@ -173,10 +212,38 @@ li {
     padding-top: 35px;
   }
 }
-/* ---------------------------- PADDING RESIZING ---------------------------- */
+/* ---------------------------- HIGHLIGHTS RESIZING ---------------------------- */
+@media (max-width: 1150px) and (min-width: 1001px), (max-width: 830px) {
+  .exp-type-header {
+    font-size: 20px;
+  }
+  li {
+    font-size: 14px;
+  }
+}
 @media (max-width: 700px) {
   .inner-content, h1 {
-    padding: 30px 15px;
+    padding: 30px 15px 50px 15px;
+  }
+  h3 {
+    margin-top: 50px;
+  }
+}
+@media (max-width: 700px) {
+  .exp-group {
+    display: block;
+    margin: 0 auto 50px auto;
+    padding: 0;
+    width: auto;
+    max-width: 500px;
+  }
+  li {
+    font-size: 16px;
+  }
+}
+@media (max-width: 400px) {
+  h3 {
+    font-size: 25px;
   }
 }
 </style>
