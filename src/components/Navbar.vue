@@ -3,7 +3,7 @@
     <div class="photo-div" v-on:click="$emit('nav', 'home')">
       <img class="photo" src="../assets/matt-violet.png">
       <h2 class="name-text">MATT VIOLET</h2>
-      <h4 class="title-text">WEB / SOFTWARE DEVELOPER</h4>
+      <h4 class="title-text">SOFTWARE ENGINEER</h4>
     </div>
     <div class="links-div">
       <p class="link-text" v-on:click="$emit('nav', 'about')">ABOUT</p>

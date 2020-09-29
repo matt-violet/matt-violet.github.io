@@ -33,7 +33,7 @@
           <h2 class="exp-type-header">Career</h2>
         </div>
         <ul>
-          <li>Software Engineer Intern at a <a href="https://www.seasoned.co/" target="blank">startup company</a>, contributing to codebases in React, Redux, Vue, Java, and GraphQL.</li>
+          <li>Software Engineer Intern at a <a href="https://www.seasoned.co/" target="blank">Seasoned</a>, contributing to codebases in React, Redux, Vue, Java, and GraphQL.</li>
           <li>Maintained WordPress websites for 3 non-profit organizations</li>
           <li>4 years of professional graphic design experience</li>
         </ul>
@@ -124,7 +124,7 @@ li {
   padding: 100px 0;
   position: relative;
   text-align: center;
-  background-image: linear-gradient(to bottom,  rgba(163,217,207,.3), rgba(4,178,217,.3));
+  background-image: linear-gradient(to bottom,  rgba(163,217,207,.5), rgba(4,178,217,.5));
 }
 .first-stats {
   display: inline-block;
@@ -183,7 +183,7 @@ li {
   padding: 0 25px;
 }
 .github-squares {
-  max-width: 800px;
+  max-width: 600px;
   text-align: center;
   margin: 75px auto 0 auto;
   width: 100%;
@@ -232,7 +232,7 @@ li {
     margin-top: 50px;
   }
 }
-@media (max-width: 700px) {
+@media (max-width: 630px) {
   .exp-group {
     display: block;
     margin: 0 auto 50px auto;

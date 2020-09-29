@@ -99,9 +99,10 @@ h3 {
 .skills-header {
   font-size: 25px;
   font-weight: 400;
+  text-decoration: underline;
   margin-bottom: 40px;
 }
-@media (max-width: 700px) {
+@media (max-width: 550px) {
   .col {
     width: 190px;
     margin: 50px auto 0 auto;

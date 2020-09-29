@@ -64,15 +64,15 @@ h1 {
   font-weight: 400;
 }
 .software-bg-div {
-  background-image: linear-gradient(to bottom,  rgba(163,217,207,.3), rgba(4,178,217,.3));
+  /* background-image: linear-gradient(to bottom,  rgba(163,217,207,.3), rgba(4,178,217,.3)); */
   padding: 30px;
   border-radius: 5px;
 }
 .design-bg-div {
-  background-image: linear-gradient(to bottom,  rgba(163,217,207,.3), rgba(4,178,217,.3));
+  /* background-image: linear-gradient(to bottom,  rgba(163,217,207,.3), rgba(4,178,217,.3)); */
   padding: 30px;
   border-radius: 5px;
-  margin-top: 75px;
+  /* margin-top: 75px; */
 }
 @media (max-width: 700px) {
   .inner-content, h1 {

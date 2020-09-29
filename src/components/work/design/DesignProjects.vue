@@ -81,7 +81,7 @@ export default {
 }
 .design-img-div {
   width: 100%;
-  height: 200px;
+  height: 195px;
   overflow: hidden;
 }
 .design-img {
@@ -91,13 +91,14 @@ export default {
 .design-text-div {
   margin: 0;
   padding: 0px 10px;
+  border-top: 1px solid;
   height: 33%;
   text-align: left;
 }
 .design-description {
-  margin: 10px 0 0 5px;
+  margin: 10px;
   padding-top: 5px;
-  font-weight: 900;
+  font-weight: 700;
   font-size: 18px;
 }
 .design-project:hover {

@@ -3,6 +3,9 @@
     <div class="header">
       <h1>CONTACT</h1>
     </div>
+    <div class="pic-div">
+      <img class="pic" data-aos="fade-right" src="../assets/matt-look.png">
+    </div>
     <div class="inner-content">
       <p class="text">Looking to chat? I'm currently available for hire and open to discussing any opportunities.</p>
       <div class="containers">
@@ -67,6 +70,15 @@ h1 {
   color: white;
   background: linear-gradient(to top, coral, lightsalmon);
   margin: 0;
+}
+.pic-div {
+  overflow: hidden;
+}
+.pic {
+  height: 350px;
+  position: absolute;
+  bottom: 0;
+  transition: .3s;
 }
 .text {
   color: var(--body-text);
@@ -141,6 +153,11 @@ h1 {
     margin: 30px 15px;
   }
 }
+@media (max-width: 1150px) and (min-width: 1000px), (max-width: 840px) and (min-width: 700px), (max-width: 450px){
+  .pic {
+    height: 250px;
+  }
+}
 @media (max-width: 700px) {
   .inner-content, h1 {
     padding: 30px 15px;
@@ -149,7 +166,7 @@ h1 {
     margin-top: 16px;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .container {
     display: block;
     margin: 0px auto 50px auto;

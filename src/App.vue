@@ -25,7 +25,7 @@
       @handlePreviousProject="showPreviousProject"
     />
     <div class="components" v-if="!showProject">
-      <About/>
+      <About @nav="navigate"/>
       <!-- <Education/> -->
       <Work :viewProjectDetails="handleViewProjectDetails"/>
       <Experience/>
@@ -123,7 +123,7 @@ export default {
       if (currentScrollPosition < 0) {
         return;
       }
-      this.showHomeBtn = currentScrollPosition >= 0 && currentScrollPosition <= 150;
+      this.showHomeBtn = currentScrollPosition >= 0 && currentScrollPosition <= 175;
       this.lastScrollPosition = currentScrollPosition;
     }
   },
@@ -147,10 +147,15 @@ body, html {
   position: relative;
 }
 a {
-  color: blue;
+  color: steelblue;
+  font-weight: 600;
+  text-decoration: underline;
 }
 a:visited {
-  color: black;
+  /* color: black; */
+}
+a:hover {
+  cursor: pointer;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -202,6 +207,9 @@ a:visited {
 @media (max-width: 1000px) {
   .components {
     margin: 0;
+  }
+  .home-bg-img {
+    margin-left: -100px;
   }
 }
 @media (max-width: 500px) {
