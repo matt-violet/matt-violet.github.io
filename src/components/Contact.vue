@@ -7,7 +7,7 @@
       <img class="pic" data-aos="fade-right" src="../assets/matt-look.png">
     </div>
     <div class="inner-content">
-      <p class="text">Looking to chat? I'm currently available for hire and open to discussing any opportunities.</p>
+      <p class="text">Looking for support with a project? No problem. Contact me to see how I can help you meet your goals.</p>
       <div class="containers">
         <div class="container" v-on:click='handleLinkClick("mattviolet@gmail.com")'>
           <img class="icon" src="../assets/icons/email.png"/>

@@ -8,9 +8,9 @@
         <p class="photo-text">My interest in coding comes from my insulin pump and continuous glucose monitor, AKA my "artificial pancreas".</p>
       </div>
       <div class="about-text-div">
-        <p>I'm a rising software engineer, recent intern, and proud graduate of Hack Reactor’s Advanced Software Engineering Immersive program.</p>
+        <p>I'm a rising software engineer, recent intern, and graduate of Hack Reactor’s Advanced Software Engineering Immersive program.</p>
         <p>Over the last couple years I have transformed my career, leaving the comfort of my non-profit role in pursuit of a technical skill set, immersing myself in advanced courses, and landing an internship at a startup company. In the process I've done increasingly complex <a v-on:click="$emit('nav', 'work')">work</a> and gained proficiency with industry-standard technologies (React, Vue, Node), workflows (Agile, Jira, Git), and best practices.</p>
-        <p>Although my career has taken some twists and turns, my heart is still in everything I do. My passion for programming comes from my lived experience as a type one diabetic using electronic medical devices (AKA my "<a href='https://drive.google.com/file/d/1D8tp35PoCCbMzuWLTPHFI5oGN7nFhIQ1/view?usp=sharing' target='_blank'>artificial pancreas</a>"). Since my health became linked to algorithms, I've invested myself in learning how these life-changing devices work and building apps with the potential to help others.</p>
+        <p>Although my career has taken some twists and turns, my heart is still in everything I do. My interest in programming comes from my experience using electronic medical devices (AKA my "<a href='https://drive.google.com/file/d/1D8tp35PoCCbMzuWLTPHFI5oGN7nFhIQ1/view?usp=sharing' target='_blank'>artificial pancreas</a>") as a type one diabetic. Since my health became linked to algorithms, I've invested myself in learning how these life-changing devices work and building apps with the potential to help others.</p>
         <p>When I'm not rambling about diabetes technology, I can be found hiking, making music, or watching sports in my hometown of Oakland, CA.</p>
       </div>
     </div>

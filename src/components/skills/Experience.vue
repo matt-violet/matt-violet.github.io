@@ -33,9 +33,9 @@
           <h2 class="exp-type-header">Career</h2>
         </div>
         <ul>
-          <li>Software Engineer Intern at a <a href="https://www.seasoned.co/" target="blank">Seasoned</a>, contributing to codebases in React, Redux, Vue, Java, and GraphQL.</li>
+          <li>Software Engineer Intern at <a href="https://www.seasoned.co/" target="blank">Seasoned</a>, contributing to codebases in React, Redux, Java, Vue and GraphQL.</li>
           <li>Maintained WordPress websites for 3 non-profit organizations</li>
-          <li>4 years of professional graphic design experience</li>
+          <li>4 years of graphic design experience</li>
         </ul>
       </div>
       <div class="exp-group">
@@ -60,11 +60,11 @@
         </div>
         <ul>
           <li>Portfolio of full stack apps built with modern front end frameworks / libraries, RESTful / external APIs, and responsive design.</li>
-          <li>A decade of non-profit communications experience</li>
-          <li>Demonstrated professional advancement</li>
+          <li>5 years of non-profit communications experience</li>
+          <li>Track record of career advancement and meeting organizational objectives</li>
         </ul>
       </div>
-      <p>As you can see from my <a href="https://github.com/matt-violet" target="_blank">GitHub</a> activity, coding is a muscle I exercise regularly:</p>
+      <p>As you can see I've been pretty active on <a href="https://github.com/matt-violet" target="_blank">GitHub</a> lately:</p>
       <div class="github-div">
         <img class="github-squares" src="../../assets/github-squares.png">
       </div>
