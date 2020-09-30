@@ -4,10 +4,7 @@
       <div class="close-btn-div">
         <img class="close-btn" src="../../../assets/icons/close.png" v-on:click="$emit('nav', 'work')">
       </div>
-      <p class="title" data-aos="zoom-in">{{ project.title }}</p>
-      <p class="description" data-aos="zoom-in">{{ project.description }}</p>
       <div class="track">
-        <img class="left arrow" src="../../../assets/icons/left-arrow.png" v-on:click="$emit('handlePreviousProject', project)">
         <div class="video-div" data-aos="zoom-in">  
           <iframe 
             class="video" 
@@ -21,16 +18,24 @@
           </iframe>
           <img v-else class='img' width="660" height="415" :src='project.video'>
         </div>
-        <img class="right arrow" src="../../../assets/icons/right-arrow.png" v-on:click="$emit('handleNextProject', project)">
       </div>
       <div class="text-div">
+        <div class="arrow-div">
+          <img class="left arrow" src="../../../assets/icons/left-arrow.png" v-on:click="$emit('handlePreviousProject', project)">
+          <img class="right arrow" src="../../../assets/icons/right-arrow.png" v-on:click="$emit('handleNextProject', project)">
+        </div>
         <div class="details-div">
-          <p class="details">{{ project.details }}</p>
+          <div class="centered">
+            <p class="title" data-aos="zoom-in">{{ project.title }}</p>
+            <p class="description" data-aos="zoom-in">{{ project.description }}</p>
+          </div>
           <p class="stack" v-for="(stack, i) of project.stack" :key="i">{{ stack }}</p>
           <div v-if='project.github.length' class="github-div">
             <a v-if='project.github.length !== 2' class='github-link' :href="project.github" target="_blank">GitHub Repository</a>
             <a v-else v-for='(link, i) of project.github' v-bind:key="i" class='github-link-2' :href="link.link" target="_blank">{{link.repo}}</a>
           </div>
+          <p class="details">{{ project.details }}</p>
+          <p v-if="project.screenshots.length" class="screenshot-text">Screenshots:</p>
         </div>
       </div>
       <div v-if="project.screenshots" class="screenshots">
@@ -59,8 +64,14 @@ export default {
   padding-bottom: 25px;
   min-height: 100%;
 }
+.inner-content {
+  width: 560px;
+  margin: auto;
+  text-align: center;
+}
 p {
   margin: 0;
+  color: var(--body-text);
 }
 a {
   font-weight: 500;
@@ -69,17 +80,39 @@ a {
   text-align: left;
 }
 .close-btn {
-  padding: 25px;
+  padding: 30px 0;
   width: 25px;
   left: 0;
   transition: .3s ease;
+}
+.arrow-div {
+  position: absolute;
+  height: 40px;
+  width: 560px;
+  clear: both;
+}
+.arrow {
+  width: 35px;
+  transform: translateY(20px);
+  z-index: 1;
+ }
+.left {
+  float: left;
+  position: relative;
+}
+.right {
+  position: relative;
+  float: right;
+}
+.arrow:hover {
+  cursor: pointer;
 }
 .close-btn:hover {
   cursor: pointer;
   transform: rotate(90deg);
 }
 .video-div {
-  margin: 10px auto 30px auto;
+  margin: 0 auto 30px auto;
   text-align: center;
   overflow: hidden;
   width: 560px;
@@ -95,40 +128,29 @@ a {
   width: 560px;
   margin: 0 auto;
 }
+.centered {
+  text-align: center;
+}
 .title {
   margin: 0 auto;
-  font-size: 40px;
+  font-size: 50px;
   font-weight: 500;
+  color: var(--body-text);
 }
 .description {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 400;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   color: var(--body-text);
 }
 .track {
   position: relative;
 }
-.arrow {
-  width: 40px;
-  top: 140px;
-  position: absolute;
-  display: inline-block;
-}
-.arrow:hover {
-  cursor: pointer;
-}
-.left {
-  transform: translateX(-345px); 
-}
-.right {
-  transform: translateX(305px);
-}
 .details-div {
   text-align: left;
 }
 .details {
-  margin-bottom: 30px;
+  margin-top: 20px;
   color: var(--body-text);
   font-weight: 400;
 }
@@ -141,7 +163,7 @@ a {
   margin: 0 8px 8px 0;
 }
 .github-div {
-  margin-top: 22px;
+  margin-top: 10px;
 }
 .github-link-2 {
   display: block;
@@ -150,6 +172,10 @@ a {
 .screenshots {
   width: 560px;
   margin: 50px auto 0 auto;
+}
+.screenshot-text {
+  margin-top: 20px;
+  font-size: 20px;
 }
 .screenshot {
   max-width: 100%;
@@ -166,54 +192,54 @@ a {
 }
 @media (max-width: 700px) {
   .video-div, .img, .video {
-    width: 400px;
     height: 225px;
   }
-  .arrow {
-    width: 30px;
-    top: 100px;
-  }
-  .left {
-    transform: translateX(-250px); 
-  }
-  .right {
-    transform: translateX(210px); 
-  }
-  .text-div {
-    width: 400px;
-    font-size: 14px;
-  }
-  .screenshots {
+  .inner-content, .video-div, .video, .img, .arrow-div, .text-div, .screenshots {
     width: 400px;
   }
-}
-@media (max-width: 550px) {
-  .video-div, .img, .video {
-    width: 270px;
-    height: 159px;
+  .close-btn {
+    width: 22px;
   }
   .arrow {
     width: 25px;
-    top: 65px;
-  }
-  .left {
-    transform: translateX(-175px); 
-  }
-  .right {
-    transform: translateX(148px); 
   }
   .text-div {
-    width: 270px;
     font-size: 14px;
   }
   .title {
-  font-size: 30px;
+    font-size: 35px;
+  }
+  .description {
+    font-size: 18px;
+  }
+}
+@media (max-width: 550px) {
+  #work-details {
+    overflow-x: hidden;
+  }
+  .video-div, .img, .video {
+    height: 159px;
+  }
+  .inner-content, .video-div, .img, .video, .arrow-div, .text-div, .screenshots {
+    width: 270px;
+  }
+  .arrow-div {
+    transform: translateY(10px);
+  }
+  .left {
+    transform: translateX(-30px);
+  }
+  .right {
+    transform: translateX(30px);
+  }
+  .text-div {
+    font-size: 14px;
+  }
+  .title {
+  font-size: 28px;
   }
   .description {
     font-size: 16px;
-  }
-  .screenshots {
-    width: 270px;
   }
 }
 </style>

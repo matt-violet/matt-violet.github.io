@@ -28,8 +28,8 @@ export const skills = {
 export const softwareProjects = [
   {
     title: 'Dialytics',
-    description: 'Diabetes Management Software',
-    details: 'Dialytics is a helpful reporting tool for those managing their blood sugar with Dexcom\'s Continuous Glucose Monitoring. It provides real glucose data - obtained from the Dexcom API via the OAuth 2 framework - displayed in easy to read charts, statistics, trends, and device settings.',
+    description: 'Diabetes Management Tool',
+    details: 'Dialytics is an analytics reporting tool that fetches and manipulates glucose data obtained from Continuous Glucose Monitoring (CGM) devices made by Dexcom, a popular choice among diabetics. I\'ll explain how Dialytics uses that data momentarily. What is CGM? It\'s what\'s on my arm in that photo you may have seen back there. CGM allows people to track their blood sugar levels 24/7 via a tiny sensor wire inserted under the skin that transmits readings wirelessly to a receiver (once every five minutes). So in order to use Dialytics, users are prompted to sign in to their Dexcom account. Once a user has been authenticated, Dialytics fetches their glucose data from the Dexcom API, via the OAuth 2 framework, and provides an easily digestable dashboard of charts, trends, statistics, and device settings. While the device settings are provided directly from the Dexcom API, I took it upon myself to calculate all of the statistics provided -- average glucose, time in range, average standard deviation, and change since prior XX period -- based on large quantities of glucose readings. I verified my calculations based on numbers from the actual Dexcom Clarity app I use regularly. The information provided by Dialytics empowers users to make healthy choices and stay on top of their glucose management.',
     stack: ['React', 'OAuth 2.0', 'Dexcom API', 'flatpickr', 'Google Charts'],
     github: 'https://github.com/matt-violet/dialytics',
     image: require('./src/assets/projects/software/dialytics/thumbnail.png'),
@@ -43,8 +43,8 @@ export const softwareProjects = [
   },
   {
     title: 'Kwik-e-Mart',
-    description: 'Mock Online Grocery Store App',
-    details: 'Welcome to Kwik-e-Mart, a full stack CRUD application using RESTful API architecture. Users can filter and select groceries for their shopping cart, add a payment method, and edit / confirm their order before checkout.',
+    description: 'Mock Online Grocery Store',
+    details: 'Kwik-e-Mart is a full stack CRUD application using RESTful API architecture. Users can browse dozens of grocery products, filter items by categories, increment / decrement the quantity of each item in their shopping cart, add a payment method (with basic form validation), and edit / confirm orders before completing their mock purchase. Kwik-e-Mart is inspired by (not only The Simpsons, but) the pandemic-induced shift to online grocery shopping, and what I consider less-than-ideal user experiences on certain grocery websites that will remain anonymous. The ease of Kwik-e-Mart\'s shopping experience is unmatched.',
     stack: ['Vue', 'Vue Router', 'Node', 'Express', 'Axios', 'Sequelize', 'PostgreSQL'],
     github: [
       {
@@ -67,35 +67,35 @@ export const softwareProjects = [
   },
   {
     title: 'Segment Events',
-    description: 'Harnessing the Power of Data',
-    details: 'As an intern at Seasoned I took ownership of a sprint to integrate Segment events (from Segment\'s Customer Data Platform) to collect data about admin user onboarding events. This information is now used by the Data and Marketing teams to drive analytics, A/B testing, and automated marketing campaigns.',
+    description: 'Data & Object-Oriented Programming',
+    details: 'As an intern at Seasoned I took ownership of a sprint integrating a 3rd party library (Segment) to collect specific data about admin users and their actions as they navigate the onboarding flow. It involved searching through a large codebase to locate relevant properties (such as user demographics or whether a user has performed a particular action on a given page), attaching them to a single object in the proper format, and including that object in an API call. The information I gathered is now used by the Data and Marketing teams to drive analytics, A/B testing, and automated marketing campaigns. This experience gave me a deeper understanding of object oriented programming and features like ES6\'s destructuring and spread operator syntax. It also contributed to a 6% increase in daily active users in just a few weeks.',
     stack: ['React', 'Segment Library'],
     github: '',
     image: require('./src/assets/projects/software/segment.png'),
     video: require('./src/assets/projects/software/segment.png'),
     screenshots: [
-      require('./src/assets/projects/software/segment/interview-canceled-applicant.png'),
-      require('./src/assets/projects/software/segment/interview-cancelled-admin.png'),
-      require('./src/assets/projects/software/segment/interview-requested.png'),
+      // require('./src/assets/projects/software/segment/interview-canceled-applicant.png'),
+      // require('./src/assets/projects/software/segment/interview-cancelled-admin.png'),
+      // require('./src/assets/projects/software/segment/interview-requested.png'),
     ]
   },
   {
     title: 'Profile Components',
     description: 'Internal Customer Support Tool',
-    details: 'As an intern at Seasoned I developed reusable components for an internal Customer Support tool. In addition to building stylized menus and cards for admins, job seekers, and stores, I implemented GraphQL queries to fetch relevant data from a Postgres database.',
+    details: 'As an intern at Seasoned I developed components for an internal Customer Support tool. The task gave me an opportunity to familiarize myself with two new programming languages as well as microservices architecture. I built things like stylized menus and profiles for admins, job seekers, and businesses. I also interacted with the Postgres database on the back end, implementing various CRUD operations with GraphQL. I had several key takeaways from this experience. First, it introduced me to a powerful front end framework, Vue, which I have now used for several projects (including the website you\'re looking at). It also introduced me to a new query language, GraphQL, which I really liked because it can significantly improve performance by delivering only the data that is explicitly requested and nothing more, in a single request, thereby lowering payloads and server stress. Accomplishing this task as an intern showed my ability to overcome the hurdle of learning new programming languages and deliver results.',
     stack: ['Vue', 'Vuetify', 'GraphQL', 'PostgreSQL'],
     github: '',
     image: require('./src/assets/projects/software/vuetify.png'),
     video:require('./src/assets/projects/software/vuetify.png'),
     screenshots: [
-      require('./src/assets/projects/software/internaltool/candidate-card.png'),
-      require('./src/assets/projects/software/internaltool/applications.png'),
+      // require('./src/assets/projects/software/internaltool/candidate-card.png'),
+      // require('./src/assets/projects/software/internaltool/applications.png'),
     ]
   },
   {
     title: 'Open Restaurant',
-    description: 'Photos Module for Restaurant App',
-    details: 'For this team project I contributed a responsive image gallery component for a restaurant reviews application. When an individual photo is clicked, the user enters a full-screen modal carousel view that includes photo details, flagging options, and intuitive navigation arrows. Images are hosted in AWS S3 buckets.',
+    description: 'Responsive Photos Module',
+    details: 'For this team project I contributed a responsive image gallery component for a restaurant reviews application. For development and testing purposes, I worked with royalty-free stock images which I hosted on Amazon Web Services in S3 Buckets. The module uses an identification number found in the address bar to retrieve the photo array for the particular restaurant, greeting users with a clean and responsive photo grid. Clicking an individual photo triggers an event that brings the user to a full-screen modal carousel view. The modal view includes photo details (date posted, username of the poster), flagging options, navigation arrows, and a close button. Clicking the next / previous arrows preserves the same order of photos as seen in the initial gallery view, giving users an inutitive experience. Upon completion, my photos module was joined with three other components (restaurant details, ratings, and booking calendar) to complete the Open Table reviews application.',
     stack: ['React', 'Styled-Components', 'Express', 'Ajax', 'MongoDB', 'Faker', 'Jest', 'Enzyme', 'Amazon S3'],
     github: 'https://github.com/krummurk/photos-module',
     image: require('./src/assets/projects/software/restaurant.jpg'),
