@@ -28,7 +28,7 @@ export default {
   margin: auto;
   position: absolute;
 }
-.welcome {
+.welcome, .hidden-welcome {
   width: 600px;
   position: fixed;
   top: 15%;
@@ -36,14 +36,8 @@ export default {
   transition: .3s;
 }
 .hidden-welcome {
-  width: 600px;
-  position: fixed;
-  display: block;
-  top: 15%;
-  left: 30%;
-  transition: .3s;
   opacity: 0;
-  transform: translateY(-200px);
+  transform: translateX(-100px);
 }
 h1 {
   color: white;
@@ -85,7 +79,7 @@ h2 {
 }
 .hidden-top-img {
   opacity: 0;
-  /* transform: translateY(-200px); */
+  transform: translateX(100px);
 }
 @keyframes pulse {
   0% { transform: scale(1); }
@@ -114,7 +108,7 @@ h2 {
     left: 10%;
   }
   .hidden-welcome {
-    transform: translateY(-100px);
+    transform: translateX(-100px);
     left: 10%;
   }
   .top-img, .hidden-top-img {
@@ -152,7 +146,7 @@ h2 {
     transition: .3s;
   }
   .hidden-welcome { 
-    transform: translateY(-100px);
+    transform: translateX(-100px);
   }
 }
 </style>

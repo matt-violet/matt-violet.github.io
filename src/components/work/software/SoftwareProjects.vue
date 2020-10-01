@@ -92,13 +92,14 @@ export default {
     text-align: center;
     transition: 0.3s;
     overflow: hidden;
-    background: black;
+    background: linear-gradient(135deg, white, lightgrey);
+    background: cover;
     -webkit-transition: 0.3s;
   }
   .img {
     position: relative;
-    min-width: 100%;
-    height: 100%;
+    width: 100%;
+    min-height: 100%;
     margin-left: 50%;
     transform: translateX(-50%);
   }

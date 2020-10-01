@@ -5,18 +5,20 @@
         <img class="close-btn" src="../../../assets/icons/close.png" v-on:click="$emit('nav', 'work')">
       </div>
       <div class="track">
-        <div class="video-div" data-aos="zoom-in">  
-          <iframe 
+        <div class="video-div" v-if="project.video">  
+          <iframe  
             class="video" 
-            v-if='project.title!=="Social Inn" && project.title!=="Segment Events" && project.title!=="Internal Tool"' 
             width="560px" 
             height="315px" 
             :src="project.video" 
             frameborder="0" 
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen>
+            allowfullscreen
+          >
           </iframe>
-          <img v-else class='img' width="660" height="415" :src='project.video'>
+        </div>
+        <div v-else class="img-div">
+          <img :class="this.project.title === 'Profile Components' ? 'pc-img' : 'img'" :src="project.image">
         </div>
       </div>
       <div class="text-div">
@@ -30,16 +32,35 @@
             <p class="description" data-aos="zoom-in">{{ project.description }}</p>
           </div>
           <p class="stack" v-for="(stack, i) of project.stack" :key="i">{{ stack }}</p>
-          <div v-if='project.github.length' class="github-div">
-            <a v-if='project.github.length !== 2' class='github-link' :href="project.github" target="_blank">GitHub Repository</a>
-            <a v-else v-for='(link, i) of project.github' v-bind:key="i" class='github-link-2' :href="link.link" target="_blank">{{link.repo}}</a>
+          <div v-if="project.github && project.github.length" class="github-div">
+            <a v-if="project.github && project.github.length !== 2"
+              class="github-link"
+              :href="project.github"
+              target="_blank"
+            >
+              GitHub Repository
+            </a>
+            <a v-else v-for="(link, i) of project.github"
+              v-bind:key="i"
+              class="github-link-2"
+              :href="link.link"
+              target="_blank"
+            >
+              {{link.repo}}
+            </a>
           </div>
           <p class="details">{{ project.details }}</p>
-          <p v-if="project.screenshots.length" class="screenshot-text">Screenshots:</p>
+          <p v-if="project.screenshots && project.screenshots.length" class="screenshot-text">Screenshots:</p>
         </div>
       </div>
       <div v-if="project.screenshots" class="screenshots">
-        <img v-for="(screenshot, i) of project.screenshots" :key="i" :src="screenshot" class="screenshot" data-aos="zoom-in"/>
+        <img
+          class="screenshot"
+          v-for="(screenshot, i) of project.screenshots"
+          :key="i"
+          :src="screenshot"
+          data-aos="zoom-in"
+        />
       </div>
     </div>
   </div>
@@ -47,7 +68,7 @@
 
 <script>
 export default {
-  name: 'SoftwareWorkDetails',
+  name: "SoftwareWorkDetails",
   props: {
     project: {type: Object},
     nav: {type: Function},
@@ -111,7 +132,7 @@ a {
   cursor: pointer;
   transform: rotate(90deg);
 }
-.video-div {
+.video-div, .img-div {
   margin: 0 auto 30px auto;
   text-align: center;
   overflow: hidden;
@@ -119,10 +140,15 @@ a {
   height: 315px;
   border-radius: 5px;
   box-shadow: 1px 2px 8px 0px grey;
+  vertical-align: middle;
 }
 .img {
-  width: 560px;
-  height: 315px;
+  width: 100%;
+  min-height: 100%;
+}
+.pc-img {
+  width: 100%;
+  transform: translateY(-35px);
 }
 .text-div {
   width: 560px;
@@ -191,11 +217,14 @@ a {
   }
 }
 @media (max-width: 700px) {
-  .video-div, .img, .video {
+  .video-div, .img-div, .video {
     height: 225px;
   }
-  .inner-content, .video-div, .video, .img, .arrow-div, .text-div, .screenshots {
+  .inner-content, .video-div, .video, .img-div, .img, .arrow-div, .text-div, .screenshots {
     width: 400px;
+  }
+  .pc-img {
+    transform: translateY(-25px);
   }
   .close-btn {
     width: 22px;
@@ -217,14 +246,23 @@ a {
   #work-details {
     overflow-x: hidden;
   }
-  .video-div, .img, .video {
+  .video-div, .img-div, .img, .video {
     height: 159px;
   }
-  .inner-content, .video-div, .img, .video, .arrow-div, .text-div, .screenshots {
+  .inner-content, .video-div, .img-div, .img, .video, .arrow-div, .text-div, .screenshots {
     width: 270px;
+  }
+  .pc-img {
+    transform: translateY(-13px);
   }
   .arrow-div {
     transform: translateY(10px);
+  }
+  .close-btn {
+    width: 16px;
+  }
+  .arrow {
+    width: 20px;
   }
   .left {
     transform: translateX(-30px);

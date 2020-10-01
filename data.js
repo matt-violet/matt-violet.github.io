@@ -72,7 +72,7 @@ export const softwareProjects = [
     stack: ['React', 'Segment Library'],
     github: '',
     image: require('./src/assets/projects/software/segment.png'),
-    video: require('./src/assets/projects/software/segment.png'),
+    video: '',
     screenshots: [
       // require('./src/assets/projects/software/segment/interview-canceled-applicant.png'),
       // require('./src/assets/projects/software/segment/interview-cancelled-admin.png'),
@@ -85,8 +85,8 @@ export const softwareProjects = [
     details: 'As an intern at Seasoned I developed components for an internal Customer Support tool. The task gave me an opportunity to familiarize myself with two new programming languages as well as microservices architecture. I built things like stylized menus and profiles for admins, job seekers, and businesses. I also interacted with the Postgres database on the back end, implementing various CRUD operations with GraphQL. I had several key takeaways from this experience. First, it introduced me to a powerful front end framework, Vue, which I have now used for several projects (including the website you\'re looking at). It also introduced me to a new query language, GraphQL, which I really liked because it can significantly improve performance by delivering only the data that is explicitly requested and nothing more, in a single request, thereby lowering payloads and server stress. Accomplishing this task as an intern showed my ability to overcome the hurdle of learning new programming languages and deliver results.',
     stack: ['Vue', 'Vuetify', 'GraphQL', 'PostgreSQL'],
     github: '',
-    image: require('./src/assets/projects/software/vuetify.png'),
-    video:require('./src/assets/projects/software/vuetify.png'),
+    image: require('./src/assets/projects/software/profile.png'),
+    video:'',
     screenshots: [
       // require('./src/assets/projects/software/internaltool/candidate-card.png'),
       // require('./src/assets/projects/software/internaltool/applications.png'),
@@ -113,7 +113,9 @@ export const softwareProjects = [
     stack: ['PostgreSQL', 'Cassandra', 'Express', 'AWS', 'k6', 'New Relic'],
     github: 'https://github.com/social-inn/Reviews',
     image: require('./src/assets/projects/software/social-inn.jpg'),
-    video: require('./src/assets/projects/software/social-in-test.png')
+    screenshots: [
+      require('./src/assets/projects/software/social-in-test.png')
+    ]
   },
   // {
   //   title: 'Connect Four',

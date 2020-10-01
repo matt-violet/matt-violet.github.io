@@ -4,7 +4,7 @@
     <div :class="showProject ? 'home-div-absolute' : 'home-div'">
       <Home @nav="navigate" :showHomeBtn="showHomeBtn"/>
       <div class="bg-div">
-        <img class="home-bg-img" :src="backgroundImage">
+        <img class="bg-img" :src="backgroundImage">
         <div class="bg-gradient"/>
       </div>
     </div>
@@ -88,34 +88,24 @@ export default {
     },
     showNextProject(currentProj) {
       if (currentProj.isDesignProject) {
-        if (!designProjects[designProjects.indexOf(currentProj) + 1]) {
-          this.featuredProject = designProjects[0];
-          return;
-        }
-        this.featuredProject = designProjects[(designProjects.indexOf(currentProj)) + 1];
-        return;
+        !designProjects[designProjects.indexOf(currentProj) + 1] ?
+          this.featuredProject = designProjects[0] :
+          this.featuredProject = designProjects[(designProjects.indexOf(currentProj)) + 1];
       } else {
-        if (!softwareProjects[softwareProjects.indexOf(currentProj) + 1]) {
-          this.featuredProject = softwareProjects[0];
-          return;
-        }
-        this.featuredProject = softwareProjects[(softwareProjects.indexOf(currentProj)) + 1];
+        !softwareProjects[softwareProjects.indexOf(currentProj) + 1] ?
+          this.featuredProject = softwareProjects[0] :
+          this.featuredProject = softwareProjects[(softwareProjects.indexOf(currentProj)) + 1]
       }
     },
     showPreviousProject(currentProj) {
       if (currentProj.isDesignProject) {
-        if (!designProjects[designProjects.indexOf(currentProj) - 1]) {
-          this.featuredProject = designProjects[designProjects.length - 1];
-          return;
-        }
-        this.featuredProject = designProjects[designProjects.indexOf(currentProj) - 1];
-        return;
+        !designProjects[designProjects.indexOf(currentProj) - 1] ?
+          this.featuredProject = designProjects[designProjects.length - 1] :
+          this.featuredProject = designProjects[designProjects.indexOf(currentProj) - 1]
       } else {
-        if (!softwareProjects[softwareProjects.indexOf(currentProj) - 1]) {
-          this.featuredProject = softwareProjects[softwareProjects.length - 1];
-          return;
-        }
-        this.featuredProject = softwareProjects[softwareProjects.indexOf(currentProj) - 1];
+        !softwareProjects[softwareProjects.indexOf(currentProj) - 1] ?
+          this.featuredProject = softwareProjects[softwareProjects.length - 1] :
+          this.featuredProject = softwareProjects[softwareProjects.indexOf(currentProj) - 1];
       }
     },
     onScroll () {
@@ -123,7 +113,7 @@ export default {
       if (currentScrollPosition < 0) {
         return;
       }
-      this.showHomeBtn = currentScrollPosition >= 0 && currentScrollPosition <= 175;
+      this.showHomeBtn = currentScrollPosition >= 0 && currentScrollPosition <= 250;
       this.lastScrollPosition = currentScrollPosition;
     }
   },
@@ -185,7 +175,7 @@ a:hover {
 .home-div-absolute {
   position: absolute;
 }
-.home-bg-img {
+.bg-img {
   min-width: 100%;
   height: 100%;
   z-index: -1;
@@ -208,12 +198,12 @@ a:hover {
   .components {
     margin: 0;
   }
-  .home-bg-img {
+  .bg-img {
     margin-left: -100px;
   }
 }
 @media (max-width: 500px) {
-  .home-bg-img {
+  .bg-img {
     margin-left: -250px;
   }
 }
