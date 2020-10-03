@@ -35,7 +35,7 @@
         <ul>
           <li>Software Engineer Intern at <a href="https://www.seasoned.co/" target="blank">Seasoned</a>, contributing to codebases in React, Redux, Java, Vue and GraphQL.</li>
           <li>Maintained WordPress websites for 3 non-profit organizations</li>
-          <li>4 years of graphic design experience</li>
+          <li>5 years of graphic design experience</li>
         </ul>
       </div>
       <div class="exp-group">
@@ -124,7 +124,7 @@ li {
   padding: 100px 0;
   position: relative;
   text-align: center;
-  background-image: linear-gradient(to bottom,  rgba(163,217,207,.5), rgba(4,178,217,.5));
+  background: linear-gradient(to bottom, rgba(70, 131, 180, 0.719), steelblue);
 }
 .first-stats {
   display: inline-block;
@@ -146,6 +146,7 @@ li {
   margin: 0;
   font-size: 50px;
   font-weight: 300;
+  color: white;
   animation: pulse 2s infinite;
 }
 @keyframes pulse {
@@ -155,8 +156,9 @@ li {
 }
 .num-description {
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 400;
   margin-bottom: 0;
+  color: white;
 }
 .exp-group {
   display: inline-block;
@@ -201,7 +203,6 @@ li {
   }
   .num {
     font-size: 38px;
-    font-weight: 500;
   }
   .num-description {
     font-size: 13px;

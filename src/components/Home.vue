@@ -29,10 +29,10 @@ export default {
   position: absolute;
 }
 .welcome, .hidden-welcome {
-  width: 600px;
+  width: 450px;
   position: fixed;
-  top: 15%;
-  left: 30%;
+  top: 12%;
+  left: calc(300px + 5%);
   transition: .3s;
 }
 .hidden-welcome {
@@ -48,17 +48,17 @@ h1 {
 }
 h2 {
   color: white;
-  font-size: 25px;
-  font-weight: 500;
-  margin-top: 10px;
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 5px;
 }
 .btn {
   background: coral;
   color: white;
   box-shadow: 2px 4px 8px 0px rgb(107, 107, 107);
-  margin: 15px 20px 0 20px;
+  margin: 20px 20px 0 20px;
   padding: 12px 24px;
-  font-size: 25px;
+  font-size: 22px;
   font-weight: 600;
   border-radius: 50px;
   border: 0;
@@ -71,7 +71,7 @@ h2 {
   color: coral;
 }
 .top-img, .hidden-top-img {
-  width: 30%;
+  width: 28%;
   bottom: 0;
   position: absolute;
   right: 5%;
@@ -87,41 +87,25 @@ h2 {
   100% { transform: scale(1); }
 }
 /* --------------------------- MEDIA QUERY --------------------------- */
-@media (max-width: 1300px) {
-  h1 {
-    font-size: 70px;
-  }
-  h2, .btn {
-    font-size: 18px;
-  }
-  .welcome, .hidden-welcome {
-    width: 450px;
-    left: 35%;
-  }
-  .top-img, .hidden-top-img {
-    width: 33%;
-  }
-}
 @media (max-width: 1000px) {
-  .welcome {
-    top: 20%;
-    left: 10%;
+  .welcome, .hidden-welcome {
+    top: calc(70px + 5%);
+    left: 5%;
   }
   .hidden-welcome {
     transform: translateX(-100px);
-    left: 10%;
   }
-  .top-img, .hidden-top-img {
-    min-width: 250px;
-  }
-}
-@media (max-width: 600px) {
   h1 {
     font-size: 60px;
   }
   h2, .btn {
     font-size: 18px;
   }
+  .top-img, .hidden-top-img {
+    width: 300px;
+  }
+}
+@media (max-width: 600px) {
   #home {
     width: 100%;
     position: absolute;
@@ -131,6 +115,7 @@ h2 {
   .top-img, .hidden-top-img {
     left: 0;
     right: 0;
+    width: 250px;
     margin: auto;
   }
   .welcome, .hidden-welcome {

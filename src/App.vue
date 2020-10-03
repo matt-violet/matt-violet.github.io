@@ -113,7 +113,7 @@ export default {
       if (currentScrollPosition < 0) {
         return;
       }
-      this.showHomeBtn = currentScrollPosition >= 0 && currentScrollPosition <= 250;
+      this.showHomeBtn = currentScrollPosition >= 0 && currentScrollPosition <= 275;
       this.lastScrollPosition = currentScrollPosition;
     }
   },
@@ -141,9 +141,6 @@ a {
   font-weight: 600;
   text-decoration: underline;
 }
-a:visited {
-  /* color: black; */
-}
 a:hover {
   cursor: pointer;
 }
@@ -168,12 +165,12 @@ a:hover {
   height: 100%;
   position: relative;
 }
+.home-div-absolute {
+  position: absolute;
+}
 .bg-div {
   width: 100%;
   overflow-x: hidden;
-}
-.home-div-absolute {
-  position: absolute;
 }
 .bg-img {
   min-width: 100%;
@@ -189,22 +186,28 @@ a:hover {
 }
 .bg-gradient {
   width: 100%;
+  margin-left: 300px;
   height: 100%;
   position: fixed;
   z-index: -1;
-  background: linear-gradient(to bottom, rgba(46, 46, 46, 0.3), rgba(0, 0, 0, 0));
+  background: linear-gradient(160deg, rgba(0, 0, 0, 0.3) 5%, rgba(0, 0, 0, 0) 95%);
 }
 @media (max-width: 1000px) {
   .components {
     margin: 0;
   }
-  .bg-img {
-    margin-left: -100px;
+  .bg-gradient {
+    margin: 0;
   }
 }
 @media (max-width: 500px) {
   .bg-img {
-    margin-left: -250px;
+    width: 1000px;
+    margin: auto;
+    margin-left: -300px;
+  }
+  .bg-div {
+    text-align: center;
   }
 }
 </style>

@@ -141,6 +141,7 @@ a {
   border-radius: 5px;
   box-shadow: 1px 2px 8px 0px grey;
   vertical-align: middle;
+  background: linear-gradient(135deg, white, lightgrey);
 }
 .img {
   width: 100%;
