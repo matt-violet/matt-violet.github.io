@@ -1,11 +1,11 @@
 <template>
   <div id="work">
     <div class="header">
-      <h1>PORTFOLIO</h1>
+      <h1>Work</h1>
     </div>
     <div class="inner-content">
       <div class="software-bg-div">
-        <h2 class="section-title">Software Development:</h2>
+        <h2 class="section-title">Software Projects:</h2>
         <SoftwareProjects @viewProjDetails="handleViewProjDetails"/>
       </div>
       <div class="design-bg-div" id="design-bg-div">
@@ -38,7 +38,7 @@ export default {
 
 <style scoped>
 #work {
-  background: white;
+  background: rgb(220, 240, 255);
 }
 .header {
   width: 100%;
@@ -46,33 +46,28 @@ export default {
 }
 .inner-content {
   padding: 75px;
-  max-width: 1000px;
+  max-width: 900px;
   margin: auto;
 }
 h1 {
-  padding: 25px 75px;
-  font-size: 45px;
-  font-weight: 500;
-  color: white;
-  background: linear-gradient(to top, coral, lightsalmon);
+  padding-top: 75px;
+  font-size: 35px;
+  font-weight: 400;
   margin: 0;
 }
 .section-title {
   display: block;
   margin-top: 0;
-  font-size: 30px;
+  font-size: 28px;
   font-weight: 400;
 }
 .software-bg-div {
-  /* background-image: linear-gradient(to bottom,  rgba(163,217,207,.3), rgba(4,178,217,.3)); */
   padding: 30px;
   border-radius: 5px;
 }
 .design-bg-div {
-  /* background-image: linear-gradient(to bottom,  rgba(163,217,207,.3), rgba(4,178,217,.3)); */
   padding: 30px;
   border-radius: 5px;
-  /* margin-top: 75px; */
 }
 @media (max-width: 700px) {
   .inner-content, h1 {

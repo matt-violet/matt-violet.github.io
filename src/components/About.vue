@@ -1,17 +1,17 @@
 <template>
   <div id="about">
     <div class="header">
-      <h1>ABOUT</h1>
+      <h1>About</h1>
     </div>
     <div class="inner-content">
       <div class="photo-div" id="photo-div" :style="{ 'background-image': 'url(' + image[index] + ')' }">
         <p class="photo-text">My interest in coding comes from my insulin pump and continuous glucose monitor, AKA my "artificial pancreas".</p>
       </div>
       <div class="about-text-div">
-        <p>I'm a rising software engineer, recent intern, and graduate of Hack Reactor’s Advanced Software Engineering Immersive program.</p>
-        <p>Over the last couple years I have transformed my career, leaving the comfort of my non-profit role in pursuit of a technical skill set, immersing myself in advanced courses, and landing an internship at a startup company. In the process I've done increasingly complex <a v-on:click="$emit('nav', 'work')">work</a> and gained proficiency with industry-standard technologies (React, Vue, Node), workflows (Agile, Jira, Git), and best practices.</p>
-        <p>Although my career has taken some twists and turns, my heart is still in everything I do. My interest in programming comes from my experience using electronic medical devices (AKA my "<a href='https://drive.google.com/file/d/1D8tp35PoCCbMzuWLTPHFI5oGN7nFhIQ1/view?usp=sharing' target='_blank'>artificial pancreas</a>") as a type one diabetic. Since my health became linked to algorithms, I've invested myself in learning how these life-changing devices work and building apps with the potential to help others.</p>
-        <p>When I'm not rambling about diabetes technology, I can be found hiking, making music, or watching sports in my hometown of Oakland, CA.</p>
+        <p>I'm a converted software engineer with hands-on experience, formal education, and professional roots in non-profit communications.</p>
+        <p>Over the last couple years I've transformed my career, leaving the comfort of my non-profit role in pursuit of a technical skill set, immersing myself in a rigorous coding bootcamp, and landing an internship at a startup company. In the process I've done increasingly complex <a v-on:click="$emit('nav', 'work')">work</a>, shipped my own code, and gained proficiency with industry-standard technologies (React, Vue, Node), workflows (Agile, Jira, Git), and best practices.</p>
+        <p>Although my career has shifted, my heart is still in everything I do. My interest in programming comes from my experience using electronic medical devices (AKA my "<a href='https://drive.google.com/file/d/1D8tp35PoCCbMzuWLTPHFI5oGN7nFhIQ1/view?usp=sharing' target='_blank'>artificial pancreas</a>") as a type one diabetic. Since my health became linked to algorithms, I've invested myself in learning how these life-changing devices work and building apps with the potential to help others.</p>
+        <p>Away from the keyboard I enjoy hiking, making music, and watching sports in my hometown of Oakland, CA.</p>
       </div>
     </div>
   </div>
@@ -33,7 +33,7 @@ export default {
   },
   mounted() {
       setInterval(() => {
-        this.index < 1 ? this.index++ : this.index = 0;
+        this.index < 2 ? this.index++ : this.index = 0;
       }, 5000);
   }
 }
@@ -41,11 +41,9 @@ export default {
 
 <style scoped>
 h1 {
-  padding: 25px 75px;
-  font-size: 45px;
-  font-weight: 500;
-  color: white;
-  background: linear-gradient(to top, coral, lightsalmon);
+  padding-top: 75px;
+  font-size: 35px;
+  font-weight: 300;
   margin: 0;
 }
 p {
@@ -66,7 +64,7 @@ strong {
 }
 .inner-content {
   padding: 75px;
-  max-width: 800px;
+  max-width: 700px;
   margin: auto;
 }
 .photo-div {
@@ -76,6 +74,7 @@ strong {
   margin: 0 20px 0px 0;
   overflow: hidden;
   border-radius: 5px;
+  background-position: center;
   transition: .3s;
   background-size: cover;
 }

@@ -216,6 +216,7 @@ export const designProjects = [
 ];
 
 export const aboutImgs = [
+  require('./src/assets/matt-violet.jpg'),
   require('./src/assets/pump.png'),
   require('./src/assets/showing-pump.jpg')
 ];

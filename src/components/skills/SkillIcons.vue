@@ -1,42 +1,44 @@
 <template>
   <div class="skill-icons-container">
-    <h3>Technical Skills</h3>
-    <div class="col">
-      <div class="inner-skill">
-        <h2 class="skills-header">Front End</h2>
-        <div class="row"
-          v-for ="(skill, i) of skills.frontend"
-          :class="i === 3 ? 'first-div-new-row' : ''"
-          :key="i"
-        >
-          <img class="icon" :src="skill.image">
-          <p class="name">{{ skill.name }}</p>
+    <div class="inner-content">
+      <h3>Technical Skills</h3>
+      <div class="col">
+        <div class="inner-skill">
+          <h2 class="skills-header">Front End</h2>
+          <div class="row"
+            v-for ="(skill, i) of skills.frontend"
+            :class="i === 3 ? 'first-div-new-row' : ''"
+            :key="i"
+          >
+            <img class="icon" :src="skill.image">
+            <p class="name">{{ skill.name }}</p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col">
-      <div class="inner-skill">
-        <h2 class="skills-header">Back End</h2>
-        <div class="row"
-          v-for ="(skill, i) of skills.backend"
-          :class="i === 3 ? 'first-div-new-row' : ''"
-          :key="i"
-        >
-          <img class="icon" :src="skill.image">
-          <p class="name">{{ skill.name }}</p>
+      <div class="col">
+        <div class="inner-skill">
+          <h2 class="skills-header">Back End</h2>
+          <div class="row"
+            v-for ="(skill, i) of skills.backend"
+            :class="i === 3 ? 'first-div-new-row' : ''"
+            :key="i"
+          >
+            <img class="icon" :src="skill.image">
+            <p class="name">{{ skill.name }}</p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col">
-      <div class="inner-skill">
-        <h2 class="skills-header">Additional</h2>
-        <div class="row"
-          v-for ="(skill, i) of skills.additional"
-          :class="i === 3 ? 'first-div-new-row' : ''"
-          :key="i"
-        >
-          <img class="icon" :src="skill.image">
-          <p class="name">{{ skill.name }}</p>
+      <div class="col">
+        <div class="inner-skill">
+          <h2 class="skills-header">Additional</h2>
+          <div class="row"
+            v-for ="(skill, i) of skills.additional"
+            :class="i === 3 ? 'first-div-new-row' : ''"
+            :key="i"
+          >
+            <img class="icon" :src="skill.image">
+            <p class="name">{{ skill.name }}</p>
+          </div>
         </div>
       </div>
     </div>
@@ -57,9 +59,14 @@ export default {
 
 <style scoped>
 .skill-icons-container {
+  background: rgb(240, 240, 240);
+}
+.inner-content {
   max-width: 800px;
+  margin: auto;
   text-align: center;
   transition: .3s;
+  padding: 75px 0;
 }
 h3 {
   font-size: 30px;
@@ -97,9 +104,8 @@ h3 {
   color: var(--body-text);
 }
 .skills-header {
-  font-size: 25px;
+  font-size: 22px;
   font-weight: 400;
-  text-decoration: underline;
   margin-bottom: 40px;
 }
 @media (max-width: 550px) {

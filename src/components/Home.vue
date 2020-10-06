@@ -4,7 +4,7 @@
       <h1>Welcome,</h1>
       <h2>I'm an Oakland-based software engineer currently exploring new job opportunities.</h2>
       <div class="btn-div">
-        <button class="btn" v-on:click="$emit('nav', 'work')">Portfolio</button>
+        <button class="btn" v-on:click="$emit('nav', 'work')">My Work</button>
       </div>
     </div>
     <img src="../assets/matt-oak-blank.png" :class="this.showHomeBtn ? 'top-img' : 'hidden-top-img'">
@@ -41,14 +41,14 @@ export default {
 }
 h1 {
   color: white;
-  font-size: 75px;
+  font-size: 65px;
   font-weight: 600;
   border: 0;
   margin: 0;
 }
 h2 {
   color: white;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
   margin-top: 5px;
 }
@@ -58,7 +58,7 @@ h2 {
   box-shadow: 2px 4px 8px 0px rgb(107, 107, 107);
   margin: 20px 20px 0 20px;
   padding: 12px 24px;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 600;
   border-radius: 50px;
   border: 0;
@@ -71,7 +71,7 @@ h2 {
   color: coral;
 }
 .top-img, .hidden-top-img {
-  width: 28%;
+  width: 25%;
   bottom: 0;
   position: absolute;
   right: 5%;

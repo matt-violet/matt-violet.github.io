@@ -1,13 +1,13 @@
 <template>
   <div id="contact">
-    <div class="header">
-      <h1>CONTACT</h1>
-    </div>
     <div class="pic-div">
       <img class="pic" data-aos="fade-right" src="../assets/matt-look.png">
     </div>
     <div class="inner-content">
-      <p class="text">Looking for support with a project? No problem. Contact me to see how I can help you meet your goals.</p>
+      <div class="header">
+        <h1>Contact</h1>
+      </div>
+      <p class="text">Looking for support with a project? Contact me to see how I can help you meet your goals.</p>
       <div class="containers">
         <div class="container" v-on:click='handleLinkClick("mattviolet@gmail.com")'>
           <img class="icon" src="../assets/icons/email.png"/>
@@ -52,7 +52,7 @@ export default {
 
 <style scoped>
 #contact {
-  background: white;
+  background: rgb(220, 240, 255);
 }
 .header {
   width: 100%;
@@ -64,12 +64,9 @@ export default {
   margin: auto;
 }
 h1 {
-  padding: 25px 75px;
-  font-size: 45px;
-  font-weight: 500;
-  color: white;
-  background: linear-gradient(to top, coral, lightsalmon);
-  margin: 0;
+  font-size: 35px;
+  font-weight: 400;
+  margin: 0 auto 75px auto;
 }
 .pic-div {
   overflow: hidden;
@@ -88,7 +85,7 @@ h1 {
   max-width: 600px;
 }
 .containers {
-  margin: 50px auto;
+  margin: 30px auto;
   text-align: center;
 }
 .container {
@@ -102,8 +99,9 @@ h1 {
   border-radius: 5px;
 }
 .container:hover {
+  background: white;
   cursor: pointer;
-  /* box-shadow: 1px 2px 8px 0px grey; */
+  box-shadow: 1px 2px 8px 0px grey;
 }
 .container:hover .icon {
   height: 60px;

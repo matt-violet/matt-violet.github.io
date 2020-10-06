@@ -38,14 +38,17 @@ export default {
   text-align: left;
 }
 .close-btn {
-  padding: 25px;
+  padding: 10px;
   width: 25px;
   left: 0;
-  transition: .3s ease;
+  margin: 50px;
+  border-radius: 5px;
+  background: var(--nav-grey);
 }
 .close-btn:hover {
   cursor: pointer;
-  transform: rotate(90deg);
+  transition: .3s;
+  box-shadow: 1px 2px 8px 0px grey;
 }
 .details {
   padding: 0 20px;
@@ -57,13 +60,18 @@ export default {
   position: relative;
 }
 .arrow {
-  width: 40px;
+  width: 25px;
+  padding: 10px;
+  border-radius: 5px;
   top: 200px;
   position: absolute;
   display: inline-block;
+  background: var(--nav-grey);
 }
 .arrow:hover {
   cursor: pointer;
+  box-shadow: 1px 2px 8px 0px grey;
+  transition: .3s;
 }
 .left {
   transform: translateX(-75px); 
@@ -73,6 +81,7 @@ export default {
 }
 .img-div {
   width: 60%;
+  max-width: 600px;
   margin: auto;
   display: inline-block;
 }
@@ -87,13 +96,13 @@ export default {
   #design-work-details {
     margin: 0;
   }
-  .close-btn {
-    margin-top: 70px;
-  }
 }
 @media (max-width: 650px) {
   .arrow {
     width: 30px;
+  }
+  .close-btn {
+    margin: 10px;
   }
 }
 </style>

@@ -2,16 +2,16 @@
   <div :class="this.showSmallMenu ? 'navbar-with-drop-down' : 'navbar'">
     <div class="photo-div" v-on:click="$emit('nav', 'home')">
       <img class="photo" src="../assets/matt-violet.png">
-      <h2 class="name-text">MATT VIOLET</h2>
+      <h2 class="name-text">Matt Violet</h2>
       <h4 class="title-text">SOFTWARE ENGINEER</h4>
     </div>
     <div class="links-div">
-      <p class="link-text" v-on:click="$emit('nav', 'about')">ABOUT</p>
+      <p class="link-text" v-on:click="$emit('nav', 'about')">About</p>
       <!-- <p class="link-text" v-on:click="$emit('nav', 'education')">EDUCATION</p> -->
-      <p class="link-text" v-on:click="$emit('nav', 'work')">PORTFOLIO</p>
-      <p class="link-text" v-on:click="$emit('nav', 'experience')">EXPERIENCE</p>
-      <p class="link-text" v-on:click='handleLinkClick(resumeLink)'>RESUME</p>
-      <p class="link-text" v-on:click="$emit('nav', 'contact')">CONTACT</p>
+      <p class="link-text" v-on:click="$emit('nav', 'work')">Work</p>
+      <p class="link-text" v-on:click="$emit('nav', 'experience')">Experience</p>
+      <p class="link-text" v-on:click='handleLinkClick(resumeLink)'>Resume</p>
+      <p class="link-text" v-on:click="$emit('nav', 'contact')">Contact</p>
     </div>
     <div class="icons-div">
       <img class="icon" src="../assets/icons/email-white.png" v-on:click='handleLinkClick("mattviolet@gmail.com")'/>
@@ -20,12 +20,12 @@
     </div>
     <img class="menu-icon" v-on:click="toggleSmallMenu()" src="../assets/icons/menu-white.png">
     <div v-if="this.showSmallMenu" class="drop-down">
-      <p class="link-text-drop-down" v-on:click="handleSmallMenuClick('about')">ABOUT</p>
+      <p class="link-text-drop-down" v-on:click="handleSmallMenuClick('about')">About</p>
       <!-- <p class="link-text-drop-down" v-on:click="handleSmallMenuClick('education')">EDUCATION</p> -->
-      <p class="link-text-drop-down" v-on:click="handleSmallMenuClick('work')">PORTFOLIO</p>
-      <p class="link-text-drop-down" v-on:click="handleSmallMenuClick('experience')">EXPERIENCE</p>
-      <p class="link-text-drop-down" v-on:click="handleSmallMenuClick('resume')">RESUME</p>
-      <p class="link-text-drop-down" v-on:click="handleSmallMenuClick('contact')">CONTACT</p>
+      <p class="link-text-drop-down" v-on:click="handleSmallMenuClick('work')">Work</p>
+      <p class="link-text-drop-down" v-on:click="handleSmallMenuClick('experience')">Experience</p>
+      <p class="link-text-drop-down" v-on:click="handleSmallMenuClick('resume')">Resume</p>
+      <p class="link-text-drop-down" v-on:click="handleSmallMenuClick('contact')">Contact</p>
     </div>
   </div>
 </template>
@@ -108,8 +108,8 @@ export default {
 }
 .title-text {
   color: lightsalmon;
-  font-size: 12px;
-  font-weight: 700;
+  font-size: 14px;
+  font-weight: 600;
 }
 .icons-div {
   margin: 76px auto 0 auto;
@@ -131,8 +131,8 @@ export default {
 }
 .link-text {
   margin: 10px 0;
-  font-weight: 600;
-  font-size: 16px;
+  font-weight: 500;
+  font-size: 18px;
   color: white;
 }
 .invisible, .menu-icon, .drop-down {
@@ -223,7 +223,8 @@ export default {
   }
   .link-text-drop-down {
     padding-left: 120px;
-    font-size: 20px;
+    font-size: 30px;
+    margin: 5px 0;
   }
   .link-text-drop-down:hover {
     padding-left: 140px;

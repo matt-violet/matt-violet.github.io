@@ -129,6 +129,7 @@ export default {
 <style>
 body {
   --body-text: rgb(90, 90, 90);
+  --nav-grey: rgb(233, 233, 233);
 }
 body, html {
   margin: 0;

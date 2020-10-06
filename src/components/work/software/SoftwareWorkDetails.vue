@@ -101,7 +101,10 @@ a {
   text-align: left;
 }
 .close-btn {
-  padding: 30px 0;
+  background: var(--nav-grey);
+  border-radius: 5px;
+  margin: 30px 0;
+  padding: 10px;
   width: 25px;
   left: 0;
   transition: .3s ease;
@@ -113,9 +116,12 @@ a {
   clear: both;
 }
 .arrow {
-  width: 35px;
-  transform: translateY(20px);
+  width: 25px;
+  transform: translateY(12px);
   z-index: 1;
+  padding: 10px;
+  border-radius: 5px;
+  background: var(--nav-grey);
  }
 .left {
   float: left;
@@ -127,10 +133,13 @@ a {
 }
 .arrow:hover {
   cursor: pointer;
+  box-shadow: 1px 2px 8px 0px grey;
+  transition: .3s;
 }
 .close-btn:hover {
   cursor: pointer;
-  transform: rotate(90deg);
+  box-shadow: 1px 2px 8px 0px grey;
+  transition: .3s;
 }
 .video-div, .img-div {
   margin: 0 auto 30px auto;
@@ -160,12 +169,12 @@ a {
 }
 .title {
   margin: 0 auto;
-  font-size: 50px;
+  font-size: 35px;
   font-weight: 500;
   color: var(--body-text);
 }
 .description {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
   margin-bottom: 40px;
   color: var(--body-text);
@@ -203,6 +212,7 @@ a {
 .screenshot-text {
   margin-top: 20px;
   font-size: 20px;
+  font-weight: 700;
 }
 .screenshot {
   max-width: 100%;
@@ -237,10 +247,10 @@ a {
     font-size: 14px;
   }
   .title {
-    font-size: 35px;
+    font-size: 30px;
   }
   .description {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 @media (max-width: 550px) {
@@ -275,10 +285,10 @@ a {
     font-size: 14px;
   }
   .title {
-  font-size: 28px;
+    font-size: 22px;
   }
   .description {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 </style>
