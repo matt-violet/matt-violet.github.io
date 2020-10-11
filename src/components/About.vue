@@ -33,7 +33,7 @@ export default {
   },
   mounted() {
       setInterval(() => {
-        this.index < 2 ? this.index++ : this.index = 0;
+        this.index < 1 ? this.index++ : this.index = 0;
       }, 5000);
   }
 }

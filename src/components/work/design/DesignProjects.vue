@@ -1,7 +1,7 @@
 <template>
   <div class="design-projects">
     <div class="project-row">
-      <div v-for="(project, i) in designProjects" :key="i" class="design-project" v-on:click="$emit('viewProjDetails', project)" data-aos="zoom-in">
+      <div v-for="(project, i) in designProjects" :key="i" class="design-project" v-on:click="$emit('viewProjDetails', project)">
         <div class="design-img-div">
           <img class="design-img" :src="project.images[0]">
         </div>
@@ -62,9 +62,12 @@ export default {
 <style scoped>
 .design-projects {
   text-align: center;
+  margin: 0 75px;
+  background: steelblue;
 }
 .project-row {
   width: 825px;
+  padding-top: 50px;
   position: relative;
   margin: auto;
   text-align: left;

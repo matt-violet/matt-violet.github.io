@@ -71,7 +71,7 @@
           <li>Track record of career advancement and meeting organizational objectives</li>
             <ul>
               <li>Helped increase daily active users by 6% as an intern at Seasoned</li>       
-              <li>Pioneered a new communications dept. and promoted to full-time status after one year at Starr King School</li>
+              <li>Promoted to full-time status after first year leading a new communications department at Starr King School</li>
               <li>Contributed to a 59% fundraising increase and record student enrollment at Starr King School</li>
             </ul>
         </ul>

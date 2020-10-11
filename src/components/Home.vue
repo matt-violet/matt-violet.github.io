@@ -41,8 +41,8 @@ export default {
 }
 h1 {
   color: white;
-  font-size: 65px;
-  font-weight: 600;
+  font-size: 60px;
+  font-weight: 900;
   border: 0;
   margin: 0;
 }
@@ -60,7 +60,7 @@ h2 {
   padding: 12px 24px;
   font-size: 18px;
   font-weight: 600;
-  border-radius: 50px;
+  border-radius: 5px;
   border: 0;
   transition: .3s;
   animation: pulse 2s infinite;
@@ -68,10 +68,10 @@ h2 {
 .btn:hover {
   cursor: pointer;
   background: white;
-  color: coral;
+  color: var(--body-text);
 }
 .top-img, .hidden-top-img {
-  width: 25%;
+  width: 23%;
   bottom: 0;
   position: absolute;
   right: 5%;

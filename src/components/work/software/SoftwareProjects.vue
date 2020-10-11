@@ -16,38 +16,6 @@
         </div>
       </div>
     </div>
-    <!-- <div class="project-row">
-      <div v-for="(project, i) in softwareProjects.slice(3,6)" :key="i" class="software-project" data-aos="zoom-in">
-        <div class="img-div">
-          <img class="img" :src="project.image">
-        </div>
-        <div class="text-div">
-          <h4 class="title">{{ project.title }}</h4>
-          <p class="description">{{ project.description }}</p>
-          <p class="stack-header">STACK: </p>
-          <p class="stack" v-for="(stack, i) of project.stack" :key="i">{{ stack }}</p>
-          <div class="btn-div">
-            <button class="details-btn" v-on:click="$emit('viewProjDetails', project)">Details</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="project-row">
-      <div v-for="(project, i) in softwareProjects.slice(6,9)" :key="i" class="software-project" data-aos="zoom-in">
-        <div class="img-div">
-          <img class="img" :src="project.image">
-        </div>
-        <div class="text-div">
-          <h4 class="title">{{ project.title }}</h4>
-          <p class="description">{{ project.description }}</p>
-          <p class="stack-header">STACK: </p>
-          <p class="stack" v-for="(stack, i) of project.stack" :key="i">{{ stack }}</p>
-          <div class="btn-div">
-            <button class="details-btn" v-on:click="$emit('viewProjDetails', project)">Details</button>
-          </div>
-        </div>
-      </div>
-    </div> -->
   </div>
 </template>
 
@@ -68,9 +36,12 @@ export default {
 <style scoped>
   .software-projects {
     text-align: center;
+    margin: 0 75px;
+    background: white;
   }
   .project-row {
     width: 825px;
+    padding-top: 50px;
     position: relative;
     margin: auto;
     text-align: left;

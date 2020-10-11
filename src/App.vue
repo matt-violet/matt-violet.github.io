@@ -1,14 +1,14 @@
 <template>
   <div id="app">
-    <Navbar v-if="!showProject" @nav="navigate"/>
-    <div :class="showProject ? 'home-div-absolute' : 'home-div'">
+    <Navbar @nav="navigate"/>
+    <div class="home-div">
       <Home @nav="navigate" :showHomeBtn="showHomeBtn"/>
       <div class="bg-div">
         <img class="bg-img" :src="backgroundImage">
         <div class="bg-gradient"/>
       </div>
     </div>
-    <SoftwareWorkDetails 
+    <!-- <SoftwareWorkDetails 
       v-if="showProject && featuredProject && !featuredProject.isDesignProject"
       class="work-details"
       :project="featuredProject"
@@ -23,11 +23,15 @@
       @nav="navigate"
       @handleNextProject="showNextProject"
       @handlePreviousProject="showPreviousProject"
-    />
-    <div class="components" v-if="!showProject">
+    /> -->
+    <div class="components">
       <About @nav="navigate"/>
       <!-- <Education/> -->
-      <Work :viewProjectDetails="handleViewProjectDetails"/>
+      <Work
+        :showProject="showProject"
+        :project="featuredProject"
+        :viewProjectDetails="handleViewProjectDetails"
+      />
       <Experience/>
       <Contact/>
     </div>
@@ -43,8 +47,8 @@ import About from './components/About.vue'
 import Experience from './components/skills/Experience.vue'
 import Work from './components/work/Work.vue'
 import Contact from './components/Contact.vue'
-import SoftwareWorkDetails from './components/work/software/SoftwareWorkDetails.vue'
-import DesignWorkDetails from './components/work/design/DesignWorkDetails.vue'
+// import SoftwareWorkDetails from './components/work/software/SoftwareWorkDetails.vue'
+// import DesignWorkDetails from './components/work/design/DesignWorkDetails.vue'
 
 export default {
   name: 'App',
@@ -56,8 +60,8 @@ export default {
     Experience,
     Work,
     Contact,
-    SoftwareWorkDetails,
-    DesignWorkDetails,
+    // SoftwareWorkDetails,
+    // DesignWorkDetails,
   },
   data() {
     return {

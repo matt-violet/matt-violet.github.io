@@ -1,7 +1,7 @@
 <template>
   <div id="contact">
     <div class="pic-div">
-      <img class="pic" data-aos="fade-right" src="../assets/matt-look.png">
+      <!-- <img class="pic" data-aos="fade-right" src="../assets/matt-look.png"> -->
     </div>
     <div class="inner-content">
       <div class="header">
@@ -52,7 +52,7 @@ export default {
 
 <style scoped>
 #contact {
-  background: rgb(220, 240, 255);
+  background: rgb(247, 205, 188);
 }
 .header {
   width: 100%;

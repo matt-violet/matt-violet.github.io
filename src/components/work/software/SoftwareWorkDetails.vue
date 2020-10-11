@@ -1,8 +1,8 @@
 <template>
   <div id="work-details">
     <div class="inner-content">
-      <div class="close-btn-div">
-        <img class="close-btn" src="../../../assets/icons/close.png" v-on:click="$emit('nav', 'work')">
+      <div class="close-btn-div" v-on:click="$emit('navi', 'work')">
+        <img class="close-btn" src="../../../assets/icons/close.png">
       </div>
       <div class="track">
         <div class="video-div" v-if="project.video">  
@@ -28,8 +28,8 @@
         </div>
         <div class="details-div">
           <div class="centered">
-            <p class="title" data-aos="zoom-in">{{ project.title }}</p>
-            <p class="description" data-aos="zoom-in">{{ project.description }}</p>
+            <p class="title">{{ project.title }}</p>
+            <p class="description">{{ project.description }}</p>
           </div>
           <p class="stack" v-for="(stack, i) of project.stack" :key="i">{{ stack }}</p>
           <div v-if="project.github && project.github.length" class="github-div">
@@ -59,7 +59,6 @@
           v-for="(screenshot, i) of project.screenshots"
           :key="i"
           :src="screenshot"
-          data-aos="zoom-in"
         />
       </div>
     </div>
@@ -71,9 +70,14 @@ export default {
   name: "SoftwareWorkDetails",
   props: {
     project: {type: Object},
-    nav: {type: Function},
+    close: {type: Function},
     handleNextProject: {type: Function},
     handlePreviousProject: {type: Function}
+  },
+  methods: {
+    // close() {
+    //   this.$emit('navi', 'work')
+    // }
   }
 }
 </script>

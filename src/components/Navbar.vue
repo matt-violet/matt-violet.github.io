@@ -89,7 +89,7 @@ export default {
 }
 .photo {
   width: 150px;
-  background: coral;
+  background: lightsteelblue;
   box-shadow: 1px 2px 4px 0px black;
   margin: 0 auto 10px auto;
   border-radius: 50%;
