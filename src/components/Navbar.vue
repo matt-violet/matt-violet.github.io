@@ -1,17 +1,16 @@
 <template>
-  <div :class="this.showSmallMenu ? 'navbar-with-drop-down' : 'navbar'">
-    <div class="photo-div" v-on:click="$emit('nav', 'home')">
+  <div :class="this.$store.state.showSmallMenu ? 'navbar-with-drop-down' : 'navbar'">
+    <div class="photo-div" v-on:click="$emit('scrollToSec', 'home')">
       <img class="photo" src="../assets/matt-violet.png">
       <h2 class="name-text">Matt Violet</h2>
       <h4 class="title-text">SOFTWARE ENGINEER</h4>
     </div>
     <div class="links-div">
-      <p class="link-text" v-on:click="$emit('nav', 'about')">About</p>
-      <!-- <p class="link-text" v-on:click="$emit('nav', 'education')">EDUCATION</p> -->
-      <p class="link-text" v-on:click="$emit('nav', 'work')">Work</p>
-      <p class="link-text" v-on:click="$emit('nav', 'experience')">Experience</p>
+      <p class="link-text" v-on:click="$emit('scrollToSec', 'about')">About</p>
+      <p class="link-text" v-on:click="$emit('scrollToSec', 'work')">Work</p>
+      <p class="link-text" v-on:click="$emit('scrollToSec', 'experience')">Experience</p>
       <p class="link-text" v-on:click='handleLinkClick(resumeLink)'>Resume</p>
-      <p class="link-text" v-on:click="$emit('nav', 'contact')">Contact</p>
+      <p class="link-text" v-on:click="$emit('scrollToSec', 'contact')">Contact</p>
     </div>
     <div class="icons-div">
       <img class="icon" src="../assets/icons/email-white.png" v-on:click='handleLinkClick("mattviolet@gmail.com")'/>
@@ -19,9 +18,8 @@
       <img class="icon" src="../assets/icons/linkedin-white.png" v-on:click='handleLinkClick("https://www.linkedin.com/in/mattviolet")'/>
     </div>
     <img class="menu-icon" v-on:click="toggleSmallMenu()" src="../assets/icons/menu-white.png">
-    <div v-if="this.showSmallMenu" class="drop-down">
+    <div v-if="this.$store.state.showSmallMenu" class="drop-down">
       <p class="link-text-drop-down" v-on:click="handleSmallMenuClick('about')">About</p>
-      <!-- <p class="link-text-drop-down" v-on:click="handleSmallMenuClick('education')">EDUCATION</p> -->
       <p class="link-text-drop-down" v-on:click="handleSmallMenuClick('work')">Work</p>
       <p class="link-text-drop-down" v-on:click="handleSmallMenuClick('experience')">Experience</p>
       <p class="link-text-drop-down" v-on:click="handleSmallMenuClick('resume')">Resume</p>
@@ -34,13 +32,7 @@
 export default {
   name: 'Navbar',
   props: {
-    nav: {type: Function}
-  },
-  data() {
-    return {
-      showSmallMenu: false,
-      resumeLink: 'https://docs.google.com/document/d/1QNbQGA8xYZ_rY8bJt6Y7lT9yVWhXIu7WmLypJb6UrZU/edit?usp=sharing'
-    }
+    scrollToSec: {type: Function}
   },
   methods: {
     handleLinkClick(url) {
@@ -51,15 +43,15 @@ export default {
       }
     },
     toggleSmallMenu() {
-      this.$data.showSmallMenu = !this.$data.showSmallMenu;
+      this.$store.state.showSmallMenu = !this.$store.state.showSmallMenu;
     },
     handleSmallMenuClick(page) {
       this.toggleSmallMenu();
       if (page === 'resume') {
-        window.open(this.resumeLink, '_blank');
+        window.open(this.$store.state.resumeLink, '_blank');
         return;
       }
-      this.$emit('nav', page);
+      this.$emit('scrollToSec', page);
     }
   }
 }

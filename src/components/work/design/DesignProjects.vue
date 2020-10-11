@@ -1,7 +1,7 @@
 <template>
   <div class="design-projects">
     <div class="project-row">
-      <div v-for="(project, i) in designProjects" :key="i" class="design-project" v-on:click="$emit('viewProjDetails', project)">
+      <div v-for="(project, i) in designProjects" :key="i" class="design-project" v-on:click="$store.commit('viewProjectDetails', project)">
         <div class="design-img-div">
           <img class="design-img" :src="project.images[0]">
         </div>
@@ -10,47 +10,12 @@
         </div>
       </div>
     </div>
-    <!-- <div class="project-row">
-      <div class="project-row">
-        <div v-for="(project, i) in designProjects.slice(3,6)" :key="i" class="design-project" v-on:click="$emit('viewProjDetails', project)" data-aos="zoom-in">
-          <div class="design-img-div">
-            <img class="design-img" :src="project.images[0]">
-          </div>
-          <div class="design-text-div">
-            <p class="design-description">{{ project.description }}</p>
-          </div>
-        </div>
-      </div>
-      <div class="project-row">
-        <div v-for="(project, i) in designProjects.slice(6,9)" :key="i" class="design-project" v-on:click="$emit('viewProjDetails', project)" data-aos="zoom-in">
-          <div class="design-img-div">
-            <img class="design-img" :src="project.images[0]">
-          </div>
-          <div class="design-text-div">
-            <p class="design-description">{{ project.description }}</p>
-          </div>
-        </div>
-      </div>
-      <div class="project-row">
-        <div v-for="(project, i) in designProjects.slice(9,12)" :key="i" class="design-project" v-on:click="$emit('viewProjDetails', project)" data-aos="zoom-in">
-          <div class="design-img-div">
-            <img class="design-img" :src="project.images[0]">
-          </div>
-          <div class="design-text-div">
-            <p class="design-description">{{ project.description }}</p>
-          </div>
-        </div>
-      </div>
-    </div> -->
   </div>
 </template>
 
 <script>
 import { designProjects } from '../../../../data.js'
 export default {
-  props: {
-    viewProjDetails: {type: Function}
-  },
   data() {
     return {
       designProjects: designProjects
@@ -63,7 +28,7 @@ export default {
 .design-projects {
   text-align: center;
   margin: 0 75px;
-  background: steelblue;
+  background: var(--dark-blue);
 }
 .project-row {
   width: 825px;

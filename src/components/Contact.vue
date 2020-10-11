@@ -1,8 +1,5 @@
 <template>
   <div id="contact">
-    <div class="pic-div">
-      <!-- <img class="pic" data-aos="fade-right" src="../assets/matt-look.png"> -->
-    </div>
     <div class="inner-content">
       <div class="header">
         <h1>Contact</h1>
@@ -52,7 +49,7 @@ export default {
 
 <style scoped>
 #contact {
-  background: rgb(247, 205, 188);
+  background: rgb(245, 187, 164);
 }
 .header {
   width: 100%;
@@ -67,15 +64,6 @@ h1 {
   font-size: 35px;
   font-weight: 400;
   margin: 0 auto 75px auto;
-}
-.pic-div {
-  overflow: hidden;
-}
-.pic {
-  height: 350px;
-  position: absolute;
-  bottom: 0;
-  transition: .3s;
 }
 .text {
   color: var(--body-text);
@@ -151,17 +139,9 @@ h1 {
     margin: 30px 15px;
   }
 }
-@media (max-width: 1150px) and (min-width: 1000px), (max-width: 840px) and (min-width: 700px), (max-width: 450px){
-  .pic {
-    height: 250px;
-  }
-}
 @media (max-width: 700px) {
   .inner-content, h1 {
     padding: 30px 15px;
-  }
-  .inner-content {
-    margin-top: 16px;
   }
 }
 @media (max-width: 700px) {

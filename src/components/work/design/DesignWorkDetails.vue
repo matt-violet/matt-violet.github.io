@@ -1,15 +1,15 @@
 <template>
   <div id="design-work-details">
     <div class="close-btn-div">
-      <img class="close-btn" src="../../../assets/icons/close.png" v-on:click="$emit('nav', 'design-bg-div')">
+      <img class="close-btn" src="../../../assets/icons/close.png" v-on:click="exitToDesign">
     </div>
     <p class="details">{{ project.details }}</p>
     <div class="track">
-      <img class="left arrow" src="../../../assets/icons/left-arrow.png" v-on:click="$emit('handlePreviousProject', project)">
+      <img class="left arrow" src="../../../assets/icons/left-arrow.png" v-on:click="$store.commit('showPreviousProject', project)">
       <div class="img-div" data-aos="zoom-in">
         <img class="img" v-for="(image, i) of project.images" :key="i" :src="image">
       </div>
-      <img class="right arrow" src="../../../assets/icons/right-arrow.png" v-on:click="$emit('handleNextProject', project)">
+      <img class="right arrow" src="../../../assets/icons/right-arrow.png" v-on:click="$store.commit('showNextProject', project)">
     </div>
   </div>
 </template>
@@ -17,11 +17,19 @@
 <script>
 export default {
   name: 'DesignWorkDetails',
-  props: {
-    nav: {type: Function},
-    project: {type: Object},
-    handleNextProject: {type: Function},
-    handlePreviousProject: {type: Function}
+  methods: {
+    exitToDesign() {
+      this.$store.state.showDesign = true;
+      this.$store.state.showProject = false;
+      document.getElementById('work').scrollIntoView({ 
+        behavior: 'smooth'
+      });
+    }
+  },
+  computed: {
+    project: function() {
+      return this.$store.state.featuredProject
+    }
   }
 }
 </script>

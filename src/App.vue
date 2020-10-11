@@ -1,37 +1,16 @@
 <template>
   <div id="app">
-    <Navbar @nav="navigate"/>
+    <Navbar @scrollToSec="scrollToSection"/>
     <div class="home-div">
-      <Home @nav="navigate" :showHomeBtn="showHomeBtn"/>
+      <Home @scrollToSec="scrollToSection"/>
       <div class="bg-div">
-        <img class="bg-img" :src="backgroundImage">
+        <img class="bg-img" :src="this.$store.state.backgroundImage">
         <div class="bg-gradient"/>
       </div>
     </div>
-    <!-- <SoftwareWorkDetails 
-      v-if="showProject && featuredProject && !featuredProject.isDesignProject"
-      class="work-details"
-      :project="featuredProject"
-      @nav="navigate"
-      @handleNextProject="showNextProject"
-      @handlePreviousProject="showPreviousProject"
-    />
-    <DesignWorkDetails
-      v-if="showProject && featuredProject && featuredProject.isDesignProject"
-      class="work-details"
-      :project="featuredProject"
-      @nav="navigate"
-      @handleNextProject="showNextProject"
-      @handlePreviousProject="showPreviousProject"
-    /> -->
     <div class="components">
-      <About @nav="navigate"/>
-      <!-- <Education/> -->
-      <Work
-        :showProject="showProject"
-        :project="featuredProject"
-        :viewProjectDetails="handleViewProjectDetails"
-      />
+      <About @scrollToSec="scrollToSection"/>
+      <Work/>
       <Experience/>
       <Contact/>
     </div>
@@ -39,16 +18,12 @@
 </template>
 
 <script>
-import { designProjects, softwareProjects } from '../data.js'
 import Navbar from './components/Navbar.vue'
 import Home from './components/Home.vue'
 import About from './components/About.vue'
-// import Education from './components/Education.vue'
 import Experience from './components/skills/Experience.vue'
 import Work from './components/work/Work.vue'
 import Contact from './components/Contact.vue'
-// import SoftwareWorkDetails from './components/work/software/SoftwareWorkDetails.vue'
-// import DesignWorkDetails from './components/work/design/DesignWorkDetails.vue'
 
 export default {
   name: 'App',
@@ -56,76 +31,30 @@ export default {
     Navbar,
     Home,
     About,
-    // Education,
     Experience,
     Work,
-    Contact,
-    // SoftwareWorkDetails,
-    // DesignWorkDetails,
-  },
-  data() {
-    return {
-      showProject: false,
-      showHomeBtn: true,
-      lastScrollPosition: 0,
-      featuredProject: {},
-      // backgroundIndex: 1,
-      backgroundImage: require("./assets/bay.jpg"),
-    }
+    Contact
   },
   methods: {
-    async navigate(id) {
-      if (this.showProject) {
-        let obj = {};
-        await this.handleViewProjectDetails(obj)
-        document.getElementById(id).scrollIntoView({ 
-          behavior: 'smooth'
-        });
-      }
-      document.getElementById(id).scrollIntoView({ 
+    scrollToSection(section) {
+      document.getElementById(section).scrollIntoView({ 
         behavior: 'smooth'
       });
     },
-    handleViewProjectDetails(project) {
-      this.showProject = !this.showProject;
-      this.featuredProject = project;
-    },
-    showNextProject(currentProj) {
-      if (currentProj.isDesignProject) {
-        !designProjects[designProjects.indexOf(currentProj) + 1] ?
-          this.featuredProject = designProjects[0] :
-          this.featuredProject = designProjects[(designProjects.indexOf(currentProj)) + 1];
-      } else {
-        !softwareProjects[softwareProjects.indexOf(currentProj) + 1] ?
-          this.featuredProject = softwareProjects[0] :
-          this.featuredProject = softwareProjects[(softwareProjects.indexOf(currentProj)) + 1]
-      }
-    },
-    showPreviousProject(currentProj) {
-      if (currentProj.isDesignProject) {
-        !designProjects[designProjects.indexOf(currentProj) - 1] ?
-          this.featuredProject = designProjects[designProjects.length - 1] :
-          this.featuredProject = designProjects[designProjects.indexOf(currentProj) - 1]
-      } else {
-        !softwareProjects[softwareProjects.indexOf(currentProj) - 1] ?
-          this.featuredProject = softwareProjects[softwareProjects.length - 1] :
-          this.featuredProject = softwareProjects[softwareProjects.indexOf(currentProj) - 1];
-      }
-    },
-    onScroll () {
+    onScrollSetCurrentPos() {
       const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
       if (currentScrollPosition < 0) {
         return;
       }
-      this.showHomeBtn = currentScrollPosition >= 0 && currentScrollPosition <= 275;
-      this.lastScrollPosition = currentScrollPosition;
+      this.$store.state.showHomeBtn = currentScrollPosition >= 0 && currentScrollPosition <= 275;
+      this.$store.state.lastScrollPosition = currentScrollPosition;
     }
   },
   mounted () {
-    window.addEventListener('scroll', this.onScroll)
+    window.addEventListener('scroll', this.onScrollSetCurrentPos)
   },
   beforeDestroy () {
-    window.removeEventListener('scroll', this.onScroll)
+    window.removeEventListener('scroll', this.onScrollSetCurrentPos)
   }
 }
 </script>
@@ -134,6 +63,8 @@ export default {
 body {
   --body-text: rgb(90, 90, 90);
   --nav-grey: rgb(233, 233, 233);
+  --dark-blue: rgb(63, 128, 180);
+  --light-blue: rgb(178, 212, 240);
 }
 body, html {
   margin: 0;

@@ -59,7 +59,7 @@ export default {
 
 <style scoped>
 .skill-icons-container {
-  background: rgb(220, 240, 255);
+  background: var(--light-blue);
 }
 .inner-content {
   max-width: 800px;

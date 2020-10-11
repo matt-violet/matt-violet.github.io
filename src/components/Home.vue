@@ -1,13 +1,13 @@
 <template>
   <div id="home">
-    <div :class="this.showHomeBtn ? 'welcome' : 'hidden-welcome'">
+    <div :class="this.$store.state.showHomeBtn ? 'welcome' : 'hidden-welcome'">
       <h1>Welcome,</h1>
       <h2>I'm an Oakland-based software engineer currently exploring new job opportunities.</h2>
       <div class="btn-div">
-        <button class="btn" v-on:click="$emit('nav', 'work')">My Work</button>
+        <button class="btn" v-on:click="$emit('scrollToSec', 'work')">My Work</button>
       </div>
     </div>
-    <img src="../assets/matt-oak-blank.png" :class="this.showHomeBtn ? 'top-img' : 'hidden-top-img'">
+    <img src="../assets/matt-oak-blank.png" :class="this.$store.state.showHomeBtn ? 'top-img' : 'hidden-top-img'">
   </div>
 </template>
 
@@ -15,8 +15,7 @@
 export default {
   name: 'Home',
   props: {
-    nav: {type: Function},
-    showHomeBtn: {type: Boolean}
+    scrollToSec: {type: Function},
   }
 }
 </script>

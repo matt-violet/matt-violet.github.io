@@ -1,7 +1,7 @@
 <template>
   <div id="work-details">
     <div class="inner-content">
-      <div class="close-btn-div" v-on:click="$emit('navi', 'work')">
+      <div class="close-btn-div" v-on:click="exitToSoftware">
         <img class="close-btn" src="../../../assets/icons/close.png">
       </div>
       <div class="track">
@@ -23,8 +23,8 @@
       </div>
       <div class="text-div">
         <div class="arrow-div">
-          <img class="left arrow" src="../../../assets/icons/left-arrow.png" v-on:click="$emit('handlePreviousProject', project)">
-          <img class="right arrow" src="../../../assets/icons/right-arrow.png" v-on:click="$emit('handleNextProject', project)">
+          <img class="left arrow" src="../../../assets/icons/left-arrow.png" v-on:click="$store.commit('showPreviousProject', project)">
+          <img class="right arrow" src="../../../assets/icons/right-arrow.png" v-on:click="$store.commit('showNextProject', project)">
         </div>
         <div class="details-div">
           <div class="centered">
@@ -68,16 +68,18 @@
 <script>
 export default {
   name: "SoftwareWorkDetails",
-  props: {
-    project: {type: Object},
-    close: {type: Function},
-    handleNextProject: {type: Function},
-    handlePreviousProject: {type: Function}
-  },
   methods: {
-    // close() {
-    //   this.$emit('navi', 'work')
-    // }
+    exitToSoftware() {
+      this.$store.state.showProject = false;
+      document.getElementById('work').scrollIntoView({ 
+        behavior: 'smooth'
+      });
+    }
+  },
+  computed: {
+    project: function() {
+      return this.$store.state.featuredProject
+    }
   }
 }
 </script>

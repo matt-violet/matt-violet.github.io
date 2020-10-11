@@ -1,38 +1,36 @@
 <template>
   <div id="work">
     <div class="inner-content">
-        <div class="header">
-          <h1>Work</h1>
-        </div>
-      <div v-if="!showProject">
+      <div class="header">
+        <h1>Work</h1>
+      </div>
+      <div v-if="!this.$store.state.showProject">
         <div class="left">
-          <div class="software-projects-btn" v-on:click="toggleShowSoftware">
-            <img class="icon software-black" :src="softwareImg">
+          <div class="software-projects-btn" v-on:click="showSoftware">
+            <img class="icon software-black" :src="this.$store.state.softwareImg">
             <h2 class="section-title">Software</h2>
           </div>
         </div>
         <div class="right">
-          <div class="design-projects-btn" v-on:click="toggleShowDesign">
-            <img class="icon design-white" :src="designImg">
+          <div class="design-projects-btn" v-on:click="showDesign">
+            <img class="icon design-white" :src="this.$store.state.designImg">
             <h2 class="section-title">Design</h2>
           </div>
         </div>
-        <div :class="showSoftware ? 'software-projects' : 'hidden'">
-          <SoftwareProjects @viewProjDetails="handleViewProjDetails"/>
+        <div :class="this.$store.state.showSoftware ? 'software-projects' : 'hidden'">
+          <SoftwareProjects/>
         </div>
-        <div :class="showDesign ? 'design-projects' : 'hidden'">
-          <DesignProjects @viewProjDetails="handleViewProjDetails"/>
+        <div :class="this.$store.state.showDesign ? 'design-projects' : 'hidden'">
+          <DesignProjects/>
         </div>
       </div>
       <SoftwareWorkDetails 
-        v-if="showProject && showSoftware"
+        v-if="this.$store.state.showProject && this.$store.state.showSoftware"
         class="software-details"
-        :project="project"
       />
       <DesignWorkDetails
-        v-if="showProject && showDesign"
+        v-if="this.$store.state.showProject && this.$store.state.showDesign"
         class="work-details"
-        :project="project"
       />
     </div>
   </div>
@@ -51,39 +49,18 @@ export default {
     SoftwareWorkDetails,
     DesignWorkDetails
   },
-  props: {
-    viewProjectDetails: {type: Function},
-    project: {type: Object},
-    nav: {type: Function},
-    handleNextProject: {type: Function},
-    handlePreviousProject: {type: Function},
-    showProject: {type: Boolean}
-  },
-  data() {
-    return {
-      showSoftware: true,
-      showDesign: false,
-      softwareImg: require("../../assets/icons/software.png"),
-      designImg: require("../../assets/icons/design-white.png"),
-    }
-  },
   methods: {
-    handleViewProjDetails(project) {
-      this.viewProjectDetails(project)
-    },
-    toggleShowSoftware() {
-      if (this.showSoftware) {
-        return
+    showSoftware() {
+      if (!this.$store.state.showSoftware) {
+        this.$store.state.showSoftware = true;
+        this.$store.state.showDesign = false;
       }
-      this.showSoftware = !this.showSoftware
-      this.showDesign = !this.showDesign
     },
-    toggleShowDesign() {
-      if (this.showDesign) {
-        return
+    showDesign() {
+      if (!this.$store.state.showDesign) {
+        this.$store.state.showDesign = true;
+        this.$store.state.showSoftware = false;
       }
-      this.showDesign = !this.showDesign
-      this.showSoftware = !this.showSoftware
     }
   }
 }
@@ -91,7 +68,7 @@ export default {
 
 <style scoped>
 #work {
-  background: rgb(231, 231, 231);
+  background: rgb(241, 241, 241);
 }
 .header {
   text-align: center;
@@ -100,7 +77,6 @@ export default {
   padding: 75px;
   max-width: 900px;
   margin: auto;
-  /* text-align: center; */
 }
 h1 {
   margin: 0 auto 75px auto;
@@ -114,10 +90,10 @@ h1 {
   margin: 0 10px 0 0;
 }
 .software-projects-btn {
-  background: white;
+  background: var(--light-blue);
 }
 .design-projects-btn {
-  background: steelblue;
+  background: var(--dark-blue);
   color: white;
 }
 .software-projects-btn, .design-projects-btn {
@@ -171,7 +147,6 @@ h1 {
   height: 500px;
   overflow: auto;
   position: relative;
-  /* margin-bottom: 75px; */
 }
 @media (max-width: 700px) {
   .inner-content, h1 {

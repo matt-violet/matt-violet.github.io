@@ -11,7 +11,7 @@
           <p class="stack-header">STACK: </p>
           <p class="stack" v-for="(stack, i) of project.stack" :key="i">{{ stack }}</p>
           <div class="btn-div">
-            <button class="details-btn" v-on:click="$emit('viewProjDetails', project)">Details</button>
+            <button class="details-btn" v-on:click="$store.commit('viewProjectDetails', project)">Details</button>
           </div>
         </div>
       </div>
@@ -22,9 +22,6 @@
 <script>
 import { softwareProjects } from '../../../../data.js'
 export default {
-  props: {
-    viewProjDetails: {type: Function}
-  },
   data() {
     return {
       softwareProjects: softwareProjects
@@ -37,7 +34,7 @@ export default {
   .software-projects {
     text-align: center;
     margin: 0 75px;
-    background: white;
+    background: var(--light-blue);
   }
   .project-row {
     width: 825px;
