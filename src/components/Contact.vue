@@ -49,7 +49,9 @@ export default {
 
 <style scoped>
 #contact {
-  background: rgb(245, 187, 164);
+  background: lightsalmon;
+  /* background: rgb(245, 187, 164); */
+  /* position: absolute; */
 }
 .header {
   width: 100%;

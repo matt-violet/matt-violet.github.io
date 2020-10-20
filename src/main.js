@@ -9,21 +9,25 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
   state: {
-    showProject: false,
-    showHomeBtn: true,
     lastScrollPosition: 0,
     featuredProject: {},
-    backgroundImage: require("./assets/bay.jpg"),
+    backgroundImage: require("./assets/bay2.jpg"),
     showSmallMenu: false,
     resumeLink: 'https://docs.google.com/document/d/1QNbQGA8xYZ_rY8bJt6Y7lT9yVWhXIu7WmLypJb6UrZU/edit?usp=sharing',
     index: 0,
-    image: aboutImgs,
+    aboutImgs,
+    showProject: false,
+    showHomeBtn: true,
+    showFixedMenu: false,
     showSoftware: true,
     showDesign: false,
     softwareImg: require("../src/assets/icons/software.png"),
     designImg: require("../src/assets/icons/design-white.png"),
   },
   mutations: {
+    changeAboutImg(state, i) {
+      state.index = i;
+    },
     viewProjectDetails(state, project) {
       state.showProject = true;
       state.featuredProject = project;
@@ -34,21 +38,29 @@ const store = new Vuex.Store({
           state.featuredProject = designProjects[0] :
           state.featuredProject = designProjects[(designProjects.indexOf(currentProj)) + 1];
       } else {
-        !softwareProjects[softwareProjects.indexOf(currentProj) + 1] ?
+        let nextIndex = softwareProjects.indexOf(currentProj) + 1;
+        !softwareProjects[nextIndex] ?
           state.featuredProject = softwareProjects[0] :
-          state.featuredProject = softwareProjects[(softwareProjects.indexOf(currentProj)) + 1]
+          state.featuredProject = softwareProjects[nextIndex];
       }
     },
     showPreviousProject(state, currentProj) {
       if (currentProj.isDesignProject) {
         !designProjects[designProjects.indexOf(currentProj) - 1] ?
           state.featuredProject = designProjects[designProjects.length - 1] :
-          state.featuredProject = designProjects[designProjects.indexOf(currentProj) - 1]
+          state.featuredProject = designProjects[designProjects.indexOf(currentProj) - 1];
       } else {
         !softwareProjects[softwareProjects.indexOf(currentProj) - 1] ?
           state.featuredProject = softwareProjects[softwareProjects.length - 1] :
           state.featuredProject = softwareProjects[softwareProjects.indexOf(currentProj) - 1];
       }
+    },
+    exitToSoftware(state) {
+      state.showProject = false;
+      console.log(state)
+      document.getElementById('work').scrollIntoView({ 
+        behavior: 'smooth'
+      });
     }
   }
 })

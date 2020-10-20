@@ -2,17 +2,18 @@
   <div class="software-projects">
     <div class="project-row">
       <div v-for="(project, i) in softwareProjects" :key="i" class="software-project" data-aos="zoom-in">
+        <p class="type">{{ project.type }}</p>
         <div class="img-div">
           <img class="img" :src="project.image">
         </div>
         <div class="text-div">
           <h4 class="title">{{ project.title }}</h4>
           <p class="description">{{ project.description }}</p>
-          <p class="stack-header">STACK: </p>
-          <p class="stack" v-for="(stack, i) of project.stack" :key="i">{{ stack }}</p>
-          <div class="btn-div">
-            <button class="details-btn" v-on:click="$store.commit('viewProjectDetails', project)">Details</button>
-          </div>
+          <!-- <p class="stack-header">Tools: </p> -->
+          <!-- <p class="stack" v-for="(stack, i) of project.stack" :key="i">{{ stack }}</p> -->
+        </div>
+        <div class="btn-div">
+          <button class="details-btn" v-on:click="$store.commit('viewProjectDetails', project)">Details</button>
         </div>
       </div>
     </div>
@@ -31,124 +32,119 @@ export default {
 </script>
 
 <style scoped>
-  .software-projects {
-    text-align: center;
-    margin: 0 75px;
-    background: var(--light-blue);
-  }
-  .project-row {
-    width: 825px;
-    padding-top: 50px;
-    position: relative;
-    margin: auto;
-    text-align: left;
-  }
-  .software-project {
-    width: 250px;
-    height: 250px;
-    box-shadow: 1px 2px 8px 0px grey;
-    border-radius: 5px;
-    display: inline-block;
-    margin: 0 25px 25px 0;
-    overflow: hidden;
-    background: white;
-    text-align: left;
-  }
-  .img-div {
-    width: 250px;
-    height: 66%;
-    text-align: center;
-    transition: 0.3s;
-    overflow: hidden;
-    background: linear-gradient(135deg, white, lightgrey);
-    background: cover;
-    -webkit-transition: 0.3s;
-  }
-  .img {
-    position: relative;
-    width: 100%;
-    min-height: 100%;
-    margin-left: 50%;
-    transform: translateX(-50%);
-  }
-  .text-div {
-    margin: 0;
-    padding: 0 15px;
-    position: relative;
-    height: 33%;
-    border-top: 1px solid black;
-  }
-  .title {
-    margin: 10px 0 0 0;
-    font-size: 20px;
-    font-weight: 900;
-    display: inline-block;
-  }
-  .description {
-    margin: 4px 0;
-    font-size: 14px;
-    color: var(--body-text);
-  }
-  .stack-header {
-    opacity: 0;
-    font-size: 13px;
-    font-weight: 500;
-    display: inline-block;
-    margin: 15px 5px 0 0;
-  }
-  .stack {
-    opacity: 0;
-    font-size: 12px;
-    font-weight: 500;
-    padding: 3px 8px;
-    background: rgb(70, 130, 180, .8);
-    color: white;
-    border-radius: 20px;
-    margin: 2px;
-    display: inline-block;
-  }
-  .btn-div {
-    text-align: center;
-    width: 230px;
-    bottom: 15px;
-    position: absolute;
-  }
-  .details-btn {
-    opacity: 0;
-    margin: auto;
-    font-size: 14px;
-    font-weight: 600;
-    padding: 8px 12px;
-    color: white;
-    background: coral;
-    border: 0;
-    border-radius: 20px;
-    display: block;
-  }
-  /* ---------------------- HOVER EFFECTS ---------------------- */
-  .software-project:hover .img-div {
-    height: 0;
-  }
-  .software-project:hover .stack, .software-project:hover .stack-header, .software-project:hover .details-btn {
-    opacity: 1;
-  }
-  .software-project:hover .title {
-    margin: 15px 0 0 0;
-  }
-  .software-project:hover .text-div {
-    height: 250px;
-    border: 0;
-  }
-  .details-btn:hover {
-    background: white;
-    color: coral;
-    transition: .3s;
-    cursor: pointer;
-    /* border: 2px solid; */
-    box-shadow: 1px 2px 4px 0px rgb(44, 44, 44);
-  }
+.software-projects {
+  margin: 0 75px;
+  background: var(--light-grey);
+}
+.project-row {
+  padding: 25px 50px 0 50px;
+}
+.software-project {
+  max-width: 30%;
+  min-height: 225px;
+  box-shadow: 1px 2px 8px 0px grey;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 0 3% 3% 0;
+  overflow: hidden;
+  background: white;
+  text-align: left;
+}
+.img-div {
+  height: 150px;
+  transition: 0.3s;
+  overflow: hidden;
+  background: linear-gradient(135deg, white, lightgrey);
+  background: cover;
+  -webkit-transition: 0.3s;
+}
+.img {
+  width: 100%;
+  min-height: 100%;
+}
+.text-div {
+  padding: 10px;
+  border-top: 1px solid grey;
+}
+.type {
+  font-size: 12px;
+  font-weight: 500;
+  border-bottom-left-radius: 5px;
+  color: white;
+  background: rgba(41, 41, 41, 0.5);
+  margin: 0;
+  right: 0;
+  padding: 4px 8px;
+  position: absolute;
+}
+.title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  display: inline-block;
+}
+.description {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: grey;
+}
+.stack-header {
+  font-size: 16px;
+  font-weight: 400;
+  color: grey;
+  display: inline-block;
+  margin: 20px 5px 0 0;
+}
+.stack {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 3px 8px;
+  background: coral;
+  color: white;
+  border-radius: 20px;
+  margin: 2px;
+  display: inline-block;
+}
+.btn-div {
+  text-align: center;
+}
+.details-btn {
+  display: none;
+  width: calc(100% - 20px);
+  margin: auto;
+  padding: 8px 12px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  background: steelblue;
+  border: 0;
+  border-radius: 5px;
+}
+/* ---------------------- HOVER EFFECTS ---------------------- */
+.software-project:hover .img-div {
+  height: 100px;
+}
+.software-project:hover .btn-div {
+  border-top: 1px solid lightgrey;
+  margin: 0 10px;
+}
+.software-project:hover .details-btn {
+  padding: 10px;
+  display: block;
+  margin: 10px auto 0 auto;
+  position: absolute;
+}
+.details-btn:hover {
+  background: coral;
+  color: white;
+  /* color: var(--body-text); */
+  transition: .3s;
+  cursor: pointer;
+  /* box-shadow: 1px 2px 4px 0px grey; */
+}
 /* ---------------------- SOFTWARE PROJECTS MEDIA QUERY ---------------------- */
-@media (max-width: 1335px) and (min-width: 1185px), (max-width: 1000px) and (min-width: 860px) {
+/* @media (max-width: 1335px) and (min-width: 1185px), (max-width: 1000px) and (min-width: 860px) {
   .project-row {
     width: 675px;
   }
@@ -243,5 +239,5 @@ export default {
   .project-row {
     width: 150px;
   }
-}
+} */
 </style>

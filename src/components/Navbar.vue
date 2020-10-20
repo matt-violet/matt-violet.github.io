@@ -1,29 +1,25 @@
 <template>
-  <div :class="this.$store.state.showSmallMenu ? 'navbar-with-drop-down' : 'navbar'">
-    <div class="photo-div" v-on:click="$emit('scrollToSec', 'home')">
-      <img class="photo" src="../assets/matt-violet.png">
-      <h2 class="name-text">Matt Violet</h2>
-      <h4 class="title-text">SOFTWARE ENGINEER</h4>
-    </div>
-    <div class="links-div">
-      <p class="link-text" v-on:click="$emit('scrollToSec', 'about')">About</p>
-      <p class="link-text" v-on:click="$emit('scrollToSec', 'work')">Work</p>
-      <p class="link-text" v-on:click="$emit('scrollToSec', 'experience')">Experience</p>
-      <p class="link-text" v-on:click='handleLinkClick(resumeLink)'>Resume</p>
-      <p class="link-text" v-on:click="$emit('scrollToSec', 'contact')">Contact</p>
-    </div>
-    <div class="icons-div">
-      <img class="icon" src="../assets/icons/email-white.png" v-on:click='handleLinkClick("mattviolet@gmail.com")'/>
-      <img class="icon" src="../assets/icons/github-white.png" v-on:click='handleLinkClick("https://github.com/matt-violet")'/>
-      <img class="icon" src="../assets/icons/linkedin-white.png" v-on:click='handleLinkClick("https://www.linkedin.com/in/mattviolet")'/>
-    </div>
-    <img class="menu-icon" v-on:click="toggleSmallMenu()" src="../assets/icons/menu-white.png">
-    <div v-if="this.$store.state.showSmallMenu" class="drop-down">
-      <p class="link-text-drop-down" v-on:click="handleSmallMenuClick('about')">About</p>
-      <p class="link-text-drop-down" v-on:click="handleSmallMenuClick('work')">Work</p>
-      <p class="link-text-drop-down" v-on:click="handleSmallMenuClick('experience')">Experience</p>
-      <p class="link-text-drop-down" v-on:click="handleSmallMenuClick('resume')">Resume</p>
-      <p class="link-text-drop-down" v-on:click="handleSmallMenuClick('contact')">Contact</p>
+  <div id="nav-component">
+    <div :class="!this.$store.state.showFixedMenu ? 'initial-navbar' : 'fixed-navbar'">
+      <div :class="this.$store.state.showSmallMenu ? 'navbar-with-drop-down' : 'navbar'">
+        <div class="links-div">
+          <p class="link" v-on:click="$emit('scrollToSec', 'services')">Services</p>
+          <p class="link" v-on:click="$emit('scrollToSec', 'experience')">Experience</p>
+          <p class="link" v-on:click="$emit('scrollToSec', 'work')">Work</p>
+          <p class="link" v-on:click="$emit('scrollToSec', 'about')">About</p>
+          <!-- <p class="link" v-on:click='handleLinkClick(resumeLink)'>Resume</p> -->
+          <p class="link" v-on:click="$emit('scrollToSec', 'contact')">Contact</p>
+        </div>
+        <img class="menu-icon" v-on:click="toggleSmallMenu()" src="../assets/icons/menu-white.png">
+        <div v-if="this.$store.state.showSmallMenu" class="drop-down">
+          <p class="link-text-drop-down" v-on:click="handleSmallMenuClick('services')">Services</p>
+          <p class="link-text-drop-down" v-on:click="handleSmallMenuClick('experience')">Experience</p>
+          <p class="link-text-drop-down" v-on:click="handleSmallMenuClick('work')">Work</p>
+          <p class="link-text-drop-down" v-on:click="handleSmallMenuClick('about')">About</p>
+          <!-- <p class="link-text-drop-down" v-on:click="handleSmallMenuClick('resume')">Resume</p> -->
+          <p class="link-text-drop-down" v-on:click="handleSmallMenuClick('contact')">Contact</p>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -59,16 +55,17 @@ export default {
 
 <style scoped>
 .navbar {
-  height: 100%;
-  width: 300px;
-  box-shadow: 0px 0px 4px 4px rgba(46, 46, 46, 0.5);
-  background: linear-gradient(to right, rgb(70, 130, 180), rgb(70, 130, 180, .75));
-  margin: 0;
-  position: fixed;
+  height: 50px;
+  width: 100%;
+  position: absolute;
+  /* box-shadow: 0px 0px 4px 4px rgba(46, 46, 46, 0.5); */
+  /* background: white; */
+  /* margin: 0; */
+  /* position: fixed; */
   z-index: 3;
-  display: inline-block;
+  /* display: inline-block; */
   text-align: center;
-  overflow-y: auto;
+  /* overflow-y: auto; */
 }
 .navbar-with-drop-down {
   width: 100%;
@@ -79,53 +76,31 @@ export default {
   overflow-y: visible;
   background: rgb(70, 130, 180, .95);
 }
-.photo {
-  width: 150px;
-  background: lightsteelblue;
-  box-shadow: 1px 2px 4px 0px black;
-  margin: 0 auto 10px auto;
-  border-radius: 50%;
-}
-.photo-div {
-  text-align: center;
-  margin: 50px auto;
-  width: 200px;
-}
-.name-text, .title-text {
-  margin: 0;
-}
-.name-text {
-  color: white;
-  font-weight: 700;
-}
-.title-text {
-  color: lightsalmon;
-  font-size: 14px;
-  font-weight: 600;
-}
-.icons-div {
-  margin: 76px auto 0 auto;
-}
-.icon {
-  margin: 0 10px;
-  width: 25px;
-  height: 25px;
+.fixed-navbar {
+  height: 60px;
+  width: 100%;
+  z-index: 1;
+  background: rgba(70, 131, 180);
+  position: fixed;
   transition: .3s;
+  box-shadow: 0px 0px 4px 4px rgba(46, 46, 46, 0.5);
+  animation: fadeDown .3s ease-in-out forwards;
+  /* animation: fadeUp .3s ease-in forwards; */
 }
-.icon:hover {
-  cursor: pointer;
-  transform: scale(1.2);
+@keyframes fadeDown {
+  from { transform: translateY(-100px); }
+  to { transform: translateY(0); }
 }
-.links-div {
-  width: 100px;
-  margin: auto;
-  text-align: left;
-}
-.link-text {
-  margin: 10px 0;
-  font-weight: 500;
-  font-size: 18px;
+/* @keyframes fadeUp {
+  from { transform: translateY(0); }
+  to { transform: translateY(-100px); }
+} */
+.link {
+  margin: 15px 25px;
+  font-weight: 700;
+  font-size: 14px;
   color: white;
+  display: inline-block;
 }
 .invisible, .menu-icon, .drop-down {
   width: 0;
@@ -137,12 +112,12 @@ export default {
   transform: scale(1.1);
   transition: .3s;
 }
-.link-text:hover, .photo-div:hover {
+.link:hover, .photo-div:hover {
   cursor: pointer;
 }
-.link-text:hover {
+.link:hover {
   color: lightsalmon;
-  transform: scale(1.1);
+  /* transform: scale(1.1); */
   transition: .3s;
 }
 /* --------------------------- MEDIA QUERY --------------------------- */
@@ -156,11 +131,11 @@ export default {
   .navbar {
     width: 100%;
     height: 70px;
-    position: fixed;
+    /* position: fixed; */
     z-index: 3;
     text-align: left;
     overflow-y: visible;
-    background: rgb(70, 130, 180, .95);
+    /* background: rgb(70, 130, 180, .95); */
   }
   .icons-div {
     display:none

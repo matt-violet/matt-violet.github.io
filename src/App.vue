@@ -1,19 +1,28 @@
 <template>
   <div id="app">
-    <Navbar @scrollToSec="scrollToSection"/>
-    <div class="home-div">
+    <Navbar v-if="!this.$store.state.showProject" @scrollToSec="scrollToSection"/>
+    <div class="home-div" v-if="!this.$store.state.showProject">
       <Home @scrollToSec="scrollToSection"/>
       <div class="bg-div">
         <img class="bg-img" :src="this.$store.state.backgroundImage">
         <div class="bg-gradient"/>
       </div>
     </div>
-    <div class="components">
-      <About @scrollToSec="scrollToSection"/>
-      <Work/>
+    <div v-if="!this.$store.state.showProject" class="components">
+      <Services/>
       <Experience/>
+      <Work/>
+      <About @scrollToSec="scrollToSection"/>
       <Contact/>
     </div>
+    <SoftwareWorkDetails 
+        v-if="this.$store.state.showProject && this.$store.state.showSoftware"
+        class="software-details"
+      />
+      <DesignWorkDetails
+        v-if="this.$store.state.showProject && this.$store.state.showDesign"
+        class="work-details"
+      />
   </div>
 </template>
 
@@ -21,9 +30,12 @@
 import Navbar from './components/Navbar.vue'
 import Home from './components/Home.vue'
 import About from './components/About.vue'
-import Experience from './components/skills/Experience.vue'
+import Services from './components/skills/Services.vue'
+import Experience from './components/experience/Experience.vue'
 import Work from './components/work/Work.vue'
 import Contact from './components/Contact.vue'
+import SoftwareWorkDetails from './components/work/software/SoftwareWorkDetails.vue'
+import DesignWorkDetails from './components/work/design/DesignWorkDetails.vue'
 
 export default {
   name: 'App',
@@ -31,8 +43,11 @@ export default {
     Navbar,
     Home,
     About,
+    Services,
     Experience,
     Work,
+    SoftwareWorkDetails,
+    DesignWorkDetails,
     Contact
   },
   methods: {
@@ -46,7 +61,8 @@ export default {
       if (currentScrollPosition < 0) {
         return;
       }
-      this.$store.state.showHomeBtn = currentScrollPosition >= 0 && currentScrollPosition <= 275;
+      this.$store.state.showHomeBtn = currentScrollPosition >= 0 && currentScrollPosition <= 100;
+      this.$store.state.showFixedMenu = currentScrollPosition >= 0 && currentScrollPosition >= 100;
       this.$store.state.lastScrollPosition = currentScrollPosition;
     }
   },
@@ -61,6 +77,8 @@ export default {
 
 <style>
 body {
+  --primary: coral;
+  --light-grey: rgb(241, 241, 241);
   --body-text: rgb(90, 90, 90);
   --nav-grey: rgb(233, 233, 233);
   --dark-blue: rgb(63, 128, 180);
@@ -92,13 +110,13 @@ a:hover {
   position: relative;
 }
 .components {
-  margin-left: 300px;
   position: relative;
-  overflow-x: hidden;
+  overflow: none;
 }
 .home-div {
   width: 100%;
-  height: 100%;
+  height: 66%;
+  overflow: hidden;
   position: relative;
 }
 .home-div-absolute {
@@ -106,27 +124,27 @@ a:hover {
 }
 .bg-div {
   width: 100%;
-  overflow-x: hidden;
+  /* height: 66%; */
+  overflow: hidden;
+  z-index: -100;
 }
 .bg-img {
-  min-width: 100%;
-  height: 100%;
-  z-index: -1;
-  position: fixed;
+  width: 100%;
+  min-height: 100%;
+  position: absolute;
+  bottom: 0;
   animation: grow 5s;
   animation-fill-mode: forwards;
 }
 @keyframes grow {
   from { transform: scale(1); }
-  to { transform: scale(1.2); }
+  to { transform: scale(1); }
 }
 .bg-gradient {
   width: 100%;
-  margin-left: 300px;
   height: 100%;
-  position: fixed;
-  z-index: -1;
-  background: linear-gradient(160deg, rgba(0, 0, 0, 0.3) 5%, rgba(0, 0, 0, 0) 95%);
+  position: absolute;
+  background: linear-gradient(to bottom, rgba(42, 101, 150, 0.5), rgba(0, 0, 0, 0));
 }
 @media (max-width: 1000px) {
   .components {
@@ -136,7 +154,12 @@ a:hover {
     margin: 0;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
+  .home-div {
+    height: 100%;
+  }
+/* } */
+/* @media (max-width: 500px) { */
   .bg-img {
     width: 1000px;
     margin: auto;

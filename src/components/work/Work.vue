@@ -24,14 +24,6 @@
           <DesignProjects/>
         </div>
       </div>
-      <SoftwareWorkDetails 
-        v-if="this.$store.state.showProject && this.$store.state.showSoftware"
-        class="software-details"
-      />
-      <DesignWorkDetails
-        v-if="this.$store.state.showProject && this.$store.state.showDesign"
-        class="work-details"
-      />
     </div>
   </div>
 </template>
@@ -39,15 +31,11 @@
 <script>
 import SoftwareProjects from './software/SoftwareProjects.vue'
 import DesignProjects from './design/DesignProjects.vue'
-import SoftwareWorkDetails from './software/SoftwareWorkDetails.vue'
-import DesignWorkDetails from './design/DesignWorkDetails.vue'
 export default {
   name: 'Work',
   components: {
     SoftwareProjects,
-    DesignProjects,
-    SoftwareWorkDetails,
-    DesignWorkDetails
+    DesignProjects
   },
   methods: {
     showSoftware() {
@@ -68,7 +56,7 @@ export default {
 
 <style scoped>
 #work {
-  background: rgb(241, 241, 241);
+  background: white;
 }
 .header {
   text-align: center;
@@ -90,10 +78,10 @@ h1 {
   margin: 0 10px 0 0;
 }
 .software-projects-btn {
-  background: var(--light-blue);
+  background: var(--light-grey);
 }
 .design-projects-btn {
-  background: var(--dark-blue);
+  background: var(--body-text);
   color: white;
 }
 .software-projects-btn, .design-projects-btn {
@@ -133,7 +121,7 @@ h1 {
 }
 .software-projects, .design-projects {
   padding: 0 0 75px 0;
-  height: 100%;
+  /* height: 100%; */
   margin: auto;
   max-width: 900px;
   border-bottom-left-radius: 5px;

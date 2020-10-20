@@ -28,7 +28,7 @@ export default {
 .design-projects {
   text-align: center;
   margin: 0 75px;
-  background: var(--dark-blue);
+  background: var(--body-text);
 }
 .project-row {
   width: 825px;
@@ -40,12 +40,12 @@ export default {
 .design-project {
   width: 250px;
   height: 250px;
-  box-shadow: 1px 2px 8px 0px grey;
+  box-shadow: 1px 2px 8px 0px rgb(37, 37, 37);
   border-radius: 5px;
   display: inline-block;
   margin: 0 25px 25px 0;
   overflow: hidden;
-  background: white;
+  background: var(--light-grey);
 }
 .design-img-div {
   width: 100%;
@@ -66,7 +66,7 @@ export default {
 .design-description {
   margin: 10px;
   padding-top: 5px;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 18px;
 }
 .design-project:hover {

@@ -1,7 +1,7 @@
 <template>
   <div id="work-details">
     <div class="inner-content">
-      <div class="close-btn-div" v-on:click="exitToSoftware">
+      <div class="close-btn-div" v-on:click="$store.commit('exitToSoftware')">
         <img class="close-btn" src="../../../assets/icons/close.png">
       </div>
       <div class="track">
@@ -23,8 +23,15 @@
       </div>
       <div class="text-div">
         <div class="arrow-div">
-          <img class="left arrow" src="../../../assets/icons/left-arrow.png" v-on:click="$store.commit('showPreviousProject', project)">
-          <img class="right arrow" src="../../../assets/icons/right-arrow.png" v-on:click="$store.commit('showNextProject', project)">
+          <img class="left arrow"
+            src="../../../assets/icons/left-arrow.png"
+            v-on:click="$store.commit('showPreviousProject', project)"
+          >
+          <img
+            class="right arrow"
+            src="../../../assets/icons/right-arrow.png"
+            v-on:click="$store.commit('showNextProject', project)"
+          >
         </div>
         <div class="details-div">
           <div class="centered">
@@ -69,12 +76,7 @@
 export default {
   name: "SoftwareWorkDetails",
   methods: {
-    exitToSoftware() {
-      this.$store.state.showProject = false;
-      document.getElementById('work').scrollIntoView({ 
-        behavior: 'smooth'
-      });
-    }
+    
   },
   computed: {
     project: function() {
