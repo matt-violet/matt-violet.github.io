@@ -1,8 +1,13 @@
 <template>
   <div id="nav-component">
     <div :class="!this.$store.state.showFixedMenu ? 'initial-navbar' : 'fixed-navbar'">
-      <div :class="this.$store.state.showSmallMenu ? 'navbar-with-drop-down' : 'navbar'">
+      <div :class="this.$store.state.showSmallMenu ? 'drop-down' : 'navbar'">
         <div class="links-div">
+          <img
+            class="logo"
+            src="../assets/icons/mv-logo-light.png"
+            v-on:click="$emit('scrollToSec', 'home')"
+          >
           <p class="link" v-on:click="$emit('scrollToSec', 'services')">Services</p>
           <p class="link" v-on:click="$emit('scrollToSec', 'experience')">Experience</p>
           <p class="link" v-on:click="$emit('scrollToSec', 'work')">Work</p>
@@ -12,12 +17,12 @@
         </div>
         <img class="menu-icon" v-on:click="toggleSmallMenu()" src="../assets/icons/menu-white.png">
         <div v-if="this.$store.state.showSmallMenu" class="drop-down">
-          <p class="link-text-drop-down" v-on:click="handleSmallMenuClick('services')">Services</p>
-          <p class="link-text-drop-down" v-on:click="handleSmallMenuClick('experience')">Experience</p>
-          <p class="link-text-drop-down" v-on:click="handleSmallMenuClick('work')">Work</p>
-          <p class="link-text-drop-down" v-on:click="handleSmallMenuClick('about')">About</p>
-          <!-- <p class="link-text-drop-down" v-on:click="handleSmallMenuClick('resume')">Resume</p> -->
-          <p class="link-text-drop-down" v-on:click="handleSmallMenuClick('contact')">Contact</p>
+          <p class="drop-down-link" v-on:click="handleSmallMenuClick('services')">Services</p>
+          <p class="drop-down-link" v-on:click="handleSmallMenuClick('experience')">Experience</p>
+          <p class="drop-down-link" v-on:click="handleSmallMenuClick('work')">Work</p>
+          <p class="drop-down-link" v-on:click="handleSmallMenuClick('about')">About</p>
+          <!-- <p class="drop-down-link" v-on:click="handleSmallMenuClick('resume')">Resume</p> -->
+          <p class="drop-down-link" v-on:click="handleSmallMenuClick('contact')">Contact</p>
         </div>
       </div>
     </div>
@@ -55,21 +60,21 @@ export default {
 
 <style scoped>
 .navbar {
-  height: 50px;
+  height: 60px;
   width: 100%;
   position: absolute;
-  /* box-shadow: 0px 0px 4px 4px rgba(46, 46, 46, 0.5); */
-  /* background: white; */
-  /* margin: 0; */
-  /* position: fixed; */
   z-index: 3;
-  /* display: inline-block; */
   text-align: center;
-  /* overflow-y: auto; */
 }
-.navbar-with-drop-down {
+.logo {
+  margin: 15px 30px;
+  position: absolute;
+  left: 0;
+  width: 30px;
+}
+.drop-down {
   width: 100%;
-  height: 70px;
+  height: 100%;
   position: fixed;
   z-index: 3;
   text-align: left;
@@ -79,24 +84,22 @@ export default {
 .fixed-navbar {
   height: 60px;
   width: 100%;
-  z-index: 1;
-  background: rgba(70, 131, 180);
+  z-index: 3;
+  background: linear-gradient(to bottom, rgb(62, 116, 160), rgb(92, 153, 202));
   position: fixed;
   transition: .3s;
-  box-shadow: 0px 0px 4px 4px rgba(46, 46, 46, 0.5);
   animation: fadeDown .3s ease-in-out forwards;
-  /* animation: fadeUp .3s ease-in forwards; */
 }
 @keyframes fadeDown {
   from { transform: translateY(-100px); }
   to { transform: translateY(0); }
 }
-/* @keyframes fadeUp {
-  from { transform: translateY(0); }
-  to { transform: translateY(-100px); }
-} */
+.links-div {
+  height: 100%;
+}
 .link {
-  margin: 15px 25px;
+  margin: 0;
+  padding: 20px;
   font-weight: 700;
   font-size: 14px;
   color: white;
@@ -112,12 +115,16 @@ export default {
   transform: scale(1.1);
   transition: .3s;
 }
+.logo:hover {
+  transform: rotate(360deg);
+  transition: .3s;
+  cursor: pointer;
+}
 .link:hover, .photo-div:hover {
   cursor: pointer;
 }
 .link:hover {
   color: lightsalmon;
-  /* transform: scale(1.1); */
   transition: .3s;
 }
 /* --------------------------- MEDIA QUERY --------------------------- */
@@ -131,11 +138,9 @@ export default {
   .navbar {
     width: 100%;
     height: 70px;
-    /* position: fixed; */
     z-index: 3;
     text-align: left;
     overflow-y: visible;
-    /* background: rgb(70, 130, 180, .95); */
   }
   .icons-div {
     display:none
@@ -144,13 +149,11 @@ export default {
     width: 30px;
     height: 30px;
     z-index: 3;
-    padding: 10px 20px 0 20px;
+    padding: 20px 20px 0 20px;
     visibility: visible;
   }
   .drop-down {
-    transform: translate(0, 9px);
     z-index: 3;
-    padding: 20px 0;
     height: 200px;
     width: 250px;
     background: rgb(70, 130, 180, .95);
@@ -161,7 +164,7 @@ export default {
     from { opacity: 0; }
     to { opacity: 1; }
   }
-  .link-text-drop-down {
+  .drop-down-link {
     padding: 8px 0 8px 80px;
     margin: 0;
     color: white;
@@ -173,7 +176,7 @@ export default {
   .drop-down:hover {
     cursor: pointer;
   }
-  .link-text-drop-down:hover {
+  .drop-down-link:hover {
     background: linear-gradient(to top, coral, lightsalmon);
     padding-left: 100px;
     transition: .3s;
@@ -183,17 +186,17 @@ export default {
   .drop-down {
     width: 100%;
     height: 100%;
-    padding-top: 100px;
+    padding: 0px;
     position: fixed;
     text-align: left;
     background: rgb(70, 130, 180, .95);
   }
-  .link-text-drop-down {
+  .drop-down-link {
     padding-left: 120px;
     font-size: 30px;
     margin: 5px 0;
   }
-  .link-text-drop-down:hover {
+  .drop-down-link:hover {
     padding-left: 140px;
   }
 }

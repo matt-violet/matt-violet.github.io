@@ -1,19 +1,18 @@
 <template>
   <div id="about">
+    <img class="img-block" src="../assets/matt-sksm.png">
+    <div class="left-text">
+      <div class="header">
+        <h1>About</h1>
+      </div>
+      <p>I'm a converted software engineer with professional roots in non-profit communications.</p>
+      <p>Over the last couple years I've transformed my career, leaving the comfort of my non-profit role in pursuit of a technical skill set, immersing myself in a rigorous coding bootcamp, and landing an internship at a startup company. In the process I've done increasingly complex <a v-on:click="$emit('scrollToSec', 'work')">work</a>, shipped my own code, and gained proficiency with industry-standard technologies (React, Vue, Node), workflows (Agile, Jira, Git), and best practices.</p>
+      <p>Although my career has shifted, my heart is still in everything I do. My interest in programming comes from my experience using electronic medical devices (AKA my "<a href='https://drive.google.com/file/d/1D8tp35PoCCbMzuWLTPHFI5oGN7nFhIQ1/view?usp=sharing' target='_blank'>artificial pancreas</a>") as a type one diabetic. Since my health became linked to algorithms, I've invested myself in learning how these life-changing devices work and building apps with the potential to help others.</p>
+      <p>Away from the keyboard I enjoy hiking, making music, and watching sports in my hometown of Oakland, CA.</p>
+    </div>
     <div class="img-div">
       <div class="gradient"/>
-      <img src="../assets/matt-sksm.png" class="img">
-    </div>
-    <div class="left">
-      <div class="about-text-div">
-        <div class="header">
-          <h1>About</h1>
-        </div>
-        <p>I'm a converted software engineer with hands-on experience, formal education, and professional roots in non-profit communications.</p>
-        <p>Over the last couple years I've transformed my career, leaving the comfort of my non-profit role in pursuit of a technical skill set, immersing myself in a rigorous coding bootcamp, and landing an internship at a startup company. In the process I've done increasingly complex <a v-on:click="$emit('scrollToSec', 'work')">work</a>, shipped my own code, and gained proficiency with industry-standard technologies (React, Vue, Node), workflows (Agile, Jira, Git), and best practices.</p>
-        <p>Although my career has shifted, my heart is still in everything I do. My interest in programming comes from my experience using electronic medical devices (AKA my "<a href='https://drive.google.com/file/d/1D8tp35PoCCbMzuWLTPHFI5oGN7nFhIQ1/view?usp=sharing' target='_blank'>artificial pancreas</a>") as a type one diabetic. Since my health became linked to algorithms, I've invested myself in learning how these life-changing devices work and building apps with the potential to help others.</p>
-        <p>Away from the keyboard I enjoy hiking, making music, and watching sports in my hometown of Oakland, CA.</p>
-      </div>
+      <img class="img" src="../assets/matt-sksm.png">
     </div>
   </div>
 </template>
@@ -30,76 +29,92 @@ export default {
 <style scoped>
 #about {
   position: relative;
+  text-align: right;
+  background: white;
 }
 h1 {
   font-size: 35px;
-  font-weight: 300;
+  font-weight: 900;
   margin: 0 0 75px 0;
 }
-p {
-  margin-top: 0;
-  font-weight: 300;
-  /* color: white; */
-  /* color: var(--body-text); */
-}
-strong {
-  font-weight: 900;
+.img-block {
+  display: none;
 }
 .header {
   width: 100%;
   text-align: center;
 }
-.left {
+.left-text {
+  text-align: left;
   width: 40%;
-  padding: 75px;
+  padding: 75px 0 0 75px;
+  z-index: 2;
   position: absolute;
-}
-.about-text-div {
-  font-size: 16px;
 }
 .img-div {
-  border: 1px solid;
-  margin: 0;
-  padding: 0;
-  position: absolute;
+  max-width: 1300px;
+  position: relative;
+  margin: 0 0 0 auto;
 }
 .img {
+  display: block;
   width: 100%;
-  /* position: relative; */
+  z-index: 0;
+  margin: 0 0 0 auto;
 }
 .gradient {
-  /* width: 100%; */
-  /* height: 100%; */
-  /* position: absolute; */
-  background: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  position: absolute;
+  background: linear-gradient(to right, white, rgba(0, 0, 0, 0) 66%);
 }
-
 @media (min-width: 1400px) {
-  .about-text-div {
-    font-size: 20px;
+  .left-text {
+    padding: 75px 0 0 12%;
+    max-width: 600px;
   }
 }
 @media (max-width: 1200px) {
-  .left {
-    padding: 50px;
+  .left-text {
+    padding: 50px 0 0 50px;
+    font-size: 14px;
   }
   h1 {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
-  .about-text-div {
+  .left-text {
     font-size: 14px;
   }
 }
 @media (max-width: 1000px) {
-  .img-div {
-    /* display: block; */
+  h1 {
+    margin-bottom: 20px;
   }
-  .left {
-    /* position: relative; */
+  .left-text {
+    width: 50%;
+    padding: 25px;
+    font-size: 13px;
+  }
+}
+@media (max-width: 800px) {
+  .left-text {
+    position: relative;
+    font-size: 16px;
+    padding: 75px;
+    width: auto;
+    color: var(--body-text);
+  }
+  .img, .gradient {
+    display: none;
+  }
+  .img-block {
+    display: block;
+    width: 100%;
   }
 }
 @media (max-width: 700px) {
-  .inner-content, h1 {
+  .left-text {
     padding: 30px 15px;
   }
 }

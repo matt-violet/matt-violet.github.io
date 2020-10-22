@@ -28,11 +28,11 @@ export default {
 .design-projects {
   text-align: center;
   margin: 0 75px;
-  background: var(--body-text);
+  background: linear-gradient(to bottom, steelblue, rgb(151, 199, 238));
 }
 .project-row {
   width: 825px;
-  padding-top: 50px;
+  padding: 50px 25px 0 25px;
   position: relative;
   margin: auto;
   text-align: left;
@@ -45,7 +45,7 @@ export default {
   display: inline-block;
   margin: 0 25px 25px 0;
   overflow: hidden;
-  background: var(--light-grey);
+  background: white;
 }
 .design-img-div {
   width: 100%;
@@ -77,7 +77,7 @@ export default {
   transition: .3s;
 }
 /* ---------------------- MEDIA QUERY ---------------------- */
-@media (max-width: 1335px) and (min-width: 1185px), (max-width: 1000px) and (min-width: 860px){
+@media (max-width: 1000px) and (min-width: 850px){
   .project-row {
     width: 675px;
   }
@@ -94,8 +94,7 @@ export default {
     font-size: 16px;
   }
 }
-/* ---------------------- MEDIA QUERY ---------------------- */
-@media (max-width: 1185px) and (min-width: 1000px), (max-width: 860px) {
+@media (max-width: 850px) {
   .project-row {
     width: 525px;
   }
@@ -116,7 +115,15 @@ export default {
     width: 350px;
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 400px) {
+  .project-row {
+    padding: 50px 10px 0 10px;
+  }
+  .design-project {
+    margin: 10px 0 0 10px;
+  }
+}
+@media (max-width: 370px) {
   .project-row {
     width: 150px;
   }

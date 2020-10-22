@@ -29,7 +29,7 @@ export default {
 h3 {
   text-align: center;
   font-size: 30px;
-  font-weight: 400;
+  font-weight: 900;
   margin: 0 auto 50px auto;
 }
 .inner-content {

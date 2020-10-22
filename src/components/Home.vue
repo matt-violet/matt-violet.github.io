@@ -50,15 +50,15 @@ h2 {
   color: white;
   font-size: 35px;
   font-weight: 300;
-  margin: 0;
+  margin: -10px 0 0 0;
 }
 .btn {
-  background: var(--primary);
+  background: coral;
   color: white;
   box-shadow: 2px 4px 8px 0px rgb(107, 107, 107);
-  margin: 25px 0 0 0;
+  margin: 15px 0 0 0;
   padding: 12px 24px;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
   border-radius: 5px;
   border: 0;
@@ -90,7 +90,6 @@ h2 {
 @media (max-width: 1000px) {
   .welcome, .hidden-welcome {
     top: calc(70px + 5%);
-    /* left: 5%; */
   }
   .hidden-welcome {
     transform: translateX(-100px);
@@ -102,7 +101,7 @@ h2 {
     font-size: 30px;
   }
   .btn {
-    font-size: 20px;
+    font-size: 16px;
   }
   .top-img, .hidden-top-img {
     min-width: 300px;

@@ -49,9 +49,7 @@ export default {
 
 <style scoped>
 #contact {
-  background: lightsalmon;
-  /* background: rgb(245, 187, 164); */
-  /* position: absolute; */
+  background: linear-gradient(to bottom, rgb(31, 75, 110), steelblue);
 }
 .header {
   width: 100%;
@@ -63,12 +61,13 @@ export default {
   margin: auto;
 }
 h1 {
+  color: white;
   font-size: 35px;
-  font-weight: 400;
+  font-weight: 900;
   margin: 0 auto 75px auto;
 }
 .text {
-  color: var(--body-text);
+  color: white;
   font-size: 18px;
   font-weight: 400;
   margin: 0 auto;
@@ -85,28 +84,23 @@ h1 {
   display: inline-block;
   text-align: center;
   transition: .3s;
-  padding: 20px 5px;
+  padding: 50px 5px 30px 5px;
   border-radius: 5px;
+  background: var(--light-grey);
+  box-shadow: 1px 2px 8px 0px rgb(37, 37, 37);
 }
 .container:hover {
   background: white;
   cursor: pointer;
-  box-shadow: 1px 2px 8px 0px grey;
 }
 .container:hover .icon {
   height: 60px;
   width: 60px;
   transform: translate(-5px, -5px);
 }
-.container:hover .link-text {
-  font-weight: 500;
-}
-.container:hover .link-header {
-  font-weight: 600;
-}
 .icon {
   position: absolute;
-  top: 10%;
+  top: 15%;
   left: 50%;
   margin-left: -25px;
   height: 50px;
@@ -114,7 +108,7 @@ h1 {
   transition: .3s;
 }
 .icon-text {
-  margin-top: 55px;
+  margin-top: 50px;
 }
 .link-header {
   left: 0;

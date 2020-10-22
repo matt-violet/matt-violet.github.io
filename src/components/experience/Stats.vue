@@ -6,11 +6,7 @@
     <div class="first-stats">
       <div class="stat" data-aos="zoom-in">
         <p class="num">3</p>
-        <p class="num-description">years of programming experience</p>
-      </div>
-      <div class="stat" data-aos="zoom-in">
-        <p class="num">1,000+</p>
-        <p class="num-description">hours of advanced CS curriculum</p>
+        <p class="num-description">years of developer experience</p>
       </div>
     </div>
     <div class="second-stats">
@@ -19,8 +15,12 @@
         <p class="num-description">months as a Software Engineer Intern</p>          
       </div>
       <div class="stat" data-aos="zoom-in">
-        <p class="num">500+</p>
-        <p class="num-description">GitHub contributions per year</p>
+        <p class="num">1,000+</p>
+        <p class="num-description">hours of Computer Science curriculum</p>
+      </div>
+      <div class="stat" data-aos="zoom-in">
+        <p class="num">5</p>
+        <p class="num-description">years of graphic design</p>
       </div>
     </div>
   </div>
@@ -36,7 +36,7 @@ export default {
 h1 {
   padding-bottom: 75px;
   font-size: 35px;
-  font-weight: 400;
+  font-weight: 900;
   color: white;
   margin: 0;
 }
@@ -44,7 +44,7 @@ h1 {
   padding: 75px 0;
   position: relative;
   text-align: center;
-  background: linear-gradient(to top, rgba(70, 131, 180, 0.719), steelblue);
+  background: linear-gradient(to bottom, rgb(62, 116, 160), rgb(92, 153, 202));
 }
 .first-stats {
   display: inline-block;
@@ -65,7 +65,7 @@ h1 {
 .num {
   margin: 0;
   font-size: 40px;
-  font-weight: 300;
+  font-weight: 500;
   color: white;
   animation: pulse 2s infinite;
 }

@@ -220,8 +220,3 @@ export const designProjects = [
     isDesignProject: true
   }
 ];
-
-export const aboutImgs = [
-  require('./src/assets/pump.png'),
-  require('./src/assets/showing-pump.jpg')
-];

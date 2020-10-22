@@ -16,13 +16,13 @@
       <Contact/>
     </div>
     <SoftwareWorkDetails 
-        v-if="this.$store.state.showProject && this.$store.state.showSoftware"
-        class="software-details"
-      />
-      <DesignWorkDetails
-        v-if="this.$store.state.showProject && this.$store.state.showDesign"
-        class="work-details"
-      />
+      v-if="this.$store.state.showProject && this.$store.state.showSoftware"
+      class="software-details"
+    />
+    <DesignWorkDetails
+      v-if="this.$store.state.showProject && this.$store.state.showDesign"
+      class="work-details"
+    />
   </div>
 </template>
 
@@ -61,8 +61,8 @@ export default {
       if (currentScrollPosition < 0) {
         return;
       }
-      this.$store.state.showHomeBtn = currentScrollPosition >= 0 && currentScrollPosition <= 100;
-      this.$store.state.showFixedMenu = currentScrollPosition >= 0 && currentScrollPosition >= 100;
+      this.$store.state.showHomeBtn = currentScrollPosition >= 0 && currentScrollPosition <= 60;
+      this.$store.state.showFixedMenu = currentScrollPosition >= 0 && currentScrollPosition >= 60;
       this.$store.state.lastScrollPosition = currentScrollPosition;
     }
   },
@@ -77,8 +77,8 @@ export default {
 
 <style>
 body {
-  --primary: coral;
-  --light-grey: rgb(241, 241, 241);
+  --light-coral: rgb(248, 182, 158);
+  --light-grey: rgb(230, 230, 230);
   --body-text: rgb(90, 90, 90);
   --nav-grey: rgb(233, 233, 233);
   --dark-blue: rgb(63, 128, 180);
@@ -115,7 +115,7 @@ a:hover {
 }
 .home-div {
   width: 100%;
-  height: 66%;
+  height: 70%;
   overflow: hidden;
   position: relative;
 }
@@ -124,7 +124,6 @@ a:hover {
 }
 .bg-div {
   width: 100%;
-  /* height: 66%; */
   overflow: hidden;
   z-index: -100;
 }
@@ -144,7 +143,7 @@ a:hover {
   width: 100%;
   height: 100%;
   position: absolute;
-  background: linear-gradient(to bottom, rgba(42, 101, 150, 0.5), rgba(0, 0, 0, 0));
+  background: linear-gradient(to bottom, rgba(20, 61, 95, 0.5), rgba(0, 0, 0, 0));
 }
 @media (max-width: 1000px) {
   .components {
@@ -158,8 +157,6 @@ a:hover {
   .home-div {
     height: 100%;
   }
-/* } */
-/* @media (max-width: 500px) { */
   .bg-img {
     width: 1000px;
     margin: auto;
@@ -167,6 +164,11 @@ a:hover {
   }
   .bg-div {
     text-align: center;
+  }
+}
+@media (max-height: 600px) {
+  .home-div {
+    height: 100%;
   }
 }
 </style>

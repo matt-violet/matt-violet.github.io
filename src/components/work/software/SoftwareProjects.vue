@@ -9,8 +9,6 @@
         <div class="text-div">
           <h4 class="title">{{ project.title }}</h4>
           <p class="description">{{ project.description }}</p>
-          <!-- <p class="stack-header">Tools: </p> -->
-          <!-- <p class="stack" v-for="(stack, i) of project.stack" :key="i">{{ stack }}</p> -->
         </div>
         <div class="btn-div">
           <button class="details-btn" v-on:click="$store.commit('viewProjectDetails', project)">Details</button>
@@ -138,13 +136,11 @@ export default {
 .details-btn:hover {
   background: coral;
   color: white;
-  /* color: var(--body-text); */
   transition: .3s;
   cursor: pointer;
-  /* box-shadow: 1px 2px 4px 0px grey; */
 }
 /* ---------------------- SOFTWARE PROJECTS MEDIA QUERY ---------------------- */
-/* @media (max-width: 1335px) and (min-width: 1185px), (max-width: 1000px) and (min-width: 860px) {
+@media (max-width: 1000px) and (min-width: 860px) {
   .project-row {
     width: 675px;
   }
@@ -187,7 +183,7 @@ export default {
     width: 170px;
   }
 }
-@media (max-width: 1185px) and (min-width: 1000px), (max-width: 860px) {
+@media (max-width: 860px) {
   .project-row {
     width: 525px;
   }
@@ -239,5 +235,5 @@ export default {
   .project-row {
     width: 150px;
   }
-} */
+}
 </style>

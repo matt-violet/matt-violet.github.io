@@ -69,7 +69,7 @@ export default {
 h1 {
   margin: 0 auto 75px auto;
   font-size: 35px;
-  font-weight: 400;
+  font-weight: 900;
 }
 .left, .right {
   display: inline-block;
@@ -81,7 +81,7 @@ h1 {
   background: var(--light-grey);
 }
 .design-projects-btn {
-  background: var(--body-text);
+  background: steelblue;
   color: white;
 }
 .software-projects-btn, .design-projects-btn {
@@ -106,7 +106,7 @@ h1 {
 }
 .icon {
   width: 25px;
-  margin-top: 3px;
+  margin-top: 4px;
   position: absolute;
   display: inline-block;
 }
@@ -121,7 +121,6 @@ h1 {
 }
 .software-projects, .design-projects {
   padding: 0 0 75px 0;
-  /* height: 100%; */
   margin: auto;
   max-width: 900px;
   border-bottom-left-radius: 5px;
@@ -142,9 +141,15 @@ h1 {
   }
 }
 @media (max-width: 425px) {
+  .software-projects-btn, .design-projects-btn {
+    width: 100px;
+  }
   .section-title {
-    font-size: 25px;
-    text-align: center;
+    font-size: 16px;
+    margin: 4px 0 0 30px;
+  }
+  .icon {
+    width: 20px;
   }
 }
 </style>
