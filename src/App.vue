@@ -15,14 +15,8 @@
       <About @scrollToSec="scrollToSection"/>
       <Contact/>
     </div>
-    <SoftwareWorkDetails 
-      v-if="this.$store.state.showProject && this.$store.state.showSoftware"
-      class="software-details"
-    />
-    <DesignWorkDetails
-      v-if="this.$store.state.showProject && this.$store.state.showDesign"
-      class="work-details"
-    />
+    <SoftwareWorkDetails v-if="this.$store.state.showProject && this.$store.state.showSoftware"/>
+    <DesignWorkDetails v-if="this.$store.state.showProject && !this.$store.state.showSoftware"/>
   </div>
 </template>
 
@@ -77,12 +71,10 @@ export default {
 
 <style>
 body {
-  --light-coral: rgb(248, 182, 158);
+  --coral: linear-gradient(rgb(255, 167, 134), rgb(209, 98, 57));
   --light-grey: rgb(230, 230, 230);
   --body-text: rgb(90, 90, 90);
-  --nav-grey: rgb(233, 233, 233);
-  --dark-blue: rgb(63, 128, 180);
-  --light-blue: rgb(178, 212, 240);
+  --dark-blue: linear-gradient(to bottom, rgb(36, 87, 128), steelblue);
 }
 body, html {
   margin: 0;
@@ -104,10 +96,6 @@ a:hover {
   -moz-osx-font-smoothing: grayscale;
   height: 100%;
   width: 100%;
-}
-.work-details {
-  z-index: 100;
-  position: relative;
 }
 .components {
   position: relative;

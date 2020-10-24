@@ -4,21 +4,21 @@
       <h1>Experience</h1>
     </div>
     <div class="first-stats">
-      <div class="stat" data-aos="zoom-in">
+      <div class="stat">
         <p class="num">3</p>
         <p class="num-description">years of developer experience</p>
       </div>
+      <div class="stat">
+        <p class="num">2</p>
+        <p class="num-description">professional developer roles worked</p>          
+      </div>
     </div>
     <div class="second-stats">
-      <div class="stat" data-aos="zoom-in">
-        <p class="num">6</p>
-        <p class="num-description">months as a Software Engineer Intern</p>          
-      </div>
-      <div class="stat" data-aos="zoom-in">
+      <div class="stat">
         <p class="num">1,000+</p>
         <p class="num-description">hours of Computer Science curriculum</p>
       </div>
-      <div class="stat" data-aos="zoom-in">
+      <div class="stat">
         <p class="num">5</p>
         <p class="num-description">years of graphic design</p>
       </div>
@@ -44,7 +44,6 @@ h1 {
   padding: 75px 0;
   position: relative;
   text-align: center;
-  background: linear-gradient(to bottom, rgb(62, 116, 160), rgb(92, 153, 202));
 }
 .first-stats {
   display: inline-block;
@@ -65,7 +64,7 @@ h1 {
 .num {
   margin: 0;
   font-size: 40px;
-  font-weight: 500;
+  font-weight: 300;
   color: white;
   animation: pulse 2s infinite;
 }
@@ -76,11 +75,11 @@ h1 {
 }
 .num-description {
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 300;
   margin-bottom: 0;
   color: white;
 }
-@media (max-width: 1250px) and (min-width: 1001px), (max-width: 850px) {
+@media (max-width: 800px) {
   .stat {
     width: 120px;
   }

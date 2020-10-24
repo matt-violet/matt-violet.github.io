@@ -7,7 +7,8 @@
         <button class="btn" v-on:click="$emit('scrollToSec', 'work')">My Work</button>
       </div>
     </div>
-    <img src="../assets/matt-violet.png" :class="this.$store.state.showHomeBtn ? 'top-img' : 'hidden-top-img'">
+    <img
+      src="../assets/matt-violet.png" :class="this.$store.state.showHomeBtn ? 'top-img' : 'hidden-top-img'">
   </div>
 </template>
 
@@ -29,7 +30,6 @@ export default {
   position: absolute;
 }
 .welcome, .hidden-welcome {
-  /* width: 450px; */
   position: absolute;
   top: 20%;
   left: 20%;
@@ -53,7 +53,7 @@ h2 {
   margin: -10px 0 0 0;
 }
 .btn {
-  background: coral;
+  background: var(--coral);
   color: white;
   box-shadow: 2px 4px 8px 0px rgb(107, 107, 107);
   margin: 15px 0 0 0;

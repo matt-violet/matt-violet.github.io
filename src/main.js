@@ -2,7 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import AOS from 'aos'
 import Vuex from 'vuex'
-import { aboutImgs, softwareProjects, designProjects } from '../data.js'
+import { softwareProjects, designProjects } from '../data.js'
 
 Vue.config.productionTip = false
 Vue.use(Vuex)
@@ -15,14 +15,14 @@ const store = new Vuex.Store({
     showSmallMenu: false,
     resumeLink: 'https://docs.google.com/document/d/1QNbQGA8xYZ_rY8bJt6Y7lT9yVWhXIu7WmLypJb6UrZU/edit?usp=sharing',
     index: 0,
-    aboutImgs,
     showProject: false,
     showHomeBtn: true,
     showFixedMenu: false,
     showSoftware: true,
-    showDesign: false,
-    softwareImg: require("../src/assets/icons/software.png"),
-    designImg: require("../src/assets/icons/design-white.png"),
+    softwareIconBlack: require("../src/assets/icons/software.png"),
+    softwareIconWhite: require("../src/assets/icons/software-white.png"),
+    designIconBlack: require("../src/assets/icons/design.png"),
+    designIconWhite: require("../src/assets/icons/design-white.png"),
   },
   mutations: {
     changeAboutImg(state, i) {
@@ -55,12 +55,13 @@ const store = new Vuex.Store({
           state.featuredProject = softwareProjects[softwareProjects.indexOf(currentProj) - 1];
       }
     },
-    exitToSoftware(state) {
+    exitToWork(state) {
       state.showProject = false;
-      console.log(state)
-      document.getElementById('work').scrollIntoView({ 
-        behavior: 'smooth'
-      });
+      setTimeout(() => {
+        document.getElementById('work').scrollIntoView({ 
+          behavior: 'smooth'
+        });
+      }, 100)
     }
   }
 })

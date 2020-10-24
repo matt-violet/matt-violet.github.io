@@ -1,15 +1,25 @@
 <template>
   <div id="design-work-details">
-    <div class="close-btn-div">
-      <img class="close-btn" src="../../../assets/icons/close.png" v-on:click="exitToDesign">
-    </div>
-    <p class="details">{{ project.details }}</p>
-    <div class="track">
-      <img class="left arrow" src="../../../assets/icons/left-arrow.png" v-on:click="$store.commit('showPreviousProject', project)">
-      <div class="img-div" data-aos="zoom-in">
-        <img class="img" v-for="(image, i) of project.images" :key="i" :src="image">
+    <div class="inner-content">
+      <div class="close-btn-div">
+        <img class="close-btn" src="../../../assets/icons/close.png" v-on:click="$store.commit('exitToWork')">
       </div>
-      <img class="right arrow" src="../../../assets/icons/right-arrow.png" v-on:click="$store.commit('showNextProject', project)">
+      <p class="details">{{ project.details }}</p>
+      <div class="track">
+        <img
+          class="left arrow"
+          src="../../../assets/icons/left-arrow.png"
+          v-on:click="$store.commit('showPreviousProject', project)"
+        >
+        <div class="img-div" data-aos="zoom-in">
+          <img class="img" v-for="(image, i) of project.images" :key="i" :src="image">
+        </div>
+        <img
+          class="right arrow"
+          src="../../../assets/icons/right-arrow.png"
+          v-on:click="$store.commit('showNextProject', project)"
+        >
+      </div>
     </div>
   </div>
 </template>
@@ -17,14 +27,8 @@
 <script>
 export default {
   name: 'DesignWorkDetails',
-  methods: {
-    exitToDesign() {
-      this.$store.state.showDesign = true;
-      this.$store.state.showProject = false;
-      document.getElementById('work').scrollIntoView({ 
-        behavior: 'smooth'
-      });
-    }
+  mounted() {
+    window.parent.scrollTo(0, 0);
   },
   computed: {
     project: function() {
@@ -39,8 +43,12 @@ export default {
   background: white;
   text-align: center;
   padding-bottom: 25px;
-  min-height: 100%;
   text-align: center;
+}
+.inner-content {
+  width: 100%;
+  max-width: 700px;
+  margin: auto;
 }
 .close-btn-div {
   text-align: left;
@@ -49,9 +57,9 @@ export default {
   padding: 10px;
   width: 25px;
   left: 0;
-  margin: 50px;
+  margin: 25px 0 25px 75px;
   border-radius: 5px;
-  background: var(--nav-grey);
+  background: var(--light-grey);
 }
 .close-btn:hover {
   cursor: pointer;
@@ -59,22 +67,25 @@ export default {
   box-shadow: 1px 2px 8px 0px grey;
 }
 .details {
+  max-width: 500px;
+  height: 50px;
   padding: 0 20px;
-  font-size: 20px;
-  font-weight: 700;
-  margin-top: 0;
+  font-size: 22px;
+  font-weight: 500;
+  margin: 0 auto 25px auto;
 }
 .track {
+  vertical-align: top;
   position: relative;
 }
 .arrow {
   width: 25px;
   padding: 10px;
   border-radius: 5px;
-  top: 200px;
+  margin-top: 150px;
   position: absolute;
   display: inline-block;
-  background: var(--nav-grey);
+  background: var(--light-grey);
 }
 .arrow:hover {
   cursor: pointer;
@@ -82,15 +93,13 @@ export default {
   transition: .3s;
 }
 .left {
-  transform: translateX(-75px); 
+  left: 0;
 }
 .right {
-  transform: translateX(35px);
+  right: 0;
 }
 .img-div {
-  width: 60%;
-  max-width: 600px;
-  margin: auto;
+  width: 80%;
   display: inline-block;
 }
 .img {
@@ -100,17 +109,35 @@ export default {
   -webkit-filter: drop-shadow(1px 2px 8px rgb(107, 107, 107));
   filter: drop-shadow(1px 2px 8px rgb(107, 107, 107));
 }
-@media (max-width: 1000px) {
-  #design-work-details {
-    margin: 0;
+@media (max-width: 740px) {
+  .inner-content {
+    width: calc(100% - 40px);
+    padding: 0 20px;
   }
-}
-@media (max-width: 650px) {
-  .arrow {
-    width: 30px;
+  .details {
+    max-width: 350px;
+    font-size: 16px;
+  }
+  .arrow, .close-btn {
+    width: 15px;
   }
   .close-btn {
-    margin: 10px;
+    margin-left: 50px;
+  }
+}
+@media (max-width: 500px) {
+  .details {
+    font-size: 12px;
+    height: 30px;
+  }
+  .arrow {
+    margin-top: 90px;
+  }
+  .img-div {
+    width: 70%;
+  }
+  .close-btn {
+    margin-left: 25px;
   }
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div id="work-details">
     <div class="inner-content">
-      <div class="close-btn-div" v-on:click="$store.commit('exitToSoftware')">
+      <div class="close-btn-div" v-on:click="$store.commit('exitToWork')">
         <img class="close-btn" src="../../../assets/icons/close.png">
       </div>
       <div class="track">
@@ -10,8 +10,8 @@
             class="video" 
             width="560px" 
             height="315px" 
-            :src="project.video" 
-            frameborder="0" 
+            :src="project.video"
+            frameborder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
             allowfullscreen
           >
@@ -75,8 +75,8 @@
 <script>
 export default {
   name: "SoftwareWorkDetails",
-  methods: {
-    
+  mounted() {
+    window.parent.scrollTo(0, 0);
   },
   computed: {
     project: function() {
@@ -91,7 +91,6 @@ export default {
   background: white;
   text-align: center;
   padding-bottom: 25px;
-  min-height: 100%;
 }
 .inner-content {
   width: 560px;
@@ -109,7 +108,7 @@ a {
   text-align: left;
 }
 .close-btn {
-  background: var(--nav-grey);
+  background: var(--light-grey);
   border-radius: 5px;
   margin: 30px 0;
   padding: 10px;
@@ -129,7 +128,7 @@ a {
   z-index: 1;
   padding: 10px;
   border-radius: 5px;
-  background: var(--nav-grey);
+  background: var(--light-grey);
  }
 .left {
   float: left;

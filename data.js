@@ -71,7 +71,7 @@ export const softwareProjects = [
     title: 'Segment Events',
     type: 'Internship Project',
     description: 'Data & OOP',
-    details: 'As an intern at Seasoned I took ownership of a sprint integrating a 3rd party library (Segment) to collect specific data about admin users and their actions as they navigate the onboarding flow. It involved locating relevant properties (such as user demographics or whether a user has performed a particular action on a given page), attaching them to a single object in the proper format, and including that object in an API call. The information I gathered is now used by the Data and Marketing teams to drive analytics, A/B testing, and automated marketing campaigns. This experience gave me a deeper understanding of object-oriented programming and features like ES6\'s destructuring and spread operator syntax. It also contributed to a 6% increase in daily active users in just a few weeks.',
+    details: 'As an intern I took ownership of a sprint integrating a 3rd party library (Segment) to collect specific data about admin users and their actions as they navigate the onboarding flow. It involved locating relevant properties (such as user demographics or whether a user has performed a particular action on a given page), attaching them to a single object in the proper format, and including that object in an API call. The information I gathered is now used by the Data and Marketing teams to drive analytics, A/B testing, and automated marketing campaigns. This experience gave me a deeper understanding of object-oriented programming and features like ES6\'s destructuring and spread operator syntax. It also contributed to a 6% increase in daily active users in just a few weeks.',
     stack: ['React', 'Segment Library'],
     github: '',
     image: require('./src/assets/projects/software/segment.png'),
@@ -86,7 +86,7 @@ export const softwareProjects = [
     title: 'Profile Components',
     type: 'Internship Project',
     description: 'Customer Support Tool',
-    details: 'As an intern at Seasoned I developed components for an internal Customer Support tool. The task gave me an opportunity to familiarize myself with two new programming languages as well as microservices architecture. I built things like stylized menus and profiles for admins, job seekers, and businesses. I also interacted with the Postgres database on the back end, implementing various CRUD operations with GraphQL. I had several key takeaways from this experience. First, it introduced me to a powerful front end framework, Vue, which I have now used for several projects (including the website you\'re looking at). It also introduced me to a new query language, GraphQL, which I really liked because it can significantly improve performance by delivering only the data that is explicitly requested and nothing more, in a single request, thereby lowering payloads and server stress. Accomplishing this task as an intern showed my ability to overcome the hurdle of learning new programming languages and deliver results.',
+    details: 'As an intern I developed components for an internal Customer Support tool. The task gave me an opportunity to familiarize myself with two new programming languages as well as microservices architecture. I built things like stylized menus and profiles for admins, job seekers, and businesses. I also interacted with the Postgres database on the back end, implementing various CRUD operations with GraphQL. I had several key takeaways from this experience. First, it introduced me to a powerful front end framework, Vue, which I have now used for several projects (including the website you\'re looking at). It also introduced me to a new query language, GraphQL, which I really liked because it can significantly improve performance by delivering only the data that is explicitly requested and nothing more, in a single request, thereby lowering payloads and server stress. Accomplishing this task as an intern showed my ability to overcome the hurdle of learning new programming languages and deliver results.',
     stack: ['Vue', 'Vuetify', 'GraphQL', 'PostgreSQL'],
     github: '',
     image: require('./src/assets/projects/software/profile.png'),
@@ -210,7 +210,7 @@ export const designProjects = [
       require('./src/assets/projects/design/HLTW-credit.jpg'),      
     ],
     description: 'Page Layouts',
-    details: 'Designed page layouts for the book "Hunter Leads the Way", 2017',
+    details: 'Designed page layouts for Robert Thompson\'s "Hunter Leads the Way", 2017',
     isDesignProject: true
   },
   {

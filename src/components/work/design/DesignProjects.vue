@@ -1,7 +1,13 @@
 <template>
   <div class="design-projects">
     <div class="project-row">
-      <div v-for="(project, i) in designProjects" :key="i" class="design-project" v-on:click="$store.commit('viewProjectDetails', project)">
+      <div
+        v-for="(project, i) in designProjects"
+        :key="i"
+        class="design-project"
+        v-on:click="$store.commit('viewProjectDetails', project)"
+        data-aos="zoom-in"  
+      >
         <div class="design-img-div">
           <img class="design-img" :src="project.images[0]">
         </div>
@@ -28,28 +34,28 @@ export default {
 .design-projects {
   text-align: center;
   margin: 0 75px;
-  background: linear-gradient(to bottom, steelblue, rgb(151, 199, 238));
 }
 .project-row {
   width: 825px;
-  padding: 50px 25px 0 25px;
+  padding: 25px 25px 0 25px;
   position: relative;
   margin: auto;
-  text-align: left;
+  text-align: center;
 }
 .design-project {
-  width: 250px;
-  height: 250px;
+  width: 225px;
+  height: 225px;
   box-shadow: 1px 2px 8px 0px rgb(37, 37, 37);
   border-radius: 5px;
   display: inline-block;
   margin: 0 25px 25px 0;
   overflow: hidden;
   background: white;
+  transition: .3s;
 }
 .design-img-div {
   width: 100%;
-  height: 195px;
+  height: 170px;
   overflow: hidden;
 }
 .design-img {
@@ -66,7 +72,7 @@ export default {
 .design-description {
   margin: 10px;
   padding-top: 5px;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 18px;
 }
 .design-project:hover {
@@ -113,11 +119,12 @@ export default {
 @media (max-width: 595px) {
   .project-row {
     width: 350px;
+    text-align: left;
   }
 }
 @media (max-width: 400px) {
   .project-row {
-    padding: 50px 10px 0 10px;
+    padding: 25px 10px 20px 10px;
   }
   .design-project {
     margin: 10px 0 0 10px;

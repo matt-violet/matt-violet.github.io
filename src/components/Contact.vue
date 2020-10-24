@@ -4,7 +4,7 @@
       <div class="header">
         <h1>Contact</h1>
       </div>
-      <p class="text">Looking for support with a project? Contact me to see how I can help you meet your goals.</p>
+      <p class="text">Need a developer? I'm currently open to new opportunities. Contact me today to see how I can help you reach your goals.</p>
       <div class="containers">
         <div class="container" v-on:click='handleLinkClick("mattviolet@gmail.com")'>
           <img class="icon" src="../assets/icons/email.png"/>
@@ -49,7 +49,7 @@ export default {
 
 <style scoped>
 #contact {
-  background: linear-gradient(to bottom, rgb(31, 75, 110), steelblue);
+  background: var(--dark-blue);
 }
 .header {
   width: 100%;
@@ -86,12 +86,13 @@ h1 {
   transition: .3s;
   padding: 50px 5px 30px 5px;
   border-radius: 5px;
-  background: var(--light-grey);
+  background: lightgrey;
   box-shadow: 1px 2px 8px 0px rgb(37, 37, 37);
 }
 .container:hover {
   background: white;
   cursor: pointer;
+  transition: .3s;
 }
 .container:hover .icon {
   height: 60px;
@@ -124,7 +125,7 @@ h1 {
   transition: .3s;
   margin: 0;
 }
-@media (max-width: 1250px) and (min-width: 1000px), (max-width: 900px) {
+@media (max-width: 900px) {
   .inner-content {
     padding: 75px 50px;
   }
@@ -141,16 +142,19 @@ h1 {
   }
 }
 @media (max-width: 700px) {
+  h1 {
+    margin-bottom: 25px;
+  }
+  .containers {
+    margin-top: 50px;
+  }
   .container {
     display: block;
     margin: 0px auto 50px auto;
     height: 70px;
   }
   .icon-text {
-    bottom: 0;
-    left: 0;
-    right: 0;
-    position: absolute;
+    margin-top: 35px;
   }
 }
 </style>

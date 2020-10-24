@@ -2,7 +2,7 @@
   <div id="experience">
     <Stats/>
     <div class="inner-content">
-      <div class="exp-group">
+      <div class="exp-group" data-aos="zoom-in">
         <img class="exp-icon" src="../../assets/icons/graduation.png">
         <div class="exp-header-div">
           <h2 class="exp-type-header">Academics</h2>
@@ -10,9 +10,9 @@
         <ul>
           <li><a href="https://www.hackreactor.com/" target="_blank">Hack Reactor</a>, 2019</li>        
           <ul>
-            <li>Advanced Software Engineering Immersive modeling today’s industry</li>
+            <li>Top tier Software Engineering Immersive (bootcamp) modeling today’s industry</li>
           </ul>
-          <li>Self study</li>
+          <li>Online learning</li>
           <ul>
             <li><a href="https://www.udemy.com/course/the-web-developer-bootcamp/" target="_blank">The Web Developer Bootcamp</a> (Udemy), 2019</li>
             <li><a href="https://www.udacity.com/course/intro-to-javascript--ud803" target="_blank">Intro to Javascript</a> (Udacity), 2018</li>
@@ -23,19 +23,19 @@
           </ul>
         </ul>
       </div>
-      <div class="exp-group">
+      <div class="exp-group" data-aos="zoom-in">
         <img class="exp-icon" src="../../assets/icons/suitcase.png">
         <div class="exp-header-div">
           <h2 class="exp-type-header">Career</h2>
         </div>
         <ul>
-          <li>Web Developer at a Hayward startup company, Webbull.co</li> 
-          <li>Software Engineer Intern at a San Francisco startup company, <a href="https://www.seasoned.co/" target="blank">Seasoned</a></li>
-          <li>Managed WordPress websites for 3 non-profit organizations, including Starr King School</li>
-          <li>5 years of graphic design experience in the non-profit world</li>
+          <li>Working as a Web Developer at a Hayward startup</li> 
+          <li>Worked as a Software Engineer Intern at a SF startup</li>
+          <li>Managed WordPress websites, SEO, and strategic communication for 3 non-profit organizations</li>
+          <li>5 years of graphic design experience in the non-profit world (custom graphics, flyers, banners, etc.)</li>
         </ul>
       </div>
-      <div class="exp-group">
+      <div class="exp-group" data-aos="zoom-in">
         <img class="exp-icon" src="../../assets/icons/achievement.png">
         <div class="exp-header-div">
           <h2 class="exp-type-header">Reputation</h2>
@@ -43,15 +43,15 @@
         <ul>
           <li>10 years of career advancement and meeting organizational objectives</li>
           <ul>
-            <li>Helped <strong>increase daily active users</strong> by 6% as an intern at Seasoned</li>       
-            <li><strong>Promoted to full-time</strong> after first year leading a new communications department at Starr King School</li>
+            <li>Helped <strong>increase daily active users</strong> by 6% as a Software Engineer Intern</li>       
+            <li><strong>Promoted to full-time</strong> after first year leading a new department at Starr King School</li>
             <li>Contributed to a <strong>59% fundraising increase</strong> and record student enrollment at Starr King School</li>
           </ul>
         </ul>
       </div>
       <div class="github-div">
-        <p>I'm an active <a href="https://github.com/matt-violet" target="_blank">GitHub</a> user, too:</p>
-        <img class="github-squares" src="../../assets/github-squares.png">
+        <p>I'm an active <a class="github-link" href="https://github.com/matt-violet" target="_blank">GitHub</a> user, too:</p>
+        <img class="github-squares" src="../../assets/github-squares.png" data-aos="zoom-in">
       </div>
     </div>
   </div>
@@ -69,7 +69,7 @@ export default {
 
 <style scoped>
 #experience {
-  background: var(--light-blue);
+  background: var(--dark-blue);
 }
 ul {
   transform: translateX(-10px);
@@ -79,11 +79,14 @@ li {
   font-size: 16px;
   margin-bottom: 10px;
 }
+p {
+  color: white;
+}
 .inner-content {
   text-align: center;
-  padding: 75px 0;
+  padding: 0 0 75px 0;
   max-width: 1200px;
-  margin: 15px auto 0 auto;
+  margin: 0 auto;
 }
 .exp-group {
   display: inline-block;
@@ -95,7 +98,8 @@ li {
   vertical-align: top;
   background: white;
   border-radius: 5px;
-  box-shadow: 1px 2px 8px 0px grey;
+  box-shadow: 1px 2px 8px 0px rgb(53, 53, 53);
+  transition: .3s;
 }
 .exp-icon {
   width: 50px;
@@ -112,7 +116,6 @@ li {
   margin: auto;
 }
 .github-div {
-  padding: 0 25px;
   margin-top: 75px;
 }
 .github-squares {
@@ -125,10 +128,13 @@ li {
 .github-text {
   position: absolute;
 }
+.github-link {
+  color: lightsalmon;
+}
 @media (max-width: 1200px) {
   .exp-group {
     width: 250px;
-    height: 400px;
+    height: 420px;
     padding: 30px 10px 25px 10px;
   }
   .exp-header-div {
@@ -138,13 +144,13 @@ li {
     font-size: 20px;
   }
   li {
-    font-size: 13px;
+    font-size: 14px;
   }
 }
 @media (max-width: 950px) {
   .exp-group {
     width: auto;
-    max-width: 450px;
+    max-width: 400px;
     height: auto;
     margin: 50px auto;
     padding: 50px 10px 25px 10px;

@@ -30,12 +30,11 @@ export default {
 #about {
   position: relative;
   text-align: right;
-  background: white;
 }
 h1 {
   font-size: 35px;
   font-weight: 900;
-  margin: 0 0 75px 0;
+  margin: 0 0 50px 0;
 }
 .img-block {
   display: none;
@@ -47,9 +46,11 @@ h1 {
 .left-text {
   text-align: left;
   width: 40%;
+  font-weight: 300;
   padding: 75px 0 0 75px;
   z-index: 2;
   position: absolute;
+  transition: .3s;
 }
 .img-div {
   max-width: 1300px;
@@ -77,14 +78,12 @@ h1 {
 }
 @media (max-width: 1200px) {
   .left-text {
+    width: 45%;
     padding: 50px 0 0 50px;
     font-size: 14px;
   }
   h1 {
     margin-bottom: 30px;
-  }
-  .left-text {
-    font-size: 14px;
   }
 }
 @media (max-width: 1000px) {
@@ -92,12 +91,19 @@ h1 {
     margin-bottom: 20px;
   }
   .left-text {
-    width: 50%;
+    width: 45%;
     padding: 25px;
     font-size: 13px;
   }
 }
-@media (max-width: 800px) {
+@media (max-width: 900px) {
+  h1 {
+    margin-bottom: 50px;
+  }
+  p {
+    max-width: 550px;
+    margin: 16px auto;
+  }
   .left-text {
     position: relative;
     font-size: 16px;
@@ -114,6 +120,9 @@ h1 {
   }
 }
 @media (max-width: 700px) {
+  h1 {
+    margin: 45px 0 50px 0;
+  }
   .left-text {
     padding: 30px 15px;
   }

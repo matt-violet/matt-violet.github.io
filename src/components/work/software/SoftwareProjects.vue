@@ -1,7 +1,12 @@
 <template>
   <div class="software-projects">
     <div class="project-row">
-      <div v-for="(project, i) in softwareProjects" :key="i" class="software-project" data-aos="zoom-in">
+      <div
+        v-for="(project, i) in softwareProjects"
+        :key="i"
+        class="software-project"
+        data-aos="zoom-in"
+      >
         <p class="type">{{ project.type }}</p>
         <div class="img-div">
           <img class="img" :src="project.image">
@@ -32,14 +37,15 @@ export default {
 <style scoped>
 .software-projects {
   margin: 0 75px;
-  background: var(--light-grey);
 }
 .project-row {
-  padding: 25px 50px 0 50px;
+  width: 825px;
+  padding: 25px 25px 0 25px;
+  margin: auto;
 }
 .software-project {
-  max-width: 30%;
-  min-height: 225px;
+  width: 225px;
+  height: 225px;
   box-shadow: 1px 2px 8px 0px grey;
   border-radius: 5px;
   display: inline-block;
@@ -47,6 +53,7 @@ export default {
   overflow: hidden;
   background: white;
   text-align: left;
+  transition: .3s;
 }
 .img-div {
   height: 150px;
@@ -69,7 +76,7 @@ export default {
   font-weight: 500;
   border-bottom-left-radius: 5px;
   color: white;
-  background: rgba(41, 41, 41, 0.5);
+  background: rgba(92, 92, 92, 0.8);
   margin: 0;
   right: 0;
   padding: 4px 8px;
@@ -86,23 +93,6 @@ export default {
   font-size: 14px;
   font-weight: 500;
   color: grey;
-}
-.stack-header {
-  font-size: 16px;
-  font-weight: 400;
-  color: grey;
-  display: inline-block;
-  margin: 20px 5px 0 0;
-}
-.stack {
-  font-size: 11px;
-  font-weight: 500;
-  padding: 3px 8px;
-  background: coral;
-  color: white;
-  border-radius: 20px;
-  margin: 2px;
-  display: inline-block;
 }
 .btn-div {
   text-align: center;
@@ -121,7 +111,7 @@ export default {
 }
 /* ---------------------- HOVER EFFECTS ---------------------- */
 .software-project:hover .img-div {
-  height: 100px;
+  height: 95px;
 }
 .software-project:hover .btn-div {
   border-top: 1px solid lightgrey;
@@ -139,8 +129,11 @@ export default {
   transition: .3s;
   cursor: pointer;
 }
-/* ---------------------- SOFTWARE PROJECTS MEDIA QUERY ---------------------- */
-@media (max-width: 1000px) and (min-width: 860px) {
+/* ---------------------- MEDIA QUERY ---------------------- */
+@media (max-width: 1000px) and (min-width: 861px) {
+  .software-project:hover .img-div {
+    height: 80px;
+  }
   .project-row {
     width: 675px;
   }
@@ -149,38 +142,13 @@ export default {
     height: 200px;
   }
   .img-div {
-    width: 200px;
+    height: 135px;
   }
   .title {
-    margin: 5px 0 0 0;
-    font-size: 16px;
-    font-weight: 700;
+    font-size: 18px;
   }
   .description {
     font-size: 12px;
-  }
-  .stack-header {
-    font-size: 11px;
-    font-weight: 700;
-    margin: 5px 5px 0 0;
-  }
-  .stack {
-    font-size: 10px;
-    font-weight: 600;
-    padding: 3px 8px;
-  }
-  .btn-div {
-    width: 170px;
-    bottom: 10px;
-  }
-  .details-btn {
-    font-size: 12px;
-    font-weight: 600;
-    padding: 4px 8px;
-  }
-  .software-project:hover .text-div {
-    height: 200px;
-    width: 170px;
   }
 }
 @media (max-width: 860px) {
@@ -192,43 +160,36 @@ export default {
     height: 150px;
   }
   .img-div {
-    width: 150px;
+    height: 105px;
   }
   .title {
-    margin: 0;
-    font-size: 12px;
-    font-weight: 700;
+    margin: 5px 0 0 0;
+    font-size: 14px;
   }
   .description {
-    font-size: 10px;
-    margin-top: 0;
+    font-size: 11px;
     line-height: 1.2;
   }
   .text-div {
     padding: 0 10px;
   }
-  .stack, .stack-header {
-    width: 0;
-    height: 0;
-    visibility: hidden;
-  }
-  .software-project:hover .text-div {
-    height: 150px;
-    width: 130px;
+  .software-project:hover .img-div {
+    height: 60px;
   }
   .btn-div {
-    width: 130px;
-    bottom: 10px;
+    margin-top: 5px !important;
+    padding: 0;
   }
   .details-btn {
-    font-size: 11px;
     font-weight: 600;
-    padding: 4px 8px;
+    padding: 5px !important;
+    font-size: 14px;
   }
 }
 @media (max-width: 590px) {
   .project-row {
     width: 350px;
+    padding: 25px 10px 20px 10px;
   }
 }
 @media (max-width: 375px) {

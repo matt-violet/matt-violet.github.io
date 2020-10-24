@@ -1,7 +1,7 @@
 <template>
   <div class="skill-icons-container">
     <div class="inner-content">
-      <div class="col">
+      <div class="col" data-aos="zoom-in">
         <div class="inner-skill">
           <h2 class="skills-header">Front End</h2>
           <div class="row"
@@ -14,7 +14,7 @@
           </div>
         </div>
       </div>
-      <div class="col">
+      <div class="col" data-aos="zoom-in">
         <div class="inner-skill">
           <h2 class="skills-header">Back End</h2>
           <div class="row"
@@ -27,7 +27,7 @@
           </div>
         </div>
       </div>
-      <div class="col">
+      <div class="col" data-aos="zoom-in">
         <div class="inner-skill">
           <h2 class="skills-header">Additional</h2>
           <div class="row"
@@ -57,17 +57,11 @@ export default {
 </script>
 
 <style scoped>
-.skill-icons-container {
-  /* background: white; */
-  /* background: var(--light-blue); */
-  /* background: rgb(255, 159, 123); */
-}
 .inner-content {
   max-width: 900px;
   margin: 50px auto 0 auto;
   text-align: center;
   transition: .3s;
-  /* padding: 0; */
 }
 h3 {
   font-size: 30px;
