@@ -118,6 +118,7 @@ h2 {
     font-size: 50px;
   }
   h2 {
+    margin-top: 5px;
     font-size: 25px;
   }
   .top-img, .hidden-top-img {

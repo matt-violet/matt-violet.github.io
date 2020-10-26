@@ -105,6 +105,7 @@ h3 {
   color: var(--body-text);
 }
 .skills-header {
+  color: steelblue;
   font-size: 26px;
   font-weight: 400;
   margin: 0 0 30px 0;

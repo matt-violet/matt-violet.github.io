@@ -8,6 +8,10 @@
           <h2 class="exp-type-header">Academics</h2>
         </div>
         <ul>
+          <li>University of California, Davis, 2010</li>
+          <ul>
+            <li>B.A. in Communication</li>
+          </ul>
           <li><a href="https://www.hackreactor.com/" target="_blank">Hack Reactor</a>, 2019</li>        
           <ul>
             <li>Top tier Software Engineering Immersive (bootcamp) modeling today’s industry</li>
@@ -17,10 +21,6 @@
             <li><a href="https://www.udemy.com/course/the-web-developer-bootcamp/" target="_blank">The Web Developer Bootcamp</a> (Udemy), 2019</li>
             <li><a href="https://www.udacity.com/course/intro-to-javascript--ud803" target="_blank">Intro to Javascript</a> (Udacity), 2018</li>
           </ul>
-          <li>University of California, Davis, 2010</li>
-          <ul>
-            <li>B.A. in Communication</li>
-          </ul>
         </ul>
       </div>
       <div class="exp-group" data-aos="zoom-in">
@@ -29,8 +29,8 @@
           <h2 class="exp-type-header">Career</h2>
         </div>
         <ul>
-          <li>Working as a Web Developer at a Hayward startup</li> 
-          <li>Worked as a Software Engineer Intern at a SF startup</li>
+          <li>Currently working as a Web Developer at a startup web agency</li> 
+          <li>Worked as a Software Engineer Intern at a startup company</li>
           <li>Managed WordPress websites, SEO, and strategic communication for 3 non-profit organizations</li>
           <li>5 years of graphic design experience in the non-profit world (custom graphics, flyers, banners, etc.)</li>
         </ul>
@@ -50,7 +50,7 @@
         </ul>
       </div>
       <div class="github-div">
-        <p>I'm an active <a class="github-link" href="https://github.com/matt-violet" target="_blank">GitHub</a> user, too:</p>
+        <p>My experience includes industry-standard tools and methodologies like Agile, Jira, Git, and <a class="github-link" href="https://github.com/matt-violet" target="_blank">GitHub</a>.</p>
         <img class="github-squares" src="../../assets/github-squares.png" data-aos="zoom-in">
       </div>
     </div>

@@ -6,9 +6,9 @@
         <h1>About</h1>
       </div>
       <p>I'm a converted software engineer with professional roots in non-profit communications.</p>
-      <p>Over the last couple years I've transformed my career, leaving the comfort of my non-profit role in pursuit of a technical skill set, immersing myself in a rigorous coding bootcamp, and landing an internship at a startup company. In the process I've done increasingly complex <a v-on:click="$emit('scrollToSec', 'work')">work</a>, shipped my own code, and gained proficiency with industry-standard technologies (React, Vue, Node), workflows (Agile, Jira, Git), and best practices.</p>
-      <p>Although my career has shifted, my heart is still in everything I do. My interest in programming comes from my experience using electronic medical devices (AKA my "<a href='https://drive.google.com/file/d/1D8tp35PoCCbMzuWLTPHFI5oGN7nFhIQ1/view?usp=sharing' target='_blank'>artificial pancreas</a>") as a type one diabetic. Since my health became linked to algorithms, I've invested myself in learning how these life-changing devices work and building apps with the potential to help others.</p>
-      <p>Away from the keyboard I enjoy hiking, making music, and watching sports in my hometown of Oakland, CA.</p>
+      <p>Over the last few years I've transformed my career, leaving the comfort of my non-profit role in pursuit of a technical skill set. I immersed myself in a rigorous coding bootcamp, landed an internship at a startup company, and grew into a full stack developer role at a web agency. In the process I've done increasingly complex <a v-on:click="$emit('scrollToSec', 'work')">work</a>, shipped quality code regularly, and gained proficiency with industry-standard technologies (React, Vue, Node), workflows (Agile, Jira, Git), and best practices.</p>
+      <p>Although my career has shifted, I still love what I do. My interest in programming comes from my experience using electronic medical devices (AKA my "<a href='https://drive.google.com/file/d/1D8tp35PoCCbMzuWLTPHFI5oGN7nFhIQ1/view?usp=sharing' target='_blank'>artificial pancreas</a>") as a type one diabetic. Since my health became linked to algorithms, I've invested myself in learning how these life-changing devices work and building apps with the potential to help others.</p>
+      <p>Away from the keyboard I enjoy barbecuing, making music, and watching sports in my hometown of Oakland, CA.</p>
     </div>
     <div class="img-div">
       <div class="gradient"/>

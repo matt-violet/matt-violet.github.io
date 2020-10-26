@@ -104,11 +104,9 @@ a:hover {
 .home-div {
   width: 100%;
   height: 70%;
+  z-index: 0;
   overflow: hidden;
   position: relative;
-}
-.home-div-absolute {
-  position: absolute;
 }
 .bg-div {
   width: 100%;

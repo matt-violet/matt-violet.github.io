@@ -4,7 +4,7 @@
       <h3>Services</h3>
       <div class="intro-text">
         <p>I am a <strong>full-stack software engineer</strong> with <strong>3 years of experience.</strong></p>
-        <p>My favorite tools for coding are <strong>React</strong> and <strong>Vue</strong>, however I have developed, maintained, and launched multiple projects from scratch using the frameworks, libraries, and technologies below.</p>
+        <p>I specialize in building user interfaces with <strong>React</strong> and <strong>Vue</strong>, however I have developed, maintained, and launched multiple full stack applications from scratch using the frameworks, libraries, and technologies below.</p>
         <p>In addition to building software, I design <strong>graphics and layouts</strong> with tools like <strong>Sketchable</strong> and <strong>Adobe Creative Suite.</strong></p> 
       </div>
       <SkillIcons/>      

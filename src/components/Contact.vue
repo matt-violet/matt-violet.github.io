@@ -7,21 +7,21 @@
       <p class="text">Need a developer? I'm currently open to new opportunities. Contact me today to see how I can help you reach your goals.</p>
       <div class="containers">
         <div class="container" v-on:click='handleLinkClick("mattviolet@gmail.com")'>
-          <img class="icon" src="../assets/icons/email.png"/>
+          <img class="icon" src="../assets/icons/email-white.png"/>
           <div class="icon-text">
             <h4 class="link-header">Email</h4>
             <p class="link-text">mattviolet@gmail.com</p>
           </div>
         </div>
         <div class="container" v-on:click='handleLinkClick("https://github.com/matt-violet")'>
-          <img class="icon" src="../assets/icons/github.png"/>
+          <img class="icon" src="../assets/icons/github-white.png"/>
           <div class="icon-text">
             <h4 class="link-header">GitHub</h4>
             <p class="link-text">github.com/matt-violet</p>
           </div>
         </div>
         <div class="container" v-on:click='handleLinkClick("https://www.linkedin.com/in/mattviolet")'>
-          <img class="icon" src="../assets/icons/linkedin.png"/>
+          <img class="icon" src="../assets/icons/linkedin-white.png"/>
           <div class="icon-text">
             <h4 class="link-header">LinkedIn</h4>
             <p class="link-text">linkedin.com/in/mattviolet</p>
@@ -86,11 +86,8 @@ h1 {
   transition: .3s;
   padding: 50px 5px 30px 5px;
   border-radius: 5px;
-  background: lightgrey;
-  box-shadow: 1px 2px 8px 0px rgb(37, 37, 37);
 }
 .container:hover {
-  background: white;
   cursor: pointer;
   transition: .3s;
 }
@@ -118,12 +115,14 @@ h1 {
   font-size: 20px;
   font-weight: 400;
   transition: .3s;
+  color: white;
 }
 .link-text {
   font-size: 12px;
   font-weight: 400;
   transition: .3s;
   margin: 0;
+  color: white;
 }
 @media (max-width: 900px) {
   .inner-content {

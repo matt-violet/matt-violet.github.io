@@ -127,7 +127,8 @@ export default {
 }
 @media (max-width: 500px) {
   .details {
-    font-size: 12px;
+    width: 300px;
+    font-size: 14px;
     height: 30px;
   }
   .arrow {

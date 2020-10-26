@@ -76,7 +76,7 @@ h1 {
   display: inline-block;
   position: relative;
   vertical-align: top;
-  margin: 0 0 20px 0;
+  margin: 0 0 50px 0;
 }
 .selected {
   background: coral;
