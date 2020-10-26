@@ -128,7 +128,8 @@ h3 {
 }
 @media (max-width: 600px) {
   .col {
-    width: 190px;
+    width: 220px;
+    padding: 30px 10px;
     margin: 50px auto 0 auto;
     display: block;
   }
@@ -140,12 +141,13 @@ h3 {
     margin-bottom: 25px;
   }
   .skills-header {
+    font-size: 26px;
     margin-top: 0;
     margin-bottom: 20px;
   }
   .name {
     top: 3px;
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 </style>

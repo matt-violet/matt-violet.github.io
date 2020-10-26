@@ -91,8 +91,11 @@ h1 {
   }
 }
 @media (max-width: 639px) {
+  h1 {
+    padding: 0 0 50px 0;
+  }
   .stats-div {
-    padding: 50px 0;
+    padding: 75px 0 0 0;
   }
   .second-stats {
     padding-top: 35px;

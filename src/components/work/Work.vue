@@ -56,7 +56,7 @@ export default {
 
 <style scoped>
 #work {
-  background: var(--light-grey);
+  background: rgb(220, 238, 255);
 }
 .header {
   text-align: center;
@@ -79,11 +79,12 @@ h1 {
   margin: 0 0 50px 0;
 }
 .selected {
-  background: coral;
+  background: var(--coral);
   color: white;
 }
 .unselected {
   color: coral;
+  background: rgba(255, 255, 255, 0.5);
 }
 .unselected:hover {
   background: white;
@@ -97,10 +98,9 @@ h1 {
   border-bottom-right-radius: 5px;
 }
 .software-projects-btn, .design-projects-btn {
-  border: 2px solid coral;
-  width: 100px;
+  width: 110px;
   text-align: left;
-  padding: 5px 10px;
+  padding: 10px 20px;
   margin: auto;
   transition: .3s;
 }
@@ -145,12 +145,16 @@ h1 {
 }
 @media (max-width: 700px) {
   .inner-content, h1 {
-    padding: 30px 15px;
+    padding: 0 15px 20px 15px;
+  }
+  h1 {
+    margin: 0;
+    padding: 75px 0 50px 0;
   }
 }
 @media (max-width: 425px) {
   .software-projects-btn, .design-projects-btn {
-    width: 100px;
+    padding: 10px;
   }
   .section-title {
     font-size: 16px;

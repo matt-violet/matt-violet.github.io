@@ -45,7 +45,7 @@ export default {
 .design-project {
   width: 225px;
   height: 225px;
-  box-shadow: 1px 2px 8px 0px rgb(37, 37, 37);
+  box-shadow: 1px 2px 8px 0px grey;
   border-radius: 5px;
   display: inline-block;
   margin: 0 25px 25px 0;

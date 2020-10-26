@@ -39,8 +39,8 @@ h3 {
   margin: auto;
 }
 .intro-text {
-  margin: 75px auto 25px auto;
-  padding: 0 40px;
+  margin: 50px auto 25px auto;
+  padding: 0 20px;
   text-align: left;
   max-width: 700px;
 }

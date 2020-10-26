@@ -68,7 +68,7 @@ h1 {
 }
 .text {
   color: white;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   margin: 0 auto;
   max-width: 600px;
@@ -142,7 +142,8 @@ h1 {
 }
 @media (max-width: 700px) {
   h1 {
-    margin-bottom: 25px;
+    padding: 0;
+    margin: 45px 0 50px 0;
   }
   .containers {
     margin-top: 50px;

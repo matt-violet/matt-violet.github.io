@@ -121,7 +121,7 @@ h1 {
 }
 @media (max-width: 700px) {
   h1 {
-    margin: 45px 0 50px 0;
+    margin: 45px 0 34px 0;
   }
   .left-text {
     padding: 30px 15px;

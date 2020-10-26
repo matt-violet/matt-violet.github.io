@@ -85,7 +85,7 @@ p {
 .inner-content {
   text-align: center;
   padding: 0 0 75px 0;
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
 }
 .exp-group {
@@ -93,10 +93,10 @@ p {
   text-align: left;
   width: 335px;
   height: 440px;
-  margin: 0 20px;
+  margin: 0 30px;
   padding: 50px 10px 25px 10px;
   vertical-align: top;
-  background: white;
+  background: var(--light-grey);
   border-radius: 5px;
   box-shadow: 1px 2px 8px 0px rgb(53, 53, 53);
   transition: .3s;
@@ -122,8 +122,8 @@ p {
   max-width: 550px;
   text-align: center;
   margin: 50px auto 0 auto;
-  box-shadow: 1px 2px 8px 0px grey;
   width: 100%;
+  box-shadow: 1px 2px 8px 0px rgb(53, 53, 53);
 }
 .github-text {
   position: absolute;
@@ -131,10 +131,11 @@ p {
 .github-link {
   color: lightsalmon;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1250px) {
   .exp-group {
     width: 250px;
     height: 420px;
+    margin: 0 20px;
     padding: 30px 10px 25px 10px;
   }
   .exp-header-div {
@@ -168,7 +169,7 @@ p {
 }
 @media (max-width: 700px) {
   .inner-content, h1 {
-    padding: 25px 30px 50px 30px;
+    padding: 25px 20px 50px 20px;
   }
 }
 </style>
