@@ -9,6 +9,7 @@
       >
         <p class="type">{{ project.type }}</p>
         <div class="img-div">
+          <div class="filter"/>
           <img class="img" :src="project.image">
         </div>
         <div class="text-div">
@@ -16,7 +17,12 @@
           <p class="description">{{ project.description }}</p>
         </div>
         <div class="btn-div">
-          <button class="details-btn" v-on:click="$store.commit('viewProjectDetails', project)">Details</button>
+          <button
+            class="details-btn"
+            v-on:click="$store.commit('viewProjectDetails', project)"
+          >
+            Details
+          </button>
         </div>
       </div>
     </div>
@@ -37,6 +43,13 @@ export default {
 <style scoped>
 .software-projects {
   margin: 0 75px;
+}
+.filter {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0), rgb(54, 54, 54, .8));
+  width: 100%;
+  height: 95px;
+  z-index: 0;
+  position: absolute;
 }
 .project-row {
   width: 825px;
@@ -74,12 +87,11 @@ export default {
 .type {
   font-size: 12px;
   font-weight: 500;
-  border-bottom-left-radius: 5px;
   color: white;
-  background: rgba(92, 92, 92, 0.8);
   margin: 0;
   right: 0;
-  padding: 4px 8px;
+  padding: 8px 12px;
+  z-index: 1;
   position: absolute;
 }
 .title {
@@ -141,7 +153,7 @@ export default {
     width: 200px;
     height: 200px;
   }
-  .img-div {
+  .img-div, .filter {
     height: 135px;
   }
   .title {
@@ -159,7 +171,7 @@ export default {
     width: 150px;
     height: 150px;
   }
-  .img-div {
+  .img-div, .filter {
     height: 105px;
   }
   .title {

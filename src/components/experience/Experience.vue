@@ -29,10 +29,10 @@
           <h2 class="exp-type-header">Career</h2>
         </div>
         <ul>
-          <li>Currently working as a Web Developer at a startup web agency</li> 
-          <li>Worked as a Software Engineer Intern at a startup company</li>
-          <li>Managed WordPress websites, SEO, and strategic communication for 3 non-profit organizations</li>
-          <li>5 years of graphic design experience in the non-profit world (custom graphics, flyers, banners, etc.)</li>
+          <li>Currently working as a <strong>Web Developer</strong> at a startup web agency</li> 
+          <li>Worked as a <strong>Software Engineer Intern</strong> at a startup company</li>
+          <li>Managed <strong>WordPress</strong> websites, <strong>SEO</strong>, and strategic communication for 3 non-profit organizations</li>
+          <li>5 years of <strong>graphic design</strong> experience in the non-profit world (custom graphics, flyers, banners, etc.)</li>
         </ul>
       </div>
       <div class="exp-group" data-aos="zoom-in">
@@ -112,7 +112,7 @@ p {
 }
 .exp-type-header {
   font-weight: 400;
-  font-size: 25px;
+  font-size: 28px;
   margin: auto;
 }
 .github-div {
@@ -142,7 +142,7 @@ p {
     margin: 10px auto 30px auto;
   }
   .exp-type-header {
-    font-size: 20px;
+    font-size: 24px;
   }
   li {
     font-size: 14px;
@@ -161,7 +161,7 @@ p {
     margin: 10px auto 50px auto;
   }
   .exp-type-header {
-    font-size: 25px;
+    font-size: 28px;
   }
   li {
     font-size: 16px;

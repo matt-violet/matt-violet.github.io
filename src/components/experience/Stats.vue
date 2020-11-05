@@ -10,17 +10,17 @@
       </div>
       <div class="stat">
         <p class="num">2</p>
-        <p class="num-description">professional developer roles worked</p>          
+        <p class="num-description">developer roles worked</p>          
       </div>
     </div>
     <div class="second-stats">
       <div class="stat">
         <p class="num">1,000+</p>
-        <p class="num-description">hours of Computer Science curriculum</p>
+        <p class="num-description">hours of advanced CS curriculum</p>
       </div>
       <div class="stat">
         <p class="num">5</p>
-        <p class="num-description">years of graphic design</p>
+        <p class="num-description">years of graphic design experience</p>
       </div>
     </div>
   </div>

@@ -5,10 +5,10 @@
       <div class="header">
         <h1>About</h1>
       </div>
-      <p>I'm a converted software engineer with professional roots in non-profit communications.</p>
-      <p>Over the last few years I've transformed my career, leaving the comfort of my non-profit role in pursuit of a technical skill set. I immersed myself in a rigorous coding bootcamp, landed an internship at a startup company, and grew into a full stack developer role at a web agency. In the process I've done increasingly complex <a v-on:click="$emit('scrollToSec', 'work')">work</a>, shipped quality code regularly, and gained proficiency with industry-standard technologies (React, Vue, Node), workflows (Agile, Jira, Git), and best practices.</p>
-      <p>Although my career has shifted, I still love what I do. My interest in programming comes from my experience using electronic medical devices (AKA my "<a href='https://drive.google.com/file/d/1D8tp35PoCCbMzuWLTPHFI5oGN7nFhIQ1/view?usp=sharing' target='_blank'>artificial pancreas</a>") as a type one diabetic. Since my health became linked to algorithms, I've invested myself in learning how these life-changing devices work and building apps with the potential to help others.</p>
-      <p>Away from the keyboard I enjoy barbecuing, making music, and watching sports in my hometown of Oakland, CA.</p>
+      <p>I'm a software engineer with professional roots in non-profit communications.</p>
+      <p>I've recently transformed my career, leaving the comfort of my non-profit role in pursuit of a technical skill set. I immersed myself in a rigorous coding bootcamp, landed an internship at a startup company, and grew into a full stack developer role at a web agency. In the process I've produced increasingly complex <a v-on:click="$emit('scrollToSec', 'work')">work</a> and learned industry-standard technologies (React, Vue, Node), workflows (Agile, Jira, Git), and best practices.</p>
+      <p>Although my career has shifted, I'm still loving what I do. My interest in programming comes from using electronic medical devices (AKA my "<a href='https://drive.google.com/file/d/1D8tp35PoCCbMzuWLTPHFI5oGN7nFhIQ1/view?usp=sharing' target='_blank'>artificial pancreas</a>") as a type one diabetic. Since my health became linked to algorithms, I've invested myself in learning how these life-changing devices work and building apps with the potential to help others.</p>
+      <p>Away from the keyboard I like barbecuing, making music, and watching sports in my hometown of Oakland, CA.</p>
     </div>
     <div class="img-div">
       <div class="gradient"/>
@@ -70,15 +70,15 @@ h1 {
   position: absolute;
   background: linear-gradient(to right, white, rgba(0, 0, 0, 0) 66%);
 }
-@media (min-width: 1400px) {
+@media (min-width: 1500px) {
   .left-text {
     padding: 75px 0 0 12%;
     max-width: 600px;
   }
 }
-@media (max-width: 1200px) {
+@media (max-width: 1250px) {
   .left-text {
-    width: 45%;
+    width: 40%;
     padding: 50px 0 0 50px;
     font-size: 14px;
   }

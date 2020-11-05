@@ -3,7 +3,9 @@
     <div class="inner-content">
       <div class="col" data-aos="zoom-in">
         <div class="inner-skill">
-          <h2 class="skills-header">Front End</h2>
+          <h2 class="skills-header">
+            Front End
+          </h2>
           <div class="row"
             v-for ="(skill, i) of skills.frontend"
             :class="i === 3 ? 'first-div-new-row' : ''"
@@ -16,7 +18,9 @@
       </div>
       <div class="col" data-aos="zoom-in">
         <div class="inner-skill">
-          <h2 class="skills-header">Back End</h2>
+          <h2 class="skills-header">
+            Back End
+          </h2>
           <div class="row"
             v-for ="(skill, i) of skills.backend"
             :class="i === 3 ? 'first-div-new-row' : ''"
@@ -29,7 +33,9 @@
       </div>
       <div class="col" data-aos="zoom-in">
         <div class="inner-skill">
-          <h2 class="skills-header">Additional</h2>
+          <h2 class="skills-header">
+            Additional
+          </h2>
           <div class="row"
             v-for ="(skill, i) of skills.additional"
             :class="i === 3 ? 'first-div-new-row' : ''"
@@ -63,11 +69,6 @@ export default {
   text-align: center;
   transition: .3s;
 }
-h3 {
-  font-size: 30px;
-  font-weight: 400;
-  margin: 0 auto 50px auto;
-}
 .col {
   width: 190px;
   border-radius: 5px;
@@ -82,7 +83,7 @@ h3 {
   margin: auto;
   padding: 10px 0;
   max-width: 150px;
-  text-align: left;
+  text-align: center;
 }
 .row {
   margin: 0 0 10px 0;
@@ -106,7 +107,7 @@ h3 {
 }
 .skills-header {
   color: steelblue;
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 400;
   margin: 0 0 30px 0;
 }
@@ -124,6 +125,7 @@ h3 {
   }
   .name {
     font-size: 14px;
+    top: 2px;
   }
 }
 @media (max-width: 600px) {
@@ -137,11 +139,8 @@ h3 {
     height: 25px;
     margin-bottom: 8px;
   }
-  h3 {
-    margin-bottom: 25px;
-  }
   .skills-header {
-    font-size: 26px;
+    font-size: 24px;
     margin-top: 0;
     margin-bottom: 20px;
   }
