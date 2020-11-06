@@ -45,7 +45,7 @@ export default {
   margin: 0 75px;
 }
 .filter {
-  background: linear-gradient(to top, rgba(0, 0, 0, 0), rgb(54, 54, 54, .8));
+  background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(75, 75, 75, 0.6));
   width: 100%;
   height: 95px;
   z-index: 0;
@@ -146,6 +146,9 @@ export default {
   .software-project:hover .img-div {
     height: 80px;
   }
+  .filter {
+    height: 80px;
+  }
   .project-row {
     width: 675px;
   }
@@ -153,7 +156,7 @@ export default {
     width: 200px;
     height: 200px;
   }
-  .img-div, .filter {
+  .img-div {
     height: 135px;
   }
   .title {
@@ -171,7 +174,7 @@ export default {
     width: 150px;
     height: 150px;
   }
-  .img-div, .filter {
+  .img-div {
     height: 105px;
   }
   .title {
@@ -187,6 +190,12 @@ export default {
   }
   .software-project:hover .img-div {
     height: 60px;
+  }
+  .filter {
+    height: 60px;
+  }
+  .type {
+    font-size: 10px;
   }
   .btn-div {
     margin-top: 5px !important;

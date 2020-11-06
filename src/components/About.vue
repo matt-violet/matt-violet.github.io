@@ -6,7 +6,7 @@
         <h1>About</h1>
       </div>
       <p>I'm a software engineer with professional roots in non-profit communications.</p>
-      <p>I've recently transformed my career, leaving the comfort of my non-profit role in pursuit of a technical skill set. I immersed myself in a rigorous coding bootcamp, landed an internship at a startup company, and grew into a full stack developer role at a web agency. In the process I've produced increasingly complex <a v-on:click="$emit('scrollToSec', 'work')">work</a> and learned industry-standard technologies (React, Vue, Node), workflows (Agile, Jira, Git), and best practices.</p>
+      <p>I chose to transform my career, leaving the comfort of my non-profit role in pursuit of a technical skill set. I immersed myself in a rigorous coding bootcamp, landed an internship at a startup company, and grew into a full stack developer role at a web agency. In the process I've produced increasingly complex <a v-on:click="$emit('scrollToSec', 'work')">work</a> and learned industry-standard technologies (React, Vue, Node), workflows (Agile, Jira, Git), and best practices.</p>
       <p>Although my career has shifted, I'm still loving what I do. My interest in programming comes from using electronic medical devices (AKA my "<a href='https://drive.google.com/file/d/1D8tp35PoCCbMzuWLTPHFI5oGN7nFhIQ1/view?usp=sharing' target='_blank'>artificial pancreas</a>") as a type one diabetic. Since my health became linked to algorithms, I've invested myself in learning how these life-changing devices work and building apps with the potential to help others.</p>
       <p>Away from the keyboard I like barbecuing, making music, and watching sports in my hometown of Oakland, CA.</p>
     </div>
