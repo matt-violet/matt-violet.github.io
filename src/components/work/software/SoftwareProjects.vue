@@ -7,8 +7,8 @@
         class="software-project"
         data-aos="zoom-in"
       >
-        <p class="type">{{ project.type }}</p>
         <div class="img-div">
+          <p class="type">{{ project.type }}</p>
           <div class="filter"/>
           <img class="img" :src="project.image">
         </div>
@@ -90,7 +90,9 @@ export default {
   color: white;
   margin: 0;
   right: 0;
-  padding: 8px 12px;
+  background: steelblue;
+  border-bottom-left-radius: 5px;
+  padding: 5px 8px;
   z-index: 1;
   position: absolute;
 }

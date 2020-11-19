@@ -102,8 +102,8 @@ export default {
   to { transform: translateY(0); }
 }
 .link {
-  margin: 0;
-  padding: 20px;
+  margin: 10px;
+  padding: 10px;
   font-weight: 700;
   font-size: 14px;
   color: white;
@@ -122,7 +122,7 @@ export default {
   cursor: pointer;
 }
 .link:hover {
-  color: lightcoral;
+  transform: scale(1.15);
   transition: .3s;
 }
 /* --------------------------- MEDIA QUERY --------------------------- */
