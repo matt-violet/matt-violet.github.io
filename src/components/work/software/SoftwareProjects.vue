@@ -9,7 +9,7 @@
       >
         <div class="img-div">
           <p class="type">{{ project.type }}</p>
-          <div class="filter"/>
+          <!-- <div class="filter"/> -->
           <img class="img" :src="project.image">
         </div>
         <div class="text-div">
@@ -138,7 +138,7 @@ export default {
   position: absolute;
 }
 .details-btn:hover {
-  background: coral;
+  background: var(--coral);
   color: white;
   transition: .3s;
   cursor: pointer;
