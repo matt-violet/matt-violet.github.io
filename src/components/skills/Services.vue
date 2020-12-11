@@ -7,8 +7,8 @@
         <p>I specialize in building user interfaces with <strong>React</strong> and <strong>Vue</strong>, however I have developed, maintained, and launched multiple full stack applications from scratch using the frameworks, libraries, and technologies below.</p>
         <p>In addition to building software, I design <strong>graphics and layouts</strong> with tools like <strong>Sketchable</strong> and <strong>Adobe Creative Suite.</strong></p> 
       </div>
-      <SkillIcons/>      
     </div>
+    <SkillIcons/>      
   </div>
 </template>
 
@@ -25,6 +25,7 @@ export default {
 <style scoped>
 #services {
   background: var(--light-grey);
+  padding-bottom: 75px;
 }
 h3 {
   text-align: center;

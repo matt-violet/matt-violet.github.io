@@ -47,6 +47,7 @@ h1 {
   margin: 0;
 }
 h2 {
+  font-family: cursive;
   color: white;
   font-size: 35px;
   font-weight: 300;

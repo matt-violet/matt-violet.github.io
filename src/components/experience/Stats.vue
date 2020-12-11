@@ -20,7 +20,7 @@
       </div>
       <div class="stat">
         <p class="num">5</p>
-        <p class="num-description">years of graphic design experience</p>
+        <p class="num-description">years of marketing and graphic design</p>
       </div>
     </div>
   </div>
@@ -70,11 +70,11 @@ h1 {
 }
 @keyframes pulse {
   0% { transform: scale(1); }
-  50% { transform: scale(1.15); }
+  50% { transform: scale(1.25); }
   100% { transform: scale(1); }
 }
 .num-description {
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 300;
   margin-bottom: 0;
   color: white;
@@ -87,7 +87,7 @@ h1 {
     font-size: 38px;
   }
   .num-description {
-    font-size: 13px;
+    font-size: 14px;
   }
 }
 @media (max-width: 639px) {
@@ -95,7 +95,7 @@ h1 {
     padding: 0 0 50px 0;
   }
   .stats-div {
-    padding: 75px 0 0 0;
+    padding: 75px 0 25px 0;
   }
   .second-stats {
     padding-top: 35px;

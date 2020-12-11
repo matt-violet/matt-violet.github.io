@@ -73,10 +73,10 @@ export default {
   text-align: center;
 }
 .logo {
-  margin: 15px 30px;
+  margin: 12px 30px;
   position: absolute;
   left: 0;
-  width: 30px;
+  width: 33px;
 }
 .drop-down {
   transition: .3s;
@@ -104,8 +104,8 @@ export default {
 .link {
   margin: 10px;
   padding: 10px;
-  font-weight: 700;
-  font-size: 14px;
+  font-weight: 500;
+  font-size: 16px;
   color: white;
   display: inline-block;
 }

@@ -1,7 +1,7 @@
 <template>
   <div class="skill-icons-container">
     <div class="inner-content">
-      <div class="col" data-aos="zoom-in">
+      <div class="col">
         <div class="inner-skill">
           <h2 class="skills-header">
             Front End
@@ -16,7 +16,7 @@
           </div>
         </div>
       </div>
-      <div class="col" data-aos="zoom-in">
+      <div class="col">
         <div class="inner-skill">
           <h2 class="skills-header">
             Back End
@@ -31,7 +31,7 @@
           </div>
         </div>
       </div>
-      <div class="col" data-aos="zoom-in">
+      <div class="col">
         <div class="inner-skill">
           <h2 class="skills-header">
             Additional
@@ -64,20 +64,20 @@ export default {
 
 <style scoped>
 .inner-content {
-  max-width: 900px;
-  margin: 50px auto 0 auto;
-  text-align: center;
+  margin: 0 auto;
   transition: .3s;
+  display: flex;
+  justify-content: center;
 }
 .col {
-  width: 190px;
-  border-radius: 5px;
+  width: 200px;
   text-align: center;
   display: inline-block;
   box-shadow: 1px 2px 8px 0px grey;
   background: white;
-  margin: 20px;
-  padding: 15px;
+  margin: 0 30px;
+  padding: 40px 25px 10px 25px;
+  transition: .3s;
 }
 .inner-skill {
   margin: auto;
@@ -86,18 +86,18 @@ export default {
   text-align: center;
 }
 .row {
-  margin: 0 0 10px 0;
-  height: 30px;
+  margin: 0 0 15px 0;
+  height: 25px;
   position: relative;
   text-align: left;
 }
 .icon {
   height: 100%;
   display: inline-block;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 .name {
-  top: 5px;
+  top: 2px;
   display: inline-block;
   position: absolute;
   margin: 0;
@@ -107,45 +107,36 @@ export default {
 }
 .skills-header {
   color: steelblue;
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 400;
   margin: 0 0 30px 0;
 }
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .skills-header {
-    font-size: 20px;
-    font-size: 22px;
+    font-size: 24px;
   }
   .col {
-    width: 150px;
-    margin: 0 10px;
+    padding: 30px 15px 10px 15px;
+    margin: 0 15px;
   }
   .row {
     height: 20px; 
   }
-  .name {
-    font-size: 14px;
-    top: 2px;
-  }
 }
-@media (max-width: 600px) {
+@media (max-width: 700px) {
+  .inner-content {
+    flex-direction: column;
+  }
   .col {
-    width: 220px;
-    padding: 30px 10px;
-    margin: 50px auto 0 auto;
+    margin: 0 auto 30px auto;
     display: block;
+    padding: 25px 20px 15px 20px;
   }
   .row {
     height: 25px;
-    margin-bottom: 8px;
-  }
-  .skills-header {
-    font-size: 24px;
-    margin-top: 0;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
   .name {
-    top: 3px;
     font-size: 16px;
   }
 }
